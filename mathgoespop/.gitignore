@@ -10,6 +10,9 @@
 # Ignore the build directory
 /build
 
+# Bloggy things to ignore
+/source/posts
+
 # Ignore cache
 /.sass-cache
 /.cache
