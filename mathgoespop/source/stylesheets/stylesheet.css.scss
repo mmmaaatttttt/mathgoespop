@@ -1,0 +1,50 @@
+/* header area */
+
+$header-bg: #2E303C;
+$header-height: 4em;
+$link-color-light: #886E69;
+$link-color: #482B25;
+
+header {
+	background-color: $header-bg;
+	height: $header-height;
+	width: 100%
+}
+
+header a, 
+header a:hover,
+header a:focus,
+header a:active {
+	color: #FFF;
+	text-decoration: none;
+}
+
+nav a, #logo {
+	padding: 0 10px;
+	line-height: $header-height;
+}
+
+/* homepage body */
+
+body {
+	clear: both;
+}
+
+a {
+	color: $link-color-light;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: $link-color;
+	text-decoration: none;
+}
+
+#main {
+	padding: 0 15px;
+}
+
+.col-md-9 {
+	border-right: 1px solid #86CB92;
+}
