@@ -44,16 +44,20 @@ a:active {
 }
 
 #main {
-	padding: 0 15px;
+	padding: 20px 15px 0;
 }
 
 .col-md-9 {
 	border-right: 1px solid $line-color;
 }
 
-h2:not(:first-of-type) {
+#main h2:not(:first-of-type) {
 	border-top: 1px solid $line-color;
 	padding-top: 10px;
+}
+
+#main h2:first-of-type, #main h1:first-of-type {
+	margin-top: 0;
 }
 
 #main h2 {
