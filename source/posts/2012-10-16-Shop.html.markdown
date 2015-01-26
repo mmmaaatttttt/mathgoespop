@@ -1,0 +1,18 @@
+---
+title: Shop!
+date: '2012-10-16'
+tags: []
+---
+
+<p style="text-align: justify;">Here at Math Goes Pop I occasionally write about books and films.  If you'd like to form your own opinion on anything I write about, please consider purchasing things through these widgets.  That way, you get the items you want, and I get a handful of change from Amazon.</p>
+<p style="text-align: justify;">Note: some of these items may not exactly have glowing reviews from me.  In case you're curious, I've put URLs to my relevant articles below each item in the widgets.</p>
+<p style="text-align: justify;">For books:</p>
+<p style="text-align: center;"><SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?rt=tf_mfw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/magopo-20/8001/75472c2c-1594-4ea3-b1a9-9b495c424023"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?rt=tf_mfw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fmagopo-20%2F8001%2F75472c2c-1594-4ea3-b1a9-9b495c424023&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT></p>
+<p style="text-align: justify;">For movies and television:</p>
+<p style="text-align: center;"><SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?rt=tf_mfw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/magopo-20/8001/5a7aa4ad-8085-4dbd-b3d6-f8c7f51e4087"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?rt=tf_mfw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fmagopo-20%2F8001%2F5a7aa4ad-8085-4dbd-b3d6-f8c7f51e4087&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT></p>
+<p style="text-align: justify;">Or, if you're itching to do some more general internet shopping, please consider starting your search with the widget below:</p>
+
+<p style="text-align: center;"><SCRIPT charset="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?rt=tf_sw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822/US/magopo-20/8002/6e780b46-483e-4619-8fa6-e3ddd25dd34a"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?rt=tf_sw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fmagopo-20%2F8002%2F6e780b46-483e-4619-8fa6-e3ddd25dd34a&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT></p>
+
+<p style="text-align: justify;">Have fun!</p>
+

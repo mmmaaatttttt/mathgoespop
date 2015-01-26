@@ -1,0 +1,7 @@
+---
+title: About
+date: '2010-01-04'
+tags: []
+---
+
+I manage to stay off the streets by writing lessons at <a href="http://www.mathalicious.com/">Mathalicious</a>, where I've worked since receiving my Ph.D. in Mathematics from UCLA in 2012.  This blog started when I was a graduate student, where, surrounded by the glitz and glamour of my extravagant Hollywood lifestyle, I could not help but search for links between mathematics and popular culture.  Here I write about those links as I find them, in the hopes that I can make mathematics more exciting and less terrifying to a general audience.

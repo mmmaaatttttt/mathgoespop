@@ -1,0 +1,11 @@
+---
+title: Meta-post
+date: '2010-01-27'
+tags: []
+---
+
+Hi everyone,
+
+This is just a quick note to welcome you to the new Math Goes Pop!  We are still tweaking the look of the site, but hope you enjoy the changes.
+
+If you haven't already done so, I'd encourage you to subscribe to the RSS feed.  If you're already subscribed, please check your feed URL, as it has now changed from the blogspot address.  The new URL is <a href="http://www.mathgoespop.com/feed">http://www.mathgoespop.com/feed</a>.  Of course, you may find it easier to just subscribe via the link up top.  I encourage you to do so!
