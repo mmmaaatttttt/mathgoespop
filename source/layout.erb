@@ -31,6 +31,9 @@
       </div>
       <div class="col-xs-3">
       <aside>
+        <form>
+          <input type="text" id="st-search-input" class="st-search-input" value="Search Math Goes Pop!"/>
+        </form>
         <h2>Recent Articles</h2>
         <ol>
           <% blog.articles[0...10].each do |article| %>
@@ -55,5 +58,7 @@
     </div>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+</script>
   </body>
 </html>
