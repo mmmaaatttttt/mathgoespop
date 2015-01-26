@@ -23,6 +23,10 @@
             <h2><%= current_article.title %></h2> <div class="postDate"><%= current_article.date.strftime('%B %e, %Y') %></div>
           <% end %>
           <%= yield %>
+          <% unless current_article.nil? %>
+              <%= disqus %>
+              <%= disqus_count %>
+          <% end %>
         </div>
       </div>
       <div class="col-xs-3">
