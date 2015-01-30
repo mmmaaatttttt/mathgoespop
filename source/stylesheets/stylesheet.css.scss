@@ -7,6 +7,10 @@ $link-color: #482B25;
 $date-color: #CF7FF4;
 $line-color: #86CB92;
 
+* {
+	font-family: Lato, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+}
+
 header {
 	background-color: $header-bg;
 	height: $header-height;
@@ -72,6 +76,11 @@ a:active {
 
 p {
 	margin: 0 15px 10px;
+	text-align: justify;
+}
+
+blockquote {
+	text-align: justify;
 }
 
 /* aside */
