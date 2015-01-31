@@ -1,8 +1,0 @@
----
-title: ''
-date: '2008-10-20'
-tags: []
-published: false
----
-
-math pumpkins?<br />
