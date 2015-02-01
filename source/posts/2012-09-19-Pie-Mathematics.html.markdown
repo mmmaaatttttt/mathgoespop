@@ -21,7 +21,7 @@ In keeping with my summertime theme of mathematics and food (see e.g. <a href="h
 <p style="text-align: left;">Given a slice of pie, the most natural way to divide it in half is to bisect the angle formed at the end of the slice.</p>
 
 
-[caption id="attachment_2240" align="aligncenter" width="392"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-12.png"><img class="size-full wp-image-2240" title="Pie" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-12.png" alt="" width="392" height="375" /></a> One slice of pie, cut in half by bisecting the green angle.[/caption]
+[caption id="attachment_2240" align="aligncenter" width="392"]<a href="http://www.mathgoespop.com/images/2012/09/Picture-12.png"><img class="size-full wp-image-2240" title="Pie" src="http://www.mathgoespop.com/images/2012/09/Picture-12.png" alt="" width="392" height="375" /></a> One slice of pie, cut in half by bisecting the green angle.[/caption]
 
 To cut a slice of pie in this manner, one generally requires an appropriate tool, such as a knife. However, our desserts were accompanied only by spoons. Rather than try to bisect the angle using such a crude instrument, we decided the person who started with the pie should simply use his or her best judgement, and stop eating when roughly half the slice had been consumed.
 
@@ -29,16 +29,16 @@ In other words, rather than bisecting the area by slicing <em>vertically</em>, w
 
 Let's return to the question of where we ought to place our cut.  Certainly halfway up isn't right, because then piece below the line will have a smaller volume:
 
-[caption id="attachment_2243" align="aligncenter" width="346"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-30.png"><img class="size-full wp-image-2243" title="Pie Slice 1" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-30.png" alt="" width="346" height="319" /></a> This pie is not sliced evenly.[/caption]
+[caption id="attachment_2243" align="aligncenter" width="346"]<a href="http://www.mathgoespop.com/images/2012/09/Picture-30.png"><img class="size-full wp-image-2243" title="Pie Slice 1" src="http://www.mathgoespop.com/images/2012/09/Picture-30.png" alt="" width="346" height="319" /></a> This pie is not sliced evenly.[/caption]
 
 To find the horizontal line which cuts the volume in half, we'll need to do a bit of calculation. Let's introduce some notation: treat a slice of pie as a sector of a cylinder of radius r and height <em>h</em>. Suppose also that the angle formed by the sides of the slice of pie is denoted $latex \theta$; if the pie consists of <em>n</em> equal slices, then $latex \theta = 2\pi/n$. The suitability of this model will be discussed at the end, but for now, let's take it as a given. Here's a diagram of the situation:
 
-[caption id="attachment_2247" align="aligncenter" width="472"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/pie.jpg"><img class=" wp-image-2247 " title="pie" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/pie.jpg" alt="" width="472" height="314" /></a> Pie math (pun intended).[/caption]
+[caption id="attachment_2247" align="aligncenter" width="472"]<a href="http://www.mathgoespop.com/images/2012/09/pie.jpg"><img class=" wp-image-2247 " title="pie" src="http://www.mathgoespop.com/images/2012/09/pie.jpg" alt="" width="472" height="314" /></a> Pie math (pun intended).[/caption]
 
 Because the volume of a cylinder with radius <em>r</em> and height <em>h</em> is $latex \pi r^2 h$, and the pie is cut into <em>n</em> equally sized pieces, the volume of a slice must equal
 <p style="text-align: center;">$latex \frac{\pi r^2 h}{n}.$</p>
 Now suppose we cut a line through the slice of pie as in our pictures above, cutting it into two pieces. Let's call the distance between this cut and the tip of the slice <em>c</em>. The two pieces are shown here from a top down view; note the blue slice corresponds to a triangular prism.
-<p style="text-align: left;"><a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-33.png"><img class="aligncenter  wp-image-2253" title="piecuts" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-33.png" alt="" width="405" height="356" /></a></p>
+<p style="text-align: left;"><a href="http://www.mathgoespop.com/images/2012/09/Picture-33.png"><img class="aligncenter  wp-image-2253" title="piecuts" src="http://www.mathgoespop.com/images/2012/09/Picture-33.png" alt="" width="405" height="356" /></a></p>
 Because the volume of a triangular prism is equal to the area of the triangular base times the height of the prism, we can compute the volume of the blue portion of the slice. Using some trig and the fact that <em>c</em> bisects the angle $latex 2\pi/n$, we see the area of the triangle must equal $latex c^{2}\tan(\pi/n)$, and therefore the blue piece has volume equal to
 <p style="text-align: center;">$latex c^{2}h\tan(\pi/n).$</p>
 <p style="text-align: left;">In order for this to equal half of the total volume, the following equality must hold:</p>
@@ -56,14 +56,14 @@ Notice we can cancel the factors of <em>h</em> on both sides, and after simplifi
 <p style="text-align: left;">Here's a picture of the different slices represented in the table along with where you should make the cut to divide each slice into pieces of equal volume. The slices are superimposed on one another.</p>
 
 
-[caption id="attachment_2270" align="aligncenter" width="534"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-31.png"><img class=" wp-image-2270 " title="Where to Slice" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-31.png" alt="" width="534" height="394" /></a> The biggest (lightest) slice corresponds to n = 4, the smallest (darkest) to n = 16.[/caption]
+[caption id="attachment_2270" align="aligncenter" width="534"]<a href="http://www.mathgoespop.com/images/2012/09/Picture-31.png"><img class=" wp-image-2270 " title="Where to Slice" src="http://www.mathgoespop.com/images/2012/09/Picture-31.png" alt="" width="534" height="394" /></a> The biggest (lightest) slice corresponds to n = 4, the smallest (darkest) to n = 16.[/caption]
 
 Similarly, here's what it looks like if you take <em>c</em> = <em>r</em>/2 in each case listed in the table.
 
-<a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-32.png"><img class="aligncenter  wp-image-2271" title="c=r/2" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/Picture-32.png" alt="" width="534" height="406" /></a>
+<a href="http://www.mathgoespop.com/images/2012/09/Picture-32.png"><img class="aligncenter  wp-image-2271" title="c=r/2" src="http://www.mathgoespop.com/images/2012/09/Picture-32.png" alt="" width="534" height="406" /></a>
 
 I don't know the value of <em>n</em> for the slice of pie we shared that evening. Lesson learned: never go out to eat without your protractor. I did, however, take a picture of our estimate. How do you think we did?
-<p style="text-align: center;"><a href="http://www.mathgoespop.com/wp-content/uploads/2012/09/lunaparkpie.jpg"><img class="aligncenter  wp-image-2274" title="lunaparkpie" src="http://www.mathgoespop.com/wp-content/uploads/2012/09/lunaparkpie-1024x621.jpg" alt="" width="614" height="373" /></a></p>
+<p style="text-align: center;"><a href="http://www.mathgoespop.com/images/2012/09/lunaparkpie.jpg"><img class="aligncenter  wp-image-2274" title="lunaparkpie" src="http://www.mathgoespop.com/images/2012/09/lunaparkpie-1024x621.jpg" alt="" width="614" height="373" /></a></p>
 Hungry for more? Chew on this: how accurate is the model used here? Is a slice of pie really best modeled by a sector of a cylinder? Or is it really more of a sector of a <a href="http://en.wikipedia.org/wiki/Frustum">frustum</a>? Does this significantly alter the results? Also, what's different if the pie is cut into three slices (i.e. what happens when <em>n</em> = 3)?  And who gets more crust with this approach?  How much more?
 
 &nbsp;

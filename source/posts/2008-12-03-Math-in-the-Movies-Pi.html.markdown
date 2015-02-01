@@ -1,23 +1,22 @@
 ---
 title: 'Math in the Movies: Pi'
 date: '2008-12-03'
+disqus_identifier: /math_in_the_movies_pi/
+disqus_url: http://www.mathgoespop.com/2008/12/math-in-the-movies-pi.html
 tags:
 - math-in-the-movies
 ---
-
-<a href="http://4.bp.blogspot.com/_fM0L9abY3bo/SS8w5MKy3cI/AAAAAAAAAHE/SyqZUtS8Twc/s1600-h/pi_movie.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img id="BLOGGER_PHOTO_ID_5273487447751318978" style="margin: 0px 10px 10px 0px; float: left; width: 234px; height: 320px;" src="http://4.bp.blogspot.com/_fM0L9abY3bo/SS8w5MKy3cI/AAAAAAAAAHE/SyqZUtS8Twc/s320/pi_movie.jpg" border="0" alt="" /></a>In 1998, Darren Aronofsky shot to success with his independent film, <a href="http://www.imdb.com/title/tt0138704/">Pi</a>. The film was widely heralded as an excellent film, and earned Mr. Aronofsky the 1998 Directing Award at the Sundance Film Festival. He then went on to direct the similarly successful <a href="http://www.imdb.com/title/tt0180093/">Requiem for a Dream</a>, followed by the less well-received 2006 film <a href="http://www.imdb.com/title/tt0414993/">The Fountain</a>.  His latest film, the Mickey Rourke vehicle called <a href="http://www.apple.com/trailers/fox_searchlight/thewrestler/">The Wrestler</a>, opens soon.
+<a href="http://4.bp.blogspot.com/_fM0L9abY3bo/SS8w5MKy3cI/AAAAAAAAAHE/SyqZUtS8Twc/s1600-h/pi_movie.jpg" ><img style="margin: 0px 10px 10px 0px; float: left; width: 234px; height: 320px;" src="http://4.bp.blogspot.com/_fM0L9abY3bo/SS8w5MKy3cI/AAAAAAAAAHE/SyqZUtS8Twc/s320/pi_movie.jpg" border="0" alt="" /></a>In 1998, Darren Aronofsky shot to success with his independent film, <a href="http://www.imdb.com/title/tt0138704/">Pi</a>. The film was widely heralded as an excellent film, and earned Mr. Aronofsky the 1998 Directing Award at the Sundance Film Festival. He then went on to direct the similarly successful <a href="http://www.imdb.com/title/tt0180093/">Requiem for a Dream</a>, followed by the less well-received 2006 film <a href="http://www.imdb.com/title/tt0414993/">The Fountain</a>.  His latest film, the Mickey Rourke vehicle called <a href="http://www.apple.com/trailers/fox_searchlight/thewrestler/">The Wrestler</a>, opens soon.
 
 The story of Pi centers on a mathematician named Max Cohen, a self professed number theorist - although he never specifies what qualifies him for this title - who spends his days analyzing the stock market and wiping the blood off of his upper lip (I know what you're thinking, and no, he's not a cage fighter - that would've made the film way better). As he comes closer to "unlocking the secrets" of the stock market (whatever that means), several interested parties begin to come out of the woodwork, all with their own self-interest at heart.
 
-From a math perspective, how does this film stack up? Unfortunately, the answer is poorly. Those wishing to learn some math from their pop culture would be better off with an episode of Sesame Street, or perhaps some School House Rock.  In fact, pretty much any math pop culture reference you can think of would probably fare better.
-<div style="text-align: left;">Let's take a closer look at the stereotypes propagated by this film.
+From a math perspective, how does this film stack up? Unfortunately, the answer is poorly. Those wishing to learn some math from their pop culture would be better off with an episode of Sesame Street, or perhaps some School House Let's take a closer look at the stereotypes propagated by this film.
 
-</div>
-<p style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://www.youtube.com/v/JRgIbKEsYT4&amp;hl=" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/JRgIbKEsYT4&amp;hl=" allowfullscreen="true"> </embed></object>
-<div style="text-align: center;"><span style="font-size: 78%;">A trailer, for those of you fortunate enough to have not seen this film.
-</span></div>
-<div><strong>- Mathematicians are really good at calculating things in their heads.</strong>
-<div>One of our first introductions to Max comes early in the film, when he is leaving his apartment and a young Asian girl approaches him with a calculator. She proceeds to ask him to compute products and quotients of large numbers in his head - things like 421 x 121. Of course, since Max is a mathematician, he has no trouble computing these products. He does it just as quickly as she can type the numbers into her calculator!
+<p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/r0SC582sJvE" frameborder="0" allowfullscreen></iframe><div style="text-align: center;"><span style="font-size: 78%;">A trailer, for those of you fortunate enough to have not seen this film.</span></div></p>
+
+<strong>- Mathematicians are really good at calculating things in their heads.</strong>
+
+One of our first introductions to Max comes early in the film, when he is leaving his apartment and a young Asian girl approaches him with a calculator. She proceeds to ask him to compute products and quotients of large numbers in his head - things like 421 x 121. Of course, since Max is a mathematician, he has no trouble computing these products. He does it just as quickly as she can type the numbers into her calculator!
 
 As I've <a href="http://mathgoespop.blogspot.com/2008/07/three-and-half-things-you-shouldnt-say.html">said before</a>, this isn't at all a realistic depiction of mathematicians. While there are certainly computational savants amongst us, it is just as common, if not more so, to encounter a mathematician who will willingly admit that he or she is no good at computation. Many mathematicians even take pride in such assertions. Mathematics is as much about doing multiplication in your head as cooking is about opening jars with your bare hands. -1.
 
@@ -26,7 +25,9 @@ As I've <a href="http://mathgoespop.blogspot.com/2008/07/three-and-half-things-y
 Max Cohen published his first paper at age 16, and completed his Ph.D. by the time he was 20. While this is certainly not unheard of in academia, the idea that you must be young to be successful is one that is especially pervasive in mathematics.
 
 The problem with this stereotype is that it tends to discourage people from studying mathematics if they are firm in their beliefs that math is solely a young man's game. In pop culture, most people who are good at math are portrayed as having completed their degrees at a very young age, but in reality these people are the exceptions, not the rules. In mathematics, as <a href="http://www.youtube.com/watch?v=QVwTyBsddYg">Aaliyah</a> will tell you, it is becoming more and more common that age ain't nothing but a number. -1.
-<div style="text-align: center;"><a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Samosa_1.jpg/800px-Samosa_1.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 378px; height: 283px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Samosa_1.jpg/800px-Samosa_1.jpg" border="0" alt="" /></a><span style="font-size: 78%;">Don't subscribe to this propaganda: mathematicians enjoy a good samosa just as much as everyone else.</span></div>
+
+<div style="text-align: center;"><a href="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Samosa_1.jpg/800px-Samosa_1.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 378px; height: 283px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Samosa_1.jpg/800px-Samosa_1.jpg" border="0" alt="" /></a><span style="font-size: 78%;">Don't subscribe to this propaganda: mathematicians enjoy a good samosa just as much as everyone else.</span></div>
+
 <strong>- People who are good at math are socially awkward. </strong>
 
 In an early scene, Max is busy looking at numbers on his computer screen (because he's a number theorist, remember?!) when someone comes knocking on his door. On the other side is his attractive neighbor, who not only sports a British accent, but also has brought him samosas.
@@ -53,9 +54,6 @@ Max's aforementioned mentor guides Max throughout the film, and often during the
 
 Sadly, Sol is a century or two late if he expects us to believe he could make a career studying a single number.   The whole idea is absurd.  I have not heard of a single mathematician who has made a lucrative career studying π, and I think you'd be just as hard pressed to find one.  Saying that a mathematician's research concerns π would be like saying an English literature professor's research concerns the word "banana."
 
-The only reasonable conclusion one can draw is that Sol is a fraud.  This is further evidenced by the fact that he doesn't know what density is (<span style="font-style: italic;">weight</span> over volume? Come on, dude).  Perhaps Sol was only hanging out with Max to bask in his numerological genius.  No doubt his time would've been better spent elsewhere.  -1.
+The only reasonable conclusion one can draw is that Sol is a fraud.  This is further evidenced by the fact that he doesn't know what density is (<em>weight</em> over volume? Come on, dude).  Perhaps Sol was only hanging out with Max to bask in his numerological genius.  No doubt his time would've been better spent elsewhere.  -1.
 
 In summary, this movie scores a whopping -6.  This is a pretty poor showing.  Sorry, Mr. Aronofsky - if it's any consolation, I do want to see your new film.  Hopefully you are more of an authority on washed up wrestlers than you are on mathematicians.
-
-</div>
-</div>

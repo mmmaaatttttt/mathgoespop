@@ -39,7 +39,7 @@ tags:
 
 <p>
 
-[caption id="attachment_293" align="aligncenter" width="302" caption="Is the lower right corner mined or not?"]<a href="http://www.mathgoespop.com/wp-content/uploads/2010/04/Picture-5.png"><img class="size-full wp-image-293" title="Picture 5" src="http://www.mathgoespop.com/wp-content/uploads/2010/04/Picture-5.png" alt="" width="302" height="304" /></a>[/caption]
+[caption id="attachment_293" align="aligncenter" width="302" caption="Is the lower right corner mined or not?"]<a href="http://www.mathgoespop.com/images/2010/04/Picture-5.png"><img class="size-full wp-image-293" title="Picture 5" src="http://www.mathgoespop.com/images/2010/04/Picture-5.png" alt="" width="302" height="304" /></a>[/caption]
 
 </p>
 

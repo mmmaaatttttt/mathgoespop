@@ -1,36 +1,38 @@
 ---
 title: Pi Day
 date: '2009-03-11'
+disqus_identifier: /pi_day/
+disqus_url: http://www.mathgoespop.com/2009/03/pi-day.html
 tags:
 - holidays
 - pi
 ---
+Hot on the heels of <a href="http://www.mathgoespop.com/2009/03/square-root-day.html">Square Root Day</a> comes Pi Day, a day held in honor of arguably the most famous mathematical constant, π.  And like Square Root Day, I am forced to approach this holiday with a certain degree of hesitation.
 
-<div style="text-align: justify;">
+There is no doubt that Pi Day is the most prestigious mathematical holiday, but this recognition usually only serves to illustrate the sad state of mathematical literacy in this country.  For example, one year I remember reading a news article about Pi Day where the author described π as a number whose decimal expansion "was believed to go on forever."  Of course, belief has nothing to do with it - this is a simple consequence of the irrationality of π, a fact which is apparently lost amidst the pie eating hubbub of this holiday.
 
-Hot on the heels of <a href="http://mathgoespop.blogspot.com/2009/03/square-root-day.html">Square Root Day</a> comes Pi Day, a day held in honor of arguably the most famous mathematical constant, π.  And like Square Root Day, I am forced to approach this holiday with a certain degree of hesitation.
+<center><a href="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pi-symbol.svg/200px-Pi-symbol.svg.png"><img class="aligncenter" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pi-symbol.svg/200px-Pi-symbol.svg.png" alt="" width="200" height="194" style="margin:0 auto;"/></a></center>
 
-There is no doubt that Pi Day is the most prestigious mathematical holiday, but this recognition usually only serves to illustrate the sad state of mathematical literacy in this country.  For example, one year I remember reading a news article about Pi Day where the author described π as a number whose decimal expansion "was believed to go on forever."  Of course, belief has nothing to do with it - this is a simple consequence of the irrationality of π, a fact which is apparently lost amidst the pie eating hubbub of this holiday.<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pi-symbol.svg/200px-Pi-symbol.svg.png"><img class="aligncenter" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pi-symbol.svg/200px-Pi-symbol.svg.png" alt="" width="200" height="194" /></a>
 Unfortunately, this is not an isolated incident - for as much as Pi Day aims to educate people about π, it seems to do just as good a job of showing how little people actually know.  Searching Google News for articles on the upcoming holiday, it's possible to find a number of stories that say a whole lot of garbage.  For example, there's this quote from a Pi Day article on <a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2009/03/10/DDAO16C55D.DTL">SF Gate</a>:
-<blockquote>Pi, as [Pi Day co-organizer Ron] Hipschman noted, is strange because it's both an <a href="http://en.wikipedia.org/wiki/Irrational_number">irrational number</a> (its decimal expansion never ends or repeats) and yet the number is also <a href="http://en.wikipedia.org/wiki/Transcendental_number">transcendental</a> (no finite sequence of algebraic functions could ever produce it).
 
-To a physicist like Shaw, that kind of contradiction and beauty was all the inspiration he needed to contemplate a Pi Day.</blockquote>
-</div>
-<div style="text-align: justify;">
+<blockquote><p>Pi, as [Pi Day co-organizer Ron] Hipschman noted, is strange because it's both an <a href="http://en.wikipedia.org/wiki/Irrational_number">irrational number</a> (its decimal expansion never ends or repeats) and yet the number is also <a href="http://en.wikipedia.org/wiki/Transcendental_number">transcendental</a> (no finite sequence of algebraic functions could ever produce it).</p><p>To a physicist like Shaw, that kind of contradiction and beauty was all the inspiration he needed to contemplate a Pi Day.</p></blockquote>
 
 This sort of writing is like nails on a chalkboard to anyone who knows better.  Forgetting the convoluted definition of a transcendental number given above, the more important point is that there is no "contradiction" in the statement.   There is nothing special about the fact that π is both transcendental and irrational - as is immediate from the definition of a transcendental number, any transcendental number is automatically irrational.
 
 No doubt there will be other examples of this mathematical butchery as Pi Day draws near.  Here are a couple more.  From the <a href="http://women.timesonline.co.uk/tol/life_and_style/women/the_way_we_live/article5883187.ece">Times Online</a>:
+
 <blockquote>[S]ince 1988 mathematicians across the land have been celebrating pi day each year by tucking into a feast of [sticky pudding]. The number has obsessed generations of mathematicians for millennia, and not because it's an excuse to eat pudding.</blockquote>
-As I've said before, there's not a working mathematician today (nor can I think of one over the past several hundred years) who has made a career studying the number pi.  No mathematician is "obsessed" with this number - although numerologists and <a href="http://mathgoespop.blogspot.com/2008/12/math-in-movies-pi.html">Max Cohen</a> certainly may argue otherwise.
+
+As I've said before, there's not a working mathematician today (nor can I think of one over the past several hundred years) who has made a career studying the number pi.  No mathematician is "obsessed" with this number - although numerologists and <a href="http://www.mathgoespop.com/2008/12/math-in-movies-pi.html">Max Cohen</a> certainly may argue otherwise.
 
 Some sources don't even seem to know what π is.  From <a href="http://www.firstcoastnews.com/news/local/news-article.aspx?storyid=132735&amp;catid=3">Jacksonville, FL</a>:
+
 <blockquote>The next big day to celebrate in the math community this year [after Square Root Day] is pi day, March 14th. It represents 3.14 - a common mathematical expression.</blockquote>
-</div>
-<div style="text-align: justify;">
 
 And from <a href="http://www.wsfa.com/Global/story.asp?S=9941536&amp;nav=menu33_2">Montgomery, AL</a>:
+
 <blockquote>On March 14 math lovers can celebrate Pi, the mathmatical [sic] formula used to find the circumference of a circle's diameter, which is 3.14.</blockquote>
+
 Not only is π defined incorrectly in both of these quotes, but it's clear that the authors don't know that π is neither a formula, nor an expression, any more than the number 12 is a formula or an expression.
 
 One could argue that perhaps I am just nitpicking.  For the general reader, such details are of no consequence, you may say.  Unfortunately, history has shown that misinterpretations of the number π can lead to quite embarrassing consequences.  One need look only to the good people of <a href="http://blog.silive.com/sinotebook/2009/03/march_14_is_pi_day.html">Indiana</a> for proof.
@@ -38,13 +40,10 @@ One could argue that perhaps I am just nitpicking.  For the general reader, such
 As discussed in the article linked above, around the turn of the last century, a man named Edwin J. Goodwin claimed to have done what mathematicians already knew was impossible: he claimed to be able to <a href="http://en.wikipedia.org/wiki/Squaring_the_circle">square the circle</a> (i.e., he claimed he had found a way to construct a square with the same area as a given circle, using only a compass, straightedge, and a finite number of steps).
 
 Not content to keep the discovery to himself, Dr. Goodwin decided to share his discovery with his fellow countrymen in Indiana:
-<blockquote>The stalwart Hoosier determined that the great state of Indiana should be the first to benefit from what he fervently believed to be a "new mathematical truth." He would allow the state to use his discovery and to put it in the school textbooks free of charge. There would be no need for Indiana to ever pay him any royalties.
 
-On January 18, 1897, after emerging from the House Swamplands and Education Committees (legislatures sometimes work in mysterious ways), Indiana House Bill 246 was introduced to codify Dr. Goodwin's discovery. Legislators freely admitted they did not understand the jargon-filled bill, although they were certain it had something to do with circles. Of course they passed it unanimously.</blockquote>
-</div>
-<p style="text-align: justify;"><a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Squaring_the_circle.svg/281px-Squaring_the_circle.svg.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img style="margin: 0pt 0pt 10px 10px; float: right; cursor: pointer; width: 233px; height: 233px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Squaring_the_circle.svg/281px-Squaring_the_circle.svg.png" border="0" alt="" /></a>While his heart was certainly in the right place, his mathematical rigor was not.  His construction relied upon the unfortunate claim that π = 3.2.  Thankfully, the error was pointed out before the bill was able to do any damage.  The story does go to show, however, that we have a long history of not understanding π.</p>
+<blockquote><p>The stalwart Hoosier determined that the great state of Indiana should be the first to benefit from what he fervently believed to be a "new mathematical truth." He would allow the state to use his discovery and to put it in the school textbooks free of charge. There would be no need for Indiana to ever pay him any royalties.</p><p>On January 18, 1897, after emerging from the House Swamplands and Education Committees (legislatures sometimes work in mysterious ways), Indiana House Bill 246 was introduced to codify Dr. Goodwin's discovery. Legislators freely admitted they did not understand the jargon-filled bill, although they were certain it had something to do with circles. Of course they passed it unanimously.</p></blockquote>
 
-<div style="text-align: justify;">
+<p style="text-align: justify;"><a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Squaring_the_circle.svg/281px-Squaring_the_circle.svg.png"><img style="margin: 0pt 0pt 10px 10px; float: right; cursor: pointer; width: 233px; height: 233px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Squaring_the_circle.svg/281px-Squaring_the_circle.svg.png" border="0" alt="" /></a>While his heart was certainly in the right place, his mathematical rigor was not.  His construction relied upon the unfortunate claim that &pi; = 3.2.  Thankfully, the error was pointed out before the bill was able to do any damage.  The story does go to show, however, that we have a long history of not understanding &pi;.</p>
 
 Eating pie is certainly an activity I can support, but other than that, I'm not really sure of this holiday's purpose.  On the official <a href="http://www.piday.org/">Pi Day</a> website, for instance, the three questions on the front page up for discussion are: "Why do you like Pi?", "What are you doing at your school to celebrate Pi Day?", and "How many digits of Pi have you memorized?"  Note that two of these questions actually have nothing to do with the number π, and the one that does deal with π doesn't ask about any actual mathematics.
 
@@ -54,5 +53,4 @@ I'm also a reluctant supporter of this holiday because I don't really see a reas
 
 Perhaps in time, we will see more effective use of these "math holidays."  For now, though, I think that this is about the best we can expect to get:
 
-</div>
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/U2uVoDxZpaQ&amp;hl=en&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/U2uVoDxZpaQ&amp;hl=en&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<center><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/U2uVoDxZpaQ&amp;hl=en&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/U2uVoDxZpaQ&amp;hl=en&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></center>

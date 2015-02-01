@@ -1,8 +1,0 @@
----
-title: the number 23
-date: '2008-11-20'
-tags: []
-published: false
----
-
-<br />

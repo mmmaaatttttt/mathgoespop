@@ -22,6 +22,6 @@ It's interesting that boys weren't more likely to endorse the view that boys are
 
 I'd also be interested in knowing whether this trend can be reversed by a suitably competent teacher.  If a group of 2nd grade girls is taught math by a woman who is unqualified, but in 6th grade is taught by a woman who is exceptional, can this help undo the damage that the 2nd grade teacher has done?  I would hope so.
 
-[caption id="attachment_192" align="aligncenter" width="286" caption="It&#39;s too bad Prezbo doesn&#39;t have lady parts."]<a href="http://www.mathgoespop.com/wp-content/uploads/2010/02/prezbo.jpg"><img class="size-full wp-image-192" title="prezbo" src="http://www.mathgoespop.com/wp-content/uploads/2010/02/prezbo.jpg" alt="" width="286" height="362" /></a>[/caption]
+[caption id="attachment_192" align="aligncenter" width="286" caption="It&#39;s too bad Prezbo doesn&#39;t have lady parts."]<a href="http://www.mathgoespop.com/images/2010/02/prezbo.jpg"><img class="size-full wp-image-192" title="prezbo" src="http://www.mathgoespop.com/images/2010/02/prezbo.jpg" alt="" width="286" height="362" /></a>[/caption]
 
 </div>

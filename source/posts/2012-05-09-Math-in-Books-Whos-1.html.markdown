@@ -14,7 +14,7 @@ In an <a href="http://www.mathgoespop.com/2012/05/run-for-the-ranking.html">earl
 
 Because of all of these accessible applications, it should come as no surprise that the mathematics of ranking is the subject of a new book, titled <a href="http://www.amazon.com/Whos-The-Science-Rating-Ranking/dp/0691154228">Who's #1? The Science of Rating and Ranking</a>.  Written by applied mathematicians Amy N. Langville and Carl D. Meyer, the book tackles a variety of methods used to extract ratings or rankings given some collection of input data.
 
-[caption id="attachment_1987" align="aligncenter" width="300" caption="Front Cover!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/05/whosno1.png"><img class="size-full wp-image-1987" title="whosno1" src="http://www.mathgoespop.com/wp-content/uploads/2012/05/whosno1.png" alt="" width="300" height="428" /></a>[/caption]
+[caption id="attachment_1987" align="aligncenter" width="300" caption="Front Cover!"]<a href="http://www.mathgoespop.com/images/2012/05/whosno1.png"><img class="size-full wp-image-1987" title="whosno1" src="http://www.mathgoespop.com/images/2012/05/whosno1.png" alt="" width="300" height="428" /></a>[/caption]
 
 This book is chock full of information.  The first part of the book discusses several different algorithms used to construct rankings.  There are plenty of applications of the type I mentioned above, though the authors seem to be particularly fond of sports.  They keep one running example from the 2005 NCAA football season running throughout; viewed through the lens of this common example, it's easier to compare and contrast the ranking and rating methods they discuss.
 

@@ -10,7 +10,7 @@ tags:
 
 <div style="text-align: justify;">In the aftermath of the Super Bowl, some of you fans may be dreading the next six months.  To kick off this football drought, I'd like to highlight <a href=" http://sports.yahoo.com/nfl/blog/shutdown_corner/post/If-Saints-win-coin-toss-Super-Bowl-could-be-ove?urn=nfl,217725">this article</a>, which was featured on Yahoo yesterday.  The article says that Saints quarterback Drew Brees should hope to lose the coin toss at the start of the game, because in the past 43 Super Bowls, the team that won the coin toss had only won 20 times.</div>
 
-[caption id="attachment_163" align="aligncenter" width="375" caption="An unlucky coin?  Unlikely."]<a href="http://www.mathgoespop.com/wp-content/uploads/2010/02/xlivcoin.jpg"><img class="size-full wp-image-163" title="xlivcoin" src="http://www.mathgoespop.com/wp-content/uploads/2010/02/xlivcoin.jpg" alt="" width="375" height="375" /></a>[/caption]
+[caption id="attachment_163" align="aligncenter" width="375" caption="An unlucky coin?  Unlikely."]<a href="http://www.mathgoespop.com/images/2010/02/xlivcoin.jpg"><img class="size-full wp-image-163" title="xlivcoin" src="http://www.mathgoespop.com/images/2010/02/xlivcoin.jpg" alt="" width="375" height="375" /></a>[/caption]
 
 Um...what?  Who cares?  While 20/43 is slightly less than the expected 50%, this difference is not even close to being statistically significant.  Actually, the fact that this ratio is only 1 1/2 games shy of the mean is pretty good.  Matt Springer has posted an <a href="http://scienceblogs.com/builtonfacts/2010/02/super_bowl_coin_toss_mathemati.php">article</a> that discusses why we shouldn't really care about this difference.
 <div style="text-align: justify;">

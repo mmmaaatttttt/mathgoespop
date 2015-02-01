@@ -20,7 +20,7 @@ tags:
 
 <p>Using nothing more than simple arithmetic, <span id="SPELLING_ERROR_16" class="blsp-spelling-error">Pierrehumbert</span> then tries to reason his way through such an argument to see if it makes any sense.  As expected, it does not.  My favorite part of the argument is the graphic that shows how many solar panels would be required to supply the world's electricity:</p>
 
-<p><a href="http://www.realclimate.org/wp-content/uploads/Globe.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 409px; height: 351px;" src="http://www.realclimate.org/wp-content/uploads/Globe.png" border="0" alt="" /></a><br />
+<p><a href="http://www.realclimate.org/images/Globe.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 409px; height: 351px;" src="http://www.realclimate.org/images/Globe.png" border="0" alt="" /></a><br />
  That black square in Saudi Arabia certainly doesn't look like it should make any significant contribution to the planet's heating, and indeed, <span id="SPELLING_ERROR_17" class="blsp-spelling-error">Pierrehumbert</span> uses mathematics to argue quite effectively that it wouldn't.</p>
 
 <p>The letter is worth a read, not just for the strength of <span id="SPELLING_ERROR_18" class="blsp-spelling-error">Pierrehumber's</span> argument, but for the simple mathematics that gives his argument such strong support.  Levitt offered a meek response in the comments (#47, I believe), which was then quickly rebutted.  Since then, all's been quiet.</p>

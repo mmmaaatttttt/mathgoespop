@@ -12,11 +12,11 @@ When shopping for gifts for someone, there are a few wells from which one freque
 
 I've written before about my <a href="http://www.mathgoespop.com/2008/07/designer-math.html">mixed</a> <a href="http://www.mathgoespop.com/2009/12/more-on-nerdy-t-shirts.html">feelings</a> regarding math t-shirts.  Today, though, I'd like to tackle a different type of gift: the math clock.  This is inspired, in part, by a gift I received from my grandmother (bless her heart) over the holiday.  The gift, pictured below, was an analog clock in which the numbers have been replaced by (what one would hope to be) mathematically equivalent expressions.
 
-[caption id="attachment_1072" align="aligncenter" width="405" caption="Figure 1: Clock with a black background."]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/02/Picture-1.png"><img class="size-full wp-image-1072" title="ChalkClock" src="http://www.mathgoespop.com/wp-content/uploads/2011/02/Picture-1.png" alt="" width="405" height="395" /></a>[/caption]
+[caption id="attachment_1072" align="aligncenter" width="405" caption="Figure 1: Clock with a black background."]<a href="http://www.mathgoespop.com/images/2011/02/Picture-1.png"><img class="size-full wp-image-1072" title="ChalkClock" src="http://www.mathgoespop.com/images/2011/02/Picture-1.png" alt="" width="405" height="395" /></a>[/caption]
 
 Don't tell her, but we haven't yet put this clock up in our apartment.  In my own defense, this is mostly because we already have a math clock displayed prominently in the kitchen.  My future wife says that she gave me our first clock, and this is a claim I have no reason to doubt.
 
-[caption id="attachment_1073" align="aligncenter" width="443" caption="Figure 2: Clock with a white background."]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/02/Picture-2.png"><img class="size-full wp-image-1073" title="WhiteClock" src="http://www.mathgoespop.com/wp-content/uploads/2011/02/Picture-2.png" alt="" width="443" height="441" /></a>[/caption]
+[caption id="attachment_1073" align="aligncenter" width="443" caption="Figure 2: Clock with a white background."]<a href="http://www.mathgoespop.com/images/2011/02/Picture-2.png"><img class="size-full wp-image-1073" title="WhiteClock" src="http://www.mathgoespop.com/images/2011/02/Picture-2.png" alt="" width="443" height="441" /></a>[/caption]
 
 Sadly, our apartment is simply not big enough for two mathematically themed clocks.  The question becomes, then, which one should be kept in-house, and which one should be relegated to the dungeon of an office I hold at the math department?  It seems that the most natural way to answer this question is to compare the mathematics of each clock side by side.
 
@@ -56,7 +56,7 @@ The <a href="http://en.wikipedia.org/wiki/Factorial">factorial</a> is a little l
 
 Presumably, the black clock wants us to solve for <em>x</em>, using the quadratic formula or something.  I don't get it, though - if they're going to express 7 as an unknown in a quadratic function of <em>x</em>, why would they write an equation that has two solutions, one of which isn't 7? Since $latex 52 - x^2 + x = 10$ is the same as $latex 42 - x^2 + x = 0$, here's a graph of $latex 42 - x^2 + x$, so you can see the two roots:
 
-<a href="http://www.mathgoespop.com/wp-content/uploads/2011/02/Picture-4.png"><img class="aligncenter size-full wp-image-1084" title="Graph" src="http://www.mathgoespop.com/wp-content/uploads/2011/02/Picture-4.png" alt="" width="315" height="198" /></a>I realize I'm being a little pedantic (after all, there isn't any negative 6 o'clock), but it would've been just as easy to write a quadratic that had only 7 as its root.  Here's one: $latex x^2 - 14x + 50 = 1.$
+<a href="http://www.mathgoespop.com/images/2011/02/Picture-4.png"><img class="aligncenter size-full wp-image-1084" title="Graph" src="http://www.mathgoespop.com/images/2011/02/Picture-4.png" alt="" width="315" height="198" /></a>I realize I'm being a little pedantic (after all, there isn't any negative 6 o'clock), but it would've been just as easy to write a quadratic that had only 7 as its root.  Here's one: $latex x^2 - 14x + 50 = 1.$
 
 Besides, the white clock's entry for 7 is good in its own right.  No contest here, white gets the point.
 
@@ -79,4 +79,4 @@ The long division is redundant, but in a sense, so is the white clock's entry - 
 By my count, the final score is 7 points for the white clock, 5 for the black.  It was a close match, but it looks like a decision has been made.  Regardless of the outcome, though, both clocks have their share of problems.
 
 I should point out that, somewhat surprisingly, these are not the only math clocks on the market.  <a href="http://komplexify.com/blog/2009/10/17/1t-once-upon-a-time/">Here</a> are even more examples.  The one which speaks to me the most, though, is probably the last one.
-<p style="text-align: center;"><a href="http://komplexify.com/blog/2009/10/17/1t-once-upon-a-time/"><img class="aligncenter size-full wp-image-1085" title="MathClock13" src="http://www.mathgoespop.com/wp-content/uploads/2011/02/MathClock13.jpg" alt="" width="450" height="399" /></a></p>
+<p style="text-align: center;"><a href="http://komplexify.com/blog/2009/10/17/1t-once-upon-a-time/"><img class="aligncenter size-full wp-image-1085" title="MathClock13" src="http://www.mathgoespop.com/images/2011/02/MathClock13.jpg" alt="" width="450" height="399" /></a></p>

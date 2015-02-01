@@ -12,13 +12,13 @@ Last month, I posted a <a href="http://www.mathgoespop.com/2012/05/math-in-books
 
 Why the Giants?  It's really just a personal preference.  For the non-Giants fan, though, it's worth pointing out that the Giants won the World Series in 2010, but failed to even make the playoffs in 2011.  Let's try to investigate why this is the case.  Baseball fans may have their own explanations for this observation, but for a moment let's focus on the math.
 
-[caption id="attachment_2050" align="aligncenter" width="491" caption="Let&#39;s go Giants!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/06/giants.png"><img class="size-full wp-image-2050 " title="giants" src="http://www.mathgoespop.com/wp-content/uploads/2012/06/giants.png" alt="" width="491" height="286" /></a>[/caption]
+[caption id="attachment_2050" align="aligncenter" width="491" caption="Let&#39;s go Giants!"]<a href="http://www.mathgoespop.com/images/2012/06/giants.png"><img class="size-full wp-image-2050 " title="giants" src="http://www.mathgoespop.com/images/2012/06/giants.png" alt="" width="491" height="286" /></a>[/caption]
 
 As the name suggests, the offense-defense rating method rates a team's offensive and defensive capabilities.  Of course, these two things are highly interdependent - if a baseball team scores 10 runs in a game, for example, is it because they have a couple of excellent hitters, or is it because the team they played against is terrible at catching the ball?  Usually the answer involves a little bit of both, and so trying to tease out offensive versus defensive achievement can be difficult.
 
 Let's pull together some numbers.  I'll focus on the five teams in the National League West, since these are the teams the Giants play the most frequently.  Along with the Giants, the NL West consists of the <a href="http://en.wikipedia.org/wiki/Arizona_Diamondbacks">Arizona Diamondbacks</a>, <a href="http://en.wikipedia.org/wiki/Colorado_Rockies">Colorado Rockies</a>, <a href="http://en.wikipedia.org/wiki/Los_Angeles_Dodgers">Los Angeles Dodgers</a>, and <a href="http://en.wikipedia.org/wiki/San_Diego_Padres">San Diego Padres</a>.  Consider the following array of runs scored by each possible pairing of these teams during the 2010 season:
 
-[caption id="attachment_2030" align="aligncenter" width="300" caption="NL West score data, 2010"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/06/NLWest2010.png"><img class="size-medium wp-image-2030" title="NLWest2010" src="http://www.mathgoespop.com/wp-content/uploads/2012/06/NLWest2010-300x108.png" alt="" width="300" height="108" /></a>[/caption]
+[caption id="attachment_2030" align="aligncenter" width="300" caption="NL West score data, 2010"]<a href="http://www.mathgoespop.com/images/2012/06/NLWest2010.png"><img class="size-medium wp-image-2030" title="NLWest2010" src="http://www.mathgoespop.com/images/2012/06/NLWest2010-300x108.png" alt="" width="300" height="108" /></a>[/caption]
 
 The number in the <em>i</em>th row and the <em>j</em>th column gives the number of runs allowed by team <em>i</em> against team <em>j</em>; equivalently, it shows the number of runs scored by team <em>j</em> against team <em>i</em>.  For example, in 2010 this shows that San Francisco scored 86 runs against Arizona, while Arizona scored 71 runs against San Francisco (this and all other baseball data is taken from <a href="http://www.baseball-reference.com/">here</a>).  Of course, one could easily argue that runs scored and runs allowed are not the best measures of a team's offense or defense; however, these numbers are easy to understand, so let's stick with them and see what the rating method tells us.
 
@@ -35,7 +35,7 @@ This seems a little bit circular - to compute the offensive scores we need to kn
 
 It's possible to do all of this calculation using matrices, but I'll leave that discussion in the textbook for folks who want to dig deeper.  By way of example, though, here's a table of the first few offensive and defensive scores for San Francisco one obtains by successive refinement:
 
-[caption id="attachment_2037" align="aligncenter" width="399" caption="Successive refinements of the offense/defense measures for the 2010 Giants"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/06/iterates.png"><img class="size-full wp-image-2037" title="iterates" src="http://www.mathgoespop.com/wp-content/uploads/2012/06/iterates.png" alt="" width="399" height="116" /></a>[/caption]
+[caption id="attachment_2037" align="aligncenter" width="399" caption="Successive refinements of the offense/defense measures for the 2010 Giants"]<a href="http://www.mathgoespop.com/images/2012/06/iterates.png"><img class="size-full wp-image-2037" title="iterates" src="http://www.mathgoespop.com/images/2012/06/iterates.png" alt="" width="399" height="116" /></a>[/caption]
 
 Remember, bigger scores are better for offense, while smaller scores are better for defense.
 
@@ -49,7 +49,7 @@ What can we learn from this data?  In 2010 the Giants had the best defense in t
 
 What happens if we compile the same data for the 2011 season?  The initial run data for last year looks like this:
 
-[caption id="attachment_2046" align="aligncenter" width="316" caption="NL West score data, 2011"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/06/NLWest2011.png"><img class="size-full wp-image-2046" title="NLWest2011" src="http://www.mathgoespop.com/wp-content/uploads/2012/06/NLWest2011.png" alt="" width="316" height="114" /></a>[/caption]
+[caption id="attachment_2046" align="aligncenter" width="316" caption="NL West score data, 2011"]<a href="http://www.mathgoespop.com/images/2012/06/NLWest2011.png"><img class="size-full wp-image-2046" title="NLWest2011" src="http://www.mathgoespop.com/images/2012/06/NLWest2011.png" alt="" width="316" height="114" /></a>[/caption]
 
 The corresponding offense/defenses ratings are computed in the following table:
 

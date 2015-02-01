@@ -18,12 +18,12 @@ This costume idea was suggested to me in the comments section of last year's lis
 <p style="text-align: left;"></p>
 
 
-[caption id="attachment_892" align="aligncenter" width="270" caption="This dude can totally count to 1."]<a href="http://www.spirithalloween.com/product/di-the-count-42-46/"><img class="size-large wp-image-892 " title="countfriendly" src="http://www.mathgoespop.com/wp-content/uploads/2010/10/countfriendly-810x1024.jpg" alt="" width="270" height="341" /></a>[/caption]
+[caption id="attachment_892" align="aligncenter" width="270" caption="This dude can totally count to 1."]<a href="http://www.spirithalloween.com/product/di-the-count-42-46/"><img class="size-large wp-image-892 " title="countfriendly" src="http://www.mathgoespop.com/images/2010/10/countfriendly-810x1024.jpg" alt="" width="270" height="341" /></a>[/caption]
 <p style="text-align: left;">Then again, one way to strike fear into the hearts of children while simultaneously dressing up as your favorite mathematically-themed Sesame Street character would be to purchase the amazingly creepy Count costume pictured below.  If you feel like your children watch too much Sesame Street (and if you have $1500 to spare), I would especially encourage you to pick up this costume, since after seeing it, I'm sure they will be traumatized for at least a significant portion of their remaining childhood.</p>
 <p style="text-align: left;"></p>
 
 
-[caption id="attachment_893" align="aligncenter" width="320" caption="If you count incorrectly, this dude will totally exsanguinate you."]<a href="http://www.alincocostumes.com/catalog/product_info.php?cPath=53&amp;products_id=482"><img class="size-full wp-image-893" title="countevil" src="http://www.mathgoespop.com/wp-content/uploads/2010/10/countevil.jpg" alt="" width="320" height="320" /></a>[/caption]
+[caption id="attachment_893" align="aligncenter" width="320" caption="If you count incorrectly, this dude will totally exsanguinate you."]<a href="http://www.alincocostumes.com/catalog/product_info.php?cPath=53&amp;products_id=482"><img class="size-full wp-image-893" title="countevil" src="http://www.mathgoespop.com/images/2010/10/countevil.jpg" alt="" width="320" height="320" /></a>[/caption]
 
 <strong>2. Professor Moriarty</strong>
 
@@ -35,7 +35,7 @@ It's not clear to what extent the next film will play up Moriarty's mathematical
 
 This pun on the familiar <a href="http://en.wikipedia.org/wiki/M%C3%B6bius_strip">Möbius strip</a> may be appropriate if you are one of those people who believe that Halloween is an excuse for you to dress like a draggle-tail.  For women who share this belief, there are many options at your disposal - here is one garment that may help set you on your way:
 
-<a href="http://www.6pm.com/l-space-sensual-solids-lola-bandeau-white"><img class="aligncenter size-medium wp-image-897" title="mobiusstripper" src="http://www.mathgoespop.com/wp-content/uploads/2010/10/mobiusstripper-257x300.jpg" alt="" width="257" height="300" /></a> Of course, dressing like you're undressing isn't limited to females.  The man below, for example, knows that men are just as free to show their goodies as women.
+<a href="http://www.6pm.com/l-space-sensual-solids-lola-bandeau-white"><img class="aligncenter size-medium wp-image-897" title="mobiusstripper" src="http://www.mathgoespop.com/images/2010/10/mobiusstripper-257x300.jpg" alt="" width="257" height="300" /></a> Of course, dressing like you're undressing isn't limited to females.  The man below, for example, knows that men are just as free to show their goodies as women.
 
 [caption id="" align="aligncenter" width="327" caption="The real Leeloo&#39;s got nothing on this guy."]<a href="http://www.wtfcostumes.com/costumes/mens-leeloo-costume.jpg"><img src="http://www.wtfcostumes.com/costumes/mens-leeloo-costume.jpg" alt="" width="327" height="435" /></a>[/caption]
 
@@ -47,7 +47,7 @@ Artist <a href="http://www.nytimes.com/2009/04/05/arts/design/05fink.html?_r=1">
 
 With that in mind, please feast your eyes on Abacus face:
 
-<a href="http://beautifuldecay.com/wp-content/uploads/2010/03/nick-cave-abacus.jpg"><img class="aligncenter" src="http://beautifuldecay.com/wp-content/uploads/2010/03/nick-cave-abacus.jpg" alt="" width="360" height="480" /></a>While it may be hard to eat or drink during festivities while wearing this costume, I think this is more than made up for by the fact that you'd have an <em>abacus on your face</em>.  Also, if you are really enthusiastic, I'm sure you could think of ways to modify the body covering so that it incorporated even more mathematical objects.
+<a href="http://beautifuldecay.com/images/2010/03/nick-cave-abacus.jpg"><img class="aligncenter" src="http://beautifuldecay.com/images/2010/03/nick-cave-abacus.jpg" alt="" width="360" height="480" /></a>While it may be hard to eat or drink during festivities while wearing this costume, I think this is more than made up for by the fact that you'd have an <em>abacus on your face</em>.  Also, if you are really enthusiastic, I'm sure you could think of ways to modify the body covering so that it incorporated even more mathematical objects.
 
 In the end, there are plenty of options for you as you try to decide on a Halloween costume.  If you are looking for something mathematically influenced, I hope you have found some ideas here (or in articles from year's past).  If any of you have any additional costume ideas, please let me know!
 

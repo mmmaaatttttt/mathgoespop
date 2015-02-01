@@ -13,7 +13,7 @@ Hi everyone,
 
 A while back I was asked to contribute an essay to a book on mathematics and popular culture.  I'm pleased to announce that this <a href="http://www.mcfarlandpub.com/book-2.php?id=978-0-7864-4978-1">book</a> is now available for purchase!  There are some great essays in this book - I'll let you decide how mine stacks up with the rest - and it also features a foreword by <a href="http://www.stanford.edu/~kdevlin/">Keith Devlin</a>, a Stanford University mathematician who you may know as NPR's Math Guy.
 
-[caption id="attachment_1761" align="aligncenter" width="294" caption="I suggested they use my face instead, but they respectfully declined."]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/03/Picture-2.png"><img class="size-full wp-image-1761" title="MathinPopCulture" src="http://www.mathgoespop.com/wp-content/uploads/2012/03/Picture-2.png" alt="" width="294" height="450" /></a>[/caption]
+[caption id="attachment_1761" align="aligncenter" width="294" caption="I suggested they use my face instead, but they respectfully declined."]<a href="http://www.mathgoespop.com/images/2012/03/Picture-2.png"><img class="size-full wp-image-1761" title="MathinPopCulture" src="http://www.mathgoespop.com/images/2012/03/Picture-2.png" alt="" width="294" height="450" /></a>[/caption]
 
 The price of entry is a little steep ($45), but if you're someone interested in buying many copies (maybe you are a teacher, or maybe you just have a huge crush on <a href="http://en.wikipedia.org/wiki/David_Krumholtz">David Krumholtz</a>), I can get you a discount on bulk orders.
 

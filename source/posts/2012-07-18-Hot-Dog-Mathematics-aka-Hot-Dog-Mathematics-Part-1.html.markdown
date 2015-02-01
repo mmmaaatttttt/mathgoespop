@@ -14,12 +14,12 @@ With the season of grilling comes the season of grilling advice.  Not all of it
 
 Surface area is something to consider in sweet treats as well as savory ones.  See, for example, the <a href="http://www.thinkgeek.com/product/a1aa/">all edges brownie pan</a>.
 
-[caption id="attachment_2138" align="aligncenter" width="500" caption="Delicious edges!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/07/all_edges_pan_brownies.jpg"><img class="size-full wp-image-2138" title="all_edges_pan_brownies" src="http://www.mathgoespop.com/wp-content/uploads/2012/07/all_edges_pan_brownies.jpg" alt="" width="500" height="415" /></a>[/caption]
+[caption id="attachment_2138" align="aligncenter" width="500" caption="Delicious edges!"]<a href="http://www.mathgoespop.com/images/2012/07/all_edges_pan_brownies.jpg"><img class="size-full wp-image-2138" title="all_edges_pan_brownies" src="http://www.mathgoespop.com/images/2012/07/all_edges_pan_brownies.jpg" alt="" width="500" height="415" /></a>[/caption]
 <p style="text-align: left;">For a fun barbeque activity, you can try to determine how the surface area of a hot dog changes if you cut it.  If hot dogs aren't your scene, this game could also be played with veggie dogs or a more gourmet sausage.</p>
 <p style="text-align: left;">Before doing anything else, we should compute the surface area of an uncut dog.  To do this, we assume the hot dog is composed of two pieces: a cylinder in the middle, and two hemispherical caps on top and bottom.  Surface area formulas for these pieces are well known, once we've assigned some variables.  Let's suppose the height of the cylindrical component is <em>h</em>, and the radius of the dog is <em>r</em>.  Here's an image of our model:</p>
 
 
-[caption id="attachment_2154" align="aligncenter" width="469" caption="Hot dog decomposition"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/07/dogscolor.jpg"><img class="size-full wp-image-2154  " title="dogscolor" src="http://www.mathgoespop.com/wp-content/uploads/2012/07/dogscolor.jpg" alt="" width="469" height="374" /></a>[/caption]
+[caption id="attachment_2154" align="aligncenter" width="469" caption="Hot dog decomposition"]<a href="http://www.mathgoespop.com/images/2012/07/dogscolor.jpg"><img class="size-full wp-image-2154  " title="dogscolor" src="http://www.mathgoespop.com/images/2012/07/dogscolor.jpg" alt="" width="469" height="374" /></a>[/caption]
 <p style="text-align: left;">The <a href="http://hotmath.com/hotmath_help/topics/surface-area-of-a-cylinder.html">lateral surface area</a> of a cylinder is then given by the expression $latex 2\pi rh$.  The hemispheres combine to give a sphere, whose total <a href="http://en.wikipedia.org/wiki/Sphere#Surface_area_of_a_sphere">surface area</a> is given by the expression $latex 4\pi r^2$.  Adding these together, we see that the surface area of an uncut hot dog is equal to</p>
 <p style="text-align: center;">$latex S_{1} = 2\pi rh + 4\pi r^2 = 2\pi r(h+2r).$</p>
 <p style="text-align: left;">Cutting the dog will only increase this surface area. The question, of course, is by how much?  There are a number of ways one could cut the dog, but let's investigate a relatively simple one: the butterfly cut.  For a butterfly cut, the dog is sliced in half lengthwise, so that it just barely remains connected at one end.</p>
@@ -33,7 +33,7 @@ To compute the additional surface area, note that the new contribution to the ar
 <p style="text-align: center;">$latex S_{2} = 2(\pi r^2 + 2rh) = 2r(\pi r + 2h).$</p>
 
 
-[caption id="attachment_2155" align="aligncenter" width="358" caption="Butterfly cross section"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/07/butterfly.jpg"><img class="size-full wp-image-2155 " title="butterfly" src="http://www.mathgoespop.com/wp-content/uploads/2012/07/butterfly.jpg" alt="" width="358" height="393" /></a>[/caption]
+[caption id="attachment_2155" align="aligncenter" width="358" caption="Butterfly cross section"]<a href="http://www.mathgoespop.com/images/2012/07/butterfly.jpg"><img class="size-full wp-image-2155 " title="butterfly" src="http://www.mathgoespop.com/images/2012/07/butterfly.jpg" alt="" width="358" height="393" /></a>[/caption]
 <p style="text-align: left;">Consequently, by butterflying your dog you've increased the surface area to</p>
 <p style="text-align: center;">$latex S_{1} + S_{2} = 2\pi r(h+2r) + 2r(\pi r + 2h)$</p>
 <p style="text-align: center;">$latex = 2r(3\pi r + (2+\pi)h).$</p>
@@ -46,7 +46,7 @@ To compute the additional surface area, note that the new contribution to the ar
 <p style="text-align: center;">$latex 1.5 \leq f(y) &lt; 1+\frac{2}{\pi} \approx 1.64.$</p>
 
 
-[caption id="attachment_2148" align="aligncenter" width="602" caption="Graph of f(y). Click to embiggen!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2012/07/Picture-25.png"><img class="size-full wp-image-2148 " title="Picture 25" src="http://www.mathgoespop.com/wp-content/uploads/2012/07/Picture-25.png" alt="" width="602" height="375" /></a>[/caption]
+[caption id="attachment_2148" align="aligncenter" width="602" caption="Graph of f(y). Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2012/07/Picture-25.png"><img class="size-full wp-image-2148 " title="Picture 25" src="http://www.mathgoespop.com/images/2012/07/Picture-25.png" alt="" width="602" height="375" /></a>[/caption]
 <p style="text-align: left;">No matter the proportions of your dog, butterflying it will increase the surface area by a factor of about 1.5.  In particular, you'll never be able to double the surface area.  A quick online search <a href="http://answers.yahoo.com/question/index?qid=20080602173316AA2jwgQ">suggests</a> that a reasonable value for the ratio of a hot dog's total length to its diameter is 7:1. Since the total length of a dog in our model is $latex h + 2r$, and the diameter is $latex 2r$, this means it is reasonable to use the approximation</p>
 <p style="text-align: center;">$latex \frac{h+2r}{2r} \approx 7.$</p>
 <p style="text-align: left;">If we isolate $latex h/r$ in the above expression, we find that</p>

@@ -20,13 +20,13 @@ With this noble goal in mind, I proceeded to DVR 28 episodes of this show.  Aft
 
 Let's look at some data.  Here is a scatterplot of each wedding's budget, vs. the total points earned.
 
-[caption id="attachment_1357" align="aligncenter" width="610" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/08/Picture-5.png"><img class="size-full wp-image-1357" title="CostVsScore" src="http://www.mathgoespop.com/wp-content/uploads/2011/08/Picture-5.png" alt="" width="610" height="311" /></a>[/caption]
+[caption id="attachment_1357" align="aligncenter" width="610" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2011/08/Picture-5.png"><img class="size-full wp-image-1357" title="CostVsScore" src="http://www.mathgoespop.com/images/2011/08/Picture-5.png" alt="" width="610" height="311" /></a>[/caption]
 
 As the dots suggest, there is a slight positive correlation between the amount one spends on a wedding, and the score one receives from one's fellow competitors.  The <a href="http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient">coefficient of correlation</a> here is approximately 0.286, though if we discard the two $150,000 weddings, this improves to around 0.348.
 
 Of course, a $10,000 wedding for 10 people might be a much nicer affair than a $10,000 wedding for 1,000 people.  If you spend more money per guest, does this translate into a higher score as well?  The dots don't lie; here's another scatterplot:
 
-[caption id="attachment_1359" align="aligncenter" width="639" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/08/Picture-6.png"><img class="size-full wp-image-1359" title="CPGvsScore" src="http://www.mathgoespop.com/wp-content/uploads/2011/08/Picture-6.png" alt="" width="639" height="326" /></a>[/caption]
+[caption id="attachment_1359" align="aligncenter" width="639" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2011/08/Picture-6.png"><img class="size-full wp-image-1359" title="CPGvsScore" src="http://www.mathgoespop.com/images/2011/08/Picture-6.png" alt="" width="639" height="326" /></a>[/caption]
 
 There is quite clearly an outlier in this set of data - this corresponds to a bride who spent $150,000 for a 120 person wedding, for a whopping $1,250 spent per guest (this particular bride did end up taking first place).  Eliminating this outlier, though, the correlation here is weaker than the correlation for actual cost, at a meager 0.098.  In other words, there may not be a linear relationship between cost per guest and total score.  This may be because certain fixed costs, such as the dress and the venue, won't necessarily vary much with the guest total, unlike something like food.
 
@@ -34,7 +34,7 @@ This analysis, though, obscures a key point.  In order to win the honeymoon, yo
 
 In the graph below, the blue bars count the number of times the most expensive wedding was given a certain rank.  The red bars count the number of times the wedding with the highest cost per guest was given a certain rank.  Note that if cost had no bearing on the rank, we would expect an equal number of weddings in each rank (in this case, about 7 per rank).
 
-[caption id="attachment_1362" align="aligncenter" width="639" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/08/Picture-7.png"><img class="size-full wp-image-1362" title="costranks" src="http://www.mathgoespop.com/wp-content/uploads/2011/08/Picture-7.png" alt="" width="639" height="336" /></a>[/caption]
+[caption id="attachment_1362" align="aligncenter" width="639" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2011/08/Picture-7.png"><img class="size-full wp-image-1362" title="costranks" src="http://www.mathgoespop.com/images/2011/08/Picture-7.png" alt="" width="639" height="336" /></a>[/caption]
 
 As you can see, spending the most money seems to bestow an advantage: fully 50% (14 out of 28) of the most expensive weddings were ranked first.  This would be unlikely if cost had no impact on ranking.
 

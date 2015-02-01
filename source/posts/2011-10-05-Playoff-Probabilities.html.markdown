@@ -24,7 +24,7 @@ What if the series is three games long?  In this case, the Giants will win if t
 <p style="text-align: left;">In each case, the probability of winning the series is a <a href="http://en.wikipedia.org/wiki/Polynomial">polynomial</a> in <em>p</em>, the probability of winning a single game.  But how to these polynomials compare?  Let's turn to technology to lead the way!</p>
 
 
-[caption id="attachment_1456" align="aligncenter" width="600" caption="Probabilities for a one, three, five, and seven game series."]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/10/Picture-5.png"><img class="size-full wp-image-1456" title="Picture 5" src="http://www.mathgoespop.com/wp-content/uploads/2011/10/Picture-5.png" alt="" width="600" height="532" /></a>[/caption]
+[caption id="attachment_1456" align="aligncenter" width="600" caption="Probabilities for a one, three, five, and seven game series."]<a href="http://www.mathgoespop.com/images/2011/10/Picture-5.png"><img class="size-full wp-image-1456" title="Picture 5" src="http://www.mathgoespop.com/images/2011/10/Picture-5.png" alt="" width="600" height="532" /></a>[/caption]
 
 Above is a graph of these four functions - the <em>x</em>-axis represents the probability <em>p</em>, while the <em>y</em>-axis represents the probability of winning the series.  The dark blue graph is for a single-game series (the function is <em>p</em>), the light blue graph is for a three-game series (the function is $latex p^2(3-2p)$, the light green graph is for a five-game series (the function is $latex = p^3(1-15p+6p^2)$), and the red graph is for a seven-game series (the function is $latex p^4(35-84p+70p^2-20p^3)$).  What can we deduce from the picture above?
 

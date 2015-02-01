@@ -76,4 +76,4 @@ Note that this problem is closely related to the<a href="http://en.wikipedia.org
 
 So, sorry Abed, but you are not a computer after all.  But perhaps after reading this, you will be one step closer to the cyborg in Kickpuncher who you idolize so dearly.
 
-[caption id="attachment_1500" align="aligncenter" width="298" caption="His cyberpunches have the power of kicks!"]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/10/Picture-6.png"><img class="size-full wp-image-1500" title="Kickpuncher" src="http://www.mathgoespop.com/wp-content/uploads/2011/10/Picture-6.png" alt="" width="298" height="457" /></a>[/caption]
+[caption id="attachment_1500" align="aligncenter" width="298" caption="His cyberpunches have the power of kicks!"]<a href="http://www.mathgoespop.com/images/2011/10/Picture-6.png"><img class="size-full wp-image-1500" title="Kickpuncher" src="http://www.mathgoespop.com/images/2011/10/Picture-6.png" alt="" width="298" height="457" /></a>[/caption]

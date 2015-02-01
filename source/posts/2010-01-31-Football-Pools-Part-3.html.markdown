@@ -18,7 +18,7 @@ Suppose, for example, that you buy four squares, and after the rows and columns 
 
 </div>
 
-[caption id="attachment_133" align="aligncenter" width="458" caption="Here&#39;s an example of a football pool which has been tagged in the four squares mentioned above."]<a href="http://www.mathgoespop.com/wp-content/uploads/2010/01/fpool3.jpg"><img class="size-full wp-image-133" title="fpool3" src="http://www.mathgoespop.com/wp-content/uploads/2010/01/fpool3.jpg" alt="" width="458" height="227" /></a>[/caption]
+[caption id="attachment_133" align="aligncenter" width="458" caption="Here&#39;s an example of a football pool which has been tagged in the four squares mentioned above."]<a href="http://www.mathgoespop.com/images/2010/01/fpool3.jpg"><img class="size-full wp-image-133" title="fpool3" src="http://www.mathgoespop.com/images/2010/01/fpool3.jpg" alt="" width="458" height="227" /></a>[/caption]
 
 <div style="text-align: justify;">
 

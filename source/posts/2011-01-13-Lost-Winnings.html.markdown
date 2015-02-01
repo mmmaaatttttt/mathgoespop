@@ -16,13 +16,13 @@ But are they so lucky after all?  Setting aside the common notion that winning 
 
 The numbers drawn for this particular lottery were 4, 8, 15, 25, 47, and 42.  Note that the last number is lower than the number that precedes it because it is the so-called "Mega Number," which is drawn from a different pool than the first five.  For those of you with a penchant for televised dramas set in tropical locations, you may note that these numbers bear a striking similarity to Hurley's <a href="http://en.wikipedia.org/wiki/Numbers_%28Lost%29">numbers</a> from <a href="http://en.wikipedia.org/wiki/Lost_%28TV_series%29">Lost</a>.
 
-<a href="http://www.tv.com/hurleys-numbers-arent-so-unlucky-anymore/webnews/249677.html"><img class="aligncenter size-full wp-image-1023" title="hurnums" src="http://www.mathgoespop.com/wp-content/uploads/2011/01/hurnums.jpg" alt="" width="480" height="401" /></a>
+<a href="http://www.tv.com/hurleys-numbers-arent-so-unlucky-anymore/webnews/249677.html"><img class="aligncenter size-full wp-image-1023" title="hurnums" src="http://www.mathgoespop.com/images/2011/01/hurnums.jpg" alt="" width="480" height="401" /></a>
 
 As evidenced by the above image, Hurley's number's were 4, 8, 15, 16, 23, and 42.  In other words, 4 out of the 6 Mega Millions numbers matched Hurley's!
 
 Unfortunately, Lost fans will note that this is not necessarily a good thing; on the show, the numbers caused Hurley nothing but trouble (including, but not limited to, a meteor strike on his place of work).  Hurley (real name <a href="http://www.imdb.com/name/nm0306201/">Jorge Garcia</a>) himself wrote on his <a href="http://furtherdispatches.wordpress.com/2011/01/05/will-you-people-ever-learn/">blog</a>: "When will you people learn? The numbers are bad!"
 
-[caption id="attachment_1027" align="aligncenter" width="394" caption="This is how Hurley feels about the numbers."]<a href="http://www.mathgoespop.com/wp-content/uploads/2011/01/hurley.jpg"><img class="size-full wp-image-1027" title="hurley" src="http://www.mathgoespop.com/wp-content/uploads/2011/01/hurley.jpg" alt="" width="394" height="222" /></a>[/caption]
+[caption id="attachment_1027" align="aligncenter" width="394" caption="This is how Hurley feels about the numbers."]<a href="http://www.mathgoespop.com/images/2011/01/hurley.jpg"><img class="size-full wp-image-1027" title="hurley" src="http://www.mathgoespop.com/images/2011/01/hurley.jpg" alt="" width="394" height="222" /></a>[/caption]
 
 From a mathematical standpoint, though, I'm less interested in whether or not the numbers are cursed (if the show is any indication, this question has already been decisively settled), and more interested in how likely it is for the lottery jackpot to so closely match the numbers from the show.
 
