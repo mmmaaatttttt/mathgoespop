@@ -1,12 +1,13 @@
 ---
 title: e day?
 date: '2010-01-27'
+disqus_identifier: /e_day
+disqus_url: http://www.mathgoespop.com/2010/01/e-day.html
 tags:
 - e
 - holidays
 - holidays
 ---
-
 If you come here regularly, you know of my complaints regarding so-called "<a href="http://mathgoespop.blogspot.com/search/label/Math%20Holidays">math holidays</a>" that get plenty of press, but rarely have anything to do with actual mathematics.  The most well known is <a href="http://mathgoespop.blogspot.com/2009/03/pi-day.html">pi day</a>, celebrated here in the states on March 14th, also known here as 3/14.
 
 Aside from the mathematical arguments one can make for or against this holiday, there is a larger problem.  It's all well and good to celebrate pi day on the date representing the first three digits of pi, but this is only possible if we write dates in the MM/DD format.  Most of the world, however, uses the (more logical) DD/MM format, therefore depriving them of such a delicious play on numbers.  Many loyal international fans of this holiday no doubt decry the fact that April has only 30 days, for otherwise they could simply celebrate pi day on 31/4.  As it is, they are left with two options: Celebrate on 3/14 like those of us in the states, or enjoy a neutered version of this play on numbers by celebrating on 3/1.
@@ -18,7 +19,5 @@ While <span style="font-style: italic;">e</span> may not be as popular as its ir
 Of course, in order to celebrate the holiday properly, one needs activities.  Topics could include the ways in which this fantastic number arises naturally, or a discussion of exponential growth (and orders of magnitude in general).  One could also prove that <em>e</em> is irrational, a fact which follows quite easily from the Taylor series expansion of the exponential function <em>e<sup>x</sup></em> at<em> x</em> = 1.  Perhaps I'm being overly optimistic though - such a holiday would probably include less exciting activities, such as a recitation of the decimal expansion of <em>e</em> to a certain number of digits (a mind numbing activity which is practiced without fail every pi day).
 
 Special consideration needs to be given to a replacement for the act of eating pie, which seems like a suitable activity to do on pi day, but not on <em>e</em> day (especially since the surfaces of pies are circular).  I'm not sure what natural analogue exists - there is one thing that comes to mind when one wants to celebrate a day called "<em>e</em> day," but I don't want to promote drug use.  Perhaps instead one could eat foods that start with the letter <em>e</em>, like eclairs, eggplants, and elephants.  But these foods don't work on a higher level, in that they don't really relate to the number <em>e</em> in the way that the circular shape of a pie can be related to the number pi itself.
-
-[caption id="" align="aligncenter" width="500" caption="Eggs for e day?"]<img title="eggs" src="http://healthybirds.umd.edu/images/eggs.jpg" alt="" width="500" height="333" />[/caption]
 
 There are obstacles to overcome, that much is certain.  But if we're going to celebrate holidays related to math, we may as well do a halfway decent job of it.  So happy <em>e</em> day to you - don't do anything I wouldn't do.
