@@ -1,6 +1,8 @@
 ---
 title: 'The Twilight Saga: A Mathematical Perspective'
 date: '2010-06-30'
+disqus_identifier: /the_twilight_saga_a_mathematical_perspective
+disqus_url: http://www.mathgoespop.com/2010/06/the-twilight-saga-a-mathematical-perspective.html
 tags:
 - creatures
 - math-in-the-movies
@@ -8,26 +10,25 @@ tags:
 - true-blood
 - twilight
 ---
-
-<p style="text-align: left;">Living in Los Angeles, it's hard not to be aware of the fact that the new <a href="http://en.wikipedia.org/wiki/Twilight_%28series%29">Twilight</a> movie, Eclipse, arrives in theaters today.  The series has developed an insatiable fan base of people willing to spend <a href="http://news.yahoo.com/s/nm/20100626/film_nm/us_twilight">thousands</a> of dollars to fly here in the hopes of scoring tickets to the premiere, which certainly indicates the film will be a success.  But of course, the film's success was never in question: with the first two movies having grossed over $1 billion worldwide, the success of this latest entry in the franchise is a foregone conclusion.</p>
+<p>Living in Los Angeles, it's hard not to be aware of the fact that the new <a href="http://en.wikipedia.org/wiki/Twilight_%28series%29">Twilight</a> movie, Eclipse, arrives in theaters today.  The series has developed an insatiable fan base of people willing to spend <a href="http://news.yahoo.com/s/nm/20100626/film_nm/us_twilight">thousands</a> of dollars to fly here in the hopes of scoring tickets to the premiere, which certainly indicates the film will be a success.  But of course, the film's success was never in question: with the first two movies having grossed over $1 billion worldwide, the success of this latest entry in the franchise is a foregone conclusion.</p>
 
 <p style="text-align: center;">
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="560" height="340" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/S2HIda5wSVU&amp;hl=en_US&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="560" height="340" src="http://www.youtube.com/v/S2HIda5wSVU&amp;hl=en_US&amp;fs=1&amp;" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 </p>
 
-<p style="text-align: left;">Of course, the success of this franchise should not be viewed in isolation, but as just a part of the larger vampire pop culture renaissance.  HBO's <a href="http://www.hbo.com/true-blood">True Blood</a>, also based on a book series involving a girl who knocks boots with the undead, is going strong into its third season this summer, and the CW's <a href="http://www.cwtv.com/shows/the-vampire-diaries">Vampire Diaries</a> will return for a second season this fall.  And just when I thought the market for vampire-themed programming had become saturated, ABC premiered its own summer show featuring blood suckers called <a href="http://abc.go.com/shows/the-gates">The Gates</a>.  Clearly there is a trend here, with the ever-growing popularity of the vampire at its center.  No doubt Eddie Murphy is rolling in his undead grave for not releasing Vampire in Brooklyn 10 years later.</p>
+<p>Of course, the success of this franchise should not be viewed in isolation, but as just a part of the larger vampire pop culture renaissance.  HBO's <a href="http://www.hbo.com/true-blood">True Blood</a>, also based on a book series involving a girl who knocks boots with the undead, is going strong into its third season this summer, and the CW's <a href="http://www.cwtv.com/shows/the-vampire-diaries">Vampire Diaries</a> will return for a second season this fall.  And just when I thought the market for vampire-themed programming had become saturated, ABC premiered its own summer show featuring blood suckers called <a href="http://abc.go.com/shows/the-gates">The Gates</a>.  Clearly there is a trend here, with the ever-growing popularity of the vampire at its center.  No doubt Eddie Murphy is rolling in his undead grave for not releasing Vampire in Brooklyn 10 years later.</p>
 
 <p style="text-align: center;">
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/lcD_Z8WsjcE&amp;hl=en_US&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="480" height="385" src="http://www.youtube.com/v/lcD_Z8WsjcE&amp;hl=en_US&amp;fs=1&amp;" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2qzFuLGeVGI" frameborder="0" allowfullscreen></iframe>
 </p>
 
-<p style="text-align: left;">While there are many words that could be used to describe these shows and movies that place supernatural love triangles at their center, "realistic" is not one of them.  Nevertheless, there are a handful of people who have taken a critical eye to the vampire phenomenon and have used mathematical models to gain insight into how the populations of such creatures might behave in real life.  Just like the fights between Team Edward and Team Jacob, however, the debate over whether vampires could actually exist rages on.</p>
+<p>While there are many words that could be used to describe these shows and movies that place supernatural love triangles at their center, "realistic" is not one of them.  Nevertheless, there are a handful of people who have taken a critical eye to the vampire phenomenon and have used mathematical models to gain insight into how the populations of such creatures might behave in real life.  Just like the fights between Team Edward and Team Jacob, however, the debate over whether vampires could actually exist rages on.</p>
 
 <p style="text-align: center;">
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="512" height="288" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="src" value="http://www.hulu.com/embed/ssxqbA2UWjYRY4gwCkCMKA" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="512" height="288" src="http://www.hulu.com/embed/ssxqbA2UWjYRY4gwCkCMKA" allowfullscreen="true"></embed></object>
 </p>
 
-<p style="text-align: left;">Not long ago, an <a href="http://io9.com/5241252/physicists-prove-that-vampires-could-not-exist">article</a> went around the web purporting that a team of physicists had proven that vampires could not exist.  The physicists, Costas Efthimiou and Sohang Gandhi, posted a paper to the <a href="http://arxiv.org/abs/physics/0608059">arXiv </a>in which they purport to use physics to dispel pop culture portrayals of ghosts and zombies, in addition to vampires.  Their argument for debunking vampires rests on the following assumptions:</p>
+<p>Not long ago, an <a href="http://io9.com/5241252/physicists-prove-that-vampires-could-not-exist">article</a> went around the web purporting that a team of physicists had proven that vampires could not exist.  The physicists, Costas Efthimiou and Sohang Gandhi, posted a paper to the <a href="http://arxiv.org/abs/physics/0608059">arXiv </a>in which they purport to use physics to dispel pop culture portrayals of ghosts and zombies, in addition to vampires.  Their argument for debunking vampires rests on the following assumptions:</p>
 
 <ol>
 	<li>When a vampire bites a human, that human becomes a vampire (we will return to this assumption later).</li>
@@ -45,7 +46,7 @@ tags:
 <p>What's more, assuming that vampires can only satisfy themselves with human blood, it seems unreasonable to assume that vampires would feast so carelessly, without regard to the diminishing supply of their food.  If vampires killed all humans, they in turn would die (again), and so it seems reasonable to expect that vampires would apply a better strategy, one in which they kept the human species afloat so that they could themselves continue to exist.  Just ask Ethan Hawke.</p>
 
 <p style="text-align: center;">
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="560" height="340" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/ayYiMygqlfo&amp;hl=en_US&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="560" height="340" src="http://www.youtube.com/v/ayYiMygqlfo&amp;hl=en_US&amp;fs=1&amp;" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mbVPb_lkRpw" frameborder="0" allowfullscreen></iframe>
 </p>
 
 <p>In a brief article for Math Horizons, mathematician Dino <a href="http://www.maths.bris.ac.uk/~eezds/publications.html">Sejdinovic</a> addresses these issues and highlights an <a href="http://server.eos.tuwien.ac.at/OR/Mehlmann/Andis/publ/Seminar105124/transylvanian.pdf">article</a> from 1982 that modeled the vampire outbreak more realistically, by including the human birth rate and vampire mortality rate.  In doing so, the mathematics becomes less fit for a general audience, but it also gives us a more interesting picture - regardless of the collective desire for human blood, vampires can act in a way that the ratio of vampires to humans reaches an eventual equilibrium.  In other words, it doesn't seem right to throw out the idea of vampires based on purely mathematical arguments.</p>

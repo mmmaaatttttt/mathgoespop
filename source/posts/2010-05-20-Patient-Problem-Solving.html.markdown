@@ -1,6 +1,8 @@
 ---
 title: Patient Problem Solving
 date: '2010-05-20'
+disqus_identifier: /patient_problem_solving
+disqus_url: http://www.mathgoespop.com/2010/05/patient-problem-solving.html
 tags:
 - dan-meyer
 - math-education
@@ -8,7 +10,6 @@ tags:
 - ted
 - two-and-a-half-men
 ---
-
 <p>Last year, I <a href="http://www.mathgoespop.com/2009/07/restructuring-the-math-pyramid.html">remarked</a> on a TED talk from mathemagician Arthur Benjamin, who argued for the displacement of Calculus by Statistics in the hierarchy of high school mathematics.  This year, TED has sponsored a talk by high school math teacher Dan Meyer, who discusses what, in his view, are the major problems with the way mathematics is currently taught to kids, and what can be done to fix things.</p>
 
 <p style="text-align: center;">

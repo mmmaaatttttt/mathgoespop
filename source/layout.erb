@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/stylesheet.css">
     <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
     <title>Math Goes Pop!<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
@@ -63,5 +64,9 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="/javascripts/swiftype.js"></script>
     <script src="/javascripts/twitter.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <% if current_page.data.custom_js %>
+      <script src=<%= "../javascripts/#{current_page.data.custom_js}.js" %>></script>
+    <% end %>
   </body>
 </html>

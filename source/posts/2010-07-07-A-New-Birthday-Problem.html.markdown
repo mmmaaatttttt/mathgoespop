@@ -1,20 +1,21 @@
 ---
 title: A New Birthday Problem
 date: '2010-07-07'
+disqus_identifier: /a_new_birthday_problem
+disqus_url: http://www.mathgoespop.com/2010/07/a-new-birthday-problem.html
 tags:
 - martin-gardner
 - math-in-the-news
 - monty-hall
 - probability
 ---
-
 <p>Last week, Slashdot posted an interesting <a href="http://science.slashdot.org/story/10/06/28/2221252/The-Tuesday-Birthday-Problem?from=rss&amp;utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+Slashdot%2Fslashdot+%28Slashdot%29">link</a> to a problem posed at the most recent <a href="http://www.g4g4.com/">Gathering 4 Gardner</a>, a mathematical (or perhaps I should say mathemagical) convention created in honor of the late Martin Gardner.  The question, posed by Gary Foshee, is as follows: you have a friend with two children, one of whom is a boy born on a Tuesday.  What is the probability that the other child is a boy?</p>
 
 <p>Forget about the Tuesday fact for a moment - if you have a friend with two children, one of whom is a boy, what is the probability that the other child is a boy?  You might expect that the answer should be 50%, since the sex of one child shouldn't affect the sex of the other.  But this is not quite right, because you're not told whether the boy is the older or younger child.</p>
 
 <p>There are only four possibilities when one has two children, so the situation is easy to analyze.  With two kids, the four possibilities are boy boy, boy girl, girl boy, and girl girl.  If you know that one of the kids is a boy, this eliminates girl girl from the list of potential combinations, leaving us with the three outcomes boy boy, boy girl, and girl boy.  Of these three outcomes, we see that only the first has two boys, and so we conclude that the probability of the second child being a boy is 1/3, NOT 1/2!</p>
 
-<p><a href="http://www.mathgoespop.com/images/2010/07/Picture-4.png"><img class="aligncenter size-full wp-image-511" title="Picture 4" src="http://www.mathgoespop.com/images/2010/07/Picture-4.png" alt="" width="292" height="292" /></a></p>
+<p style="text-align:center;"><a href="http://www.mathgoespop.com/images/2010/07/Picture-4.png"><img class="aligncenter size-full wp-image-511" title="Picture 4" src="http://www.mathgoespop.com/images/2010/07/Picture-4.png" alt="" width="292" height="292" /></a></p>
 
 <p>There's another way to answer this question, one that generalizes nicely to the more complicated question asked by Foshee.  There are two cases to consider: either the boy you know about is the younger child, or the older child.  If the boy you know about is the younger child, there are two possibilities for the older child (girl or boy).  Similarly, if the boy you know about is the older child, there are two possibilities for the younger child (girl or boy).  This gives four outcomes, but you have counted the boy boy outcome twice.  In other words, we see there are only three distinct outcomes, and only one of them has two boys, so again we see that the probability is 1/3.</p>
 
@@ -22,7 +23,7 @@ tags:
 
 <p>As before, let's split into two cases, depending on whether the Tuesday boy is younger or older.  If the younger child is the Tuesday boy, then there are 14 possible outcomes for the older child, since there are 2 choices for the sex of the child and 7 choices for the day of the week on which the child was born.  Similarly, if the older child is the Tuesday boy, there are once again 14 possible outcomes for the younger child.  However, notice that we have counted the outcome of two boys both born on Tuesday twice, just as we counted the outcome of two boys twice in the simpler problem.  Correcting for this double counting, we see that there are 14 + 14 - 1 = 27 possible outcomes.  Of these outcomes, 13 of them correspond to having a two boys - if the younger child is the Tuesday boy, there are 7 possible outcomes that will give us two boys, and if the older child is the Tuesday boy, there are again 7 possible outcomes.  As before, though, we've counted both children being Tuesday boys twice, so we subtract 1 to correct for this double-counting, which leaves us with a total of 7 + 7 - 1 = 13 desired outcomes.  This means that the probability of the second child being a boy is 13/27.  While still not equal to 1/2, this is much closer to 1/2 than 1/3.</p>
 
-<p><a href="http://www.mathgoespop.com/images/2010/07/Picture-5.png"><img class="aligncenter size-full wp-image-513" title="Picture 5" src="http://www.mathgoespop.com/images/2010/07/Picture-5.png" alt="" width="378" height="378" /></a></p>
+<p style="text-align:center;"><a href="http://www.mathgoespop.com/images/2010/07/Picture-5.png"><img class="aligncenter size-full wp-image-513" title="Picture 5" src="http://www.mathgoespop.com/images/2010/07/Picture-5.png" alt="" width="378" height="378" /></a></p>
 
 <p>Much like the <a href="http://www.mathgoespop.com/2008/08/math-in-the-news-monty-hall-strikes-again.html">Monty Hall</a> problem, however, one can understand the mathematical reasoning behind this problem and still have trouble with the intuition.  After all, why should the day on which a child was born have any bearing on the sex of the other child?  On the face of it, the solution to this problem doesn't make any sense.  One way to try and marry this solution to our intuition is to assign some numbers and explore the data, seeing where our intuition diverges from this picture.</p>
 

@@ -1,6 +1,8 @@
 ---
 title: Math Really Goes Pop
 date: '2010-03-29'
+disqus_identifier: /math_really_goes_pop
+disqus_url: http://www.mathgoespop.com/2010/03/math-really-goes-pop.html
 tags:
 - colbert-report
 - geometry
@@ -9,14 +11,14 @@ tags:
 - perez-hilton
 - poincare-conjecture
 ---
+This morning my good friend Gabe of <a href="http://motivatedgrammar.wordpress.com/">Motivated Grammar</a>, who is secretly addicted to celebrity gossip, sent me this link to an <a href="http://perezhilton.com/2010-03-25-man-refuses-prize-after-solving-worlds-most-complicated-math-problem">article</a> from Perez Hilton which is all about mathematics.  No, I am not joking - Mr. Hilton apparently loves Grigori Perelman, the mathematician who solved the famous Poincaré conjecture and recently refused a $1 million dollar prize from the <a href="http://www.claymath.org/">Clay Mathematics Institute</a> for his solution.
 
-<p>This morning my good friend Gabe of <a href="http://motivatedgrammar.wordpress.com/">Motivated Grammar</a>, who is secretly addicted to celebrity gossip, sent me this link to an <a href="http://perezhilton.com/2010-03-25-man-refuses-prize-after-solving-worlds-most-complicated-math-problem">article</a> from Perez Hilton which is all about mathematics.  No, I am not joking - Mr. Hilton apparently loves Grigori Perelman, the mathematician who solved the famous Poincaré conjecture and recently refused a $1 million dollar prize from the <a href="http://www.claymath.org/">Clay Mathematics Institute</a> for his solution.</p>
-<p>[caption id="" align="aligncenter" width="410" caption="I&#39;m fairly confident that this is the first time a mathematician has been branded with the Perez Hilton logo."]<img src="http://img.perezhilton.com/images/2010/03/ap07123109646jb__oPt.jpg" alt="" width="410" height="458" />[/caption]</p>
-<p>The <a href="http://en.wikipedia.org/wiki/Poincar%C3%A9_conjecture">Poincaré conjecture</a>, first posed by Poincaré over 100 years ago, is a question about conditions under which an object is essentially a hypersphere, that is, a sphere sitting inside 4 dimensional space.  More specifically, it asks whether or not every simply connected, closed 3-manifold is homeomorphic to the 3-sphere (the answer is affirmative).  Believe it or not, there is a fairly accessible <a href="http://en.wikipedia.org/wiki/Solution_of_the_Poincar%C3%A9_conjecture">article</a> on Wikipedia which describes these terms and briefly discusses Perelman's methods.  The $1 million prize stems from the fact that the Clay Institute dubbed this one of the 7 Millennium problems in mathematics.  Each of the 6 remaining problems also has a $1 million prize associated with it (and who said mathematics didn't pay?).</p>
-<p>It should be mentioned that although Perelman is credited with the proof of the Poincaré conjecture, his papers do omit some of the details.  However, his methods were all correct, and Kleiner and Lott were able to use his detailed blueprints to give a full proof using his methods.  I'm sure they would be happy to split the cash, should Perelman not recant on his wishes.</p>
-<p>It's also worth noting that this isn't Perelman's first exposure in the realms of pop culture.  In fact, when Perelman won the Fields Medal 4 years ago for solving the Poincare conjecture, Stephen Colbert took him to task, although I'd argue Colbert's jealous outburst stems only from the fact that he didn't win the prize himself.</p>
-<p><br class="spacer_" /></p>
-</p>
+The <a href="http://en.wikipedia.org/wiki/Poincar%C3%A9_conjecture">Poincaré conjecture</a>, first posed by Poincaré over 100 years ago, is a question about conditions under which an object is essentially a hypersphere, that is, a sphere sitting inside 4 dimensional space.  More specifically, it asks whether or not every simply connected, closed 3-manifold is homeomorphic to the 3-sphere (the answer is affirmative).  Believe it or not, there is a fairly accessible <a href="http://en.wikipedia.org/wiki/Solution_of_the_Poincar%C3%A9_conjecture">article</a> on Wikipedia which describes these terms and briefly discusses Perelman's methods.  The $1 million prize stems from the fact that the Clay Institute dubbed this one of the 7 Millennium problems in mathematics.  Each of the 6 remaining problems also has a $1 million prize associated with it (and who said mathematics didn't pay?).
+
+It should be mentioned that although Perelman is credited with the proof of the Poincaré conjecture, his papers do omit some of the details.  However, his methods were all correct, and Kleiner and Lott were able to use his detailed blueprints to give a full proof using his methods.  I'm sure they would be happy to split the cash, should Perelman not recant on his wishes.
+
+It's also worth noting that this isn't Perelman's first exposure in the realms of pop culture.  In fact, when Perelman won the Fields Medal 4 years ago for solving the Poincare conjecture, Stephen Colbert took him to task, although I'd argue Colbert's jealous outburst stems only from the fact that he didn't win the prize himself.
+
 <p><center></p>
 <table style="font-family: arial; font-style: normal; font-variant: normal; font-weight: normal; font-size: 11px; line-height: normal; font-size-adjust: none; font-stretch: normal; color: #333333; background-color: #f5f5f5; height: 353px;" cellspacing="0" cellpadding="0" width="360">
 <tbody>
@@ -51,7 +53,7 @@ tags:
 </tbody>
 </table>
 <p></center></p>
-<p><br class="spacer_" /></p>
+
 <p>It's quite clear, however, that Dr. Perelman does not welcome all this attention.  In fact, recent media request have been met with the following response: "You are disturbing me.  I am picking mushrooms."  Could this be an indication of where he gets his mathematical ideas?  Perhaps.</p>
 <p>It is clear that Perelman has no desire to be a mathematical ambassador to the general population.  But like it or not, the general population seems to be fascinated by him.  Here's a tip for someone trying to be inconspicuous: the best way to minimize publicity when someone offers you a million dollars probably doesn't involve rejecting the offer.  Certainly if the Institute is looking for places to distribute that cash, I would welcome some summer funding.</p>
 
