@@ -1,6 +1,8 @@
 ---
 title: 3Dead?
 date: '2010-09-08'
+disqus_identifier: 3dead
+disqus_url: http://www.mathgoespop.com/2010/09/3dead.html
 tags:
 - 3d
 - avatar
@@ -9,20 +11,21 @@ tags:
 - polar-express
 - slate
 ---
-
 Late last month, Slate ran an interesting article analyzing the performance of 3D movies over the past six years.  Titled "<a href="http://www.slate.com/id/2264927/pagenum/all/">Is 3-D Dead in the Water?</a>", the article investigated the success of a 3D film by looking at several films released in 3D and graphing the ratio of their opening weekend revenue from 3D screenings to their opening weekend revenue from 2D screenings.  There's a lot of good stuff in the article leading up to this, but the main point is given by the following graph:
 
-[caption id="" align="aligncenter" width="568" caption="Image courtesy of Slate - click the link above to see the original article."]<a href="http://img.slate.com/media/4/100824_CB_chart3.jpg"><img src="http://img.slate.com/media/4/100824_CB_chart3.jpg" alt="" width="568" height="334" /></a>[/caption]
-<p style="text-align: center;">This graph tells you, for example, that during opening weekend for <a href="http://www.imdb.com/title/tt0338348/">The Polar Express</a> in 2004, the screens showing the film in 3D made nearly 7 times as much money as the screens showing the film in 2D.  As you can see, the drop from this film is quite precipitous, and among recent films, it looks as though 3D and 2D versions of a 3D film are making around the same amount of money.  Given the extra effort involved in making a film 3D (either by shooting in 3D or by adding the effects in post production), some might take this as a sign that the 3D bubble is ready to burst.</p>
-Of course, given the higher ticket prices for the 3D experience, attendance numbers may paint an even bleaker picture.  Suppose that on average, prices for a 3D film are 20% higher than prices for its 2D equivalent (this is a fairly conservative estimate - I wouldn't be surprised if the actual surcharge was closer to 30%).  In that case, if we scale the 3D revenues by a factor of 5/6 (so that a 20% increase yields the original price), we get a better idea of attendance ratios for 3D vs 2D screenings.  Looking at the original data and the scaled data side by side gives us the following picture:
+<p style="text-align: center;font-size:small;"><a href="http://img.slate.com/media/4/100824_CB_chart3.jpg"><img src="http://img.slate.com/media/4/100824_CB_chart3.jpg" alt="" width="568" height="334" /></a><br>Image courtesy of Slate - click the link above to see the original article.</p>
 
-[caption id="attachment_786" align="aligncenter" width="640" caption="Click to enlarge!"]<a href="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png"><img class="size-full wp-image-786" title="3D2DOA" src="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png" alt="" width="640" height="375" /></a>[/caption]
+This graph tells you, for example, that during opening weekend for <a href="http://www.imdb.com/title/tt0338348/">The Polar Express</a> in 2004, the screens showing the film in 3D made nearly 7 times as much money as the screens showing the film in 2D.  As you can see, the drop from this film is quite precipitous, and among recent films, it looks as though 3D and 2D versions of a 3D film are making around the same amount of money.  Given the extra effort involved in making a film 3D (either by shooting in 3D or by adding the effects in post production), some might take this as a sign that the 3D bubble is ready to burst.
+
+Of course, given the higher ticket prices for the 3D experience, attendance numbers may paint an even bleaker picture. Suppose that on average, prices for a 3D film are 20% higher than prices for its 2D equivalent (this is a fairly conservative estimate - I wouldn't be surprised if the actual surcharge was closer to 30%).  In that case, if we scale the 3D revenues by a factor of 5/6 (so that a 20% increase yields the original price), we get a better idea of attendance ratios for 3D vs 2D screenings.  Looking at the original data and the scaled data side by side gives us the following picture:
+
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png"><img class="size-full wp-image-786" title="3D2DOA" src="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png" alt="" width="640" height="375" /></a><br>Click to enlarge!</p>
 
 Notice that my graph has not omitted the success of <a href="http://www.imdb.com/title/tt1179891/">My Bloody Valentine 3D</a>.  This brings me to a related point - it seems a little inconsistent to exclude this movie from the graph on the basis of it being an <a href="http://en.wikipedia.org/wiki/Outlier">outlier</a>, but not to exclude The Polar Express on the same basis.  It's natural to want to do this, if you are arguing that 3D is on the verge of another extinction, but it doesn't seem fair to exclude one and not the other.
 
 Excluding both films as being outliers (which seems like an entirely natural thing to do - after all, when The Polar Express came out, there were only 59 screens that showed it in 3D that opening weekend, and this small number of screens highly skews the revenue per screen ratio), we get the following adjusted graph:
 
-[caption id="attachment_788" align="aligncenter" width="640" caption="Click to make larger!"]<a href="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png"><img class="size-full wp-image-788" title="3D2DOAnooutliers" src="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png" alt="" width="640" height="422" /></a>[/caption]
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png"><img class="size-full wp-image-788" title="3D2DOAnooutliers" src="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png" alt="" width="640" height="422" /></a><br>Click to make larger!</p>
 
 This graph is less compelling.  While there is a general downward trend, there are many movies that have bucked that trend.  Also, given the recent uptick in 3D box office performance, it's hard to say conclusively how audiences are responding to 3D from this graph alone.
 
@@ -32,12 +35,14 @@ This brings me to another question: do better reviewed films perform better in 3
 
 Here are two scatter plots showing the freshness rating vs ratio of opening weekend 3D revenue to opening weekend 2D revenue.  The first plot includes the two outliers, while the second ignores them.
 
-[caption id="attachment_789" align="aligncenter" width="640" caption="Click to make bigger!"]<a href="http://www.mathgoespop.com/images/2010/09/scatterplot.png"><img class="size-full wp-image-789" title="scatterplot" src="http://www.mathgoespop.com/images/2010/09/scatterplot.png" alt="" width="640" height="382" /></a>[/caption]
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/scatterplot.png"><img class="size-full wp-image-789" title="scatterplot" src="http://www.mathgoespop.com/images/2010/09/scatterplot.png" alt="" width="640" height="382" /></a></p>
 
-[caption id="attachment_790" align="aligncenter" width="640" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png"><img class="size-full wp-image-790" title="splotnooutliers" src="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png" alt="" width="640" height="423" /></a>[/caption]
-<p style="text-align: left;">While ignoring outliers helps, in neither case is there a strong correlation between a movie's perceived quality and its relative performance on 3D screens during opening weekend.*  Again, I'd be curious to see how these numbers change if the ratio of 3D revenue to 2D revenue for the entirety of a film's run was considered, rather than just opening weekend.  For now, though, I'll content myself with this.</p>
-<p style="text-align: left;">I should point out that the data I used for the (admittedly brief) analysis above was found <a href="http://blog.boxofficespy.com/2010/09/future-of-3d-movies-at-box-office-3d.html">here</a>, since I couldn't find the source data used in the Slate article.  Because of this, there may be slight differences in our numbers (although judging from our graphs, there doesn't seem to be a huge difference).</p>
-<p style="text-align: left;">In conclusion, regarding the proclaimed death of 3D, I think it's too early to make a conclusion.  I will tell you, though, that paying $17.50 to see <a href="http://www.imdb.com/title/tt0464154/">Piranha 3D</a> seems a little ridiculous, even for the most ardent Jerry O'Connell fan.</p>
-<p style="text-align: center;"><object width="640" height="385" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/mW5_4gZ0Jn4?fs=1&amp;hl=en_US" /><param name="allowfullscreen" value="true" /><embed width="640" height="385" type="application/x-shockwave-flash" src="http://www.youtube.com/v/mW5_4gZ0Jn4?fs=1&amp;hl=en_US" allowFullScreen="true" allowscriptaccess="always" allowfullscreen="true" /></object></p>
-<p style="text-align: left;">* For the statistically minded, the <a href="http://en.wikipedia.org/wiki/Correlation_and_dependence">correlation</a> coefficient in the case where outliers are included is roughly .026.  When the outliers are ignored, it increases to around .158.</p>
-<p style="text-align: center;"></p>
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png"><img class="size-full wp-image-790" title="splotnooutliers" src="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png" alt="" width="640" height="423" /></a></p>
+
+<p>While ignoring outliers helps, in neither case is there a strong correlation between a movie's perceived quality and its relative performance on 3D screens during opening weekend.*  Again, I'd be curious to see how these numbers change if the ratio of 3D revenue to 2D revenue for the entirety of a film's run was considered, rather than just opening weekend.  For now, though, I'll content myself with this.</p>
+
+<p>I should point out that the data I used for the (admittedly brief) analysis above was found <a href="http://blog.boxofficespy.com/2010/09/future-of-3d-movies-at-box-office-3d.html">here</a>, since I couldn't find the source data used in the Slate article.  Because of this, there may be slight differences in our numbers (although judging from our graphs, there doesn't seem to be a huge difference).</p>
+
+<p>In conclusion, regarding the proclaimed death of 3D, I think it's too early to make a conclusion.  I will tell you, though, that paying $17.50 to see <a href="http://www.imdb.com/title/tt0464154/">Piranha 3D</a> seems a little ridiculous, even for the most ardent Jerry O'Connell fan.</p>
+
+<p>* For the statistically minded, the <a href="http://en.wikipedia.org/wiki/Correlation_and_dependence">correlation</a> coefficient in the case where outliers are included is roughly .026.  When the outliers are ignored, it increases to around .158.</p>

@@ -1,0 +1,1 @@
+$(function(){var e=document.getElementById("test");katex.render("\\displaystyle {\\frac{4}{7}}",e),console.log("yo")});

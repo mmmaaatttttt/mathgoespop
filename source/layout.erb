@@ -66,7 +66,7 @@
     <script src="/javascripts/twitter.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
     <% if current_page.data.custom_js %>
-      <script src=<%= "../javascripts/#{current_page.data.custom_js}.js" %>></script>
+      <script src=<%= "../../javascripts/#{current_page.data.custom_js}.js" %>></script>
     <% end %>
   </body>
 </html>

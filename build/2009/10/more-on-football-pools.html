@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <title>Math Goes Pop! - More on Football Pools</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo" class="pull-left"><a href="/">Math Goes Pop!</a></div>
+    <nav class="pull-right">
+      <a href="/about.html">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <body>
+    <div class="row">
+      <div class="col-md-9">
+        <div id="main" role="main">
+            <h2>More on Football Pools</h2> <div class="postDate">October 10, 2009</div>
+          <p>Update: Part 3 of this series of posts can now be found <a href="http://www.mathgoespop.com/2010/01/football-pools-part-3.html">here</a>.</p>
+
+<p>This post is a follow-up to an <a href="http://www.mathgoespop.com/2009/02/variant-of-traditional-football-pool.html">earlier post</a> that looked at betting squares for football scores.  In particular, we analyzed the distribution of the second digit of final football scores, and compared that to the digital root of final football scores (recall that the digital root of a number is found by iteratively calculating the sum of the digits in that number until you come up with a single digit number from 1 through 9).  We found that on average, the final digits of football scores do not distribute themselves evenly - a score ending in 2 or 5 is much rarer than a score ending in 7 or 0, for example.  However, the analysis of the digital root suggested that digital roots may become evenly distributed on average.</p>
+
+<p>We now turn to a related question of independence, which was mentioned at the end of the previous post.  More specifically, we address the following question: is the second digit of the home team's football score independent of the second digit of the away team's score?  What if we replace "second digit" by "digital root" in the above question?</p>
+
+<p>A more basic question that is related to both of these is whether or not the two final scores in a football game are independent.  The answer to this question is not entirely obvious.  On the one hand, knowing that one team scored 7 points doesn't tell you anything <span style="font-style: italic;">a priori </span>about the second team's score.  On the other hand, one team's score during a game will certainly influence the strategy of the opposing team: if one team is ahead by a wide margin, for example, the losing team will likely play riskier in the hopes of making some big plays.  Conversely, if the difference in scores is very close, teams are less likely to make plays that are as risky unless it's late in the fourth quarter.</p>
+
+<p>Alternatively, what if you are told that one team scored 7 points, but that the game went into overtime?  Now you know a great deal about the other team's score: since overtime in the NFL is sudden death, and since the only way to score 7 points is by a touchdown or the (very unlikely) combination of a field goal and two safeties, you know that the other team must have scored 4, 5, 7, 9, 10, or 13 points.</p>
+
+<p>From these examples, it seems that football scores aren't entirely independent - there is  often some relationship between the two.  However, it's natural to think that perhaps on average, we do have independence.  Similarly, we may hope that by looking at several games, we have independence of the second digit or the digital root between home and away teams.</p>
+
+<p>One reason to hope that we would have independence is that it allows us to calculate probabilities of winning squares with much less input.  If the probability of the home team having a score that ends in a 7 is 17%, for example, and the probability of the away team having a score that ends in an 8 is 7%, we'd like to be able to say that the probability of the (7, 8) square winning in a football pool is .17 x .07.  Otherwise, to estimate the probability of any particular square winning we'd have to rely on historical data, and create a running tally of how each square has performed.  Needless to say, this is more work.</p>
+
+<p>Unfortunately, it seems that this is necessary work.  By looking at data from 4,642 preseason and regular season games from 1994-2008 (the 1994 season was the first in which the two-point conversion was instituted), I tallied the counts for each winning square in the case of both the traditional football pool and the digital root pool.  Here is the data:</p>
+
+<p><a href="http://2.bp.blogspot.com/_fM0L9abY3bo/StEsls_4vnI/AAAAAAAAASM/ocZ9HAtiML0/s1600-h/Picture+2.png"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 209px;" src="http://2.bp.blogspot.com/_fM0L9abY3bo/StEsls_4vnI/AAAAAAAAASM/ocZ9HAtiML0/s400/Picture+2.png" border="0" alt="" /></a></p>
+
+<p><a href="http://3.bp.blogspot.com/_fM0L9abY3bo/StEstEFns7I/AAAAAAAAASU/8shrdlgAGTE/s1600-h/Picture+3.png"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 204px;" src="http://3.bp.blogspot.com/_fM0L9abY3bo/StEstEFns7I/AAAAAAAAASU/8shrdlgAGTE/s400/Picture+3.png" border="0" alt="" /></a></p>
+
+<p>Recall that for the digital root pool, the digit 0 only occurs if one team doesn't score - to even things out, I have assigned a score of 0 with a digital root of 9 (I discussed reasons for this in my earlier post).</p>
+
+<p>Using a standard statistical test for independence, we conclude that there is essentially no way that the digital root of one team is independent of another team, or that the last digit of one team's score is independent of another team's score.<sup>1</sup> To illustrate one example, 10.8% of the home team's scores had a digital root of 2, while 9.26% of the away team's scores had a digital root of 2.  Therefore, assuming the digital roots of the away team and home team's scores were independent, the probability of winding up in the (2,2) square would be 0.108 x 0.0926, which is approximately 1%.</p>
+
+<p>However, as the data shows, only 12 games ended in the (2,2) square this gives a much smaller probability of 12/4,642, which is approximately 0.26%.  In other words, if you know that the score of the home team's digital root is 2, it is suddenly much less likely that the score of the away team's digital root is also 2.</p>
+
+<p>Some other observations:</p>
+
+<ol>
+  <li>
+    <p>Using this larger data set, we also find that it's actually unlikely that the digital roots become equally distributed among the digits from 1 to 9.  While the distribution is certainly more uniform than in the case of the second digit, we also see that certain digital roots occur significantly more frequently than others (5 occurs much less frequently than 1, for example).</p>
+  </li>
+  <li>
+    <p>Even though away team and home team 2nd digits and digital roots are not independent, one may expect that the probability of having a score with a given 2nd digit or a given digital root should be independent of whether the team is the home team or the away team.  Interestingly, in the case of the 2nd digit, this is not true.  In particular, it is more likely for an away team's score to end in a 3 than a home team's score, and it is more likely for a home team's score to end in an 8 than an away team's score.<sup>2</sup> In the case of the digital root, however, the data is insufficient for us to reject the hypothesis that the probability that the away team's score has a certain digital root should be different from the probability that the home team's score has a certain digital root.<sup>3</sup></p>
+  </li>
+</ol>
+
+<p>In considering the relative merits of the traditional football pool versus the digital root method, one question from my earlier post remains unanswered: which method will hit the most squares during a typical football game?  It seems reasonable to expect that the digital root method will hit a larger number of squares than the traditional method.  For example, if the score is 13-7, and the home team scores a field goal followed by a touchdown, two boxes will be hit by the traditional pool: (3,7), (3,0), followed again by (3,7).  However, the digital root method will hit three boxes: (3,7), (3,1), and then (3,8).</p>
+
+<p>This heuristic is certainly reasonable, but does it hold when looking over a large number of games?  I'll return to this question in a later post.</p>
+
+<ol>
+  <li>
+    <p>In the case of the last digit, we obtain a χ<sup>2</sup> value of 425.50 with 81 degrees of freedom, which gives a probability that is essentially 0.  Similarly, in the case of the digital root, we obtain a χ<sup>2</sup> value of 326.52 with 64 degrees of freedom, again yielding a probability that is essentially 0.</p>
+  </li>
+  <li>
+    <p>Testing the Null Hypothesis that the probability that a home team's score ends in a 3 is equal to the probability that the probability that an away team's score ends in a 3 yields a χ<sup>2</sup> value of 33.62 with 1 degree of freedom.  Replacing 3 with 8 gives a χ<sup>2</sup> value of 11.86.  At a 0.01 significance level and 1 degree of freedom, we reject the null hypothesis if χ<sup>2</sup> is larger than 6.6348.</p>
+  </li>
+  <li>
+    <p>In other words, the χ<sup>2</sup> values in the digital root case are never larger than 6.6348.  The case of the digital root equal to 5, however, comes close - in this case, the χ<sup>2</sup> value is 6.6130.</p>
+  </li>
+</ol>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/more_on_football_pools';
+                        var disqus_url = 'http://www.mathgoespop.com/2009/10/more-on-football-pools.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-xs-3">
+      <aside>
+        <form>
+          <input type="text" id="st-search-input" class="st-search-input" value="Search Math Goes Pop!"/>
+        </form>
+        <h2>Recent Articles</h2>
+        <ol>
+            <li><a href="/2014/07/give-it-away-give-it-away-give-it-away-later.html">Give it Away, Give it Away, Give it Away Later</a> <span>Jul  8</span></li>
+            <li><a href="/2014/03/keeping-it-real-an-addendum.html">Keeping it Real: An Addendum</a> <span>Mar 20</span></li>
+            <li><a href="/2013/06/its-not-complicated-or-is-it.html">It's Not Complicated.  Or is it?</a> <span>Jun 24</span></li>
+            <li><a href="/2013/03/down-with-plurality.html">Down with Plurality!</a> <span>Mar  9</span></li>
+            <li><a href="/2012/11/mathalicious-post-most-expensive-collectibles-ever.html">Mathalicious Post: Most Expensive. Collectibles. Ever.</a> <span>Nov  8</span></li>
+            <li><a href="/2012/10/shop.html">Shop!</a> <span>Oct 16</span></li>
+            <li><a href="/2012/10/math-in-books-the-universe-in-zero-words.html">Math in Books: The Universe in Zero Words</a> <span>Oct 16</span></li>
+            <li><a href="/2012/10/mathalicious-post-doubling-down.html">Mathalicious Post: Doubling Down</a> <span>Oct 14</span></li>
+            <li><a href="/2012/10/mathalicious-post-to-foul-or-not-to-foul.html">Mathalicious Post: To Foul Or Not To Foul</a> <span>Oct  4</span></li>
+            <li><a href="/2012/09/pie-mathematics.html">Pi(e) Mathematics</a> <span>Sep 19</span></li>
+        </ol>
+
+<!--         <h2>Tags</h2>
+        <ol>
+            <li><a href="/tags/math-education.html">math-education (17)</a></li>
+            <li><a href="/tags/math-in-the-news.html">math-in-the-news (48)</a></li>
+            <li><a href="/tags/et-cetera.html">et-cetera (19)</a></li>
+            <li><a href="/tags/math-gets-around.html">math-gets-around (33)</a></li>
+            <li><a href="/tags/politics.html">politics (6)</a></li>
+            <li><a href="/tags/voting.html">voting (9)</a></li>
+            <li><a href="/tags/math-on-tv.html">math-on-tv (23)</a></li>
+            <li><a href="/tags/women-and-math.html">women-and-math (5)</a></li>
+            <li><a href="/tags/animal-math.html">animal-math (6)</a></li>
+            <li><a href="/tags/math-in-the-movies.html">math-in-the-movies (25)</a></li>
+            <li><a href="/tags/wired.html">wired (8)</a></li>
+            <li><a href="/tags/costumes.html">costumes (4)</a></li>
+            <li><a href="/tags/holidays.html">holidays (25)</a></li>
+            <li><a href="/tags/dreidel.html">dreidel (1)</a></li>
+            <li><a href="/tags/fractals.html">fractals (3)</a></li>
+            <li><a href="/tags/geometry.html">geometry (3)</a></li>
+            <li><a href="/tags/math-and-food.html">math-and-food (13)</a></li>
+            <li><a href="/tags/mariah-carey.html">mariah-carey (1)</a></li>
+            <li><a href="/tags/occams-razor.html">occams-razor (1)</a></li>
+            <li><a href="/tags/adult-swim.html">adult-swim (1)</a></li>
+            <li><a href="/tags/school-house-rock.html">school-house-rock (2)</a></li>
+            <li><a href="/tags/mcdonalds.html">mcdonalds (1)</a></li>
+            <li><a href="/tags/nike.html">nike (1)</a></li>
+            <li><a href="/tags/betting.html">betting (3)</a></li>
+            <li><a href="/tags/digital-root.html">digital-root (3)</a></li>
+            <li><a href="/tags/football.html">football (7)</a></li>
+            <li><a href="/tags/pool.html">pool (3)</a></li>
+            <li><a href="/tags/sports.html">sports (20)</a></li>
+            <li><a href="/tags/numerology.html">numerology (7)</a></li>
+            <li><a href="/tags/optimization.html">optimization (2)</a></li>
+            <li><a href="/tags/the-simpsons.html">the-simpsons (7)</a></li>
+            <li><a href="/tags/pi.html">pi (9)</a></li>
+            <li><a href="/tags/arithmetic.html">arithmetic (10)</a></li>
+            <li><a href="/tags/math-fail.html">math-fail (6)</a></li>
+            <li><a href="/tags/verizon.html">verizon (4)</a></li>
+            <li><a href="/tags/basketball.html">basketball (3)</a></li>
+            <li><a href="/tags/scientific-american.html">scientific-american (5)</a></li>
+            <li><a href="/tags/south-park.html">south-park (1)</a></li>
+            <li><a href="/tags/stand-and-deliver.html">stand-and-deliver (3)</a></li>
+            <li><a href="/tags/abel-prize.html">abel-prize (1)</a></li>
+            <li><a href="/tags/knowing.html">knowing (2)</a></li>
+            <li><a href="/tags/60-minutes.html">60-minutes (1)</a></li>
+            <li><a href="/tags/economics.html">economics (1)</a></li>
+            <li><a href="/tags/numb3rs.html">numb3rs (3)</a></li>
+            <li><a href="/tags/ponzi-scheme.html">ponzi-scheme (1)</a></li>
+            <li><a href="/tags/baseball.html">baseball (8)</a></li>
+            <li><a href="/tags/climate.html">climate (3)</a></li>
+            <li><a href="/tags/probability.html">probability (22)</a></li>
+            <li><a href="/tags/captain-planet.html">captain-planet (1)</a></li>
+            <li><a href="/tags/sir-model.html">sir-model (2)</a></li>
+            <li><a href="/tags/warcraft.html">warcraft (1)</a></li>
+            <li><a href="/tags/poisson-summation.html">poisson-summation (1)</a></li>
+            <li><a href="/tags/up.html">up (1)</a></li>
+            <li><a href="/tags/sex-and-the-city.html">sex-and-the-city (1)</a></li>
+            <li><a href="/tags/strogatz.html">strogatz (2)</a></li>
+            <li><a href="/tags/zipfs-law.html">zipfs-law (1)</a></li>
+            <li><a href="/tags/mythbusters.html">mythbusters (1)</a></li>
+            <li><a href="/tags/birthday-problem.html">birthday-problem (1)</a></li>
+            <li><a href="/tags/coupon-collectors-problem.html">coupon-collectors-problem (2)</a></li>
+            <li><a href="/tags/revolutionary-road.html">revolutionary-road (1)</a></li>
+            <li><a href="/tags/calculus.html">calculus (5)</a></li>
+            <li><a href="/tags/pedagogy.html">pedagogy (5)</a></li>
+            <li><a href="/tags/statistics.html">statistics (11)</a></li>
+            <li><a href="/tags/mathematicians-lament.html">mathematicians-lament (2)</a></li>
+            <li><a href="/tags/district-9.html">district-9 (1)</a></li>
+            <li><a href="/tags/creatures.html">creatures (2)</a></li>
+            <li><a href="/tags/jadis.html">jadis (1)</a></li>
+            <li><a href="/tags/comics.html">comics (2)</a></li>
+            <li><a href="/tags/economist.html">economist (1)</a></li>
+            <li><a href="/tags/money.html">money (1)</a></li>
+            <li><a href="/tags/obama.html">obama (1)</a></li>
+            <li><a href="/tags/casino-royale.html">casino-royale (1)</a></li>
+            <li><a href="/tags/dark-knight.html">dark-knight (1)</a></li>
+            <li><a href="/tags/harry-potter.html">harry-potter (1)</a></li>
+            <li><a href="/tags/kevin-bacon.html">kevin-bacon (1)</a></li>
+            <li><a href="/tags/prisoners-dilemma.html">prisoners-dilemma (1)</a></li>
+            <li><a href="/tags/geek-chic.html">geek-chic (1)</a></li>
+            <li><a href="/tags/commercials.html">commercials (2)</a></li>
+            <li><a href="/tags/martin-gardner.html">martin-gardner (3)</a></li>
+            <li><a href="/tags/recreational-math.html">recreational-math (3)</a></li>
+            <li><a href="/tags/truel.html">truel (1)</a></li>
+            <li><a href="/tags/freakonomics.html">freakonomics (1)</a></li>
+            <li><a href="/tags/riemann-hypothesis.html">riemann-hypothesis (2)</a></li>
+            <li><a href="/tags/precious.html">precious (1)</a></li>
+            <li><a href="/tags/math-jokes.html">math-jokes (1)</a></li>
+            <li><a href="/tags/t-shirt.html">t-shirt (1)</a></li>
+            <li><a href="/tags/bagel.html">bagel (1)</a></li>
+            <li><a href="/tags/mobius-strip.html">mobius-strip (2)</a></li>
+            <li><a href="/tags/topology.html">topology (1)</a></li>
+            <li><a href="/tags/bertrand-russell.html">bertrand-russell (1)</a></li>
+            <li><a href="/tags/logicomix.html">logicomix (2)</a></li>
+            <li><a href="/tags/math-in-books.html">math-in-books (11)</a></li>
+            <li><a href="/tags/russells-paradox.html">russells-paradox (1)</a></li>
+            <li><a href="/tags/new-years.html">new-years (1)</a></li>
+            <li><a href="/tags/beavis-and-butthead.html">beavis-and-butthead (1)</a></li>
+            <li><a href="/tags/mike-judge.html">mike-judge (1)</a></li>
+            <li><a href="/tags/supreme-court.html">supreme-court (1)</a></li>
+            <li><a href="/tags/e.html">e (4)</a></li>
+            <li><a href="/tags/education.html">education (1)</a></li>
+            <li><a href="/tags/gender-gap.html">gender-gap (3)</a></li>
+            <li><a href="/tags/stereotype.html">stereotype (1)</a></li>
+            <li><a href="/tags/dating.html">dating (4)</a></li>
+            <li><a href="/tags/drake.html">drake (2)</a></li>
+            <li><a href="/tags/futurama.html">futurama (2)</a></li>
+            <li><a href="/tags/love.html">love (1)</a></li>
+            <li><a href="/tags/secretary-problem.html">secretary-problem (2)</a></li>
+            <li><a href="/tags/algebra.html">algebra (3)</a></li>
+            <li><a href="/tags/new-york-times.html">new-york-times (2)</a></li>
+            <li><a href="/tags/jobs.html">jobs (1)</a></li>
+            <li><a href="/tags/colbert-report.html">colbert-report (1)</a></li>
+            <li><a href="/tags/millennium-problems.html">millennium-problems (2)</a></li>
+            <li><a href="/tags/perez-hilton.html">perez-hilton (1)</a></li>
+            <li><a href="/tags/poincare-conjecture.html">poincare-conjecture (1)</a></li>
+            <li><a href="/tags/jaime-escalante.html">jaime-escalante (1)</a></li>
+            <li><a href="/tags/floodit.html">floodit (1)</a></li>
+            <li><a href="/tags/minesweeper.html">minesweeper (1)</a></li>
+            <li><a href="/tags/office-space.html">office-space (1)</a></li>
+            <li><a href="/tags/pnp.html">pnp (1)</a></li>
+            <li><a href="/tags/tetris.html">tetris (1)</a></li>
+            <li><a href="/tags/nicolas-cage.html">nicolas-cage (1)</a></li>
+            <li><a href="/tags/golf.html">golf (1)</a></li>
+            <li><a href="/tags/math-awareness-month.html">math-awareness-month (1)</a></li>
+            <li><a href="/tags/kevorkian.html">kevorkian (1)</a></li>
+            <li><a href="/tags/logical-fallacy.html">logical-fallacy (1)</a></li>
+            <li><a href="/tags/dan-meyer.html">dan-meyer (1)</a></li>
+            <li><a href="/tags/ted.html">ted (1)</a></li>
+            <li><a href="/tags/two-and-a-half-men.html">two-and-a-half-men (1)</a></li>
+            <li><a href="/tags/r-kelly.html">r-kelly (1)</a></li>
+            <li><a href="/tags/levy-walk.html">levy-walk (1)</a></li>
+            <li><a href="/tags/sharks.html">sharks (1)</a></li>
+            <li><a href="/tags/true-blood.html">true-blood (1)</a></li>
+            <li><a href="/tags/twilight.html">twilight (2)</a></li>
+            <li><a href="/tags/monty-hall.html">monty-hall (2)</a></li>
+            <li><a href="/tags/soccer.html">soccer (1)</a></li>
+            <li><a href="/tags/japan.html">japan (1)</a></li>
+            <li><a href="/tags/number-theory.html">number-theory (2)</a></li>
+            <li><a href="/tags/ruth-aaron-pair.html">ruth-aaron-pair (1)</a></li>
+            <li><a href="/tags/combinatorics.html">combinatorics (4)</a></li>
+            <li><a href="/tags/pigeonhole-principle.html">pigeonhole-principle (3)</a></li>
+            <li><a href="/tags/stirlings-formula.html">stirlings-formula (1)</a></li>
+            <li><a href="/tags/top-chef.html">top-chef (1)</a></li>
+            <li><a href="/tags/education-standards.html">education-standards (1)</a></li>
+            <li><a href="/tags/terminator.html">terminator (1)</a></li>
+            <li><a href="/tags/protractor.html">protractor (1)</a></li>
+            <li><a href="/tags/groups.html">groups (2)</a></li>
+            <li><a href="/tags/rubiks-cube.html">rubiks-cube (2)</a></li>
+            <li><a href="/tags/will-smith.html">will-smith (1)</a></li>
+            <li><a href="/tags/weird-al.html">weird-al (1)</a></li>
+            <li><a href="/tags/physics.html">physics (2)</a></li>
+            <li><a href="/tags/scott-pilgrim.html">scott-pilgrim (1)</a></li>
+            <li><a href="/tags/3d.html">3d (1)</a></li>
+            <li><a href="/tags/avatar.html">avatar (1)</a></li>
+            <li><a href="/tags/piranha.html">piranha (1)</a></li>
+            <li><a href="/tags/polar-express.html">polar-express (1)</a></li>
+            <li><a href="/tags/slate.html">slate (2)</a></li>
+            <li><a href="/tags/bowling.html">bowling (1)</a></li>
+            <li><a href="/tags/cancer.html">cancer (1)</a></li>
+            <li><a href="/tags/jon-stewart.html">jon-stewart (1)</a></li>
+            <li><a href="/tags/a-beautiful-mind.html">a-beautiful-mind (1)</a></li>
+            <li><a href="/tags/john-nash.html">john-nash (1)</a></li>
+            <li><a href="/tags/combinations.html">combinations (2)</a></li>
+            <li><a href="/tags/in-n-out.html">in-n-out (1)</a></li>
+            <li><a href="/tags/abacus.html">abacus (1)</a></li>
+            <li><a href="/tags/sesame-street.html">sesame-street (3)</a></li>
+            <li><a href="/tags/sherlock-holmes.html">sherlock-holmes (1)</a></li>
+            <li><a href="/tags/mandelbrot.html">mandelbrot (1)</a></li>
+            <li><a href="/tags/brian-wilson.html">brian-wilson (1)</a></li>
+            <li><a href="/tags/giants.html">giants (1)</a></li>
+            <li><a href="/tags/mario.html">mario (1)</a></li>
+            <li><a href="/tags/mean-girls.html">mean-girls (1)</a></li>
+            <li><a href="/tags/washington-post.html">washington-post (1)</a></li>
+            <li><a href="/tags/oakland.html">oakland (1)</a></li>
+            <li><a href="/tags/exams.html">exams (3)</a></li>
+            <li><a href="/tags/humanities.html">humanities (1)</a></li>
+            <li><a href="/tags/immigration.html">immigration (2)</a></li>
+            <li><a href="/tags/goldbach.html">goldbach (1)</a></li>
+            <li><a href="/tags/kickstarter.html">kickstarter (2)</a></li>
+            <li><a href="/tags/twin-primes.html">twin-primes (1)</a></li>
+            <li><a href="/tags/lost.html">lost (1)</a></li>
+            <li><a href="/tags/lottery.html">lottery (2)</a></li>
+            <li><a href="/tags/clocks.html">clocks (1)</a></li>
+            <li><a href="/tags/danica-mckellar.html">danica-mckellar (1)</a></li>
+            <li><a href="/tags/continued-fraction.html">continued-fraction (1)</a></li>
+            <li><a href="/tags/pi-day.html">pi-day (2)</a></li>
+            <li><a href="/tags/radix.html">radix (1)</a></li>
+            <li><a href="/tags/burger-king.html">burger-king (1)</a></li>
+            <li><a href="/tags/passwords.html">passwords (1)</a></li>
+            <li><a href="/tags/permutations.html">permutations (1)</a></li>
+            <li><a href="/tags/tmz.html">tmz (1)</a></li>
+            <li><a href="/tags/escher.html">escher (1)</a></li>
+            <li><a href="/tags/zenos-paradox.html">zenos-paradox (1)</a></li>
+            <li><a href="/tags/erotica.html">erotica (1)</a></li>
+            <li><a href="/tags/sex.html">sex (1)</a></li>
+            <li><a href="/tags/yukoku.html">yukoku (1)</a></li>
+            <li><a href="/tags/rent.html">rent (1)</a></li>
+            <li><a href="/tags/the-office.html">the-office (3)</a></li>
+            <li><a href="/tags/charlie-sheen.html">charlie-sheen (1)</a></li>
+            <li><a href="/tags/maximum-likelihood.html">maximum-likelihood (1)</a></li>
+            <li><a href="/tags/parks-and-recreation.html">parks-and-recreation (3)</a></li>
+            <li><a href="/tags/poisson-distribution.html">poisson-distribution (1)</a></li>
+            <li><a href="/tags/mtv.html">mtv (1)</a></li>
+            <li><a href="/tags/oscars.html">oscars (2)</a></li>
+            <li><a href="/tags/tau.html">tau (2)</a></li>
+            <li><a href="/tags/numbers-guy.html">numbers-guy (1)</a></li>
+            <li><a href="/tags/evolution.html">evolution (1)</a></li>
+            <li><a href="/tags/npr.html">npr (2)</a></li>
+            <li><a href="/tags/batman.html">batman (1)</a></li>
+            <li><a href="/tags/weddings.html">weddings (3)</a></li>
+            <li><a href="/tags/inclusion-exclusion.html">inclusion-exclusion (1)</a></li>
+            <li><a href="/tags/menage-problem.html">menage-problem (1)</a></li>
+            <li><a href="/tags/fibonacci-sequence.html">fibonacci-sequence (1)</a></li>
+            <li><a href="/tags/golden-ratio.html">golden-ratio (1)</a></li>
+            <li><a href="/tags/plastic-constant.html">plastic-constant (1)</a></li>
+            <li><a href="/tags/moneyball.html">moneyball (1)</a></li>
+            <li><a href="/tags/pythagorean-expectation.html">pythagorean-expectation (1)</a></li>
+            <li><a href="/tags/community.html">community (1)</a></li>
+            <li><a href="/tags/kickpuncher.html">kickpuncher (1)</a></li>
+            <li><a href="/tags/stable-marriage-problem.html">stable-marriage-problem (1)</a></li>
+            <li><a href="/tags/stable-roommate-problem.html">stable-roommate-problem (1)</a></li>
+            <li><a href="/tags/hookes-law.html">hookes-law (1)</a></li>
+            <li><a href="/tags/modern-family.html">modern-family (1)</a></li>
+            <li><a href="/tags/thanksgiving.html">thanksgiving (1)</a></li>
+            <li><a href="/tags/baking.html">baking (1)</a></li>
+            <li><a href="/tags/car-talk.html">car-talk (1)</a></li>
+            <li><a href="/tags/fundamental-counting-principle.html">fundamental-counting-principle (1)</a></li>
+            <li><a href="/tags/fundamental-theorem-of-arithmetic.html">fundamental-theorem-of-arithmetic (1)</a></li>
+            <li><a href="/tags/math-on-the-radio.html">math-on-the-radio (1)</a></li>
+            <li><a href="/tags/kleibers-law.html">kleibers-law (1)</a></li>
+            <li><a href="/tags/legos.html">legos (1)</a></li>
+            <li><a href="/tags/power-law.html">power-law (1)</a></li>
+            <li><a href="/tags/49ers.html">49ers (2)</a></li>
+            <li><a href="/tags/possessionpoints.html">possessionpoints (1)</a></li>
+            <li><a href="/tags/roulette.html">roulette (1)</a></li>
+            <li><a href="/tags/fermats-last-theorem.html">fermats-last-theorem (1)</a></li>
+            <li><a href="/tags/21.html">21 (1)</a></li>
+            <li><a href="/tags/rain-man.html">rain-man (1)</a></li>
+            <li><a href="/tags/cnn-light-years.html">cnn-light-years (1)</a></li>
+            <li><a href="/tags/guest-posts.html">guest-posts (7)</a></li>
+            <li><a href="/tags/hunger-games.html">hunger-games (1)</a></li>
+            <li><a href="/tags/stem.html">stem (1)</a></li>
+            <li><a href="/tags/isoperimetric-inequality.html">isoperimetric-inequality (1)</a></li>
+            <li><a href="/tags/trigonometry.html">trigonometry (2)</a></li>
+            <li><a href="/tags/kentucky-derby.html">kentucky-derby (1)</a></li>
+            <li><a href="/tags/logic.html">logic (1)</a></li>
+            <li><a href="/tags/racing.html">racing (1)</a></li>
+            <li><a href="/tags/edtech.html">edtech (1)</a></li>
+            <li><a href="/tags/arrows-impossibility-theorem.html">arrows-impossibility-theorem (1)</a></li>
+            <li><a href="/tags/march-madness.html">march-madness (1)</a></li>
+            <li><a href="/tags/ranking.html">ranking (2)</a></li>
+            <li><a href="/tags/mind-your-decisions.html">mind-your-decisions (1)</a></li>
+            <li><a href="/tags/san-francisco-giants.html">san-francisco-giants (1)</a></li>
+            <li><a href="/tags/cnn.html">cnn (1)</a></li>
+            <li><a href="/tags/fathers-day.html">fathers-day (1)</a></li>
+            <li><a href="/tags/celebrity.html">celebrity (1)</a></li>
+            <li><a href="/tags/half-your-age-plus-seven.html">half-your-age-plus-seven (1)</a></li>
+            <li><a href="/tags/playboy.html">playboy (1)</a></li>
+            <li><a href="/tags/friend-zone.html">friend-zone (1)</a></li>
+            <li><a href="/tags/friends.html">friends (1)</a></li>
+            <li><a href="/tags/hot-dog.html">hot-dog (2)</a></li>
+            <li><a href="/tags/maillard-reaction.html">maillard-reaction (1)</a></li>
+            <li><a href="/tags/surface-area.html">surface-area (2)</a></li>
+            <li><a href="/tags/helicoid.html">helicoid (1)</a></li>
+            <li><a href="/tags/area.html">area (1)</a></li>
+            <li><a href="/tags/food.html">food (1)</a></li>
+            <li><a href="/tags/pie.html">pie (1)</a></li>
+            <li><a href="/tags/volume.html">volume (1)</a></li>
+            <li><a href="/tags/mathalicious.html">mathalicious (2)</a></li>
+            <li><a href="/tags/nba.html">nba (1)</a></li>
+            <li><a href="/tags/blackjack.html">blackjack (1)</a></li>
+            <li><a href="/tags/gambling.html">gambling (1)</a></li>
+            <li><a href="/tags/swingers.html">swingers (1)</a></li>
+            <li><a href="/tags/vegas.html">vegas (1)</a></li>
+            <li><a href="/tags/equations.html">equations (1)</a></li>
+            <li><a href="/tags/history.html">history (1)</a></li>
+            <li><a href="/tags/center-for-election-science.html">center-for-election-science (1)</a></li>
+            <li><a href="/tags/electology.html">electology (1)</a></li>
+            <li><a href="/tags/att.html">att (1)</a></li>
+            <li><a href="/tags/bijection.html">bijection (1)</a></li>
+            <li><a href="/tags/cardinality.html">cardinality (1)</a></li>
+            <li><a href="/tags/cell-phones.html">cell-phones (1)</a></li>
+            <li><a href="/tags/infinity.html">infinity (1)</a></li>
+            <li><a href="/tags/injection.html">injection (1)</a></li>
+            <li><a href="/tags/set.html">set (1)</a></li>
+            <li><a href="/tags/surjection.html">surjection (1)</a></li>
+            <li><a href="/tags/car.html">car (1)</a></li>
+            <li><a href="/tags/games.html">games (1)</a></li>
+            <li><a href="/tags/hockey.html">hockey (1)</a></li>
+        </ol> -->
+
+        <h2>By Year</h2>
+        <ol>
+            <li><a href="/2014.html">2014 (2)</a></li>
+            <li><a href="/2013.html">2013 (2)</a></li>
+            <li><a href="/2012.html">2012 (32)</a></li>
+            <li><a href="/2011.html">2011 (34)</a></li>
+            <li><a href="/2010.html">2010 (45)</a></li>
+            <li><a href="/2009.html">2009 (47)</a></li>
+            <li><a href="/2008.html">2008 (27)</a></li>
+        </ol>
+        <a href="https://twitter.com/mmmaaatttttt" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @mmmaaatttttt</a>
+      </aside>
+ </div>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="/javascripts/twitter.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+  </body>
+</html>

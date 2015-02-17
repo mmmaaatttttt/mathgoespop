@@ -1,6 +1,8 @@
 ---
 title: Race to Where?
 date: '2010-08-09'
+disqus_identifier: race_to_where
+disqus_url: http://www.mathgoespop.com/2010/08/race-to-the-top.html
 tags:
 - algebra
 - education-standards
@@ -19,10 +21,12 @@ On the one hand, advocates for adopting the national standards point to the roug
 
 I'm no expert on these issues, so I'm not quite sure where I stand.  On principle I'd like to support anything that gets more money into schools, but it seems kind of ridiculous that the way for California to increase its chances of receiving funding is by weakening its education standards.  Regarding the question of which is the lesser of two evils (weakening standards or snubbing a potential influx of cash), I guess that depends on how likely California is to receive funding.  The Economic Policy Institute <a href="http://epi.3cdn.net/4835aafd6e80385004_5nm6bn6id.pdf">found</a> that the winners of the first round of Race to the Top were essentially selected arbitrarily; if that's the case, how much trust should be placed in this competition in the first place?  Moreover, doesn't the adoption of national standards to some extent stifle innovation?  In an area so in need of innovation as mathematical education, this doesn't seem like a good thing.
 
-[caption id="" align="aligncenter" width="241" caption="Remember: robots would not exist without math."]<img src="http://upload.wikimedia.org/wikipedia/en/8/85/Terminator2poster.jpg" alt="" width="241" height="350" />[/caption]
+<p style="text-align:center;font-size:small;"><img src="http://upload.wikimedia.org/wikipedia/en/8/85/Terminator2poster.jpg" alt="" width="241" height="350" /><br>Remember: robots would not exist without math.</p>
 
 Then again, California badly needs the cash (maybe Arnold should have stuck to making movies about aliens and robots and being pregnant). Additionally, isn't it an open question as to how much standards really matter?  As pointed out in an op-ed from July 30th in the San Francisco Chronicle,
+
 <blockquote>[W]hat seems to matter when it comes to student performance isn't the standards themselves but how they're implemented. For example, Maryland has easier standards than California, according to a study by the Thomas B. Fordham Institute. But Education Week ranks Maryland first in the country for overall quality, including academic achievement as well as student success in the workplace.</blockquote>
+
 I would hope that no one would argue that strict education standards are more important than having inspiring and well-educated teachers.  So, if California can acquire funds to help recruit and retain the best teachers, I guess the sacrifice is worth it.  A final verdict is beyond my pay scale, though.
 
 (Hat tip to dad for many of the links above.)

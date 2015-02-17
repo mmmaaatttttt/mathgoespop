@@ -2,7 +2,7 @@
 title: Top Chef Mathematics
 date: '2010-07-28'
 disqus_identifier: /top_chef_mathematics
-disqus_url: http://www.mathgoespop.com/2010/07/top-chef-mathematic.html
+disqus_url: http://www.mathgoespop.com/2010/07/top-chef-mathematics.html
 tags:
 - combinatorics
 - math-and-food
@@ -50,41 +50,35 @@ If you like food, Washington DC, hubris, or reality television, then chances are
 
 <p>It's more interesting, of course, to deal with <em>c</em> different colors, rather than just 3.  We can still perform this analysis, and try to find probabilities and expectations.  Suppose we have <em>c</em> pairs of balls, each pair of a different color.  We draw the balls without replacement from a bag until we find a pair of the same color, then we stop.  We can define a <a href="http://en.wikipedia.org/wiki/Random_variable">random variable</a> <em>Y<sub>c</sub></em> to be the draw on which we complete our first pair. For example, in the case <em>c</em> = 3 above, we saw that <em>Y</em><sub>3</sub> = 2 with probability 1/5, <em>Y</em><sub>3</sub> = 3 with probability 2/5, and <em>Y</em><sub>3</sub> = 4 with probability 2/5.</p>
 
-<p>As before, notice that <em>Y<sub>c</sub></em> must take a value between 2 and <em>c</em> + 1.  This is because we can't draw a pair before our 2nd draw, and after <em>c</em> draws, the worst case scenario is for us to have each ball of a different color.  Since we have exhausted all color possibilities, the <em>c</em> + 1st draw must give us a pair (in essence we are applying the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">Pigeonhole Principle</a>).  So, to describe the behavior of <em>Y<sub>c</sub></em> we need to calculate the probability that <em>Y<sub>c</sub></em> = <em>k</em> for <em>k</em> between 2 and <em>c</em> + 1.</p>
+<p>As before, notice that <em>Y<sub>c</sub></em> must take a value between 2 and <em>c</em> + 1.  This is because we can't draw a pair before our 2nd draw, and after <em>c</em> draws, the worst case scenario is for us to have each ball of a different color.  Since we have exhausted all color possibilities, the (<em>c</em> + 1)<sup>st</sup> draw must give us a pair (in essence we are applying the <a href="http://en.wikipedia.org/wiki/Pigeonhole_principle">Pigeonhole Principle</a>).  So, to describe the behavior of <em>Y<sub>c</sub></em> we need to calculate the probability that <em>Y<sub>c</sub></em> = <em>k</em> for <em>k</em> between 2 and <em>c</em> + 1.</p>
 
-<p>The same sort of argument as in the simple case <em>c</em> = 3 works here.  Suppose you want to calculate <em>P</em>(<em>Y<sub>c</sub></em> = <em>k</em>).  In order to find your first pair on the <em>k</em>th draw, you need to NOT draw a pair on your 2nd, 3rd, 4th, ..., or <em>k</em> - 1st draw, and then have the color on the <em>k</em>th draw match one of the colors you have already drawn.  Since there are a total of 2<em>c</em> balls in the bag to begin with, we see that the odds of not drawing a pair on the 2nd draw is <div id="test">$latex \frac{2c-2}{2c-1}$</div>, the odds of not drawing a pair on the 3rd draw is $latex \frac{2c-4}{2c-2}$ (since there are 2<em>c</em> - 2 balls remaining, and you want to avoid 2 that are colors you've already drawn, leaving you with 2<em>c</em> - 2 - 2 = 2<em>c</em> - 4 options), and so on, so that the odds of not getting a pair on the <em>k - </em>1st draw is $latex \frac{2c-2(k-2)}{2c-(k-2)}$.  Meanwhile, in order to draw a pair on your <em>k</em>th draw, you must pull one of the <em>k</em> - 1 colors that have already been pulled.  Since there are 2<em>c</em> - <em>k</em> + 1 balls remaining, the probability that this happens is $latex \frac{k-1}{2c-k+1}$.</p>
+<p>The same sort of argument as in the simple case <em>c</em> = 3 works here.  Suppose you want to calculate <em>P</em>(<em>Y<sub>c</sub></em> = <em>k</em>).  In order to find your first pair on the <em>k</em>th draw, you need to NOT draw a pair on your 2nd, 3rd, 4th, ..., or (<em>k</em> - 1)<sup>st</sup> draw, and then have the color on the <em>k</em>th draw match one of the colors you have already drawn.  Since there are a total of 2<em>c</em> balls in the bag to begin with, we see that the odds of not drawing a pair on the 2nd draw is <span id="form1"></span>, the odds of not drawing a pair on the 3rd draw is <span id="form2"></span> (since there are 2<em>c</em> - 2 balls remaining, and you want to avoid 2 that are colors you've already drawn, leaving you with 2<em>c</em> - 2 - 2 = 2<em>c</em> - 4 options), and so on, so that the odds of not getting a pair on the (<em>k - </em>1)<sup>st</sup> draw is <span id="form3"></span>.  Meanwhile, in order to draw a pair on your <em>k</em>th draw, you must pull one of the <em>k</em> - 1 colors that have already been pulled.  Since there are 2<em>c</em> - <em>k</em> + 1 balls remaining, the probability that this happens is <span id="form4"></span>.</p>
 
 <p>Combining these, we see that</p>
+<p style="text-align: center;" id="form5"></p>
+<p style="text-align: center;" id="form6"></p>
+<p style="text-align: center;" id="form7"></p>
+<p style="text-align: center;" id="form8" class="size-exempt"></p>
 
-<p style="text-align: center;">$latex P(Y_c = k) = \frac{k-1}{2c-k+1}\prod_{j=1}^{k-2}\frac{2c-2j}{2c-j}$</p>
+(Recall that the binomial coefficient <span id="form9"></span> is given by <span id="form10"></span>, and as usual n! = <em>n</em> &times; (<em>n</em> &ndash; 1) &times; ... 3 &times; 2 &times; 1 is the product of all integers from 1 to <em>n</em>.) With this formula, we can now see how likely it was for the first pairing on Top Chef to have occurred on or after the 6th draw.  In this case there are 8 pairs, so <em>c</em> = 8, and we see that
 
-<p style="text-align: center;">$latex = \frac{k-1}{2c-k+1}2^{k-2}\prod_{j=1}^{k-2}\frac{c-j}{2c-j}$</p>
-
-<p style="text-align: center;">$latex = 2^{k-2}\frac{k-1}{2c-k+1}\frac{(c-1)!}{(2c-1)!}\frac{(2c-k+1)!}{(c-k+1)!}$</p>
-
-<p style="text-align: center;">$latex = \frac{2^{k-2}\left(\begin{array}{c}c-1\\k-2\end{array}\right)}{\left(\begin{array}{c}2c-1\\k-1\end{array}\right)}.$</p>
-
-(Recall that the binomial coefficient $latex \left(\begin{array}{c}n\\k\end{array}\right)$ is given by $latex \left(\begin{array}{c}n\\k\end{array}\right) = \frac{n!}{k!(n-k)!}$, and as usual n! = n &times; (n-1) &times; ... 3 &times; 2 &times; 1 is the product of all integers from 1 to n.) With this formula, we can now see how likely it was for the first pairing on Top Chef to have occurred on or after the 6th draw.  In this case there are 8 pairs, so <em>c</em> = 8, and we see that
-
-<p style="text-align: center;">$latex P(Y_8 \geq 6) = \sum_{k=6}^{9}P(Y_8 = k) = \sum_{k=6}^{9} \frac{2^{k-2}\left(\begin{array}{c}7\\k-2\end{array}\right)}{\left(\begin{array}{c}15\\k-1\end{array}\right)},$</p>
-
+<p style="text-align: center;" id="form11"></p>
 <p>which comes out to 16/39, or roughly 41.03%.</p>
+<p>Of course, there's still the question of expectation: approximately how large do we expect <em>Y<sub>c</sub></em> to be (remember we saw that <em>E</em>(<em>Y</em><sub>3</sub>) = 16/5)?  I'll spare you the details, but one can show that for general <em>c</em>, the expected value is given by</p>
 
-<p>Of course, there's still the question of expectation: approximately how large do we expect $latex Y_c$ to be (remember we saw that $latex E(Y_3) = 16/5$)?  I'll spare you the details, but one can show that for general <em>c</em>, the expected value is given by</p>
+<p style="text-align: center;" id="form12"></p>
 
-<p style="text-align: center;">$latex E(Y_c) = \frac{2^{2c}(c!)^2}{(2c)!}.$</p>
+<p>In particular, in the case <em>c</em> = 8 from Top Chef, we find that $latex <em>E</em>(<em>Y</em><sub>3</sub>) = 32768/6435, which is approximately 5.09.  So on average, for <em>c</em> = 8 we expect to find a pair after a little more than 5 draws.</p>
 
-<p>In particular, in the case <em>c</em> = 8 from Top Chef, we find that $latex E(Y_8) = \frac{32768}{6435}$, which is approximately 5.09.  So on average, for <em>c</em> = 8 we expect to find a pair after a little more than 5 draws.</p>
+<p>For the more advanced reader, one final question: what happens to the expected value as <em>c</em> grows large?  As it turns out, we can write the expected value in a very nice form in terms of the <a href="http://en.wikipedia.org/wiki/Gamma_function">Gamma function</a> (which one can think of as a generalization of the factorial to the entire real line).  Using the doubling formula <span id="form13"></span>, the interested reader can show that</p>
 
-<p>For the more advanced reader, one final question: what happens to the expected value as <em>c</em> grows large?  As it turns out, we can write the expected value in a very nice form in terms of the <a href="http://en.wikipedia.org/wiki/Gamma_function">Gamma function</a> (which one can think of as a generalization of the factorial to the entire real line).  Using the doubling formula $latex \Gamma(z)\Gamma(z+1/2) = 2^{1-2z}\sqrt{\pi}\Gamma(2z)$, the interested reader can show that</p>
-
-<p style="text-align: center;">$latex E(Y_c) = \sqrt{\pi}\frac{\Gamma(c+1)}{\Gamma(c+1/2)}.$</p>
+<p style="text-align: center;" id="form14"></p>
 
 <p>If one then uses <a href="http://en.wikipedia.org/wiki/Stirling%27s_approximation">Stirling's formula</a> to approximate the Gamma function, it follows that</p>
 
-<p style="text-align: center;">$latex E(Y_c) \approx \sqrt{c\pi},$</p>
+<p style="text-align: center;" id="form15"></p>
 
-<p>in other words $latex \frac{E(Y_c)}{\sqrt{c}} \rightarrow \sqrt{\pi}$ as $latex c \rightarrow \infty.$  What a wonderful asymptotic!  This tells us that the number of draws we will need from a bag of <em>c</em> pairs before obtaining our first pair grows like the square root of <em>c</em> times a factor of $latex \sqrt{\pi}$.  We can compare the estimate given here for $latex E(Y_8)$ with the exact value computed above - in doing so, we find that $latex E(Y_8) \approx \sqrt{8\pi} \approx 5.01$.  So indeed, the approximation is fairly close to the true value (and the approximation will only get better as <em>c</em> grows).</p>
+<p>in other words <span id="form16"></span> as <span id="form17"></span>.  What a wonderful asymptotic!  This tells us that the number of draws we will need from a bag of <em>c</em> pairs before obtaining our first pair grows like the square root of <em>c</em> times a factor of <span id="form18"></span>.  We can compare the estimate given here for <em>E</em>(<em>Y</em><sub>8</sub>) with the exact value computed above &ndash; in doing so, we find that <span id="form19"></span>.  So indeed, the approximation is fairly close to the true value (and the approximation will only get better as <em>c</em> grows).</p>
 
 <p>There are many related questions one could ask.  For example, what if instead of pairs, we look at collections of triplets, or quadruplets?  What if we consider formation of the 2nd pair or 3rd pair instead of only considering the 1st pair?  What if we allow for different numbers of balls of each color (e.g. 2 red balls and 3 green balls)?  But I've already gone on too long, so I will leave these questions for another time.  I don't know if these questions go by a certain name or not - I couldn't find this particular problem anywhere.  If anyone knows of a paper or book where these problems are discussed, I would be much obliged.</p>
 

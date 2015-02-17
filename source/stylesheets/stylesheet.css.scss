@@ -11,10 +11,19 @@ $line-color: #86CB92;
 	font-family: Lato, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 }
 
+.katex:not(.size-exempt), .mathit, .reset-textstyle.textstyle {
+	font-family: Lato, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !important;
+	
+}
+
+.katex:not(.size-exempt) {
+	font-size: 16px !important;
+}
+
 header {
 	background-color: $header-bg;
 	height: $header-height;
-	width: 100%
+	width: 100%;
 }
 
 header a, 

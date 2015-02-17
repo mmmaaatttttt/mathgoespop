@@ -1,9 +1,0 @@
----
-title: Contact
-date: '2010-09-08'
-tags: []
----
-
-If you've got questions, comments, concerns or ideas that you'd like to share with me personally, I can always be reached via email.  My address is matt 'at' &lt;this website's name, all one word&gt; 'dot' com.
-
-Thanks!
