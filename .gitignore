@@ -6,3 +6,6 @@ source/posts/ideas.markdown
 source/images/*
 
 # source/posts
+
+# Ignore build results
+build/

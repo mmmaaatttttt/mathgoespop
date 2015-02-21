@@ -1,13 +1,14 @@
 ---
 title: RIP Benoît Mandelbrot
 date: '2010-10-20'
+disqus_identifier: /rip_benot_mandelbrot
+disqus_url: http://www.mathgoespop.com/2010/10/rip-benot-mandelbrot.html
 tags:
 - fractals
 - mandelbrot
 - math-in-the-news
 - scientific-american
 ---
-
 It has already made the internet rounds, but it seems appropriate, given his popular appeal, to remark on the passing of mathematician <a href="http://en.wikipedia.org/wiki/Beno%C3%AEt_Mandelbrot">Benoît Mandelbrot</a>.  Mandelbrot, perhaps best well known for coining the term <a href="http://en.wikipedia.org/wiki/Fractal">fractal</a> (and for his related popular work on the subject), died last week at the age of 85.
 
 Mandelbrot's popularization of fractal geometry garnered him quite a bit of attention beginning in the 1980's.  There is even a fractal named after him, the so-called "<a href="http://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a>," which, like many fractals, is simple to generate, but looks complicated.
