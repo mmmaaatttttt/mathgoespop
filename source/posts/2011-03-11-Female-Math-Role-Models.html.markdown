@@ -1,6 +1,8 @@
 ---
 title: Female Math Role Models?
 date: '2011-03-11'
+disqus_identifier: /female_math_role_models
+disqus_url: http://www.mathgoespop.com/2011/03/female-math-role-models.html
 tags:
 - danica-mckellar
 - gender-gap

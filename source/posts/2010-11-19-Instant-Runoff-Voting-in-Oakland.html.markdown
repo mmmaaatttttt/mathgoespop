@@ -1,16 +1,17 @@
 ---
 title: Instant Runoff Voting in Oakland
 date: '2010-11-19'
+disqus_identifier: /instant_runoff_voting_in_oakland
+disqus_url: http://www.mathgoespop.com/2010/11/instant-runoff-voting-in-oakland.html
 tags:
 - math-in-the-news
 - oakland
 - politics
 - voting
 ---
-
 Earlier this month, Oakland elected its first Asian American to the less than coveted role of city mayor.  <a href="http://en.wikipedia.org/wiki/Jean_Quan">Jean Quan</a> emerged victorious this election day, although at one point she was trailing her opponent by 11 percentage points.  Understood in context, however, her victory is perhaps less surprising - rather than winning by <a href="http://en.wikipedia.org/wiki/Plurality_voting_system">Plurality</a>, Quan won under Oakland's <a href="http://en.wikipedia.org/wiki/Instant-runoff_voting">Instant Runoff Voting</a> system.
 
-[caption id="attachment_939" align="aligncenter" width="450" caption="I don&#39;t know much about Oakland politics, but this picture sure makes her look ready for business."]<a href="http://www.jeanquanforoakland.org/about"><img class="size-full wp-image-939" title="Quan_for_Mayor-255_Lake_Merritt_1_0" src="http://www.mathgoespop.com/images/2010/11/Quan_for_Mayor-255_Lake_Merritt_1_0.jpg" alt="" width="450" height="292" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.jeanquanforoakland.org/about"><img class="size-full wp-image-939" title="Quan_for_Mayor-255_Lake_Merritt_1_0" src="http://www.mathgoespop.com/images/2010/11/Quan_for_Mayor-255_Lake_Merritt_1_0.jpg" alt="" width="450" height="292" /></a><br>I don't know much about Oakland politics, but this picture sure makes her look ready for business.</p>
 
 What's the difference?  For most elections in the United States, voters are instructed to cast their vote for the individual who they would most like to see get elected.  These votes are tallied, and the one with the most votes is declared the winner.  In contrast, the Instant Runoff Voting system asks voters to rank several candidates at once - this extra information is used to automatically determine the outcome of a runoff if no candidate has a majority of first choice votes.
 
@@ -18,7 +19,7 @@ For a more detailed explanation, let's use this mayoral race as an example.  Th
 
 How did this shake out for Oaktown?  The Alameda County website has posted detailed <a href="http://www.acgov.org/rov/rcv/results/rcvresults_2984.htm">results</a>.   Because of the large number of candidates, the process described above  had to be applied a number of times.  Let me simplify things a bit and  look only at the last few rounds.
 
-[caption id="attachment_941" align="aligncenter" width="644" caption="Here&#39;s a simplified version of the data you can find from the link above."]<a href="http://www.mathgoespop.com/images/2010/11/Picture-6.png"><img class="size-full wp-image-941" title="IVData" src="http://www.mathgoespop.com/images/2010/11/Picture-6.png" alt="" width="644" height="159" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/11/Picture-6.png"><img class="size-full wp-image-941" title="IVData" src="http://www.mathgoespop.com/images/2010/11/Picture-6.png" alt="" width="644" height="159" /></a><br>Here's a simplified version of the data you can find from the link above.</p>
 
 The data shows, for example, that in Round 6, Terence Candell had the fewest number of votes.  Therefore, he was eliminated from the running, and his 2,680 votes were distributed among the remaining candidates, according to the preferences indicated on the ballot.  In the next round, Marcie Hodge had the fewest number of votes, and so she was eliminated and her votes were distributed among the remaining candidates.  And so on.  Eventually, Jean Quan emerged victorious, despite the fact that Don Perrata was the leader in every other round.  This is probably due in no small part to the combined strategy of Kaplan and Quan - according to <a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2010/11/09/BA3K1G91HH.DTL">this</a> article, the two joined forces and asked voters to place them in first and second place on the ballot.
 

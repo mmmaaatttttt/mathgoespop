@@ -1,6 +1,8 @@
 ---
 title: A Certain Ambiguity
 date: '2011-04-12'
+disqus_identifier: /a_certain_ambiguity
+disqus_url: http://www.mathgoespop.com/2011/04/a-certain-ambiguity.html
 tags:
 - escher
 - logicomix
@@ -12,15 +14,17 @@ I recently read the 2007 novel <a href="http://en.wikipedia.org/wiki/A_Certain_A
 
 The grandson, Ravi Kapoor, delves into this mysterious part of his grandfather's past while taking a mathematics class analogue of "Physics for Poets" - in other words, a math class aimed at non-mathematics students.  The story jumps between classroom discussions and fictionalized historical records in an attempt to make clear the beauty of mathematics and give insight into the quest for truth (including, but not limited to, mathematical truth).
 
-[caption id="attachment_1180" align="aligncenter" width="228" caption="A precarious bike ride."]<a href="http://www.mathgoespop.com/images/2011/04/certamb.jpg"><img class="size-full wp-image-1180" title="certamb" src="http://www.mathgoespop.com/images/2011/04/certamb.jpg" alt="" width="228" height="345" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2011/04/certamb.jpg"><img class="size-full wp-image-1180" title="certamb" src="http://www.mathgoespop.com/images/2011/04/certamb.jpg" alt="" width="228" height="345" /></a><br>A precarious bike ride.</p>
 
 The cover of the book describes it as "A Mathematical Novel" - to many, this may seem like an oxymoron.  In the preliminary author's note, they elaborate by stating the following:
+
 <blockquote>Our principal purpose in writing A Certain Ambiguity is to show the reader that mathematics is beautiful.  Furthermore, we seek to show that mathematics has profound things to say about what it means for humans to truly know something.  We believe that both objectives are best achieved in the medium of a novel.  After all it is human beings who feel beauty and it is human beings who feel the immediacy of philosophical questions.  And the only way to get human beings into the picture is to tell a story.</blockquote>
+
 But does the novel achieve it's goals?  I'm not so sure that it does.
 
 From a mathematical standpoint, the book does a good job of introducing and developing mathematical concepts for a general audience.  For the math newbie, this book discusses <a href="http://en.wikipedia.org/wiki/Zeno%27s_paradoxes#The_dichotomy_paradox">Zeno's paradox</a>, the <a href="http://en.wikipedia.org/wiki/Square_root_of_2#Proofs_of_irrationality">irrationality</a> of $latex \sqrt{2}$, <a href="http://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Cantor's diagonalization argument</a>, and some <a href="http://en.wikipedia.org/wiki/Non-Euclidean_geometry">non-Euclidean geometry</a>, just to name a few.  It also delves into the history of many mathematical discoveries, and tries to explore the personalities of those who have contributed to our collection of mathematical knowledge.
 
-[caption id="" align="aligncenter" width="425" caption="A mention of non-Euclidean geometry gives me an excuse to link to an Escher drawing.  Click through to try and discover the connection!"]<a href="http://en.wikipedia.org/wiki/M._C._Escher"><img src="http://upload.wikimedia.org/wikipedia/en/5/55/Escher_Circle_Limit_III.jpg" alt="" width="425" height="425" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://en.wikipedia.org/wiki/M._C._Escher"><img src="http://upload.wikimedia.org/wikipedia/en/5/55/Escher_Circle_Limit_III.jpg" alt="" width="425" height="425" /></a><br>A mention of non-Euclidean geometry gives me an excuse to link to an Escher drawing.  Click through to try and discover the connection!</p>
 
 This is all well and good.  The problem is that this frequently gets in the way of the narrative.  It is clear that the authors have a passion for mathematics, but it's less clear that they have a passion for storytelling.  Ravi's story sometimes seems to serve only as an inconvenient bridge that needs to be crossed in order to move from one mathematical discussion to another.  Also, there are several fictionalized journal entries from long deceased mathematicians (these are what personalize the history of mathematics), but these frequently serve no purpose in the larger story.
 

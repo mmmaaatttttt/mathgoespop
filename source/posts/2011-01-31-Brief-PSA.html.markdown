@@ -1,6 +1,8 @@
 ---
 title: Brief PSA
 date: '2011-01-31'
+disqus_identifier: /brief_psa
+disqus_url: http://www.mathgoespop.com/2011/01/brief-psa.html
 tags:
 - math-in-the-news
 ---
@@ -8,4 +10,5 @@ tags:
 Hi everyone.  This week is a little hectic for me, so I won't have time for a full-fledged post until probably this weekend.  I thought I would take an opportunity to respond to <a href="http://www.msnbc.msn.com/id/41314561/ns/us_news-weird_news/">this</a>, though, since a few people have sent it my way.  I'd just like to remind all mathematically-minded folks that our rep in this country is bad enough already, so please, let's all agree to not pee on our colleagues' office doors.  In fact, I don't think it should be too hard to take it a step further, and actively remove ourselves from any situation in which someone could even reasonably accuse us of peeing on their door (office or otherwise).
 
 Then again, maybe this guy was putting his own spin on the latest dance craze.
+
 <p style="text-align: center;"><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/tLPZmPaHme0" frameborder="0" allowFullScreen></iframe></p>

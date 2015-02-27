@@ -1,6 +1,8 @@
 ---
 title: Pi, I Shake My Fist at You
 date: '2010-11-24'
+disqus_identifier: /pi_i_shake_my_fist_at_you
+disqus_url: http://www.mathgoespop.com/2010/11/pi-i-shake-my-fist-at-you.html
 tags:
 - math-education
 - math-in-the-news
