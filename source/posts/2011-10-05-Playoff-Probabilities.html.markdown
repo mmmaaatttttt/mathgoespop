@@ -1,10 +1,13 @@
 ---
 title: Playoff Probabilities
 date: '2011-10-05'
+disqus_identifier: /playoff_probabilities
+disqus_url: http://www.mathgoespop.com/2011/10/playoff-probabilities.html
 tags:
 - baseball
 - probability
 - sports
+custom_js: 2011_10_playoff_probabilities
 ---
 
 Continuing with <a href="http://www.mathgoespop.com/2011/09/moneyball.html">last</a> week's theme, and since we are in the midst of playoffs, I'd like to take a moment now to discuss another link between baseball and mathematics.  This link is particularly timely since the <a href="http://www.baseball-reference.com/blog/archives/10800">scuttlebutt</a> on the internet suggests that next year the playoff rules for baseball will be changed: the number of teams competing for the World Series will increase from 8 to 10, and because of that, another round of playoff games will be introduced.
@@ -15,24 +18,59 @@ Many people take issue with such a short series on the grounds of fairness.  In
 
 Suppose two teams are meeting for a playoff series, and the probability that one team (call it, I don't know, the <a href="http://sanfrancisco.giants.mlb.com/index.jsp?c_id=sf">Giants</a>) will win a single game is <em>p</em> (this model is fairly simple, and does not take into account advantages associated with the starting pitcher, for example, but let's keep things basic for now).  Then the probability that this team will win a one game series is again <em>p</em>, since the series consists of a single game.
 
-What if the series is three games long?  In this case, the Giants will win if they win the first two games, or split the first two games and win the third game.  So there are three outcomes: WW, WLW, or LWW.  The probability of the first event is $latex p^2$, while the probability of the second and third events are both $latex p^2(1-p)$ (probability <em>p</em> of success is the same as probability 1-<em>p</em> of failure).  Adding these three probabilities gives the total probability that the team will win a best-of-three series:
-<p style="text-align: center;">$latex p^2 + 2p^2(1-p) = p^2(3-2p).$</p>
-<p style="text-align: left;">In a best-of-five series, the Giants will win if they win three in a row, two of the first three and the fourth, or two of the first four and the fifth.  Using <a href="http://en.wikipedia.org/wiki/Combination">combinations</a> to count the possibilities, we see that in this case, the probability of the Giants winning the series is equal to</p>
-<p style="text-align: center;">$latex p^3 + \binom{3}{2}p^3(1-p)+\binom{4}{2}p^3(1-p)^2$</p>
-<p style="text-align: center;">$latex = p^3(10-15p+6p^2).$</p>
-<p style="text-align: left;">With the same type of argument you can calculate the probability that the Giants win a best-of-seven series.  I'll spare you the details: the result is $latex p^4(35-84p+70p^2-20p^3)$.</p>
-<p style="text-align: left;">In each case, the probability of winning the series is a <a href="http://en.wikipedia.org/wiki/Polynomial">polynomial</a> in <em>p</em>, the probability of winning a single game.  But how to these polynomials compare?  Let's turn to technology to lead the way!</p>
+What if the series is three games long?  In this case, the Giants will win if they win the first two games, or split the first two games and win the third game.  So there are three outcomes: WW, WLW, or LWW.  The probability of the first event is <em>p</em><sup>2</sup>, while the probability of the second and third events are both <em>p</em><sup>2</sup>(1 &ndash; <em>p</em>) (probability <em>p</em> of success is the same as probability 1 &ndash; <em>p</em> of failure).  Adding these three probabilities gives the total probability that the team will win a best-of-three series:
+
+<p style="text-align: center;"><em>p</em><sup>2</sup> + 2<em>p</em><sup>2</sup>(1 &ndash; <em>p</em>) = <em>p</em><sup>2</sup>(3 &ndash; 2<em>p</em>).</p>
+
+<p>In a best-of-five series, the Giants will win if they win three in a row, two of the first three and the fourth, or two of the first four and the fifth.  Using <a href="http://en.wikipedia.org/wiki/Combination">combinations</a> to count the possibilities, we see that in this case, the probability of the Giants winning the series is equal to</p>
+
+<p style="text-align: center;" class="formula"></p>
+
+<p style="text-align: center;"><em>p</em><sup>3</sup>(10 &ndash; 15<em>p</em> + 6<em>p</em><sup>2</sup>).</p>
+
+<p>With the same type of argument you can calculate the probability that the Giants win a best-of-seven series.  I'll spare you the details: the result is $latex <em>p</em><sup>4</sup>(35 &ndash; 84p + 70<em>p</em><sup>2</sup> &ndash; 20<em>p</em><sup>3</sup>).</p>
+
+<p>In each case, the probability of winning the series is a <a href="http://en.wikipedia.org/wiki/Polynomial">polynomial</a> in <em>p</em>, the probability of winning a single game.  But how to these polynomials compare?  Let's turn to technology to lead the way!</p>
 
 
-[caption id="attachment_1456" align="aligncenter" width="600" caption="Probabilities for a one, three, five, and seven game series."]<a href="http://www.mathgoespop.com/images/2011/10/Picture-5.png"><img class="size-full wp-image-1456" title="Picture 5" src="http://www.mathgoespop.com/images/2011/10/Picture-5.png" alt="" width="600" height="532" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2011/10/Picture-5.png"><img class="size-full wp-image-1456" title="Picture 5" src="http://www.mathgoespop.com/images/2011/10/Picture-5.png" alt="" width="600" height="532" /></a><br>Probabilities for a one, three, five, and seven game series.</p>
 
-Above is a graph of these four functions - the <em>x</em>-axis represents the probability <em>p</em>, while the <em>y</em>-axis represents the probability of winning the series.  The dark blue graph is for a single-game series (the function is <em>p</em>), the light blue graph is for a three-game series (the function is $latex p^2(3-2p)$, the light green graph is for a five-game series (the function is $latex = p^3(1-15p+6p^2)$), and the red graph is for a seven-game series (the function is $latex p^4(35-84p+70p^2-20p^3)$).  What can we deduce from the picture above?
+Above is a graph of these four functions - the <em>x</em>-axis represents the probability <em>p</em>, while the <em>y</em>-axis represents the probability of winning the series.  The dark blue graph is for a single-game series (the function is <em>p</em>), the light blue graph is for a three-game series, the light green graph is for a five-game series, and the red graph is for a seven-game series.  What can we deduce from the picture above?
 
 First, note that a longer series benefits the stronger team more than the weaker team - this makes intuitive sense, if you think about it.  Also, for teams that are perfectly evenly matched (i.e. <em>p = </em>0.5), the length of the series doesn't affect the probability of winning the series, which is also 50% in each case.
 
 But what about teams with a slight, moderate, or strong advantage over their competition?  How does the length of the series affect the probability of winning the series?  Let's look at a small table of values, in the cases <em>p</em> = .55, <em>p</em> = .6, and <em>p</em> = .7.
 
-[table id=4 /]
+<table class="table table-bordered table-centered">
+	<tr>
+		<td><em>p</em></td>
+		<td width="22%">Best of One Probability of Success</td>
+		<td width="22%">Best of Three Probability of Success</td>
+		<td width="22%">Best of Five Probability of Success</td>
+		<td width="22%">Best of Seven Probability of Success</td>
+	</tr>
+	<tr>
+		<td>.550</td>
+		<td>.550</td>
+		<td>.575</td>
+		<td>.593</td>
+		<td>.608</td>
+	</tr>
+	<tr>
+		<td>.600</td>
+		<td>.600</td>
+		<td>.648</td>
+		<td>.683</td>
+		<td>.710</td>
+	</tr>
+	<tr>
+		<td>.700</td>
+		<td>.700</td>
+		<td>.784</td>
+		<td>.837</td>
+		<td>.874</td>
+	</tr>
+</table>
 
 As you can see from the table (or the graph), the more evenly matched the teams, the less of a difference the length of the series makes.  If your team has a 55% chance of winning a given game, the advantage in a seven game series is increased by a little less than 6 percentage points.  With a 60% chance of winning a given game, the advantage in a seven game series is increased by 11 percentage points, and with a 70% chance of winning a given game, the advantage in a seven game series is increased by over 17 percentage points.
 

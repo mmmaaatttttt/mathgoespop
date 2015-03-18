@@ -119,6 +119,15 @@ blockquote {
 	border-radius: 4px;
 }
 
+.table-centered {
+	margin: 0 15px 10px;
+	text-align: center;
+}
+
+.table-centered td {
+	vertical-align: middle !important;
+}
+
 // .col-xs-3 h2:first-of-type {
 // 	margin-top: -10px;
 // }

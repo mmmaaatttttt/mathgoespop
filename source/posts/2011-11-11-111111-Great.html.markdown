@@ -1,10 +1,11 @@
 ---
 title: 11/11/11.  Great.
 date: '2011-11-11'
+disqus_identifier: /111111_great
+disqus_url: http://www.mathgoespop.com/2011/11/111111-great.html
 tags:
 - holidays
 ---
-
 To the question making the news circuit today ("Does today's date have any special significance?") I believe an article at Scientific American provides the most compelling answer: <a href="http://blogs.scientificamerican.com/guest-blog/2011/11/11/does-111111-have-anything-to-do-with-science/">no</a>.  Not only does the article brush aside suggestions that this day might have some deeper meaning, but it also spends some time discussing why such numerological curiosities capture our collective imagination to the extent that they do.  If you only read one article about 11/11/11 today (or two, I suppose, since you're already reading this), let it be that one.
 
 If you are a masochist like me, though, there are plenty of ridiculous articles floating around today to help you get your blood boiling.  One of my favorites comes from <a href="http://www.philly.com/philly/news/133666648.html">today</a>'s Philadelphia Inquirer.  It's full of gems like:
