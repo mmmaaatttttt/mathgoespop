@@ -1,6 +1,8 @@
 ---
 title: 'Math in Books: Math Puzzles'
 date: '2012-05-27'
+disqus_identifier: /math_in_books_math_puzzles
+disqus_url: http://www.mathgoespop.com/2012/05/math-in-books-math-puzzles.html
 tags:
 - math-in-books
 - mind-your-decisions
@@ -12,7 +14,7 @@ The book is organized into three sections, divided by general subject.  There a
 
 William Poundstone's book on the history of Microsoft and the puzzle-based job interview, <a href="http://www.amazon.com/Would-Move-Mount-Microsofts-Puzzle/dp/0316919160">How Would You Move Mt. Fuji?</a>, is probably the most commonly cited text in Presh's collection.  Poundstone's book, while interesting, already feels a little bit dated, so it's nice some of these puzzles outside the context of a larger book on how pioneering Microsoft is as a company because of their approach to job interviews.  (Side note: a more timely follow-up to Poundstone's book may be his more recent <a href="http://www.amazon.com/Are-Smart-Enough-Work-Google/dp/031609997X">Are You Smart Enough to Work at Google?</a>)
 
-[caption id="attachment_2017" align="aligncenter" width="250" caption="Thanks to Presh for sending along this cover photo!"]<a href="http://mindyourdecisions.com/blog/"><img class="size-medium wp-image-2017" title="puzzle-book-cover-big" src="http://www.mathgoespop.com/images/2012/05/puzzle-book-cover-big-184x300.jpg" alt="" width="250" height="409" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://mindyourdecisions.com/blog/"><img class="size-medium wp-image-2017" title="puzzle-book-cover-big" src="http://www.mathgoespop.com/images/2012/05/puzzle-book-cover-big-184x300.jpg" alt="" width="250" height="409" /></a><br>Thanks to Presh for sending along this cover photo!</p>
 
 Though the puzzles may not all be unique, Presh provides clear and interesting solutions to each of them.  He is at his best when he also ponders extensions to the original puzzle, or discusses several alternative solutions for the same question.  Even with puzzles I had already seen, I was pleasantly surprised by the novelty and variety of Presh's solutions more than once.  Though the more advanced solutions sometimes skip a few steps (especially solutions involving calculus), Presh at least has the common sense to let you know when he is omitting some of the details.  Having said that, for readers who have not had some background in calculus (or in the case of one puzzle, some linear algebra), some of the solutions may be a bit hard to understand.  The good news is that most of the solutions are completely self-contained.
 

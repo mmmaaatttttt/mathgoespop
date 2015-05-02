@@ -1,6 +1,8 @@
 ---
 title: 'CNN Light Years Guest Post: Did ''Avengers'' really own box office records?'
 date: '2012-05-18'
+disqus_identifier: /avengers
+disqus_url: http://www.mathgoespop.com/2012/05/avengers.html
 tags:
 - guest-posts
 - math-in-the-movies

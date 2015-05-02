@@ -1,6 +1,8 @@
 ---
 title: 'Mathalicious Post: Most Expensive. Collectibles. Ever.'
 date: '2012-11-08'
+disqus_identifier: /mathalicious_post_most_expensive_collectibles_ever
+disqus_url: http://www.mathgoespop.com/2012/11/most-expensive-collectibles-ever.html
 tags:
 - coupon-collectors-problem
 - guest-posts

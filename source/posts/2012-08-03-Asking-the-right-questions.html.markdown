@@ -1,6 +1,8 @@
 ---
 title: Asking the right questions
 date: '2012-08-03'
+disqus_identifier: /asking_the_right_questions
+disqus_url: http://www.mathgoespop.com/2012/08/asking-the-right-questions.html
 tags:
 - algebra
 - math-education

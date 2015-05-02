@@ -1,6 +1,8 @@
 ---
 title: A Rule for Summer Lovin'
 date: '2012-06-25'
+disqus_identifier: /a_rule_for_summer_lovin
+disqus_url: http://www.mathgoespop.com/2012/06/a-rule-for-summer-lovin.html
 tags:
 - celebrity
 - dating
@@ -19,26 +21,32 @@ One of the most well-known rules of thumb is the <a href="http://en.wikipedia.or
 <a href="http://www.quora.com/Dating-Relationships/What-is-the-origin-of-half-your-age-plus-seven-dating-rule">Originally</a>, this rule was conceived of as a means to compute a wife's ideal age compared to her husband (namely, half his age plus seven).  It has since evolved, however, to provide a rule of thumb for the largest age gap a relationship can withstand before it is considered perhaps a bit creepy.  It works equally well for men and women, too.  By way of example, if you're 20, you shouldn't date someone younger than 17, and good luck dating someone under 22 if you're 30 or above.
 
 Mathematically, we can express the rule as follows: if we let <em>A</em> denote the older person's age, and <em>a</em> denote the younger person's age, then the rule states that
-<p style="text-align: center;">$latex a \geq A/2 + 7.$</p>
-<p style="text-align: left;">Of course, a lower bound on <em>a</em> can be transformed into an upper bound on <em>A</em> - by transforming the above inequality we see</p>
-<p style="text-align: center;">$latex A \leq 2a - 14.$</p>
-<p style="text-align: left;">(If you're a teacher looking for an introduction to inverse functions, look no further!)</p>
-<p style="text-align: left;">These two inequalities determine regions in the plane, and by considering them simultaneously they tell us that you shouldn't date someone who is younger than half your age plus seven years, or older than twice your age minus fourteen years.  If we graph this region in the plane, we find the following acceptable region of ages for you to date:</p>
 
+<p style="text-align: center;"><em>a</em> &ge; <em>A</em>/2 + 7.</p>
 
-[caption id="attachment_2087" align="aligncenter" width="491" caption="Graph of the feasible dating region."]<a href="http://www.mathgoespop.com/images/2012/06/halfage.png"><img class="size-large wp-image-2087  " title="halfage" src="http://www.mathgoespop.com/images/2012/06/halfage-1024x1024.png" alt="" width="491" height="491" /></a>[/caption]
-<p style="text-align: left;">The black line represents your age as a function of time (increasing at a rate of one year per year). The blue region shows the range of acceptable ages for you to date at a particular point in time.  For example, when you are 14, it is only acceptable to date 14 year olds.  When you're 20, you can date people between the ages of 17 and 26.  When you're 30, you can date between the ages of 22 and 46, and so on.</p>
-<p style="text-align: left;">Once nice thing about the rule is that even if you want to date someone outside of the blue region above, given enough time that person will enter the region.  If you're 30 and in love with a 20 year old, all you need to do is wait four years - you will then be 34, and the object of your desire will be 24, just inside the acceptable region, since 34 ÷ 2 + 7 = 24.</p>
-<p style="text-align: left;">We can also see how various high-profile couples fit into this framework.  For example, the age difference between <a href="http://en.wikipedia.org/wiki/Ashton_Kutcher">Ashton Kutcher</a> and <a href="http://en.wikipedia.org/wiki/Demi_Moore">Demi Moore</a> made headlines throughout their relationship.  She is approximately 15.24 years older than him, so if we plot his age as a function of time through the course of their relationship, we obtain the following:</p>
+<p>Of course, a lower bound on <em>a</em> can be transformed into an upper bound on <em>A</em> - by transforming the above inequality we see</p>
 
+<p style="text-align: center;"><em>A</em> &le; 2<em>a</em> &ndash; 14.</p>
 
-[caption id="attachment_2097" align="aligncenter" width="491" caption="Ashton &amp; Demi"]<a href="http://www.mathgoespop.com/images/2012/06/ashtondemi.png"><img class="size-large wp-image-2097  " title="ashtondemi" src="http://www.mathgoespop.com/images/2012/06/ashtondemi-1024x1024.png" alt="" width="491" height="491" /></a>[/caption]
+<p>(If you're a teacher looking for an introduction to inverse functions, look no further!)</p>
+
+<p>These two inequalities determine regions in the plane, and by considering them simultaneously they tell us that you shouldn't date someone who is younger than half your age plus seven years, or older than twice your age minus fourteen years.  If we graph this region in the plane, we find the following acceptable region of ages for you to date:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/06/halfage.png"><img class="size-large wp-image-2087  " title="halfage" src="http://www.mathgoespop.com/images/2012/06/halfage-1024x1024.png" alt="" width="491" height="491" /></a><br>Graph of the feasible dating region.</p>
+
+<p>The black line represents your age as a function of time (increasing at a rate of one year per year). The blue region shows the range of acceptable ages for you to date at a particular point in time.  For example, when you are 14, it is only acceptable to date 14 year olds.  When you're 20, you can date people between the ages of 17 and 26.  When you're 30, you can date between the ages of 22 and 46, and so on.</p>
+
+<p>Once nice thing about the rule is that even if you want to date someone outside of the blue region above, given enough time that person will enter the region.  If you're 30 and in love with a 20 year old, all you need to do is wait four years - you will then be 34, and the object of your desire will be 24, just inside the acceptable region, since 34 ÷ 2 + 7 = 24.</p>
+
+<p>We can also see how various high-profile couples fit into this framework.  For example, the age difference between <a href="http://en.wikipedia.org/wiki/Ashton_Kutcher">Ashton Kutcher</a> and <a href="http://en.wikipedia.org/wiki/Demi_Moore">Demi Moore</a> made headlines throughout their relationship.  She is approximately 15.24 years older than him, so if we plot his age as a function of time through the course of their relationship, we obtain the following:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/06/ashtondemi.png"><img class="size-large wp-image-2097  " title="ashtondemi" src="http://www.mathgoespop.com/images/2012/06/ashtondemi-1024x1024.png" alt="" width="491" height="491" /></a><br>Ashton &amp; Demi</p>
 
 Here the black line represents Demi's age, while the red line represents Ashton's. When they first started dating (in 2003, according to Wikipedia), by this measure Ashton was too young.  Even when they got married, he was just outside of her acceptable dating region.  However, by the time they split up the age difference was no longer unacceptable - it appears that Ashton's age was acceptable for roughly half the duration of their relationship.
 
 For another example, consider Michael Douglas and Catharine Zeta-Jones.  This example is particularly nice mathematically, since their age gap is exactly 25 years.  This Hollywood couple is still together, so if we map her age as a function of time, from the start of their relationship to present day, we get the following:
 
-[caption id="attachment_2099" align="aligncenter" width="491" caption="Catherine &amp; Michael"]<a href="http://www.mathgoespop.com/images/2012/06/czj.png"><img class="size-large wp-image-2099  " title="czj" src="http://www.mathgoespop.com/images/2012/06/czj-1024x1024.png" alt="" width="491" height="491" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/06/czj.png"><img class="size-large wp-image-2099  " title="czj" src="http://www.mathgoespop.com/images/2012/06/czj-1024x1024.png" alt="" width="491" height="491" /></a><br>Catherine &amp; Michael</p>
 
 Here we see that Catherine Zeta-Jones has only been inside of Douglas's acceptable region for a relatively short period of time.  This makes sense, since a 25 year age gap only begins to be acceptable when the older party is 64.
 
@@ -46,7 +54,7 @@ For an even more extreme example, we can consider the poster boy for violation o
 
 While Hef keeps getting older, the same cannot be said of his love interests:
 
-[caption id="attachment_2101" align="aligncenter" width="491" caption="Hugh Hefner and everyone else."]<a href="http://www.mathgoespop.com/images/2012/06/hef.png"><img class="size-large wp-image-2101  " title="hef" src="http://www.mathgoespop.com/images/2012/06/hef-1024x1024.png" alt="" width="491" height="491" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/06/hef.png"><img class="size-large wp-image-2101  " title="hef" src="http://www.mathgoespop.com/images/2012/06/hef-1024x1024.png" alt="" width="491" height="491" /></a><br>Hugh Hefner and everyone else.</p>
 
 Though you wouldn't know it based on his present behavior, Hef's first wife was actually older than him, though just barely so.  This is why Mildred's line is right in the middle of Hef's acceptable region for the duration of their 10 year marriage.  But the other three women mentioned above were always too young for Hef by this measure.  For his most recent relationship, the gap between his age and Crystal's is more than 60 years!  This means that in order for Crystal to make it into the acceptable region, they will have to stay together until some time in the year 2060, when she will be 74 and he will be 134.  Given that the durations of Hef's relationships appear to be decreasing, I would say this is unlikely.
 

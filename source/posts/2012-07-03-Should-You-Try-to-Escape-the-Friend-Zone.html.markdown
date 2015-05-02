@@ -1,6 +1,8 @@
 ---
 title: Should You Try to Escape the Friend Zone?
 date: '2012-07-03'
+disqus_identifier: /should_you_try_to_escape_the_friend_zone
+disqus_url: http://www.mathgoespop.com/2012/07/should-you-try-to-escape-the-friend-zone.html
 tags:
 - dating
 - friend-zone
@@ -18,7 +20,7 @@ Suppose you find yourself trapped in the friend zone, and want to make a break f
 
 One place to look is one of MTV's latest dating shows, the aptly named <a href="http://www.mtv.com/shows/friendzone/series.jhtml">Friendzone</a>.  The show takes pairs of friends in which one pines for the other, and documents a confession of true feelings and the ramifications of such a confession.  The confession is always made in a public place, and closes with the confessor asking his or her friend out on a date at their current location.  Each episode of this show covers two couples and two confessions, so with MTV's commercial interruptions, each storyline takes about 10 minutes.
 
-[caption id="attachment_2118" align="aligncenter" width="500" caption="Here&#39;s the title card for the show."]<a href="http://www.mtv.com/shows/friendzone/series.jhtml"><img class="size-full wp-image-2118" title="friendzone" src="http://www.mathgoespop.com/images/2012/07/friendzone_500x375.jpg" alt="" width="500" height="375" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mtv.com/shows/friendzone/series.jhtml"><img class="size-full wp-image-2118" title="friendzone" src="http://www.mathgoespop.com/images/2012/07/friendzone_500x375.jpg" alt="" width="500" height="375" /></a><br>Here's the title card for the show.</p>
 
 After fast forwarding my way through many of these episodes (though I must admit, I watched many of them as well), I have collected data on 75 pairs of friends, which I would now like to share with you.  Of course, because we must always take the word "reality" in "reality television" with several grains of salt, this data is undoubtedly biased.  With this caveat in mind, I thought it would be fun to poke around and see what we could find.
 
@@ -28,13 +30,13 @@ Of the 38 men who confessed their love and asked for a date, 25 received a yes, 
 
 One can also flip the script a bit, and ask about the sex of the person being asked, rather than the sex of the person doing the asking.  These questions are not equivalent, since occasionally the show features same-sex pairs of friends.  In this case, 39 women were asked on a date, of whom 27 accepted, while 36 men were asked on a date, of whom 28 accepted.  Again, the differences are noticeable, though not quite significant.  Here's a chart illustrating these four cases.
 
-[caption id="attachment_2123" align="aligncenter" width="563" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2012/07/Picture-12.png"><img class="size-full wp-image-2123" title="Date Accept/Reject Proportions" src="http://www.mathgoespop.com/images/2012/07/Picture-12.png" alt="" width="563" height="366" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/07/Picture-12.png"><img class="size-full wp-image-2123" title="Date Accept/Reject Proportions" src="http://www.mathgoespop.com/images/2012/07/Picture-12.png" alt="" width="563" height="366" /></a><br>Click to embiggen!</p>
 
 Of course, this is only part of the story.  What if your friend says yes to the date, but only because you put him on the spot, or he feels bad saying no?  Nobody wants to hear a yes out of pity.  Thankfully, since the show follows the pair on the date if it occurs, we can see how many of these dates are actually pity dates.  We can also investigate whether one sex is more likely to say "yes" out of pity than another, though again, it is difficult to draw statistically significant conclusions.
 
 For the guys: of the 25 who received a "yes" to the date, 7 of them discovered on the date that their friend was not interested in pursuing a relationship.  This means that the number of successful relationships formed from the confession drops from 25 out of 38 to 18 out of 38, or around 47.4%.  For the ladies, 8 of the 30 dates turned out to be pity dates, bringing the success rate down to 22 out of 37 from 30 out of 37.  Here's a modified chart, where date acceptance has been replaced by relationship acceptance.
 
-[caption id="attachment_2125" align="aligncenter" width="564" caption="Click to embiggen!"]<a href="http://www.mathgoespop.com/images/2012/07/Picture-13.png"><img class="size-full wp-image-2125 " title="Relationship Accept Proportions" src="http://www.mathgoespop.com/images/2012/07/Picture-13.png" alt="" width="564" height="367" /></a>[/caption]
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/07/Picture-13.png"><img class="size-full wp-image-2125 " title="Relationship Accept Proportions" src="http://www.mathgoespop.com/images/2012/07/Picture-13.png" alt="" width="564" height="367" /></a><br>Click to embiggen!</p>
 
 As before, we see men who do the asking fare slightly worse than women, though the difference is once again not statistically significant.
 

@@ -1,6 +1,8 @@
 ---
 title: 'CNN Light Years Guest Post: How Professors'' Dads Made Math Fun'
 date: '2012-06-15'
+disqus_identifier: /cnn_light_years_guest_post_how_professors_dads_made_math_fun
+disqus_url: http://www.mathgoespop.com/2012/04/how-professors-dads-made-math-fun.html
 tags:
 - cnn
 - fathers-day

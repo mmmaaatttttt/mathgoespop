@@ -1,6 +1,8 @@
 ---
 title: 'CNN Light Years guest post: Data: It''s how stores know you''re pregnant'
 date: '2012-04-20'
+disqus_identifier: /cnn_light_years_guest_post_data_its_how_stores_know_youre_pregnant.html
+disqus_url: http://www.mathgoespop.com/2012/04/cnn-light-years-guest-post-data-its-how-stores-know-youre-pregnant.html
 tags:
 - guest-posts
 - math-in-the-news

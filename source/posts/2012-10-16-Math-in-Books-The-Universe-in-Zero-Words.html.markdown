@@ -1,12 +1,13 @@
 ---
 title: 'Math in Books: The Universe in Zero Words'
 date: '2012-10-16'
+disqus_identifier: /math_in_books_the_universe_in_zero_words
+disqus_url: http://www.mathgoespop.com/2012/10/math-in-books-the-universe-in-zero-words.html
 tags:
 - equations
 - history
 - math-in-books
 ---
-
 <p style="text-align: justify;">I recently had the pleasure of reading <a href="http://www.amazon.com/Universe-Zero-Words-Mathematics-Equations/dp/0691152829">The Universe in Zero Words: The Story of Mathematics as Told through Equations</a>.  Written by Dr. <a href="http://danamackenzie.com/">Dana Mackenzie</a>, the book frames mathematical history in terms of some of the most important equations ever discovered.  While writing about equations for a general audience can be a dangerous game, Dr. Mackenzie tackles mathematical notation head on.  If the sight of an equation causes a chill to run down your spine, fear not; the book eases you in with the very simplest of equations (we're talking 1 + 1 = 2 here) and guides you gently through a history of mathematics, from antiquity to present day.</p>
 <p style="text-align: center;"><a href="http://www.mathgoespop.com/images/2012/10/zerouniverse.jpg"><img class="aligncenter  wp-image-2361" title="zerouniverse" src="http://www.mathgoespop.com/images/2012/10/zerouniverse.jpg" alt="" width="270" height="363" /></a></p>
 <p style="text-align: justify;">Of course, as you move closer to the present, the equations get a little more sophisticated.  Even so, Dr. Mackenzie does his best to ground the equations to something relatable to a wide audience (and by and large, he's quite successful).  For instance, he uses whales as a way to talk about non-Euclidean geometry: you can read more about this example <a href="http://wordplay.blogs.nytimes.com/2012/10/08/whale/#more-84608">here</a>, and can download the relevant chapter, too.  While the book won't turn you into a mathematical genius, it will teach you the history surrounding some of the subject's most important equations, and will give you a reasonable idea as to what the equations are communicating.  Words can't always do justice to the economical beauty of an equation (after all, that's what makes equations so appealing in the first place!), but if you suffer from math anxiety, a book like this may help to alleviate some of your most severe symptoms.</p>

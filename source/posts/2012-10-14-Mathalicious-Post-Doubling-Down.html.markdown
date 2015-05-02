@@ -1,6 +1,8 @@
 ---
 title: 'Mathalicious Post: Doubling Down'
 date: '2012-10-14'
+disqus_identifier: /mathalicious_post_doubling_down
+disqus_url: http://www.mathgoespop.com/2012/10/mathalicious-post-doubling-down.html
 tags:
 - blackjack
 - gambling

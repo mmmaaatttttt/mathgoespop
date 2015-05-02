@@ -1,6 +1,8 @@
 ---
 title: 'Mathalicious Post: To Foul Or Not To Foul'
 date: '2012-10-04'
+disqus_identifier: /mathalicious_post_to_foul_or_not_to_foul
+disqus_url: http://www.mathgoespop.com/2012/10/mathalicious-post-to-foul-or-not-to-foul.html
 tags:
 - basketball
 - guest-posts

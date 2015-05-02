@@ -1,6 +1,8 @@
 ---
 title: 'CNN Light Years guest post: Why a different voting system might be better'
 date: '2012-03-16'
+disqus_identifier: /cnn_light_years_guest_post_why_a_different_voting_system_might_be_better.html
+disqus_url: http://www.mathgoespop.com/2012/03/cnn-light-years-guest-post-why-a-different-voting-system-might-be-better.html
 tags:
 - cnn-light-years
 - guest-posts
