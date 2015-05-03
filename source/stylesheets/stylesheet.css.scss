@@ -1,4 +1,4 @@
-/* header area */
+/* header and footer area */
 
 $header-bg: #2E303C;
 $header-height: 4em;
@@ -24,7 +24,7 @@ h2, h2 a {
 	font-size: 16px !important;
 }
 
-header {
+header, footer {
 	background-color: $header-bg;
 	height: $header-height;
 	width: 100%;
@@ -33,7 +33,11 @@ header {
 header a, 
 header a:hover,
 header a:focus,
-header a:active {
+header a:active, 
+footer a, 
+footer a:hover,
+footer a:focus,
+footer a:active {
 	color: #FFF;
 	text-decoration: none;
 }
@@ -41,6 +45,17 @@ header a:active {
 nav a, #logo {
 	padding: 0 10px;
 	line-height: $header-height;
+}
+
+footer #social-media i {
+	float: left;
+	line-height: 1.6em;
+}
+
+footer #license {
+	float: right;
+	line-height: $header-height;
+	padding-right: 20px;
 }
 
 /* homepage body */

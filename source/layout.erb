@@ -35,37 +35,41 @@
         </div>
       </div>
       <div class="col-xs-3">
-      <aside>
-        <form>
-          <input type="text" id="st-search-input" class="st-search-input" value="Search Math Goes Pop!"/>
-        </form>
-        <h2>Recent Articles</h2>
-        <ul type="circle">
-          <% blog.articles[0...5].each do |article| %>
-            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-          <% end %>
-        </ul>
-
-<!--         <h2>Tags</h2>
-        <ol>
-          <% blog.tags.each do |tag, articles| %>
-            <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-          <% end %>
-        </ol> -->
-
-        <h2>By Year</h2>
+        <aside>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" value="Search Math Goes Pop!"/>
+          </form>
+          <h2>Recent Articles</h2>
           <ul type="circle">
-            <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-              <li class="year"><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+            <% blog.articles[0...5].each do |article| %>
+              <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
             <% end %>
           </ul>
-        <div id="social-media">
-          <a href="https://twitter.com/mmmaaatttttt"><i class="fa fa-twitter-square"></i></a>
-          <a href="https://instagram.com/mmmaaatttttt"><i class="fa fa-instagram"></i></a>
-        </div>
-        
-      </aside>
- </div>
+
+  <!--         <h2>Tags</h2>
+          <ol>
+            <% blog.tags.each do |tag, articles| %>
+              <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+            <% end %>
+          </ol> -->
+
+          <h2>By Year</h2>
+            <ul type="circle">
+              <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+                <li class="year"><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+              <% end %>
+            </ul>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt"><i class="fa fa-twitter-square"></i></a>
+      <a href="https://instagram.com/mmmaaatttttt"><i class="fa fa-instagram"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="/javascripts/swiftype.js"></script>
