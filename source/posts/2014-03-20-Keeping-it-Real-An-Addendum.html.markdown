@@ -1,10 +1,11 @@
 ---
 title: 'Keeping it Real: An Addendum'
 date: '2014-03-20'
+disqus_identifier: /keeping_it_real_an_addendum/
+disqus_url: http://www.mathgoespop.com/2014/03/keeping-it-real-an-addendum.html
 tags:
 - et-cetera
 ---
-
 <p style="text-align: justify;">Last week, Dan Meyer <a href="http://blog.mrmeyer.com/2014/dear-mathalicious-fake-world-which-of-these-questions-is-real-world/">invited</a> the folks at Mathalicious to opine on the meaning of the phrase "real-world," not as it applies to MTV shows (though that would make for a great conversation), but as it applies to questions asked of students in a math classroom. This week, we <a href="http://blog.mathalicious.com/2014/03/19/the-real-worlds/">responded</a>, continuing what I believe to be an important and interesting discussion about the nature of what we mean when we demand that mathematics be made more "real" for our students.</p>
 <p style="text-align: justify;">Most of my thoughts on the subject are encapsulated in the Mathalicious response. (Both articles come highly recommended, and what I say below may not make much sense if you haven't read them first.) The conversation got me thinking, though, and so I'd like to offer my own personal aside/addendum.</p>
 <p style="text-align: justify;">When I began writing in this corner of the internet in the summer of 2008, my goal was simply to talk about mathematical ideas in a way that was accessible for a general audience (and in particular, an audience that didn't necessarily think of itself as mathematically inclined). I believed that talking about math through the lens of popular culture would help with this, because, in my experience, most people (a) prefer pop culture to math, and (b) don't believe that the intersection between the two is all that rich. I probably haven't always been successful in hitting the sweet spot in the intersection between pop culture and mathematics, but those successes have brought with them a not-insignificant sense of pride.</p>
