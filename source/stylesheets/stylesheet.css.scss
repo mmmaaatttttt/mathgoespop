@@ -2,13 +2,17 @@
 
 $header-bg: #2E303C;
 $header-height: 4em;
-$link-color-light: #886E69;
+$link-color-light: #25A5C4;
 $link-color: #482B25;
 $date-color: #CF7FF4;
 $line-color: #86CB92;
 
 * {
 	font-family: Lato, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+}
+
+h2, h2 a {
+	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
 }
 
 .katex:not(.size-exempt), .mathit, .reset-textstyle.textstyle {
@@ -44,10 +48,17 @@ nav a, #logo {
 body {
 	clear: both;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 a {
 	color: $link-color-light;
+}
+
+.row {
+	background: rgba(46,48,60,0.1);
+	margin-left: 0;
+	margin-right: 0;
 }
 
 a:hover,
@@ -58,11 +69,16 @@ a:active {
 }
 
 #main {
-	padding: 20px 15px 0;
+	margin: 20px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 15px;
 }
 
 .col-md-9 {
 	border-right: 1px solid $line-color;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 #main h2:not(:first-of-type) {
@@ -126,6 +142,15 @@ blockquote {
 
 .table-centered td {
 	vertical-align: middle !important;
+}
+
+aside ul {
+	padding-left: 20px;
+}
+
+#social-media i {
+	font-size: 40px;
+	margin-left: 20px;
 }
 
 // .col-xs-3 h2:first-of-type {
