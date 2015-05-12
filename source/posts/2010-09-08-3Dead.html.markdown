@@ -19,13 +19,13 @@ This graph tells you, for example, that during opening weekend for <a href="http
 
 Of course, given the higher ticket prices for the 3D experience, attendance numbers may paint an even bleaker picture. Suppose that on average, prices for a 3D film are 20% higher than prices for its 2D equivalent (this is a fairly conservative estimate - I wouldn't be surprised if the actual surcharge was closer to 30%).  In that case, if we scale the 3D revenues by a factor of 5/6 (so that a 20% increase yields the original price), we get a better idea of attendance ratios for 3D vs 2D screenings.  Looking at the original data and the scaled data side by side gives us the following picture:
 
-<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png"><img class="size-full wp-image-786" title="3D2DOA" src="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png" alt="" width="640" height="375" /></a><br>Click to enlarge!</p>
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png"><img class="size-full wp-image-786" title="3D2DOA" src="http://www.mathgoespop.com/images/2010/09/3D2DOA1.png" alt="" width="560" height="375" /></a><br>Click to enlarge!</p>
 
 Notice that my graph has not omitted the success of <a href="http://www.imdb.com/title/tt1179891/">My Bloody Valentine 3D</a>.  This brings me to a related point - it seems a little inconsistent to exclude this movie from the graph on the basis of it being an <a href="http://en.wikipedia.org/wiki/Outlier">outlier</a>, but not to exclude The Polar Express on the same basis.  It's natural to want to do this, if you are arguing that 3D is on the verge of another extinction, but it doesn't seem fair to exclude one and not the other.
 
 Excluding both films as being outliers (which seems like an entirely natural thing to do - after all, when The Polar Express came out, there were only 59 screens that showed it in 3D that opening weekend, and this small number of screens highly skews the revenue per screen ratio), we get the following adjusted graph:
 
-<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png"><img class="size-full wp-image-788" title="3D2DOAnooutliers" src="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png" alt="" width="640" height="422" /></a><br>Click to make larger!</p>
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png"><img class="size-full wp-image-788" title="3D2DOAnooutliers" src="http://www.mathgoespop.com/images/2010/09/3D2DOAnooutliers1.png" alt="" width="560" height="422" /></a><br>Click to make larger!</p>
 
 This graph is less compelling.  While there is a general downward trend, there are many movies that have bucked that trend.  Also, given the recent uptick in 3D box office performance, it's hard to say conclusively how audiences are responding to 3D from this graph alone.
 
@@ -35,9 +35,9 @@ This brings me to another question: do better reviewed films perform better in 3
 
 Here are two scatter plots showing the freshness rating vs ratio of opening weekend 3D revenue to opening weekend 2D revenue.  The first plot includes the two outliers, while the second ignores them.
 
-<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/scatterplot.png"><img class="size-full wp-image-789" title="scatterplot" src="http://www.mathgoespop.com/images/2010/09/scatterplot.png" alt="" width="640" height="382" /></a></p>
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/scatterplot.png"><img class="size-full wp-image-789" title="scatterplot" src="http://www.mathgoespop.com/images/2010/09/scatterplot.png" alt="" width="560" height="382" /></a></p>
 
-<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png"><img class="size-full wp-image-790" title="splotnooutliers" src="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png" alt="" width="640" height="423" /></a></p>
+<p style="text-align: center;font-size:small;"><a href="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png"><img class="size-full wp-image-790" title="splotnooutliers" src="http://www.mathgoespop.com/images/2010/09/splotnooutliers.png" alt="" width="560" height="423" /></a></p>
 
 <p>While ignoring outliers helps, in neither case is there a strong correlation between a movie's perceived quality and its relative performance on 3D screens during opening weekend.*  Again, I'd be curious to see how these numbers change if the ratio of 3D revenue to 2D revenue for the entirety of a film's run was considered, rather than just opening weekend.  For now, though, I'll content myself with this.</p>
 

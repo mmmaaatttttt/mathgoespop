@@ -21,7 +21,7 @@ Continuing <a href="http://www.mathgoespop.com/2011/05/dunder-math-lin.html">las
 
 In a recent episode, Tom Haverford waxed poetic on the slang he has invented to describe different types of food.  A clip is currently on YouTube (though I don't know how long it will stay).
 
-<p style="text-align: center;"><object width="640" height="390"><param name="movie" value="http://www.youtube.com/v/FbR7mpX07Uw?fs=1&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="390" src="http://www.youtube.com/v/FbR7mpX07Uw?fs=1&amp;hl=en_US" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<p style="text-align: center;"><object width="560" height="390"><param name="movie" value="http://www.youtube.com/v/FbR7mpX07Uw?fs=1&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="560" height="390" src="http://www.youtube.com/v/FbR7mpX07Uw?fs=1&amp;hl=en_US" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
 
 <p>Here's a list of the slang Tom uses:</p>
 <p style="text-align: center;">desserts = 'serts,</p>

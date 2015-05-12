@@ -59,7 +59,7 @@ The <a href="http://en.wikipedia.org/wiki/Factorial">factorial</a> is a little l
 
 Presumably, the black clock wants us to solve for <em>x</em>, using the quadratic formula or something.  I don't get it, though - if they're going to express 7 as an unknown in a quadratic function of <em>x</em>, why would they write an equation that has two solutions, one of which isn't 7? Since 52 &ndash; <em>x</em><sup>2</sup> + <em>x</em> = 10 is the same as 42 &ndash; <em>x</em><sup>2</sup> + <em>x</em> = 0, here's a graph of 42 &ndash; <em>x</em><sup>2</sup> + <em>x</em>, so you can see the two roots:
 
-<center><a href="http://www.mathgoespop.com/images/2011/02/Picture-4.png"><img class="aligncenter size-full wp-image-1084" title="Graph" src="http://www.mathgoespop.com/images/2011/02/Picture-4.png" alt="" width="315" height="198" /></a></center>
+<center><a href="http://www.mathgoespop.com/images/2011/02/Picture-4.png"><img class="aligncenter size-full wp-image-1084" title="Graph" src="http://www.mathgoespop.com/images/2011/02/Picture-4.png" alt="" width="360" height="198" /></a></center>
 
 I realize I'm being a little pedantic (after all, there isn't any negative 6 o'clock), but it would've been just as easy to write a quadratic that had only 7 as its root.  Here's one: <em>x</em><sup>2</sup> &ndash; 14<em>x</em> + 50 = 1.
 

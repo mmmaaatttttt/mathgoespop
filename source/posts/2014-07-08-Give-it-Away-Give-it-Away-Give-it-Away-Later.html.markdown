@@ -17,7 +17,7 @@ A friend of mine received free tickets to a Kings game when I was living in LA s
 
 I don't remember much about the game (though I do recall that the Kings emerged victorious). What I remember most vividly was that during one of the breaks between periods, a new car was brought onto the ice and there was a contest to give that car away.  Sort of like what happens in this video, but the rules were a little different:
 
-<p style="text-align: center;"><iframe src="//www.youtube.com/embed/na7rnQytNJ8" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/na7rnQytNJ8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 
 In the game I attended, six contestants were given a key to a new car, but they were told that only one key would start the vehicle. One at a time, each person had to enter the car, put the key in the ignition, and try to start the engine. If they succeeded, they won the car; otherwise, they had to exit the vehicle and give the next person a turn.
 

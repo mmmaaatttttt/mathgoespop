@@ -11,4 +11,4 @@ Hi everyone.  This week is a little hectic for me, so I won't have time for a f
 
 Then again, maybe this guy was putting his own spin on the latest dance craze.
 
-<p style="text-align: center;"><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/tLPZmPaHme0" frameborder="0" allowFullScreen></iframe></p>
+<p style="text-align: center;"><iframe title="YouTube video player" class="youtube-player" type="text/html" width="560" height="390" src="http://www.youtube.com/embed/tLPZmPaHme0" frameborder="0" allowFullScreen></iframe></p>
