@@ -11,8 +11,8 @@ $line-color: #86CB92;
 	font-family: Lato, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 }
 
-h2, h2 a {
-	font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+h2, h2 a, .postDate {
+	font-family: Lustria, Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
 }
 
 .katex:not(.size-exempt), .mathit, .reset-textstyle.textstyle {
@@ -42,8 +42,12 @@ footer a:active {
 	text-decoration: none;
 }
 
+header form {
+	display: inline-block;
+}
+
 nav a, #logo {
-	padding: 0 10px;
+	padding: 0 20px;
 	line-height: $header-height;
 }
 
@@ -98,11 +102,13 @@ a:active {
 
 #main h2:not(:first-of-type) {
 	border-top: 1px solid $line-color;
-	padding-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 
 #main h2:first-of-type, #main h1:first-of-type {
 	margin-top: 0;
+	padding-bottom: 10px;
 }
 
 #main h2 {
@@ -122,6 +128,11 @@ p {
 
 blockquote {
 	text-align: justify;
+	font-size: 16px;
+	margin: 0 30px;
+	padding: 10px;
+	border: none;
+	font-style: italic;
 }
 
 /* aside */
@@ -168,6 +179,36 @@ aside ul {
 	margin-left: 20px;
 }
 
-// .col-xs-3 h2:first-of-type {
-// 	margin-top: -10px;
-// }
+/* about */
+
+#matt-photo, #matt-photo div {
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	border: 3px solid $link-color-light;
+}
+
+#matt-photo {
+	background-image: url("/images/matt_present.jpg");
+	background-size: 100%;
+	float:left;
+	margin-right: 20px;
+}
+
+#matt-photo div {
+	margin-left: -3px;
+	margin-top: -3px;
+	background-image: url("/images/matt_past.jpg");
+	background-size: 100%;
+	background-size: 120%;
+	background-position: -20px -10px;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#matt-photo div:hover {
+	opacity: 1;
+}
