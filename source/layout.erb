@@ -19,8 +19,8 @@
     </nav>
   </header>
   <body>
-    <div class="row">
-      <div class="col-md-2"></div>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2"></div>
       <div class="col-md-7">
         <div id="main" role="main">
           <% unless current_article.nil? %>
@@ -33,31 +33,27 @@
           <% end %>
         </div>
       </div>
-      <div class="col-xs-3">
+      <div class="col-md-3">
         <aside>
           <form>
             <input type="text" id="st-search-input" class="st-search-input" value="Search Math Goes Pop!"/>
           </form>
-          <h2>Recent Articles</h2>
-          <ul type="circle">
-            <% blog.articles[0...5].each do |article| %>
-              <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-            <% end %>
-          </ul>
-
-  <!--         <h2>Tags</h2>
-          <ol>
-            <% blog.tags.each do |tag, articles| %>
-              <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-            <% end %>
-          </ol> -->
-
-          <h2>By Year</h2>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+              <% blog.articles[0...5].each do |article| %>
+                <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+              <% end %>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
             <ul type="circle">
               <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
                 <li class="year"><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
               <% end %>
             </ul>
+          </div>
           
         </aside>
       </div>
@@ -73,6 +69,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="/javascripts/swiftype.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <%= javascript_include_tag "all" %>
     <% if current_page.data.custom_js %>
       <script src=<%= "../../javascripts/#{current_page.data.custom_js}.js" %>></script>
     <% end %>
