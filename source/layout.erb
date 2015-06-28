@@ -5,22 +5,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/stylesheet.css">
-    <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Lustria:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Math Goes Pop!<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <header>
-    <div id="logo" class="pull-left"><a href="/">Math Goes Pop!</a></div>
-    <nav class="pull-right">
-      <a href="/about.html">About</a>
-    </nav>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
   </header>
   <body>
     <div class="row" id="main-row">
-      <div id="left-sidebar" class="col-md-2"></div>
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
       <div class="col-md-7">
         <div id="main" role="main">
           <% unless current_article.nil? %>
@@ -35,6 +38,11 @@
       </div>
       <div class="col-md-3">
         <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="https://instagram.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-instagram"></i></a>
+          </nav>
           <form>
             <input type="text" id="st-search-input" class="st-search-input" value="Search Math Goes Pop!"/>
           </form>
