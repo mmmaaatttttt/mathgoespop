@@ -1,0 +1,39 @@
+#numberInput, #maxInput {
+	display: inline-block;
+	width: 150px;
+}
+
+.math-area-body-visible ol li {
+	padding: 10px 0;
+}
+
+.no-top-padding {
+	padding-top: 0 !important;
+}
+
+#btn-area {
+	text-align: center;
+}
+
+#divisorCalculate, #reset {
+	display: inline-block;
+}
+
+#numberErrorText, #maxErrorText {
+	display: inline-block;
+	color: red;
+	margin-top: 10px;
+}
+
+#numberCheck, #maxCheck {
+	display: inline-block;
+	margin-left:10px;
+}
+
+.glyphicon-ok-circle {
+	color: green;
+}
+
+.glyphicon-remove-circle {
+	color: red;
+}

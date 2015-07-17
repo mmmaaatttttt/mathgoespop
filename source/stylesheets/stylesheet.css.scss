@@ -213,6 +213,11 @@ blockquote {
 	text-align: center;
 }
 
+.mgp-youtube {
+	display: block;
+	margin: 0 auto 10px;
+}
+
 /* aside */
 
 #st-search-input {
@@ -309,6 +314,7 @@ aside ul {
 	background-color: lighten($math-area-color, 20%);
 	border-radius: 10px;
 	padding: 10px 15px;
+	margin-bottom: 10px;
 }
 
 .math-area-title {
@@ -327,6 +333,9 @@ aside ul {
 
 .math-area-body {
 	display: none;
+}
+
+.math-area-body-visible, .math-area-body {
 	background-color: #FFF;
 	padding: 10px;
 	border-radius: 10px;

@@ -9,6 +9,9 @@
     <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <% if current_page.data.custom_css %>
+      <link rel="stylesheet" href=<%= "../../stylesheets/#{current_page.data.custom_css}.css" %>></script>
+    <% end %>
     <title>Math Goes Pop!<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
@@ -73,7 +76,7 @@
     </div>
     <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
    </footer>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="/javascripts/swiftype.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
