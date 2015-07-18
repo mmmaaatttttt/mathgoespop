@@ -27,7 +27,7 @@ tl;dr: I'm happy to be back! Let's hang out soon.
 
 <div class="math-area">
 	<div class="math-area-title">
-		Which has a greater impact on completion percentage? Click on the plus sign to find out: &rarr;
+		Which has a greater impact on completion percentage? Click to find out: &rarr;
 		<span class="glyphicon glyphicon-plus-sign"></span>
 	</div>
 	<div class="math-area-body">
