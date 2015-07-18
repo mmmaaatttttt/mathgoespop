@@ -6,7 +6,7 @@ custom_css: 2015_07_have_a_kid
 ---
 I would start off by apologizing for the clickbait-y title, but I'd rather not take any of the blame. Instead, I'll use <a href="http://www.numberphile.com/" target="_blank">Numberphile</a> as a scapegoat, since one of their most recent videos inspired both the title and the content of this post.
 
-The video in question is titled _Whey 1980 was a great year to be born... but 2184 will be even better._ Like many who are mathematically minded, I couldn't help but watch. In the video, <a href="http://standupmaths.com/" target="_blank">Matt Parker</a> talks about a mathematical property of the year 1980. If you've got a few minutes, here's the full video:
+The video in question is titled _Why 1980 was a great year to be born... but 2184 will be even better._ Like many who are mathematically minded, I couldn't help but watch. In the video, <a href="http://standupmaths.com/" target="_blank">Matt Parker</a> talks about a mathematical property of the year 1980. If you've got a few minutes, here's the full video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/99stb2mzspI" frameborder="0" allowfullscreen class="mgp-youtube"></iframe>
 
