@@ -1,0 +1,49 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 192px;
+  margin: 0 auto;
+  height: 192px;
+  margin-bottom: 10px;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 192px;
+  height: 192px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
+
+.question .card-front, .question .card-back {
+  background-color: #000000;
+}
+
+.answer .card-front, .answer .card-back {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+}
+
+.card-back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.flipped .card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.flipped .card-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+img {
+  max-width: 100%;
+}
