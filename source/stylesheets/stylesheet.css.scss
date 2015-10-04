@@ -345,3 +345,7 @@ aside ul {
 .math-area-body p {
 	margin: 0px;
 }
+
+.btn:focus, .btn:active {
+	outline: none;
+}

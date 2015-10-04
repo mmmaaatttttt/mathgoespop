@@ -1,9 +1,9 @@
 .card {
   position: relative;
   width: 100%;
-  max-width: 192px;
+  max-width: 189px;
   margin: 0 auto;
-  height: 192px;
+  height: 190px;
   margin-bottom: 10px;
 }
 
@@ -12,8 +12,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 192px;
-  height: 192px;
+  width: 100%;
+  max-width: 189px;
+  height: 189px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transition: -webkit-transform 1s;
@@ -34,6 +35,11 @@
           transform: rotateY(-180deg);
 }
 
+.card-front:hover, 
+.card-back:hover {
+  cursor: pointer;
+}
+
 .card.flipped .card-front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
@@ -46,4 +52,60 @@
 
 img {
   max-width: 100%;
+}
+
+#main .row {
+  margin: 0;
+}
+
+.scrubber {
+  width: 100%;
+}
+
+.well {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+#play-area {
+  display: none;
+}
+
+.mini-black {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.mini-white {
+  background-color: white;
+  border: 1px solid black;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.question-wrapper, .answer-wrapper {
+  position: relative;
+  width: 8.47%;
+  padding-bottom: 8.47%;
+  display: inline-block;
+}
+
+.card-text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: rotateY(0);
+          transform: translateY(-50%);
+  text-align: center;
 }
