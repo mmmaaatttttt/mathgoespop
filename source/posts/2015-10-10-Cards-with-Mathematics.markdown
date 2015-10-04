@@ -224,6 +224,10 @@ Here's a little demo to help you develop an intuition for the problem:
           <td># of Times new card would've been better (Running Tally)</td>
           <td id="runningCount">0</td>
         </tr>
+        <tr> 
+          <td># of Trials Total (Running Tally)</td>
+          <td id="totalCount">0</td>
+        </tr>
         <tr>
           <td>% of Times New card would've been better (Running Percentage)</td>
           <td id="runningPercent">0.00%</td>

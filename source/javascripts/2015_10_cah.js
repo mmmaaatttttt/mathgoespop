@@ -25,8 +25,6 @@ var updateWhiteCards = function() {
 	$cardBack.height(w);
 };
 
-
-
 var updateDemoCardVisibility = function(numOfCards) {
 	$answerCards.each(function(idx) {
   	idx <= numOfCards ? $answerCards.eq(idx).show() : $answerCards.eq(idx).hide();
@@ -85,5 +83,10 @@ $start.on('click', function() {
 $playAgain.on('click', function() {
 	updateDemoCardText(totalCardSlider.value(),cardInHandSlider.value());
 });
+
+$reset.on('click', function() {
+	$playarea.slideUp(1000);
+	$preview.slideDown(1000);
+})
 
 });	
