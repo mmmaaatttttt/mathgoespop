@@ -113,3 +113,11 @@ img {
           transform: translateY(-50%);
   text-align: center;
 }
+
+#demo-buttons {
+  text-align: center;
+}
+
+#demo-buttons .btn {
+  width: 30%;
+}

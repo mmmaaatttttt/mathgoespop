@@ -227,18 +227,18 @@ Here's a little demo to help you develop an intuition for the problem:
       <table class="table table-bordered">
         <tr> 
           <td># of Times new card would've been better (Running Tally)</td>
-          <td id="runningCount">0</td>
+          <td id="runningCount" class="text-center">0</td>
         </tr>
         <tr> 
           <td># of Trials Total (Running Tally)</td>
-          <td id="totalCount">0</td>
+          <td id="totalCount" class="text-center">0</td>
         </tr>
         <tr>
           <td>% of Times New card would've been better (Running Percentage)</td>
-          <td id="runningPercent">0.00%</td>
+          <td id="runningPercent" class="text-center">0.00%</td>
         </tr>
       </table>
-      <p>
+      <p id="demo-buttons">
         <input id="playAgain" type="button" class="btn btn-primary" value="Play Another Round">
         <input id="simulate" type="button" class="btn btn-success" value="Simulate 1,000 Rounds">
         <input id="reset" type="button" class="btn btn-danger" value="Reset and Go Back">
