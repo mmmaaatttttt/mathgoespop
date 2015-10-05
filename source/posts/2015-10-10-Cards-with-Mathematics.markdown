@@ -214,11 +214,16 @@ Here's a little demo to help you develop an intuition for the problem:
         </div>
       </div>
       <div class="answer-wrapper">
-        <div class="mini-white">
-          <div class="card-text"></div>
+        <div class="mini-white" id="last-card">
+          <div class="card-front">
+            <div class="card-text">?</div>
+          </div>
+          <div class="card-back">
+            <div class="card-text"></div>
+          </div>
         </div>
       </div>
-      <p>The number on a card represents its ranking as a best match to the prompt. For example, the card next to the prompt is ranked <span id="rankVal"></span> out of <span class="totalVal"></span>.</p>
+      <p>The number on a card represents its ranking as a best match to the prompt. For example, the card next to the prompt is ranked <span id="rankVal"></span> out of <span class="totalVal">50</span>.</p>
       <table class="table table-bordered">
         <tr> 
           <td># of Times new card would've been better (Running Tally)</td>

@@ -1,6 +1,6 @@
 ;$(function() {
 
-var $cards = $('.card');
+var $cards = $('.card, #last-card');
 var $whiteCards = $('.card.answer');
 var $cardFront = $('.answer .card-front');
 var $cardBack = $('.answer .card-back');
@@ -13,6 +13,7 @@ var $answerCards = $('.answer-wrapper');
 var $playAgain = $('#playAgain');
 var $simulate = $('#simulate');
 var $reset = $('#reset');
+var $rankVal = $('#rankVal');
 
 $cards.on('click', function() {
 	$(this).toggleClass('flipped');
@@ -27,7 +28,7 @@ var updateWhiteCards = function() {
 
 var updateDemoCardVisibility = function(numOfCards) {
 	$answerCards.each(function(idx) {
-  	idx <= numOfCards ? $answerCards.eq(idx).show() : $answerCards.eq(idx).hide();
+  	idx < numOfCards || idx === 20 ? $answerCards.eq(idx).show() : $answerCards.eq(idx).hide();
   });
 }
 
@@ -43,11 +44,15 @@ var getRandomNumbers = function(numRange, numOfNumbers) {
 }
 
 var updateDemoCardText = function(numRange, numOfCards) {
-	var numbers = getRandomNumbers(numRange, numOfCards - 1);
+	var numbers = getRandomNumbers(numRange, numOfCards);
 	numbers.forEach(function(number, index) {
-		$answerCards.eq(index).find('.card-text').text(number);
+		if (index === numbers.length - 1) {
+			$cards.eq($cards.length - 1).find('.card-text').eq(1).text(number);
+		} else {
+			$answerCards.eq(index).find('.card-text').text(number);
+		}
 	});
-	$answerCards.eq(numbers.length).find('.card-text').text('?');
+	$rankVal.text(numbers[0]);
 }
 
 updateWhiteCards();
