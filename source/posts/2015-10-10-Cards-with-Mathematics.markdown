@@ -217,6 +217,7 @@ Here's a little demo to help you develop an intuition for the problem:
         <div class="mini-white" id="last-card">
           <div class="card-front">
             <div class="card-text">?</div>
+            <div id="pulse"></div>
           </div>
           <div class="card-back">
             <div class="card-text"></div>

@@ -1,6 +1,7 @@
 ;$(function() {
 
 var $cards = $('.card, #last-card');
+var $lastCard = $('#last-card');
 var $whiteCards = $('.card.answer');
 var $cardFront = $('.answer .card-front');
 var $cardBack = $('.answer .card-back');
@@ -14,9 +15,16 @@ var $playAgain = $('#playAgain');
 var $simulate = $('#simulate');
 var $reset = $('#reset');
 var $rankVal = $('#rankVal');
+var $pulse = $('#pulse');
+var demoFlipped = false;
 
 $cards.on('click', function() {
 	$(this).toggleClass('flipped');
+});
+
+$lastCard.on('click', function() {
+	demoFlipped = true;
+	$pulse.hide();
 });
 
 var updateWhiteCards = function() {
@@ -92,6 +100,9 @@ $playAgain.on('click', function() {
 $reset.on('click', function() {
 	$playarea.slideUp(1000);
 	$preview.slideDown(1000);
+	$lastCard.removeClass('flipped');
+	demoFlipped = false;
+	$pulse.show();
 })
 
 });	
