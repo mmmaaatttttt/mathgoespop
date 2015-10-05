@@ -16,15 +16,14 @@ var $simulate = $('#simulate');
 var $reset = $('#reset');
 var $rankVal = $('#rankVal');
 var $pulse = $('#pulse');
+var $runningCount = $('#runningCount');
+var $totalCount = $('#totalCount');
+var $runningPercent = $('#runningPercent');
 var demoFlipped = false;
+var currentNumbers;
 
 $cards.on('click', function() {
 	$(this).toggleClass('flipped');
-});
-
-$lastCard.on('click', function() {
-	demoFlipped = true;
-	$pulse.hide();
 });
 
 var updateWhiteCards = function() {
@@ -53,6 +52,7 @@ var getRandomNumbers = function(numRange, numOfNumbers) {
 
 var updateDemoCardText = function(numRange, numOfCards) {
 	var numbers = getRandomNumbers(numRange, numOfCards);
+	currentNumbers = numbers;
 	numbers.forEach(function(number, index) {
 		if (index === numbers.length - 1) {
 			$cards.eq($cards.length - 1).find('.card-text').eq(1).text(number);
@@ -62,6 +62,23 @@ var updateDemoCardText = function(numRange, numOfCards) {
 	});
 	$rankVal.text(numbers[0]);
 }
+
+var updateTable = function() {
+	$totalCount.text(parseInt($totalCount.text())+1);
+	if (currentNumbers.indexOf(Math.min.apply(null, currentNumbers)) === currentNumbers.length - 1) {
+		$runningCount.text(parseInt($runningCount.text())+1);
+	}
+	$runningPercent.text(($runningCount.text()/$totalCount.text()*100).toFixed(2)+"%");
+}
+
+$lastCard.on('click', function() {
+	$pulse.hide();
+	$playAgain.attr('disabled', false);
+	if (!demoFlipped) {
+		updateTable();
+	}
+	demoFlipped = true;
+});
 
 updateWhiteCards();
 updateDemoCardVisibility(3);
@@ -93,16 +110,39 @@ $start.on('click', function() {
 	updateDemoCardText(totalCardSlider.value(),cardInHandSlider.value());
 });
 
+var resetDemoConditions = function() {
+	$lastCard.removeClass('flipped');
+	demoFlipped = false;
+	$pulse.show();
+	$playAgain.attr('disabled', true);
+}
+
 $playAgain.on('click', function() {
+	var $answerArea = $lastCard.find('.card-back .card-text');
+	$answerArea.addClass('white-text');
+	setTimeout(function() { $answerArea.removeClass('white-text'); }, 500);
+	resetDemoConditions();
 	updateDemoCardText(totalCardSlider.value(),cardInHandSlider.value());
 });
 
 $reset.on('click', function() {
-	$playarea.slideUp(1000);
+	$playarea.slideUp(1000, function() {
+		resetDemoConditions();
+		$totalCount.text('0');
+		$runningCount.text('0');
+		$runningPercent.text('0.00%');
+	});
 	$preview.slideDown(1000);
-	$lastCard.removeClass('flipped');
-	demoFlipped = false;
-	$pulse.show();
-})
+});
+
+$simulate.on('click', function() {
+	for (var trial=0;trial<1000;trial++) {
+		$totalCount.text(parseInt($totalCount.text())+1);
+		if (Math.random() < 1/(cardInHandSlider.value()+1)) {
+			$runningCount.text(parseInt($runningCount.text())+1);
+		}
+		$runningPercent.text(($runningCount.text()/$totalCount.text()*100).toFixed(2)+"%");
+	}
+});
 
 });	

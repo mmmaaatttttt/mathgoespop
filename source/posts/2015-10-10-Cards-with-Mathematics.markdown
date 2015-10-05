@@ -92,7 +92,7 @@ Here's a little demo to help you develop an intuition for the problem:
       <div class="row">
         <div class="col-sm-6 text-center">
           <div class="well">
-            Total cards: <span class="totalVal">50</span>
+            Cards in deck: <span class="totalVal">50</span>
             <div id="totalCardSlider"></div>
           </div>
         </div>
@@ -240,7 +240,7 @@ Here's a little demo to help you develop an intuition for the problem:
         </tr>
       </table>
       <p id="demo-buttons">
-        <input id="playAgain" type="button" class="btn btn-primary" value="Play Another Round">
+        <input id="playAgain" type="button" class="btn btn-primary" value="Play Another Round" disabled>
         <input id="simulate" type="button" class="btn btn-success" value="Simulate 1,000 Rounds">
         <input id="reset" type="button" class="btn btn-danger" value="Reset and Go Back">
       </p>
