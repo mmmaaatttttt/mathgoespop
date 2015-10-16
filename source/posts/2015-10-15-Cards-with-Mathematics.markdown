@@ -1,7 +1,6 @@
 ---
 title: Cards with Mathematics
-date: '2015-10-10'
-published: false
+date: '2015-10-15'
 custom_js: 
   - scrubber
   - 2015_10_cah
@@ -11,13 +10,13 @@ custom_css:
 ---
 I'm a sucker for a good card game. Or even a bad card game, if it's played in the company of good friends. Or even a bad card game played in the company of poor friends, as long as the food is decent.
 
-Because of this relatively low bar, I've played a variety of card games in my day. And some of these games can spark interesting mathematics. If you've taken a probability course, for instance, you may have explored the intersection of cards and mathematics a bit. Maybe you had to calculate the probability of being dealt a full house in poker, or of busting in a game of blackjack.
+Because of this relatively low bar, I've played a variety of card games. And some of these games have sparked interesting mathematical questions. If you've taken a probability course, for instance, you may have explored the intersection of cards and mathematics a bit. Maybe you had to calculate the probability of being dealt a full house in poker, or of busting in a game of blackjack.
 
 But mathematics exists even in card games that don't typically come up in math class. And just because a deck of cards doesn't have any numbers on it, that doesn't mean it should be exiled into the realm of the non-mathematical.
 
 To prove this point, consider <a href="https://en.wikipedia.org/wiki/Cards_Against_Humanity" target="_blank">_Cards Against Humanity_</a> (or, if you'd prefer, its more family-friendly predecessor: <a href="https://en.wikipedia.org/wiki/Apples_to_Apples" target="_blank">_Apples to Apples_</a>). Rather than the describe the rules of _Cards Against Humanity_, a self-described "party game for horrible people," let's work through a practice round of the game together.
 
-To play the game, each player starts with a certain number of white cards (the exact number depends on how many people are playing). Each round, one player (dubbed the Grand Czar, a role that rotates from round to round) takes a black card from the deck and turns it over. Here's an example; click on the card below to flip it:
+To play the game, each player starts with a certain number of white cards. Each round, one player (dubbed the Grand Czar, a role that rotates from round to round) takes a black card from the deck and turns it over. Here's an example; click on the card below to flip it:
 
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
@@ -34,7 +33,7 @@ To play the game, each player starts with a certain number of white cards (the e
   </div>
 </div>
 
-Once the black card has been revealed, players try to find the white card in their hand that they think pairs best with the Czar's black card. Once all players have submitted their responses, they're shuffled and the Czar decides which response he or she likes best. The winner receives the black card (so that people can keep track of how many rounds they've won), and the game proceeds to the next round. After players make their selection, they draw from a deck of white cards to ensure that every player has the same number of cards in his or her hand at all times.
+Once the black card has been revealed, players try to find the white card in their hand that they think pairs best with the Czar's black card. Once all players have submitted their responses, the white cards are shuffled and the Czar decides which response he or she likes best. The winner receives the black card (so that people can keep track of how many rounds they've won), and the game proceeds to the next round. After players make their selection, they draw from a deck of white cards to ensure that every player has the same number of cards in his or her hand at all times.
 
 To keep things simple, suppose you have three cards in your hand. In response to the prompt above, which one would you choose? (Remember: click to flip!)
 
@@ -77,7 +76,7 @@ To keep things simple, suppose you have three cards in your hand. In response to
 	</div>
 </div>
 
-Any one of these options would make for a suitable response to the prompt. However, anyone who has played this game for a few rounds will notice the following phenomenon: sometimes, the card you draw for the next round seems like it would've been a _perfect_ fit for the round that just happened!
+Any one of these options would make for a suitable response to the prompt. However, anyone who has played this game for a few rounds will notice the following phenomenon: sometimes, the card you draw for the next round seems like it would've been a _perfect_ fit for the round that just occurred!
 
 For instance, suppose you decide to play the "Shiny objects" card in response to "What's the next Happy Meal toy?" This is a totally reasonable maneuver. Not the most inspired response, but sometimes none of the cards you get are a perfect match for the prompt. But then, after submitting your response, suppose you draw the following card for the next round:
 
@@ -102,7 +101,7 @@ This happens with enough frequency during a game of _Cards Against Humanity_ tha
 
 1. There is some fixed number of white cards you're drawing from, call it _N_.
 2. You have a fixed number of cards in your hand, call it _m_.
-3. For each black card, there is some "best match" for that card among the white cards, some "second-best" match, some "third-best match," and so on. In other words, for each prompt, there is a corresponding ranking of the white cards from best to worst (of course, this ranking won't be absolute, and will depend on the preferences of that round's Grand Czar).
+3. For each black card, there is some "best match" for that card among the white cards, some "second-best" match, some "third-best match," and so on. In other words, for each prompt, there is a corresponding ranking of the white cards from best to worst. (Of course, this ranking won't be absolute, and will depend on the preferences of that round's Grand Czar.)
 
 In this situation, what's the likelihood that the card you draw the round would have been a better fit than any of the cards you had during the round?
 
@@ -289,11 +288,11 @@ If you've explored the demo, you may very well have a conjecture for the answer.
     <p>Before offering up a proof, notice that the likelihood that the next card will be a better fit doesn't actually depend on the number of cards in the deck. Assuming you don't know anything about the white cards beforehand, the likelihood that a better card is just outside your reach is the same whether there's one card in the deck, or 1,000.</p>
     <p>To see why, let's ignore the distinction between the cards in your hand and the card at the top of the deck, and just consider all <em>m</em> + 1 cards together. Within this collection, one card will be the best of the bunch; and assuming you know nothing about the whims of the Grand Czar or the next prompt, you can only assume that any one of those <em>m</em> + 1 cards is equally likely to be the best.</p>
     <p>Returning to our simple example from before, if you have three cards in your hand and are drawing a fourth, their absolute rankings amongst the entire deck don't matter: it's only the relative rankings between them that do. Of the four cards, one will be the best match, one will be second best, one will be third best, and one will be the worst. All things being equal, then, with three cards in your hand you have a 25% probability that the next card will be a better fit for the prompt.</p>
-    <p>The only caveat here is that technically, one could argue that some cards are just objectively worse than others, and so they'll tend to be worse matches regardless of the prompt. But trying to account for this would needlessly complicate the model, and in any event, you may be dealing with a Grand Czar who has a terrible sense of humor, in which case a card that seems bad to a normal person might be a great fit.</p>
+    <p>The only caveat here is that technically, one could argue that some cards are just objectively worse than others, and so they'll tend to be worse matches regardless of the prompt. But trying to account for this would needlessly complicate the model. What's more, you may be dealing with a Grand Czar who has a terrible sense of humor, in which case a card that seems bad to a normal person might be a great fit.</p>
   </div>
 </div>
 
-In particular, the official _Cards Against Humanity_ rules call for each player to draw 10 cards. Based on this, the probability that a card you draw after any given round would have been a better fit than the cards in your hand is 1/11, or around 9%. _Apples to Apples_, you're even more likely to draw a better card after playing, since in that game players have only 7 cards in their hand.
+In particular, the official _Cards Against Humanity_ rules call for each player to draw 10 cards. Based on this, the probability that a card you draw after any given round would have been a better fit than the cards in your hand is 1/11, or around 9%. In _Apples to Apples_, you're even more likely to draw a better card after playing, since in that game players have only 7 cards in their hand.
 
 Cool, right? Here are a couple of follow-up questions to consider, if you're so inclined:
 
