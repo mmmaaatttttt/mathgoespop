@@ -14,7 +14,7 @@ Because of this relatively low bar, I've played a variety of card games. And som
 
 But mathematics exists even in card games that don't typically come up in math class. And just because a deck of cards doesn't have any numbers on it, that doesn't mean it should be exiled into the realm of the non-mathematical.
 
-To prove this point, consider <a href="https://en.wikipedia.org/wiki/Cards_Against_Humanity" target="_blank">_Cards Against Humanity_</a> (or, if you'd prefer, its more family-friendly predecessor: <a href="https://en.wikipedia.org/wiki/Apples_to_Apples" target="_blank">_Apples to Apples_</a>). Rather than the describe the rules of _Cards Against Humanity_, a self-described "party game for horrible people," let's work through a practice round of the game together.
+To prove this point, consider <a href="https://en.wikipedia.org/wiki/Cards_Against_Humanity" target="_blank">_Cards Against Humanity_</a> (or, if you'd prefer, its more family-friendly predecessor: <a href="https://en.wikipedia.org/wiki/Apples_to_Apples" target="_blank">_Apples to Apples_</a>). In order to understand the rules of the game, let's work through a practice round together.
 
 To play the game, each player starts with a certain number of white cards. Each round, one player (dubbed the Grand Czar, a role that rotates from round to round) takes a black card from the deck and turns it over. Here's an example; click on the card below to flip it:
 
@@ -298,8 +298,4 @@ Cool, right? Here are a couple of follow-up questions to consider, if you're so 
 
 1. Some prompts require you to play _two_ cards, not one. In this case, you draw an extra card, play two, and then draw one. In this case, what's the probability that the card you draw at the end would have contributed to a better _pair_ of cards? 
 
-2. One variant of the _Cards Against Humanity_ is called Rando Cardrissian. Here's how it works, according to the official rules: "Every round, pick one random White Card from the pile and place it inot play. This card belongs to an imaginary player named Rando Cardrissian, and if he wins the game, all players go home in a state of everlasting shame." If you're playing with a group of friends, what's the probability that Rando will win a given round?
-
-<!-- answer, accordian to show why -->
-
-<!-- bonus, what about double/triple prompts -->
+2. One variant of the _Cards Against Humanity_ is called Rando Cardrissian. Here's how it works, according to the official rules: "Every round, pick one random White Card from the pile and place it into play. This card belongs to an imaginary player named Rando Cardrissian, and if he wins the game, all players go home in a state of everlasting shame." If you're playing with a group of friends, what's the probability that Rando will win a given round?
