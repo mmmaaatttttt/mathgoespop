@@ -136,7 +136,7 @@ $reset.on('click', function() {
 });
 
 $simulate.on('click', function() {
-	for (var trial=0;trial<1000;trial++) {
+	for (var trial=0;trial<100;trial++) {
 		$totalCount.text(parseInt($totalCount.text())+1);
 		if (Math.random() < 1/(cardInHandSlider.value()+1)) {
 			$runningCount.text(parseInt($runningCount.text())+1);

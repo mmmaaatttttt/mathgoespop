@@ -241,17 +241,58 @@ Here's a little demo to help you develop an intuition for the problem:
       </table>
       <p id="demo-buttons">
         <input id="playAgain" type="button" class="btn btn-primary" value="Play Another Round" disabled>
-        <input id="simulate" type="button" class="btn btn-success" value="Simulate 1,000 Rounds">
+        <input id="simulate" type="button" class="btn btn-success" value="Simulate 100 Rounds">
         <input id="reset" type="button" class="btn btn-danger" value="Reset and Go Back">
       </p>
     </div>
   </div>
 </div>
 
-<!-- model where you can choose n cards total, m cards per hand !-->
+Of course, unlike in the demo above, in reality you don't have any idea what the ranking of cards in your hand is: it will depend on the prompt that's about to be asked, as well as the personality of the Grand Czar. The rankings are there only to help make specific scenarios a bit more concrete.
+
+If you've explored the demo, you may very well have a conjecture for the answer. I'll leave a proof of the result hidden, but here's the answer in all its glory:
+
+<div class="math-area">
+  <div class="math-area-title">
+    If you have <em>m</em> cards in your hand, the probability that the next card in the deck will be a better fit is 1/(<em>m</em> + 1).
+    <span class="glyphicon glyphicon-plus-sign"></span>
+  </div>
+  <div class="math-area-body">
+    <p>Before offering up a proof, notice that the likelihood that the next card will be a better fit doesn't actually depend on the number of cards in the deck. Assuming you don't know anything about the white cards beforehand, the likelihood that a better card is just outside your reach is the same whether there's one card in the deck, or 1,000.</p>
+    <p>To see why, let's ignore the distinction between the cards in your hand and the card at the top of the deck, and just consider all <em>m</em> + 1 cards together. Within this collection, one card will be the best of the bunch; and assuming you know nothing about the whims of the Grand Czar or the next prompt, you can only assume that any one of those <em>m</em> + 1 cards is equally likely to be the best.</p>
+    <p>Returning to our simple example from before, if you have three cards in your hand and are drawing a fourth, their absolute rankings amongst the entire deck don't matter: it's only the relative rankings between them that do. Of the four cards, one will be the best match, one will be second best, one will be third best, and one will be the worst.</p>
+    <div class="answer-wrapper">
+      <div class="mini-white">
+        <div class="card-text"></div>
+      </div>
+    </div>
+    <div class="answer-wrapper">
+      <div class="mini-white">
+        <div class="card-text"></div>
+      </div>
+    </div>
+    <div class="answer-wrapper">
+      <div class="mini-white">
+        <div class="card-text"></div>
+      </div>
+    </div>
+    <div class="answer-wrapper">
+      <div class="mini-white">
+        <div class="card-text"></div>
+      </div>
+    </div>
+    <p>The only caveat here is that technically, one could argue that some cards are just objectively worse than others, and so they'll tend to be worse matches regardless of the prompt. But trying to account for this would needlessly complicate the model, and in any event, you may be dealing with a Grand Czar who has a terrible sense of humor, in which case a card that seems bad to a normal person might be a great fit.</p>
+  </div>
+</div>
+
+In particular, the official _Cards Against Humanity_ rules call for each player to draw 10 cards. Based on this, the probability that a card you draw after any given round would have been a better fit than the cards in your hand is 1/11, or around 9%. _Apples to Apples_, you're even more likely to draw a better card after playing, since in that game players have only 7 cards in their hand.
+
+Cool, right? Here are a couple of follow-up questions to consider, if you're so inclined:
+
+1. Some prompts require you to play _two_ cards, not one. In this case, you draw an extra card, play two, and then draw one. In this case, what's the probability that the card you draw at the end would have contributed to a better _pair_ of cards? 
+
+2. One variant of the _Cards Against Humanity_ is called Rando Cardrissian. Here's how it works, according to the official rules: "Every round, pick one random White Card from the pile and place it inot play. This card belongs to an imaginary player named Rando Cardrissian, and if he wins the game, all players go home in a state of everlasting shame." If you're playing with a group of friends, what's the probability that Rando will win a given round?
 
 <!-- answer, accordian to show why -->
 
 <!-- bonus, what about double/triple prompts -->
-
-<!-- wagering -->
