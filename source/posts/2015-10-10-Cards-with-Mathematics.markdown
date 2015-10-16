@@ -9,9 +9,9 @@ custom_css:
   - scrubber
   - 2015_10_cah
 ---
-I'm a sucker for a good card game. Or even a bad card game, if it's played in the company of good friends. Or even a bad card game if it's played in the company of poor friends, as long as the food is decent.
+I'm a sucker for a good card game. Or even a bad card game, if it's played in the company of good friends. Or even a bad card game played in the company of poor friends, as long as the food is decent.
 
-What I mean to say is, I've played a variety of card games in my day. Some of them, as you may know, can spark some interesting mathematics. If you've taken a probability course, for instance, you may have explored the intersection of cards and mathematics a bit. Maybe you had to calculate the probability of being dealt a full house in poker, or of busting in a game of blackjack.
+Because of this relatively low bar, I've played a variety of card games in my day. And some of these games can spark interesting mathematics. If you've taken a probability course, for instance, you may have explored the intersection of cards and mathematics a bit. Maybe you had to calculate the probability of being dealt a full house in poker, or of busting in a game of blackjack.
 
 But mathematics exists even in card games that don't typically come up in math class. And just because a deck of cards doesn't have any numbers on it, that doesn't mean it should be exiled into the realm of the non-mathematical.
 
@@ -19,10 +19,18 @@ To prove this point, consider <a href="https://en.wikipedia.org/wiki/Cards_Again
 
 To play the game, each player starts with a certain number of white cards (the exact number depends on how many people are playing). Each round, one player (dubbed the Grand Czar, a role that rotates from round to round) takes a black card from the deck and turns it over. Here's an example; click on the card below to flip it:
 
-<div class="card question">
-  <div class="card-front"></div>
-  <div class="card-back">
-    <img src="/images/2015/10/black-card.png" alt="What's the next Happy Meal Toy?">
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="card-container">
+      <div class="demo-wrapper"> 
+        <div class="card question">
+          <div class="card-front"></div>
+          <div class="card-back">
+            <img src="/images/2015/10/black-card.png" alt="What's the next Happy Meal Toy?">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -32,28 +40,40 @@ To keep things simple, suppose you have three cards in your hand. In response to
 
 <div class="row">
 	<div class="col-sm-4">
-		<div class="card answer">
-		  <div class="card-front"></div>
-		  <div class="card-back">
-		    <img src="/images/2015/10/white-card-1.png" alt="Shiny objects">
-		  </div>
-		</div>
+    <div class="card-container">
+      <div class="demo-wrapper">
+    		<div class="card answer">
+    		  <div class="card-front"></div>
+    		  <div class="card-back">
+    		    <img src="/images/2015/10/white-card-1.png" alt="Shiny objects">
+    		  </div>
+    		</div>
+      </div>
+    </div>
 	</div>
 	<div class="col-sm-4">
-		<div class="card answer">
-		  <div class="card-front"></div>
-		  <div class="card-back">
-		    <img src="/images/2015/10/white-card-2.png" alt="Leprosy">
-		  </div>
-		</div>
+    <div class="card-container">
+      <div class="demo-wrapper">
+    		<div class="card answer">
+    		  <div class="card-front"></div>
+    		  <div class="card-back">
+    		    <img src="/images/2015/10/white-card-2.png" alt="Leprosy">
+    		  </div>
+    		</div>
+      </div>
+    </div>
 	</div>
 	<div class="col-sm-4">
-		<div class="card answer">
-		  <div class="card-front"></div>
-		  <div class="card-back">
-		    <img src="/images/2015/10/white-card-3.png" alt="Extremely tight pants">
-		  </div>
-		</div>
+    <div class="card-container">
+      <div class="demo-wrapper">
+    		<div class="card answer">
+    		  <div class="card-front"></div>
+    		  <div class="card-back">
+    		    <img src="/images/2015/10/white-card-3.png" alt="Extremely tight pants">
+    		  </div>
+    		</div>
+      </div>
+    </div>
 	</div>
 </div>
 
@@ -61,10 +81,18 @@ Any one of these options would make for a suitable response to the prompt. Howev
 
 For instance, suppose you decide to play the "Shiny objects" card in response to "What's the next Happy Meal toy?" This is a totally reasonable maneuver. Not the most inspired response, but sometimes none of the cards you get are a perfect match for the prompt. But then, after submitting your response, suppose you draw the following card for the next round:
 
-<div class="card answer">
-  <div class="card-front"></div>
-  <div class="card-back">
-    <img src="/images/2015/10/white-card-4.png" alt="A lifetime of sadness">
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <div class="card-container">
+      <div class="demo-wrapper"> 
+        <div class="card answer">
+          <div class="card-front"></div>
+          <div class="card-back">
+            <img src="/images/2015/10/white-card-4.png" alt="A lifetime of sadness">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -260,27 +288,7 @@ If you've explored the demo, you may very well have a conjecture for the answer.
   <div class="math-area-body">
     <p>Before offering up a proof, notice that the likelihood that the next card will be a better fit doesn't actually depend on the number of cards in the deck. Assuming you don't know anything about the white cards beforehand, the likelihood that a better card is just outside your reach is the same whether there's one card in the deck, or 1,000.</p>
     <p>To see why, let's ignore the distinction between the cards in your hand and the card at the top of the deck, and just consider all <em>m</em> + 1 cards together. Within this collection, one card will be the best of the bunch; and assuming you know nothing about the whims of the Grand Czar or the next prompt, you can only assume that any one of those <em>m</em> + 1 cards is equally likely to be the best.</p>
-    <p>Returning to our simple example from before, if you have three cards in your hand and are drawing a fourth, their absolute rankings amongst the entire deck don't matter: it's only the relative rankings between them that do. Of the four cards, one will be the best match, one will be second best, one will be third best, and one will be the worst.</p>
-    <div class="answer-wrapper">
-      <div class="mini-white">
-        <div class="card-text"></div>
-      </div>
-    </div>
-    <div class="answer-wrapper">
-      <div class="mini-white">
-        <div class="card-text"></div>
-      </div>
-    </div>
-    <div class="answer-wrapper">
-      <div class="mini-white">
-        <div class="card-text"></div>
-      </div>
-    </div>
-    <div class="answer-wrapper">
-      <div class="mini-white">
-        <div class="card-text"></div>
-      </div>
-    </div>
+    <p>Returning to our simple example from before, if you have three cards in your hand and are drawing a fourth, their absolute rankings amongst the entire deck don't matter: it's only the relative rankings between them that do. Of the four cards, one will be the best match, one will be second best, one will be third best, and one will be the worst. All things being equal, then, with three cards in your hand you have a 25% probability that the next card will be a better fit for the prompt.</p>
     <p>The only caveat here is that technically, one could argue that some cards are just objectively worse than others, and so they'll tend to be worse matches regardless of the prompt. But trying to account for this would needlessly complicate the model, and in any event, you may be dealing with a Grand Czar who has a terrible sense of humor, in which case a card that seems bad to a normal person might be a great fit.</p>
   </div>
 </div>

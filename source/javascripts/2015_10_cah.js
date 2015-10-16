@@ -26,13 +26,6 @@ $cards.on('click', function() {
 	$(this).toggleClass('flipped');
 });
 
-var updateWhiteCards = function() {
-	w = $whiteCards.width();
-	$whiteCards.height(w);
-	$cardFront.height(w);
-	$cardBack.height(w);
-};
-
 var updateDemoCardVisibility = function(numOfCards) {
 	$answerCards.each(function(idx) {
   	idx < numOfCards || idx === 20 ? $answerCards.eq(idx).show() : $answerCards.eq(idx).hide();
@@ -55,13 +48,15 @@ var updateDemoCardText = function(numRange, numOfCards) {
 	currentNumbers = numbers;
 	numbers.forEach(function(number, index) {
 		if (index === numbers.length - 1) {
-			$cards.eq($cards.length - 1).find('.card-text').eq(1).text(number);
+			$lastCard.find('.card-text').eq(1).text(number);
 		} else {
 			$answerCards.eq(index).find('.card-text').text(number);
 		}
 	});
 	$rankVal.text(numbers[0]);
 }
+
+
 
 var updateTable = function() {
 	$totalCount.text(parseInt($totalCount.text())+1);
@@ -80,10 +75,7 @@ $lastCard.on('click', function() {
 	demoFlipped = true;
 });
 
-updateWhiteCards();
 updateDemoCardVisibility(3);
-
-window.onresize = updateWhiteCards; // REFACTOR TO ONLY USE CSS
 
 var totalCardSlider = new ScrubberView(); 
 totalCardSlider.min(50).max(300).step(10).value(50);
