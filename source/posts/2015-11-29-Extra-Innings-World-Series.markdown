@@ -1,6 +1,6 @@
 ---
 title: Do Extra Innings Games Predict World Series Longevity?
-date: '2015-11-24'
+date: '2015-11-29'
 custom_js: 
   - 2015_11_world_series
 custom_css: 
