@@ -56,7 +56,7 @@
           transform: rotateY(0);
 }
 
-img {
+#main img {
   max-width: 100%;
 }
 

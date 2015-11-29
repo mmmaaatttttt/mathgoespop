@@ -41,7 +41,6 @@ footer {
 
 header a, 
 header a:hover,
-header a:focus,
 header a:active, 
 footer a, 
 footer a:hover,
@@ -244,12 +243,18 @@ blockquote {
 }
 
 .table-centered {
-	margin: 0 15px 10px;
+	margin: 10px auto;
 	text-align: center;
+	width: 95%;
 }
 
 .table-centered td {
 	vertical-align: middle !important;
+}
+
+.mgp-table-cell {
+	background-color: lighten($header-bg,20%);
+	color: white;
 }
 
 aside ul {
