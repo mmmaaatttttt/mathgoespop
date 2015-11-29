@@ -2,10 +2,8 @@
 title: Do Extra Innings Games Predict World Series Longevity?
 date: '2015-11-24'
 custom_js: 
-  - scrubber
-  - 2015_10_cah
+  - 2015_11_world_series
 custom_css: 
-  - scrubber
   - 2015_11_world_series
 ---
 Now that baseball season has ended, I find myself going through withdrawal. And with spring training several months away, I need something to fill the void left in my heart. To that end, let's take a moment and look back -- with a mathematical eye, of course -- on the 2015 World Series.
@@ -198,7 +196,7 @@ So, are World Series with extra innings games more likely to last 7 games? Thus 
     <p>For example, in the above example, we could take the population to be the space of all past and future World Series; the samples we're comparing are the proportion of seven-game series that have no extra-inning games to the proportion of seven-game series that have at least one extra inning game.</p>
     <p>It's worth noting that there are some caveats on the numbers involved: e.g. both <em>s</em><sub>1</sub> and <em>n</em><sub>1</sub> &ndash; <em>s</em><sub>1</sub> should be sufficiently large (say, at least 5).</p>
     <p>But enough jibber-jabber. Play around with these inputs if you want to build an intuition. (Note: a <em>p-value</em> of 0.05 or less is typically held as being statistically significant, though this benchmark, as discussed beautifully in Jordan Ellenberg's book <em><a href="http://www.amazon.com/How-Not-Be-Wrong-Mathematical/dp/0143127535">How Not to Be Wrong</a></em>, is somewhat arbitrary.</p>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="dataTable">
       <tr>
         <td colspan="2">Sample 1</td>
         <td colspan="2">Sample 2</td>
@@ -212,15 +210,14 @@ So, are World Series with extra innings games more likely to last 7 games? Thus 
         <td><em>n</em><sub>2</sub></td>
       </tr>
       <tr id="dataRow">
-        <td><input type="number" id="s1" step="1" value="0" class="form-control"></td>
-        <td><input type="number" id="n1" step="1" value="0" class="form-control"></td>
-        <td><input type="number" id="s2" step="1" value="0" class="form-control"></td>
-        <td><input type="number" id="n2" step="1" value="0" class="form-control"></td>
-        <td id="pval"></td>
-        <td id="sig"></td>
+        <td><input type="number" id="s1" step="1" min="0" value="0" class="form-control"></td>
+        <td><input type="number" id="n1" step="1" min="0" value="0" class="form-control"></td>
+        <td><input type="number" id="s2" step="1" min="0" value="0" class="form-control"></td>
+        <td><input type="number" id="n2" step="1" min="0" value="0" class="form-control"></td>
+        <td id="pval">--</td>
+        <td id="sig">--</td>
       </tr>
     </table>
+    <p class="text-danger" id="minVals">Please be sure that <em>s</em><sub>1</sub>, <em>n</em><sub>1</sub> &ndash; <em>s</em><sub>1</sub>, <em>s</em><sub>2</sub>, and <em>n</em><sub>2</sub> &ndash; <em>s</em><sub>2</sub> are all at least 5.</p>
   </div>
 </div>
-
-https://onlinecourses.science.psu.edu/stat414/node/268
