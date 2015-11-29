@@ -8,13 +8,13 @@ custom_css:
 ---
 Now that baseball season has ended, I find myself going through withdrawal. And with spring training several months away, I need something to fill the void left in my heart. To that end, let's take a moment and look back -- with a mathematical eye, of course -- on the 2015 World Series.
 
-In case you missed it, Game 1 of the World Series was a game for the ages. The New York Mets and the Kansas City Royals duked it out for 14 innings. This was long enough to take the crown for the longest Game 1 in World Series history (though it tied Game 2 in 1916 and Game 3 in 2005, which were also 14 innings long). Here are the highlights:
+In case you missed it, Game 1 was one for the record books. The New York Mets and the Kansas City Royals duked it out for 14 innings. This was long enough to take the crown for the longest Game 1 in World Series history (though it tied Game 2 in 1916 and Game 3 in 2005, which were also 14 innings long). Here are the highlights:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ehiuTpr8g-8" frameborder="0" allowfullscreen class="mgp-youtube"></iframe>
 
 Even before Game 1, many pundits predicted that the series would last a full seven games. For example, all 5 members of the CBS Sports staff polled in <a href="http://www.cbssports.com/mlb/eye-on-baseball/25351815/2015-world-series-predictions-mets-royals-go-the-distance" target="_blank">this</a> article predicted a seven-game series, though they were split on which team would emerge victorious.
 
-It shouldn't be surprising, then, that after Game 1 analysts maintained their faith that the series would be a long one. And at the time, this belief seemed entirely reasonable: if two teams are so evenly matched that they can duel each other for 14 innings, then surely the series should be more likely than average to last seven games. Even bookies agreed with this assessment; here's how the odds for World Series betting changed between Game 1 and Game 2 (courtesy of <a href="http://bleacherreport.com/articles/2583362-world-series-2015-odds-and-prop-bets-info-for-mets-vs-royals-game-1" target="_blank">Bleacher</a> <a href="http://bleacherreport.com/articles/2583670-world-series-2015-odds-prop-bets-score-prediction-for-mets-vs-royals-game-2">Report</a>):
+It shouldn't be surprising, then, that after Game 1 analysts maintained their faith that the series would be a long one. And at the time, this belief seemed entirely reasonable: if two teams are so evenly matched that they can grind out 14 innings, then surely the series should be more likely to last seven games. Even bookies agreed with this assessment; here's how the odds for World Series betting changed between Game 1 and Game 2 (courtesy of <a href="http://bleacherreport.com/articles/2583362-world-series-2015-odds-and-prop-bets-info-for-mets-vs-royals-game-1" target="_blank">Bleacher</a> <a href="http://bleacherreport.com/articles/2583670-world-series-2015-odds-prop-bets-score-prediction-for-mets-vs-royals-game-2">Report</a>):
 
 <table class="table table-bordered table-striped table-hover table-centered">
   <tr>
@@ -54,7 +54,9 @@ It shouldn't be surprising, then, that after Game 1 analysts maintained their fa
 
 (Here, the percent change is calculated with respect to a $1 bet. For instance, a $1 bet on a four game series before Game 1 would've earned you $19/4 = $4.75, but after Game 1 and before Game 2 it would've earned $7.50, a roughly 58% increase.) 
 
-Note that odds on a seven game series had the biggest downward change after Game 1, reflecting the fact that more people thought a seven-game series was likely. It was somewhat surprising, then, when the Royals defeated the Mets in only five games.
+Odds on a seven game series had the biggest downward change after Game 1, reflecting the fact that more people thought a seven-game series was likely. 
+
+It was somewhat surprising, then, when the Royals defeated the Mets in only five games.
 
 This raises an interesting question: are extra-innings games actually any good at predicting how long a world series lasts? Of course, in theory the answer is yes: if a World Series has 7 extra-innings games, you can be pretty confident that the World Series lasted 7 games. Practically speaking, though, only one World Series (in 1991) has had as many as three extra-innings games; the rest have all had two or fewer.
 
@@ -138,9 +140,9 @@ Here's what the data looks like for the LCS:
   </tr>
 </table>
 
-In this case, there's an even larger difference. Of the League Championship Series with no extra innings games, roughly 16% (5/31) lasted seven games. But if the series had extra innings games, that percentage more than doubles, to more than 34% (10/29). In this case, even though the numbers are small, the difference is enough to qualify as statistically significant.
+In this case, there's an even larger difference. Of the League Championship Series with no extra innings games, roughly 16% (5/31) lasted seven games. But if the series had extra innings games, that percentage more than doubles, to more than 34% (10/29). But even though the difference is even more pronounced, it's not enough to make the result statistically significant.
 
-Combine these two sets together, and here's what we get: 
+But here's where things get a little weird. Combine these two sets together, and we get a cumulative table with data from all relevant World Series and League Championship series: 
 
 <table class="table table-bordered table-hover table-centered">
   <tr>
@@ -178,7 +180,7 @@ Combine these two sets together, and here's what we get:
   </tr>
 </table>
 
-In this case, the difference between the proportions (23/91 and 28/73) once again qualifies as significant.
+In this case, the difference between the proportions (23/91 and 28/73) qualifies as significant! You can play around with the numbers yourself in the area below, if you're curious.
 
 So, are World Series with extra innings games more likely to last 7 games? Thus far, the data suggests no. But more generally, best-of-seven series with extra inning games appear to be more likely to last 7 games. Cool, right? Statistics is weird.
 
@@ -192,7 +194,7 @@ So, are World Series with extra innings games more likely to last 7 games? Thus 
   <div class="math-area-body">
     <p>I don't really want to talk much about the details of statistical significance. There are plenty of resources out there that can explain the concept (for example, <a href="https://onlinecourses.science.psu.edu/stat414/node/268" target="_blank">this one</a> or <a href="http://stattrek.com/hypothesis-test/difference-in-proportions.aspx">this one.</a>).</p>
     <p>What I would like to do, though, is give you the ability to mess around with sample proportions and see whether differences are stastically significant or not. So here's a little widget that lets you do just that.</p>
-    <p>The game is relatively simple. We have to sets of sample data drawn from two populations. Each one has a number of trials (<em>n</em><sub>1</sub> in the first case, <em>n</em><sub>2</sub> in the second case), and a number of successes (<em>s</em><sub>1</sub> and <em>s</em><sub>2</sub>). We want to know whether or not it's likely that in the population, the proportion of successes is the same, or whether it's larger in one population. We do this by comparing the sample proportions <em>s</em><sub>1</sub>/<em>n</em><sub>1</sub> and <em>s</em><sub>2</sub>/<em>n</em><sub>2</sub>, and calculating what's called a <em>P-value</em>. The lower the <em>P-value</em>, the less likely the two proportions are to be equal.</p>
+    <p>The rules are relatively simple. We have two sets of sample data drawn from two populations. Each one has a number of trials (<em>n</em><sub>1</sub> in the first case, <em>n</em><sub>2</sub> in the second case), and a number of successes (<em>s</em><sub>1</sub> and <em>s</em><sub>2</sub>). We want to know whether or not it's likely for the proportions of success in the two populations are different or not, based on the samples. We do this by comparing the sample proportions <em>s</em><sub>1</sub>/<em>n</em><sub>1</sub> and <em>s</em><sub>2</sub>/<em>n</em><sub>2</sub>, and calculating what's called a <em>P-value</em>. The lower the <em>P-value</em>, the less likely the two proportions are to be equal.</p>
     <p>For example, in the above example, we could take the population to be the space of all past and future World Series; the samples we're comparing are the proportion of seven-game series that have no extra-inning games to the proportion of seven-game series that have at least one extra inning game.</p>
     <p>It's worth noting that there are some caveats on the numbers involved: e.g. both <em>s</em><sub>1</sub> and <em>n</em><sub>1</sub> &ndash; <em>s</em><sub>1</sub> should be sufficiently large (say, at least 5).</p>
     <p>But enough jibber-jabber. Play around with these inputs if you want to build an intuition. (Note: a <em>p-value</em> of 0.05 or less is typically held as being statistically significant, though this benchmark, as discussed beautifully in Jordan Ellenberg's book <em><a href="http://www.amazon.com/How-Not-Be-Wrong-Mathematical/dp/0143127535">How Not to Be Wrong</a></em>, is somewhat arbitrary.</p>
@@ -210,14 +212,28 @@ So, are World Series with extra innings games more likely to last 7 games? Thus 
         <td><em>n</em><sub>2</sub></td>
       </tr>
       <tr id="dataRow">
-        <td><input type="number" id="s1" step="1" min="0" value="0" class="form-control"></td>
-        <td><input type="number" id="n1" step="1" min="0" value="0" class="form-control"></td>
-        <td><input type="number" id="s2" step="1" min="0" value="0" class="form-control"></td>
-        <td><input type="number" id="n2" step="1" min="0" value="0" class="form-control"></td>
+        <td><input type="number" id="s1" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td><input type="number" id="n1" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td><input type="number" id="s2" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td><input type="number" id="n2" step="1" min="0" value="0" class="form-control text-center"></td>
         <td id="pval">--</td>
         <td id="sig">--</td>
       </tr>
     </table>
+    <div class="row">
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="ws">Use WS Data</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="lcs">Use LCS Data</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="wslcs">Use WS + LCS Data</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="ws-reset">Reset Widget</button>
+      </div>
+    </div>
     <p class="text-danger" id="minVals">Please be sure that <em>s</em><sub>1</sub>, <em>n</em><sub>1</sub> &ndash; <em>s</em><sub>1</sub>, <em>s</em><sub>2</sub>, and <em>n</em><sub>2</sub> &ndash; <em>s</em><sub>2</sub> are all at least 5.</p>
   </div>
 </div>

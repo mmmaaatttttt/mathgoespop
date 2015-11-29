@@ -7,44 +7,76 @@ var $s2 = $("#s2");
 var $pval = $("#pval");
 var $sig = $("#sig");
 var $minVals = $("#minVals");
+var $ws = $("#ws");
+var $lcs = $("#lcs");
+var $wslcs = $("#wslcs");
+var $reset = $("#ws-reset");
 
-// si always is <= ni
+$ws.on('click', function() {
+	$s1.val(18);
+	$s2.val(18);
+	$n1.val(60);
+	$n2.val(44);
+	update();
+});
+
+$lcs.on('click', function() {
+	$s1.val(5);
+	$s2.val(10);
+	$n1.val(31);
+	$n2.val(29);
+	update();
+});
+
+$wslcs.on('click', function() {
+	$s1.val(23);
+	$s2.val(28);
+	$n1.val(91);
+	$n2.val(73);
+	update();
+});
+
+$reset.on('click', function() {
+	$s1.val(0);
+	$s2.val(0);
+	$n1.val(0);
+	$n2.val(0);
+	update();
+})
 
 $n1.on('keyup blur change', function() {
 	if (parseFloat($s1.val()) > parseFloat($n1.val())) {
 		$s1.val($n1.val());
 	}
-	$pval.text(calculatePValue($s1.val(), $n1.val(), $s2.val(), $n2.val()));
-	checkWarning($s1.val(), $n1.val(), $s2.val(), $n2.val());
-	$sig.text(checkSignificance($s1.val(), $n1.val(), $s2.val(), $n2.val()));
+	update();
 });
 
 $s1.on('keyup blur change', function() {
 	if (parseFloat($s1.val()) > parseFloat($n1.val())) {
 		$n1.val($s1.val());
 	}
-	$pval.text(calculatePValue($s1.val(), $n1.val(), $s2.val(), $n2.val()));
-	checkWarning($s1.val(), $n1.val(), $s2.val(), $n2.val());
-	$sig.text(checkSignificance($s1.val(), $n1.val(), $s2.val(), $n2.val()));
+	update();
 });
 
 $n2.on('keyup blur change', function() {
 	if (parseFloat($s2.val()) > parseFloat($n2.val())) {
 		$s2.val($n2.val());
 	}
-	$pval.text(calculatePValue($s1.val(), $n1.val(), $s2.val(), $n2.val()));
-	checkWarning($s1.val(), $n1.val(), $s2.val(), $n2.val());
-	$sig.text(checkSignificance($s1.val(), $n1.val(), $s2.val(), $n2.val()));
+	update();
 });
 
 $s2.on('keyup blur change', function() {
 	if (parseFloat($s2.val()) > parseFloat($n2.val())) {
 		$n2.val($s2.val());
 	}
+	update();
+});
+
+function update() {
 	$pval.text(calculatePValue($s1.val(), $n1.val(), $s2.val(), $n2.val()));
 	checkWarning($s1.val(), $n1.val(), $s2.val(), $n2.val());
 	$sig.text(checkSignificance($s1.val(), $n1.val(), $s2.val(), $n2.val()));
-});
+}
 
 function calculatePValue(s1, n1, s2, n2) {
 	var s1f = parseFloat(s1);
