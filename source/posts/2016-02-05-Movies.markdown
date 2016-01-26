@@ -1,0 +1,9 @@
+---
+title: Summer Lovin' vs. Happy Holidays
+date: '2016-02-05'
+custom_js: 
+  - d3
+  - 2016_02_movies
+custom_css: 
+  - 2016_02_movies
+---

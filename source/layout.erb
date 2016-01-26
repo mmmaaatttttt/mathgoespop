@@ -89,10 +89,11 @@
     <script src="/javascripts/swiftype.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
     <%= javascript_include_tag "all" %>
+    <% third_party_scripts = {"d3" => "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.13/d3.js"} %>
     <% if current_page.data.custom_js %>
       <% if current_page.data.custom_js.respond_to?(:each) %>
         <% current_page.data.custom_js.each do |script| %>
-          <script src=<%= "../../javascripts/#{script}.js" %>></script>
+          <script src=<%= third_party_scripts[script] || "../../javascripts/#{script}.js" %>></script>
         <% end %>
       <% else %>
         <script src=<%= "../../javascripts/#{current_page.data.custom_js}.js" %>></script>
