@@ -7,3 +7,13 @@ custom_js:
 custom_css: 
   - 2016_02_movies
 ---
+<div class="math-area">
+  <div class="math-area-title">
+    Blerg
+    <span class="glyphicon glyphicon-plus-sign"></span>
+  </div>
+  <div class="math-area-body">
+    <div id="graph"></div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni in praesentium doloribus, error exercitationem expedita a illum molestiae tenetur, quisquam cum laudantium laborum, quam porro molestias soluta nobis omnis aliquid.
+  </div>
+</div>
