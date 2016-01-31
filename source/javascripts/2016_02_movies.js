@@ -31,19 +31,18 @@
                      .domain([0, d3.max(curMovies, function(movie) { return movie.total })])
                      .range([parseInt(svgHeight.slice(0,3)), 0]); 
 
-    console.log("yscale max", d3.max(curMovies, function(movie) { return movie.total }))
-    curMovies.forEach(function(movie) {
+    curMovies.forEach(function(movie, idx) {
       console.log(movie)
-      svg.selectAll('circle')
+      svg.selectAll('circle.' + curSeason + '.year' + curYear + '.movie' + idx)
        .data(movie.weeklyGrosses)
        .enter()
        .append('circle')
-       .attr('cx', function(d, i) { console.log("cx", xScale(i)); return xScale(i); })
-       .attr('cy', function(d) { console.log("cy", d, "scaledcy", yScale(d)); return yScale(d); })
+       .attr('cx', function(d, i) { return xScale(i); })
+       .attr('cy', function(d) { return yScale(d); })
        .attr('r', 5);
     });
     
-    console.log(revisedMovies);
+    // console.log(revisedMovies);
   });
 
 });
