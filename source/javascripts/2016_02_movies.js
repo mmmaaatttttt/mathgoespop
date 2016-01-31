@@ -1,11 +1,12 @@
 ;$(function() {
 
   // svg setup
-  var svgWidth = '100%';
+  var svgWidth = $("#graph").width();
   var svgHeight = '300px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
-  var curSeason = "summer"
+  var curSeason = "summer";
+  var dotRadius = 5;
   var curMovies, xScale, yScale, revisedMovies;
 
   d3.json('/javascripts/2016_movies.json', function(data) {
@@ -26,10 +27,10 @@
     // create scales
     xScale = d3.scale.linear()
                      .domain([0, d3.max(curMovies, function(movie) { return movie.weeklyGrosses.length })])
-                     .range([0, svgWidth]);
+                     .range([dotRadius, svgWidth - dotRadius]);
     yScale = d3.scale.linear()
                      .domain([0, d3.max(curMovies, function(movie) { return movie.total })])
-                     .range([parseInt(svgHeight.slice(0,3)), 0]); 
+                     .range([parseInt(svgHeight.slice(0,3)) - dotRadius, dotRadius]); 
 
     curMovies.forEach(function(movie, idx) {
       console.log(movie)
@@ -39,7 +40,7 @@
        .append('circle')
        .attr('cx', function(d, i) { return xScale(i); })
        .attr('cy', function(d) { return yScale(d); })
-       .attr('r', 5);
+       .attr('r', dotRadius);
     });
     
     // console.log(revisedMovies);
