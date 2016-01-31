@@ -64,4 +64,15 @@
     d3.selectAll('circle.' + season + '.year' + year).classed('visible', true);
   }
 
+  // TODO:
+  // - buttons to show/hide summer/holiday
+  // - top 5 vs. average?
+  // - check for inflation vs. not
+  // - add line segs
+  // - color
+  // - add axes
+  // - add tooltip
+  // - change axes based on inflation/not
+  // - change x-axis based on year? 
+
 });
