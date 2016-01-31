@@ -5,11 +5,12 @@
   var svgHeight = '300px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
-  var curSeason = "summer";
   var dotRadius = 5;
   var $yearSlider = $("#yearSlider");
-  var $yearText = $(".year");
+  var $yearText = $(".graph-year");
   var xScale, yScale, revisedMovies;
+  var $toggle = $(".toggle");
+  var visibility = {summer: true, holiday: false};
 
   d3.json('/javascripts/2016_movies.json', function(data) {
 
@@ -40,7 +41,7 @@
        .classed(movie.season + ' year' + movie.releaseYear + ' movie' + idx, true);
     });
     
-    showData(curSeason, curYear);
+    showData('summer', curYear);
 
   });
 
@@ -52,7 +53,8 @@
     clearData();
     curYear = v;
     $yearText.text(v);
-    showData(curSeason, curYear);
+    setData('summer', curYear, visibility['summer']);
+    setData('holiday', curYear, visibility['holiday']);
   };
   $yearSlider.append(yearSlider.elt); 
 
@@ -60,9 +62,20 @@
     d3.selectAll('circle').classed('visible', false);
   }
 
-  function showData(season, year) {
-    d3.selectAll('circle.' + season + '.year' + year).classed('visible', true);
+  function setData(season, year, bool) {
+    d3.selectAll('circle.' + season + '.year' + year).classed('visible', bool);
   }
+
+  function showData(season, year) {
+    setData(season, year, true);
+  }
+
+  $toggle.on('click', function() {
+    var $this = $(this);
+    var season = $this.attr('class').match(/summer|holiday/)[0];
+    visibility[season] = $this.is(':checked');
+    setData(season, curYear, visibility[season]);
+  })
 
   // TODO:
   // - buttons to show/hide summer/holiday
@@ -73,6 +86,9 @@
   // - add axes
   // - add tooltip
   // - change axes based on inflation/not
-  // - change x-axis based on year? 
+  // - change x-axis based on year?
+  // - table below chart with basic info?
+  // - default vals once movie closed?
+  // - responsive? 
 
 });

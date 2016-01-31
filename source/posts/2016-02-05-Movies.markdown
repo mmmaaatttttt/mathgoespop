@@ -11,10 +11,38 @@ custom_css:
 ---
 <div class="math-area">
   <div class="math-area-title centered">
-    Movie Data (<span class="year">2015</span>)
+    Movie Data (<span class="graph-year">2015</span>)
   </div>
   <div class="math-area-body-visible">
     <div id="graph"></div>
-    <div id="yearSlider"></div>
+    <table id="options" class="table table-bordered">
+      <tr>
+        <td class="centered" colspan="5">Options</td>
+      </tr>
+      <tr>
+        <td>Year: <span class="graph-year">2015</span></td>
+        <td colspan="4"><div id="yearSlider"></div></td>
+      </tr>
+      <tr>
+        <td>Summer Movies:</td>
+        <td>
+          <div class="switch">
+            <input id="summer-toggle" class="toggle summer-toggle" type="checkbox" checked>
+            <label for="summer-toggle"></label>
+          </div>
+        </td>
+        <td>Holiday Movies:</td>
+        <td>
+          <div class="switch">
+            <input id="holiday-toggle" class="toggle holiday-toggle" type="checkbox">
+            <label for="holiday-toggle"></label>
+          </div>
+        </td>
+      </tr>
+    </table>
+    
   </div>
+  <button class="btn btn-default">hi</button>
+  <button class="btn btn-primary">hi</button>
+  <button class="btn btn-danger">hi</button>
 </div>
