@@ -1,0 +1,12 @@
+circle {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.scrubber {
+	width: 95%;
+	margin: 0 auto;
+}

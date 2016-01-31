@@ -3,16 +3,18 @@ title: Summer Lovin' vs. Happy Holidays
 date: '2016-02-05'
 custom_js: 
   - d3
+  - scrubber
   - 2016_02_movies
 custom_css: 
+  - scrubber
   - 2016_02_movies
 ---
 <div class="math-area">
   <div class="math-area-title centered">
-    Movie Data
+    Movie Data (<span class="year">2015</span>)
   </div>
   <div class="math-area-body-visible">
     <div id="graph"></div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni in praesentium doloribus, error exercitationem expedita a illum molestiae tenetur, quisquam cum laudantium laborum, quam porro molestias soluta nobis omnis aliquid.
+    <div id="yearSlider"></div>
   </div>
 </div>
