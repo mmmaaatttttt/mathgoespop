@@ -5,7 +5,7 @@
   var svgHeight = '300px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
-  var dotRadius = 5;
+  var dotRadius = 3;
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
   var xScale, yScale, revisedMovies;
@@ -24,21 +24,34 @@
     
     // create scales
     xScale = d3.scale.linear()
-                     .domain([0, d3.max(revisedMovies, function(movie) { return movie.weeklyGrosses.length })])
+                     .domain([0, d3.max(revisedMovies, function(movie) { return movie.weeklyGrosses.length + 1 })])
                      .range([dotRadius, svgWidth - dotRadius]);
     yScale = d3.scale.linear()
                      .domain([0, d3.max(revisedMovies, function(movie) { return movie.total })])
                      .range([parseInt(svgHeight.slice(0,3)) - dotRadius, dotRadius]); 
 
     revisedMovies.forEach(function(movie, idx) {
+      // add scatterplot points
       svg.selectAll('circle.' + movie.season + '.year' + movie.releaseYear + '.movie' + idx)
-       .data(movie.weeklyGrosses)
-       .enter()
-       .append('circle')
-       .attr('cx', function(d, i) { return xScale(i); })
-       .attr('cy', function(d) { return yScale(d); })
-       .attr('r', dotRadius)
-       .classed(movie.season + ' year' + movie.releaseYear + ' movie' + idx, true);
+         .data(movie.weeklyGrosses)
+         .enter()
+         .append('circle')
+         .attr('cx', function(d, i) { return xScale(i + 1); })
+         .attr('cy', function(d) { return yScale(d); })
+         .attr('r', dotRadius)
+         .classed(movie.season + ' year' + movie.releaseYear + ' movie' + idx, true);
+
+      // add connecting lines
+      svg.selectAll('line.' + movie.season + '.year' + movie.releaseYear + '.movie' + idx) 
+        .data(movie.weeklyGrosses)
+        .enter()
+        .append('line')
+        .attr('x1', function(d, i) { return xScale(i) })
+        .attr('x2', function(d, i) { return xScale(i + 1)})
+        .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+        .attr('y2', function(d) { return yScale(d)})
+        .classed(movie.season + ' year' + movie.releaseYear + ' movie' + idx, true);
+      
     });
     
     showData('summer', curYear);
@@ -60,10 +73,12 @@
 
   function clearData() {
     d3.selectAll('circle').classed('visible', false);
+    d3.selectAll('line').classed('visible', false);
   }
 
   function setData(season, year, bool) {
     d3.selectAll('circle.' + season + '.year' + year).classed('visible', bool);
+    d3.selectAll('line.' + season + '.year' + year).classed('visible', bool);
   }
 
   function showData(season, year) {
@@ -78,8 +93,6 @@
   })
 
   // TODO:
-  // - buttons to show/hide summer/holiday
-  // - top 5 vs. average?
   // - check for inflation vs. not
   // - add line segs
   // - color
@@ -90,5 +103,6 @@
   // - table below chart with basic info?
   // - default vals once movie closed?
   // - responsive? 
+  // - refactor so not everything is drawn at once, too expensive
 
 });
