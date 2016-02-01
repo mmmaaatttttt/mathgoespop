@@ -30,7 +30,7 @@ line {
 	stroke: rgb(217, 83, 79);
 }
 
-.notInTheaters {
+line.notInTheaters {
 	fill: rgb(221, 221, 221);
 	stroke: rgb(221, 221, 221);
 }

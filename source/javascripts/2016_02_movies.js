@@ -2,10 +2,10 @@
 
   // svg setup
   var svgWidth = $("#graph").width();
-  var svgHeight = '300px';
+  var svgHeight = '400px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
-  var dotRadius = 5;
+  var dotRadius = 4;
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
   var xScale, yScale, revisedMovies, maxX, maxY;
@@ -79,34 +79,33 @@
   }
 
   function drawByYear(year) {
-    svg.selectAll('circle').remove();
-    svg.selectAll('line').remove();
+    // svg.selectAll('circle').remove();
+    // svg.selectAll('line').remove();
 
     revisedMovies.filter(function(movie) {
       return movie.releaseYear === year.toString();
     }).forEach(function(movie, idx) {
       // add connecting lines
-      svg.selectAll('line.' + movie.season + '.movie' + idx) 
-        .data(movie.weeklyGrosses)
-        .enter()
-        .append('line')
-        .attr('x1', function(d, i) { return xScale(i) })
-        .attr('x2', function(d, i) { return xScale(i + 1)})
-        .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
-        .attr('y2', function(d) { return yScale(d)})
-        .classed(movie.season + ' movie' + idx, true)
-        .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+      var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
+        
+      lines.enter().append('line')
+
+      lines.attr('x1', function(d, i) { return xScale(i) })
+           .attr('x2', function(d, i) { return xScale(i + 1)})
+           .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+           .attr('y2', function(d) { return yScale(d)})
+           .classed(movie.season + ' movie' + idx, true)
+           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
       
       // add scatterplot points
-      svg.selectAll('circle.' + movie.season + '.movie' + idx)
-         .data(movie.weeklyGrosses)
-         .enter()
-         .append('circle')
-         .attr('cx', function(d, i) { return xScale(i + 1); })
-         .attr('cy', function(d) { return yScale(d); })
-         .attr('r', dotRadius)
-         .classed(movie.season + ' movie' + idx, true)
-         .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+      var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
+         
+      circles.enter().append('circle').attr('r', dotRadius)
+
+      circles.attr('cx', function(d, i) { return xScale(i + 1); })
+             .attr('cy', function(d) { return yScale(d); })
+             .classed(movie.season + ' movie' + idx, true)
+             .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
     });
   }
 
