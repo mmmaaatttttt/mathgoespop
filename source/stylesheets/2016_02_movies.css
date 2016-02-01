@@ -5,9 +5,10 @@ circle {
 
 line {
 	fill: none;
-  shape-rendering: crispEdges;
   opacity: 0;
   transition: opacity 0.4s;
+  stroke-width: 3px;
+  shape-rendering: geometricPrecision;
 }
 
 .visible {

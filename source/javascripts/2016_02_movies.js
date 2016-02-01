@@ -5,7 +5,7 @@
   var svgHeight = '300px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
-  var dotRadius = 3;
+  var dotRadius = 5;
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
   var xScale, yScale, revisedMovies, maxX, maxY;
@@ -121,7 +121,6 @@
   // - fix transition on year slide
   // - add tooltip
   // - table below chart with basic info?
-  // - default vals once movie closed?
   // - responsive? 
   // - add axes
   // - check for inflation vs. not
