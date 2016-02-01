@@ -15,8 +15,7 @@
   d3.json('/javascripts/2016_movies.json', function(data) {
 
     // modify movie data so that only 20 years are considered,
-    // weekly grosses are cumulative,
-    // and weekly grosses arrays have the same length
+    // weekly grosses are cumulative
     revisedMovies = data.filter(function(movie) { 
       return parseInt(movie.releaseYear) > 1995 
     }).map(function(movie) {
@@ -28,6 +27,15 @@
 
     maxX = d3.max(revisedMovies, function(movie) { return movie.weeklyGrosses.length + 1 });
     maxY = d3.max(revisedMovies, function(movie) { return movie.total });
+
+    // ensure weekly grosses have the same length
+    revisedMovies = revisedMovies.map(function(movie) {
+      movie.weeks = movie.weeklyGrosses.length;
+      for (var i = movie.weeks; i < maxX - 1; i++) {
+        movie.weeklyGrosses.push(movie.total);
+      }
+      return movie;
+    });
 
     // create scales
     xScale = d3.scale.linear()
@@ -77,16 +85,6 @@
     revisedMovies.filter(function(movie) {
       return movie.releaseYear === year.toString();
     }).forEach(function(movie, idx) {
-      // add scatterplot points
-      svg.selectAll('circle.' + movie.season + '.movie' + idx)
-         .data(movie.weeklyGrosses)
-         .enter()
-         .append('circle')
-         .attr('cx', function(d, i) { return xScale(i + 1); })
-         .attr('cy', function(d) { return yScale(d); })
-         .attr('r', dotRadius)
-         .classed(movie.season + ' movie' + idx, true);
-
       // add connecting lines
       svg.selectAll('line.' + movie.season + '.movie' + idx) 
         .data(movie.weeklyGrosses)
@@ -96,7 +94,19 @@
         .attr('x2', function(d, i) { return xScale(i + 1)})
         .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
         .attr('y2', function(d) { return yScale(d)})
-        .classed(movie.season + ' movie' + idx, true);
+        .classed(movie.season + ' movie' + idx, true)
+        .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+      
+      // add scatterplot points
+      svg.selectAll('circle.' + movie.season + '.movie' + idx)
+         .data(movie.weeklyGrosses)
+         .enter()
+         .append('circle')
+         .attr('cx', function(d, i) { return xScale(i + 1); })
+         .attr('cy', function(d) { return yScale(d); })
+         .attr('r', dotRadius)
+         .classed(movie.season + ' movie' + idx, true)
+         .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
     });
   }
 
