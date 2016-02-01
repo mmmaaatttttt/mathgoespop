@@ -26,9 +26,8 @@
       return movie;
     });
 
-    maxX = d3.max(revisedMovies, function(movie) { console.log(movie.title, movie.weeklyGrosses.length); return movie.weeklyGrosses.length + 1 });
+    maxX = d3.max(revisedMovies, function(movie) { return movie.weeklyGrosses.length + 1 });
     maxY = d3.max(revisedMovies, function(movie) { return movie.total });
-    console.log("MAX", maxX);
 
     // create scales
     xScale = d3.scale.linear()
@@ -38,30 +37,7 @@
                      .domain([0, maxY])
                      .range([parseInt(svgHeight.slice(0,3)) - dotRadius, dotRadius]); 
 
-    revisedMovies.forEach(function(movie, idx) {
-      // add scatterplot points
-      svg.selectAll('circle.' + movie.season + '.year' + movie.releaseYear + '.movie' + idx)
-         .data(movie.weeklyGrosses)
-         .enter()
-         .append('circle')
-         .attr('cx', function(d, i) { return xScale(i + 1); })
-         .attr('cy', function(d) { return yScale(d); })
-         .attr('r', dotRadius)
-         .classed(movie.season + ' year' + movie.releaseYear + ' movie' + idx, true);
-
-      // add connecting lines
-      svg.selectAll('line.' + movie.season + '.year' + movie.releaseYear + '.movie' + idx) 
-        .data(movie.weeklyGrosses)
-        .enter()
-        .append('line')
-        .attr('x1', function(d, i) { return xScale(i) })
-        .attr('x2', function(d, i) { return xScale(i + 1)})
-        .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
-        .attr('y2', function(d) { return yScale(d)})
-        .classed(movie.season + ' year' + movie.releaseYear + ' movie' + idx, true);
-      
-    });
-    
+    drawByYear(curYear);
     showData('summer', curYear);
 
   });
@@ -74,6 +50,7 @@
     clearData();
     curYear = v;
     $yearText.text(v);
+    drawByYear(curYear);
     setData('summer', curYear, visibility['summer']);
     setData('holiday', curYear, visibility['holiday']);
   };
@@ -85,12 +62,42 @@
   }
 
   function setData(season, year, bool) {
-    d3.selectAll('circle.' + season + '.year' + year).classed('visible', bool);
-    d3.selectAll('line.' + season + '.year' + year).classed('visible', bool);
+    d3.selectAll('circle.' + season).classed('visible', bool);
+    d3.selectAll('line.' + season).classed('visible', bool);
   }
 
   function showData(season, year) {
     setData(season, year, true);
+  }
+
+  function drawByYear(year) {
+    svg.selectAll('circle').remove();
+    svg.selectAll('line').remove();
+
+    revisedMovies.filter(function(movie) {
+      return movie.releaseYear === year.toString();
+    }).forEach(function(movie, idx) {
+      // add scatterplot points
+      svg.selectAll('circle.' + movie.season + '.movie' + idx)
+         .data(movie.weeklyGrosses)
+         .enter()
+         .append('circle')
+         .attr('cx', function(d, i) { return xScale(i + 1); })
+         .attr('cy', function(d) { return yScale(d); })
+         .attr('r', dotRadius)
+         .classed(movie.season + ' movie' + idx, true);
+
+      // add connecting lines
+      svg.selectAll('line.' + movie.season + '.movie' + idx) 
+        .data(movie.weeklyGrosses)
+        .enter()
+        .append('line')
+        .attr('x1', function(d, i) { return xScale(i) })
+        .attr('x2', function(d, i) { return xScale(i + 1)})
+        .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+        .attr('y2', function(d) { return yScale(d)})
+        .classed(movie.season + ' movie' + idx, true);
+    });
   }
 
   $toggle.on('click', function() {
@@ -101,7 +108,7 @@
   })
 
   // TODO:
-  // - refactor so not everything is drawn at once, too expensive
+  // - fix transition on year slide
   // - add tooltip
   // - table below chart with basic info?
   // - default vals once movie closed?
