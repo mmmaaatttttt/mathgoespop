@@ -8,26 +8,34 @@
   var dotRadius = 3;
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
-  var xScale, yScale, revisedMovies;
+  var xScale, yScale, revisedMovies, maxX, maxY;
   var $toggle = $(".toggle");
   var visibility = {summer: true, holiday: false};
 
   d3.json('/javascripts/2016_movies.json', function(data) {
 
-    // modify movie data so weekly grosses are cumulative
-    revisedMovies = data.map(function(movie) {
+    // modify movie data so that only 20 years are considered,
+    // weekly grosses are cumulative,
+    // and weekly grosses arrays have the same length
+    revisedMovies = data.filter(function(movie) { 
+      return parseInt(movie.releaseYear) > 1995 
+    }).map(function(movie) {
       movie.weeklyGrosses = movie.weeklyGrosses.map(function(el, idx, grosses) { 
         return grosses.slice(0,idx+1).reduce(function(a,b) { return a + b }, 0) 
       });
       return movie;
     });
-    
+
+    maxX = d3.max(revisedMovies, function(movie) { console.log(movie.title, movie.weeklyGrosses.length); return movie.weeklyGrosses.length + 1 });
+    maxY = d3.max(revisedMovies, function(movie) { return movie.total });
+    console.log("MAX", maxX);
+
     // create scales
     xScale = d3.scale.linear()
-                     .domain([0, d3.max(revisedMovies, function(movie) { return movie.weeklyGrosses.length + 1 })])
+                     .domain([0, maxX])
                      .range([dotRadius, svgWidth - dotRadius]);
     yScale = d3.scale.linear()
-                     .domain([0, d3.max(revisedMovies, function(movie) { return movie.total })])
+                     .domain([0, maxY])
                      .range([parseInt(svgHeight.slice(0,3)) - dotRadius, dotRadius]); 
 
     revisedMovies.forEach(function(movie, idx) {
@@ -59,7 +67,7 @@
   });
 
   var yearSlider = new ScrubberView(); 
-  yearSlider.min(1986).max(2015).step(1).value(2015);
+  yearSlider.min(1996).max(2015).step(1).value(2015);
   // yearSlider.thumb.style.background = 
   // yearSlider.thumb.style.borderColor = 
   yearSlider.onValueChanged = function(v) {
@@ -93,16 +101,13 @@
   })
 
   // TODO:
-  // - check for inflation vs. not
-  // - add line segs
-  // - color
-  // - add axes
+  // - refactor so not everything is drawn at once, too expensive
   // - add tooltip
-  // - change axes based on inflation/not
-  // - change x-axis based on year?
   // - table below chart with basic info?
   // - default vals once movie closed?
   // - responsive? 
-  // - refactor so not everything is drawn at once, too expensive
+  // - add axes
+  // - check for inflation vs. not
+  // - change axes based on inflation/not
 
 });
