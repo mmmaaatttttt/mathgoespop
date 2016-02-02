@@ -9,6 +9,8 @@
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
   var $toggle = $(".toggle");
+  var $summerRow = $("#summer-row");
+  var $holidayRow = $("#holiday-row");
   var xScale, yScale, revisedMovies, maxX, maxY;
 
   var tooltip = d3.select('body').append('div')
@@ -160,6 +162,7 @@
     var season = id.match(/summer|holiday/);
     if (season) {
       visibility[season[0]].all = !visibility[season[0]].all;
+      $('#'+season+"-row").children().slice(1,6).fadeToggle(400, 'linear');
       drawByYear(curYear);
     } else if (id.match(/inflation/)) {
       // add code for inflation
@@ -174,11 +177,9 @@
 
   // TODO:
 
-  // - table below chart with basic info?
-  // - toggle individual movies
   // - responsive? 
   // - add axes
-  // - clean up options styling
+
   // - check for inflation vs. not
   // - change axes based on inflation/not
   // - add graph for multiplier over time 

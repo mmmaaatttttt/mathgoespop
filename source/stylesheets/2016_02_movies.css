@@ -11,6 +11,7 @@ line {
 .scrubber {
 	width: 95%;
 	margin: 0 auto;
+  height: 30px;
 }
 
 .summer {
@@ -45,9 +46,6 @@ circle.notInTheaters {
 }
 
 /* checkboxes, inspired by http://callmenick.com/post/css-toggle-switch-examples */
-.switch {
-	display: inline-block;
-}
 
 .toggle {
   position: absolute;
@@ -66,7 +64,7 @@ circle.notInTheaters {
   background-color: #dddddd;
   border-radius: 30px;
   transition: background 0.4s;
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 
 .toggle + label:before,
@@ -123,6 +121,13 @@ circle.notInTheaters {
   background-color: rgb(68, 157, 68);
 }
 
-#options td {
-	vertical-align: middle;
+#options p {
+	margin: 0;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+#holiday-row > .col-xs-2:not(:first-child) {
+  display: none;
 }
