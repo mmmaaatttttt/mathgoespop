@@ -1,8 +1,5 @@
 $ ->
 
-	# $("#left-sidebar").height $("#main-row").height() 
-	# $("#gradient").height $("#main-row").height() 
-
 	mathAreaToggles = $ '.math-area .glyphicon-plus-sign'
 
 	mathAreaToggles.click ->

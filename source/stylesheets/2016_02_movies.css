@@ -38,8 +38,20 @@ line.notInTheaters {
 circle.notInTheaters {
 	opacity: 0;
 }
-/* checkboxes, inspired by http://callmenick.com/post/css-toggle-switch-examples */
 
+#tooltip {
+	position: absolute;
+}
+
+#tooltip div {
+  padding: 2px 4px;
+}
+
+#tooltip p {
+  margin: 0;
+}
+
+/* checkboxes, inspired by http://callmenick.com/post/css-toggle-switch-examples */
 .switch {
 	display: inline-block;
 }

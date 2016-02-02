@@ -5,12 +5,17 @@
   var svgHeight = '400px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
-  var dotRadius = 4;
+  var dotRadius = 5;
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
   var xScale, yScale, revisedMovies, maxX, maxY;
   var $toggle = $(".toggle");
   var visibility = {summer: true, holiday: false};
+
+  var tooltip = d3.select('body').append('div')
+                  .attr('id', 'tooltip')
+                  .attr('class', 'panel panel-warning')
+                  .style('opacity', 0);
 
   d3.json('/javascripts/2016_movies.json', function(data) {
 
@@ -78,13 +83,16 @@
     setData(season, year, true);
   }
 
+  function addCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   function drawByYear(year) {
-    // svg.selectAll('circle').remove();
-    // svg.selectAll('line').remove();
 
     revisedMovies.filter(function(movie) {
       return movie.releaseYear === year.toString();
     }).forEach(function(movie, idx) {
+
       // add connecting lines
       var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
         
@@ -99,11 +107,41 @@
       
       // add scatterplot points
       var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
-         
-      circles.enter().append('circle').attr('r', dotRadius)
+      
+      circles.enter().append('circle')
+             .attr('r', dotRadius)
 
       circles.attr('cx', function(d, i) { return xScale(i + 1); })
              .attr('cy', function(d) { return yScale(d); })
+             .attr('data-title', movie.title)
+             .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
+             .attr('data-total', movie.total);
+
+      circles.on("mouseenter", function(d, i) {
+                if ($(this).css('opacity') > 0) {
+                  tooltip.transition()    
+                      .duration(0)    
+                      .style("opacity", 0.9);
+
+                  tooltip.html((function() { 
+                    var that = d3.select(this);
+                    return "<div class='panel-heading'><p class='panel-title'>" + that.attr('data-title') 
+                    + "</p></div><div class='panel-body'><p>Released: " + that.attr('data-release')
+                    + "</p><p>Total Gross: $" + (that.attr('data-total'))
+                    + "</p><p>Grossed as of Week " + (i + 1) +": $" + addCommas(d) +"</p></div>"}).bind(this)
+                  ).style("left", d3.event.pageX + "px")   
+                   .style("top", d3.event.pageY + "px");  
+                }
+              })
+             .on("mouseout", function(d) {
+                if ($(this).css('opacity') > 0) {
+                  tooltip.transition()    
+                    .duration(500)    
+                    .style("opacity", 0)
+                    .style("left", 0)   
+                    .style("top", 0);
+                }
+             })
              .classed(movie.season + ' movie' + idx, true)
              .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
     });
@@ -117,12 +155,15 @@
   })
 
   // TODO:
-  // - fix transition on year slide
   // - add tooltip
   // - table below chart with basic info?
   // - responsive? 
   // - add axes
+  // - actually remove nodes rather than toggling opacity, messes with tooltip
+  // - clean up options styling
   // - check for inflation vs. not
   // - change axes based on inflation/not
+  // - toggle individual movies
+  // - add graph for multiplier over time 
 
 });
