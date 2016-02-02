@@ -88,66 +88,66 @@
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  function drawByYear(year) {
+  function showTooltip(d, i) {
+    if ($(this).css('opacity') > 0) {
+      tooltip.transition()    
+          .duration(0)    
+          .style("opacity", 0.9);
 
+      tooltip.html((function() { 
+        var that = d3.select(this);
+        return "<div class='panel-heading'><p class='panel-title'>" + that.attr('data-title') 
+        + "</p></div><div class='panel-body'><p>Released: " + that.attr('data-release')
+        + "</p><p>Total Gross: $" + addCommas(that.attr('data-total'))
+        + "</p><p>Grossed as of Week " + (i + 1) +": $" + addCommas(d) +"</p></div>"}).bind(this)
+      ).style("left", d3.event.pageX + "px")   
+       .style("top", d3.event.pageY + "px");  
+    }
+  }
+
+  function hideTooltip() {
+    if ($(this).css('opacity') > 0) {
+      tooltip.transition()    
+        .duration(500)    
+        .style("opacity", 0)
+        .style("left", 0)   
+        .style("top", 0);
+    }
+  }
+
+  function drawMovie(movie, idx) {
+    // add connecting lines
+    var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
+    lines.enter().append('line');
+    lines.classed(movie.season + ' movie' + idx, true)
+         .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
+         .transition()
+         .attr('x1', function(d, i) { return xScale(i) })
+         .attr('x2', function(d, i) { return xScale(i + 1)})
+         .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+         .attr('y2', function(d) { return yScale(d)});
+    
+    // add scatterplot points
+    var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
+    circles.enter().append('circle');
+    circles.transition()
+           .attr('r', dotRadius)
+           .attr('cx', function(d, i) { return xScale(i + 1); })
+           .attr('cy', function(d) { return yScale(d); })
+           .attr('data-title', movie.title)
+           .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
+           .attr('data-total', movie.total);
+
+    circles.on("mouseenter", showTooltip)
+           .on("mouseout", hideTooltip)
+           .classed(movie.season + ' movie' + idx, true)
+           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+  }
+
+  function drawByYear(year) {
     revisedMovies.filter(function(movie) {
       return movie.releaseYear === year.toString();
-    }).forEach(function(movie, idx) {
-
-      // add connecting lines
-      var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
-        
-      lines.enter().append('line')
-
-      lines.classed(movie.season + ' movie' + idx, true)
-           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
-           .transition()
-           .attr('x1', function(d, i) { return xScale(i) })
-           .attr('x2', function(d, i) { return xScale(i + 1)})
-           .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
-           .attr('y2', function(d) { return yScale(d)});
-      
-      // add scatterplot points
-      var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
-      
-      circles.enter().append('circle')
-
-      circles.transition()
-             .attr('r', dotRadius)
-             .attr('cx', function(d, i) { return xScale(i + 1); })
-             .attr('cy', function(d) { return yScale(d); })
-             .attr('data-title', movie.title)
-             .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
-             .attr('data-total', movie.total);
-
-      circles.on("mouseenter", function(d, i) {
-                if ($(this).css('opacity') > 0) {
-                  tooltip.transition()    
-                      .duration(0)    
-                      .style("opacity", 0.9);
-
-                  tooltip.html((function() { 
-                    var that = d3.select(this);
-                    return "<div class='panel-heading'><p class='panel-title'>" + that.attr('data-title') 
-                    + "</p></div><div class='panel-body'><p>Released: " + that.attr('data-release')
-                    + "</p><p>Total Gross: $" + addCommas(that.attr('data-total'))
-                    + "</p><p>Grossed as of Week " + (i + 1) +": $" + addCommas(d) +"</p></div>"}).bind(this)
-                  ).style("left", d3.event.pageX + "px")   
-                   .style("top", d3.event.pageY + "px");  
-                }
-              })
-             .on("mouseout", function(d) {
-                if ($(this).css('opacity') > 0) {
-                  tooltip.transition()    
-                    .duration(500)    
-                    .style("opacity", 0)
-                    .style("left", 0)   
-                    .style("top", 0);
-                }
-             })
-             .classed(movie.season + ' movie' + idx, true)
-             .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
-    });
+    }).forEach(drawMovie);
   }
 
   $toggle.on('click', function() {
@@ -159,11 +159,11 @@
 
   // TODO:
 
+  // - actually remove nodes rather than toggling opacity, messes with tooltip
   // - table below chart with basic info?
   // - toggle individual movies
   // - responsive? 
   // - add axes
-  // - actually remove nodes rather than toggling opacity, messes with tooltip
   // - clean up options styling
   // - check for inflation vs. not
   // - change axes based on inflation/not
