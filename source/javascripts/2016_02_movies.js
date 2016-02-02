@@ -6,11 +6,11 @@
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
   var dotRadius = 5;
+  var visibility = {summer: true, holiday: false};
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
-  var xScale, yScale, revisedMovies, maxX, maxY;
   var $toggle = $(".toggle");
-  var visibility = {summer: true, holiday: false};
+  var xScale, yScale, revisedMovies, maxX, maxY;
 
   var tooltip = d3.select('body').append('div')
                   .attr('id', 'tooltip')
@@ -51,8 +51,6 @@
                      .range([parseInt(svgHeight.slice(0,3)) - dotRadius, dotRadius]); 
 
     drawByYear(curYear);
-    showData('summer', curYear);
-
   });
 
   var yearSlider = new ScrubberView(); 
@@ -63,26 +61,8 @@
     curYear = v;
     $yearText.text(v);
     drawByYear(curYear);
-    // setData('summer', curYear, visibility['summer']);
-    // setData('holiday', curYear, visibility['holiday']);
   };
   $yearSlider.append(yearSlider.elt); 
-
-  // function clearData() {
-  //   ['circle', 'line'].forEach(function(graphType) {
-  //     d3.selectAll(graphType).transition().duration(400).style('opacity', 0).remove();
-  //     console.log('removed')
-  //   });
-  // }
-
-  function setData(season, year, bool) {
-    d3.selectAll('circle.' + season).classed('visible', bool);
-    d3.selectAll('line.' + season).classed('visible', bool);
-  }
-
-  function showData(season, year) {
-    setData(season, year, true);
-  }
 
   function addCommas(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -116,32 +96,46 @@
   }
 
   function drawMovie(movie, idx) {
-    // add connecting lines
     var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
-    lines.enter().append('line');
-    lines.classed(movie.season + ' movie' + idx, true)
-         .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
-         .transition()
-         .attr('x1', function(d, i) { return xScale(i) })
-         .attr('x2', function(d, i) { return xScale(i + 1)})
-         .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
-         .attr('y2', function(d) { return yScale(d)});
-    
-    // add scatterplot points
     var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
-    circles.enter().append('circle');
-    circles.transition()
-           .attr('r', dotRadius)
-           .attr('cx', function(d, i) { return xScale(i + 1); })
-           .attr('cy', function(d) { return yScale(d); })
-           .attr('data-title', movie.title)
-           .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
-           .attr('data-total', movie.total);
+    var startingOpacity = +!lines.empty();
+    if (visibility[movie.season]) {
+      lines.enter().append('line');
+      lines.classed(movie.season + ' movie' + idx, true)
+           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
+           .style('opacity', startingOpacity)
+           .transition()
+           .attr('x1', function(d, i) { return xScale(i) })
+           .attr('x2', function(d, i) { return xScale(i + 1)})
+           .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+           .attr('y2', function(d) { return yScale(d)})
+           .transition()
+           .ease('linear')
+           .duration(400)
+           .style('opacity', 1);
+      
+      circles.enter().append('circle');
+      circles.style('opacity', function(d, i) { return i + 1 > movie.weeks ? 0 : startingOpacity })
+             .transition()
+             .attr('r', dotRadius)
+             .attr('cx', function(d, i) { return xScale(i + 1); })
+             .attr('cy', function(d) { return yScale(d); })
+             .attr('data-title', movie.title)
+             .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
+             .attr('data-total', movie.total)
+             .transition()
+             .ease('linear')
+             .duration(400)
+             .style('opacity', function(d, i) { return i + 1 > movie.weeks ? 0 : 1});
 
-    circles.on("mouseenter", showTooltip)
-           .on("mouseout", hideTooltip)
-           .classed(movie.season + ' movie' + idx, true)
-           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+      circles.on("mouseenter", showTooltip)
+             .on("mouseout", hideTooltip)
+             .classed(movie.season + ' movie' + idx, true)
+             .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+    } else {
+      circles.transition().ease('linear').duration(400).style('opacity', 0).remove();
+      lines.transition().ease('linear').duration(400).style('opacity', 0).remove();
+    }
   }
 
   function drawByYear(year) {
@@ -153,13 +147,12 @@
   $toggle.on('click', function() {
     var $this = $(this);
     var season = $this.attr('class').match(/summer|holiday/)[0];
-    visibility[season] = $this.is(':checked');
-    setData(season, curYear, visibility[season]);
+    visibility[season] = !visibility[season];
+    drawByYear(curYear);
   })
 
   // TODO:
-
-  // - actually remove nodes rather than toggling opacity, messes with tooltip
+  
   // - table below chart with basic info?
   // - toggle individual movies
   // - responsive? 
