@@ -2,7 +2,7 @@ circle {
 	transition: opacity 0.4s;
 }
 
-line {
+line.summer, line.holiday {
 	fill: none;
   stroke-width: 3px;
   shape-rendering: geometricPrecision;
@@ -31,6 +31,13 @@ line.notInTheaters {
 
 circle.notInTheaters {
 	opacity: 0;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
 }
 
 #tooltip {

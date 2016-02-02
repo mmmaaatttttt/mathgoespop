@@ -11,6 +11,7 @@
   var $toggle = $(".toggle");
   var $summerRow = $("#summer-row");
   var $holidayRow = $("#holiday-row");
+  var padding = {left: 60, top: 370, right: 10, bottom: 30}
   var xScale, yScale, revisedMovies, maxX, maxY;
 
   var tooltip = d3.select('body').append('div')
@@ -56,11 +57,38 @@
     // create scales
     xScale = d3.scale.linear()
                      .domain([0, maxX])
-                     .range([dotRadius, svgWidth - dotRadius]);
+                     .range([padding.left, svgWidth - padding.right]);
     yScale = d3.scale.linear()
                      .domain([0, maxY])
-                     .range([parseInt(svgHeight.slice(0,3)) - dotRadius, dotRadius]); 
+                     .range([padding.top, padding.bottom]); 
 
+    // var yAxisScale = d3.scale.linear()
+    //                  .domain([0, 1000000000])
+    //                  .range([0, 1000])
+
+    // create axes
+    var xAxis = d3.svg.axis()
+                      .scale(xScale)
+                      .orient("bottom")
+                      .ticks(20);
+
+    var yAxis = d3.svg.axis()
+                      .scale(yScale)
+                      .orient("left")
+                      .ticks(20)
+                      .tickFormat(d3.format("$.3s"));
+
+    svg.append('g')
+        .attr('class', 'axis')
+        .attr('transform', 'translate(0,' + padding.top + ')')
+        .call(xAxis);
+
+    svg.append('g')
+        .attr('class', 'axis')
+        .attr('transform', 'translate(' + padding.left + ',0)')
+        .call(yAxis);
+
+    // draw graphs
     drawByYear(curYear);
   });
 
@@ -178,7 +206,6 @@
   // TODO:
 
   // - responsive? 
-  // - add axes
 
   // - check for inflation vs. not
   // - change axes based on inflation/not
