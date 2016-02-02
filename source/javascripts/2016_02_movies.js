@@ -6,7 +6,6 @@
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
   var dotRadius = 5;
-  var visibility = {summer: true, holiday: false};
   var $yearSlider = $("#yearSlider");
   var $yearText = $(".graph-year");
   var $toggle = $(".toggle");
@@ -17,6 +16,16 @@
                   .attr('class', 'panel panel-warning')
                   .style('opacity', 0);
 
+  var visibility = {
+    summer: {
+      all: true,
+      individual: [true, true, true, true, true]
+    },
+    holiday: {
+      all: false,
+      individual: [true, true, true, true, true]
+    }
+  };
   d3.json('/javascripts/2016_movies.json', function(data) {
 
     // modify movie data so that only 20 years are considered,
@@ -99,7 +108,7 @@
     var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
     var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
     var startingOpacity = +!lines.empty();
-    if (visibility[movie.season]) {
+    if (visibility[movie.season].all && visibility[movie.season].individual[idx % 5]) {
       lines.enter().append('line');
       lines.classed(movie.season + ' movie' + idx, true)
            .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
@@ -138,21 +147,33 @@
     }
   }
 
-  function drawByYear(year) {
-    revisedMovies.filter(function(movie) {
+  function drawByYear(year,idx) {
+    var filteredMovies = revisedMovies.filter(function(movie) {
       return movie.releaseYear === year.toString();
-    }).forEach(drawMovie);
+    });
+    idx !== undefined ? drawMovie(filteredMovies[idx], idx) : filteredMovies.forEach(drawMovie);
   }
 
   $toggle.on('click', function() {
     var $this = $(this);
-    var season = $this.attr('class').match(/summer|holiday/)[0];
-    visibility[season] = !visibility[season];
-    drawByYear(curYear);
+    var id = $this.attr('id');
+    var season = id.match(/summer|holiday/);
+    if (season) {
+      visibility[season[0]].all = !visibility[season[0]].all;
+      drawByYear(curYear);
+    } else if (id.match(/inflation/)) {
+      // add code for inflation
+      console.log('inflation!')
+    } else {
+      var idx = parseInt(id.split("-")[1])
+      var visArr = visibility[$this.attr('class').match(/summer|holiday/)[0]].individual;
+      visArr[idx % 5] = !visArr[idx % 5];
+      drawByYear(curYear,idx);
+    }
   })
 
   // TODO:
-  
+
   // - table below chart with basic info?
   // - toggle individual movies
   // - responsive? 

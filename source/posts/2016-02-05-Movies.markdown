@@ -15,31 +15,93 @@ custom_css:
   </div>
   <div class="math-area-body-visible">
     <div id="graph"></div>
-    <table id="options" class="table table-bordered">
-      <tr>
-        <td class="centered" colspan="5">Options</td>
-      </tr>
-      <tr>
-        <td>Year: <span class="graph-year">2015</span></td>
-        <td colspan="4"><div id="yearSlider"></div></td>
-      </tr>
-      <tr>
-        <td>Summer Movies:</td>
-        <td>
+    <div class="container-fluid" id="options">
+      <div class="row">
+        <div class="col-sm-2"><p>Year: <span class="graph-year">2015</span></p></div>
+        <div class="col-sm-6"><div id="yearSlider"></div></div>
+        <div class="col-sm-4"><p>Adjust for Inflation?</p>
+          <div class="switch">
+            <input id="inflation-toggle" class="toggle inflation-toggle" type="checkbox">
+            <label for="inflation-toggle"></label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">Summer: 
           <div class="switch">
             <input id="summer-toggle" class="toggle summer-toggle" type="checkbox" checked>
             <label for="summer-toggle"></label>
           </div>
-        </td>
-        <td>Holiday Movies:</td>
-        <td>
+        </div>
+        <div class="col-sm-2">#1
+          <div class="switch">
+            <input id="toggle-0" class="toggle summer-toggle" type="checkbox" checked>
+            <label for="toggle-0"></label>
+          </div> 
+        </div>
+        <div class="col-sm-2">#2
+          <div class="switch">
+            <input id="toggle-1" class="toggle summer-toggle" type="checkbox" checked>
+            <label for="toggle-1"></label>
+          </div>
+        </div>
+        <div class="col-sm-2">#3
+          <div class="switch">
+            <input id="toggle-2" class="toggle summer-toggle" type="checkbox" checked>
+            <label for="toggle-2"></label>
+          </div>
+        </div>
+        <div class="col-sm-2">#4
+          <div class="switch">
+            <input id="toggle-3" class="toggle summer-toggle" type="checkbox" checked>
+            <label for="toggle-3"></label>
+          </div>
+        </div>
+        <div class="col-sm-2">#5
+          <div class="switch">
+            <input id="toggle-4" class="toggle summer-toggle" type="checkbox" checked>
+            <label for="toggle-4"></label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">Holiday: 
           <div class="switch">
             <input id="holiday-toggle" class="toggle holiday-toggle" type="checkbox">
             <label for="holiday-toggle"></label>
           </div>
-        </td>
-      </tr>
-    </table>
-    
+        </div>
+        <div class="col-sm-2">#1
+          <div class="switch">
+            <input id="toggle-5" class="toggle holiday-toggle" type="checkbox" checked>
+            <label for="toggle-5"></label>
+          </div> 
+        </div>
+        <div class="col-sm-2">#2
+          <div class="switch">
+            <input id="toggle-6" class="toggle holiday-toggle" type="checkbox" checked>
+            <label for="toggle-6"></label>
+          </div>
+        </div>
+        <div class="col-sm-2">#3
+          <div class="switch">
+            <input id="toggle-7" class="toggle holiday-toggle" type="checkbox" checked>
+            <label for="toggle-7"></label>
+          </div>
+        </div>
+        <div class="col-sm-2">#4
+          <div class="switch">
+            <input id="toggle-8" class="toggle holiday-toggle" type="checkbox" checked>
+            <label for="toggle-8"></label>
+          </div>
+        </div>
+        <div class="col-sm-2">#5
+          <div class="switch">
+            <input id="toggle-9" class="toggle holiday-toggle" type="checkbox" checked>
+            <label for="toggle-9"></label>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

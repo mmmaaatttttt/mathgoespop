@@ -1,18 +1,11 @@
 circle {
-	/*opacity: 0;*/
 	transition: opacity 0.4s;
 }
 
 line {
 	fill: none;
-  /*opacity: 0;*/
-  /*transition: opacity 0.4s;*/
   stroke-width: 3px;
   shape-rendering: geometricPrecision;
-}
-
-.visible {
-	/*opacity: 1;*/
 }
 
 .scrubber {
@@ -119,6 +112,15 @@ circle.notInTheaters {
 .holiday-toggle:checked + label:after {
 	left: 4px;
 	background-color: rgb(217, 83, 79);
+}
+
+.inflation-toggle:checked + label {
+  background-color: rgb(68, 157, 68);
+}
+
+.inflation-toggle:checked + label:after {
+  left: 4px;
+  background-color: rgb(68, 157, 68);
 }
 
 #options td {
