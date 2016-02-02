@@ -1,12 +1,12 @@
 circle {
 	opacity: 0;
-	transition: opacity 0.4s;
+	/*transition: opacity 0.4s;*/
 }
 
 line {
 	fill: none;
   opacity: 0;
-  transition: opacity 0.4s;
+  /*transition: opacity 0.4s;*/
   stroke-width: 3px;
   shape-rendering: geometricPrecision;
 }

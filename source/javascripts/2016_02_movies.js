@@ -60,19 +60,20 @@
   // yearSlider.thumb.style.background = 
   // yearSlider.thumb.style.borderColor = 
   yearSlider.onValueChanged = function(v) {
-    clearData();
     curYear = v;
     $yearText.text(v);
     drawByYear(curYear);
-    setData('summer', curYear, visibility['summer']);
-    setData('holiday', curYear, visibility['holiday']);
+    // setData('summer', curYear, visibility['summer']);
+    // setData('holiday', curYear, visibility['holiday']);
   };
   $yearSlider.append(yearSlider.elt); 
 
-  function clearData() {
-    d3.selectAll('circle').classed('visible', false);
-    d3.selectAll('line').classed('visible', false);
-  }
+  // function clearData() {
+  //   ['circle', 'line'].forEach(function(graphType) {
+  //     d3.selectAll(graphType).transition().duration(400).style('opacity', 0).remove();
+  //     console.log('removed')
+  //   });
+  // }
 
   function setData(season, year, bool) {
     d3.selectAll('circle.' + season).classed('visible', bool);
@@ -98,20 +99,22 @@
         
       lines.enter().append('line')
 
-      lines.attr('x1', function(d, i) { return xScale(i) })
+      lines.classed(movie.season + ' movie' + idx, true)
+           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
+           .transition()
+           .attr('x1', function(d, i) { return xScale(i) })
            .attr('x2', function(d, i) { return xScale(i + 1)})
            .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
-           .attr('y2', function(d) { return yScale(d)})
-           .classed(movie.season + ' movie' + idx, true)
-           .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks });
+           .attr('y2', function(d) { return yScale(d)});
       
       // add scatterplot points
       var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses)
       
       circles.enter().append('circle')
-             .attr('r', dotRadius)
 
-      circles.attr('cx', function(d, i) { return xScale(i + 1); })
+      circles.transition()
+             .attr('r', dotRadius)
+             .attr('cx', function(d, i) { return xScale(i + 1); })
              .attr('cy', function(d) { return yScale(d); })
              .attr('data-title', movie.title)
              .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
@@ -127,7 +130,7 @@
                     var that = d3.select(this);
                     return "<div class='panel-heading'><p class='panel-title'>" + that.attr('data-title') 
                     + "</p></div><div class='panel-body'><p>Released: " + that.attr('data-release')
-                    + "</p><p>Total Gross: $" + (that.attr('data-total'))
+                    + "</p><p>Total Gross: $" + addCommas(that.attr('data-total'))
                     + "</p><p>Grossed as of Week " + (i + 1) +": $" + addCommas(d) +"</p></div>"}).bind(this)
                   ).style("left", d3.event.pageX + "px")   
                    .style("top", d3.event.pageY + "px");  
@@ -155,15 +158,15 @@
   })
 
   // TODO:
-  // - add tooltip
+
   // - table below chart with basic info?
+  // - toggle individual movies
   // - responsive? 
   // - add axes
   // - actually remove nodes rather than toggling opacity, messes with tooltip
   // - clean up options styling
   // - check for inflation vs. not
   // - change axes based on inflation/not
-  // - toggle individual movies
   // - add graph for multiplier over time 
 
 });
