@@ -4,6 +4,7 @@
   var svgWidth = $("#graph").width();
   var svgHeight = '400px';
   var svg = d3.select("#graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
+  var svg2 = d3.select("#multiplier-graph").append("svg").attr('width', svgWidth).attr('height', svgHeight);
   var curYear = 2015;
   var dotRadius = 5;
   var $yearSlider = $("#yearSlider");
@@ -11,8 +12,8 @@
   var $toggle = $(".toggle");
   var $summerRow = $("#summer-row");
   var $holidayRow = $("#holiday-row");
-  var padding = {left: 60, top: 370, right: 10, bottom: 30}
-  var xScale, yScale, revisedMovies, maxX, maxY;
+  var padding = {left: 60, top: 370, right: 10, bottom: 30};
+  var xScale, yScale, xScale2, yScale2, revisedMovies, maxX, maxY, maxY2;
 
   var tooltip = d3.select('body').append('div')
                   .attr('id', 'tooltip')
@@ -54,6 +55,7 @@
       return movie;
     });
 
+    // setup for GRAPH 1
     // create scales
     xScale = d3.scale.linear()
                      .domain([0, maxX])
@@ -61,10 +63,6 @@
     yScale = d3.scale.linear()
                      .domain([0, maxY])
                      .range([padding.top, padding.bottom]); 
-
-    // var yAxisScale = d3.scale.linear()
-    //                  .domain([0, 1000000000])
-    //                  .range([0, 1000])
 
     // create axes
     var xAxis = d3.svg.axis()
@@ -90,6 +88,85 @@
 
     // draw graphs
     drawByYear(curYear);
+
+    // setup for GRAPH 2
+    maxY2 = d3.max(revisedMovies, function(movie) { return movie.multiplier });
+
+    xScale2 = d3.time.scale()
+                     .domain([new Date("Jan 1 1996"), new Date("Dec 31 2015")])
+                     .range([padding.left, svgWidth - padding.right]);
+    yScale2 = d3.scale.linear()
+                     .domain([0, maxY2])
+                     .range([padding.top, padding.bottom]); 
+
+    // create axes
+    var xAxis2 = d3.svg.axis()
+                      .scale(xScale2)
+                      .orient("bottom")
+                      .ticks(15);
+
+    var yAxis2 = d3.svg.axis()
+                      .scale(yScale2)
+                      .orient("left")
+                      .ticks(20);
+
+    svg2.append('g')
+        .attr('class', 'axis')
+        .attr('transform', 'translate(0,' + padding.top + ')')
+        .call(xAxis2);
+
+    svg2.append('g')
+        .attr('class', 'axis')
+        .attr('transform', 'translate(' + padding.left + ',0)')
+        .call(yAxis2);
+
+    var circles2 = svg2.selectAll('circle').data(revisedMovies);    
+
+    circles2.enter().append('circle');
+    circles2.attr('r', dotRadius)
+            .attr('cx', function(d, i) { return xScale2(new Date(d.releaseDay + " " + d.releaseYear)); })
+            .attr('cy', function(d, i) { return yScale2(d.multiplier) })
+            .attr('class', function(d, i) { return d.season });
+
+    var avgMovies = revisedMovies.reduce(function(prev, cur, idx) {
+      if (idx % 5 === 0) {
+          prev.push({avgMult: 0, totalTotal: 0, totalOpening: 0, season: cur.season, date: new Date("July 2 " + (1996 + (idx/5 % 20)))})
+      }
+      prev[prev.length - 1].avgMult += cur.multiplier/5;
+      prev[prev.length - 1].totalTotal += cur.total;
+      prev[prev.length - 1].totalOpening += cur.openingWeekend;
+      return prev
+    }, []);
+
+    var linesavg = svg2.selectAll('lines.avg').data(avgMovies.reduce(function(prev, cur, idx) {
+      if (avgMovies[idx + 1] && cur.season === avgMovies[idx + 1].season) {
+        prev.push([avgMovies[idx], avgMovies[idx+1]]);
+      }
+      return prev;
+    }, []));
+
+    linesavg.enter().append('line');
+    linesavg.attr('x1', function(d, i) { console.log(d); return xScale2(d[0].date); })
+            .attr('x2', function(d, i) { return xScale2(d[1].date); })
+            .attr('y1', function(d, i) { return yScale2(d[0].avgMult) })
+            .attr('y2', function(d, i) { return yScale2(d[1].avgMult) })
+            .attr('class', function(d, i) { return d[0].season })
+
+
+     // lines.enter().append('line');
+     //  lines.classed(movie.season + ' movie' + idx, true)
+     //       .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
+     //       .style('opacity', startingOpacity)
+     //       .transition()
+     //       .attr('x1', function(d, i) { return xScale(i) })
+     //       .attr('x2', function(d, i) { return xScale(i + 1)})
+     //       .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+     //       .attr('y2', function(d) { return yScale(d)})
+     //       .transition()
+     //       .ease('linear')
+     //       .duration(400)
+     //       .style('opacity', 1);
+
   });
 
   var yearSlider = new ScrubberView(); 
@@ -209,6 +286,6 @@
 
   // - check for inflation vs. not
   // - change axes based on inflation/not
-  // - add graph for multiplier over time 
+  // - add tooltip for graph 2
 
 });

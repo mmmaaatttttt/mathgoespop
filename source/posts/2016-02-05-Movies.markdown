@@ -105,3 +105,12 @@ custom_css:
     </div>
   </div>
 </div>
+
+<div class="math-area">
+  <div class="math-area-title centered">
+    Multiplier vs. Release Date
+  </div>
+  <div class="math-area-body-visible">
+    <div id="multiplier-graph"></div>
+  </div>
+</div>
