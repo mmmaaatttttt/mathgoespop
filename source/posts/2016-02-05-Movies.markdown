@@ -1,5 +1,5 @@
 ---
-title: Summer Lovin' vs. Happy Holidays
+title: Winter is Coming?
 date: '2016-02-05'
 custom_js: 
   - d3
@@ -9,9 +9,17 @@ custom_css:
   - scrubber
   - 2016_02_movies
 ---
+When I was in high school, I very much wanted _<a href="http://www.imdb.com/title/tt0120915/" target="_blank">Star Wars Episode I</a>_ to eclipse _<a href="http://www.imdb.com/title/tt0120338/?ref_=nv_sr_1" target="_blank">Titanic</a>_ as the highest-grossing domestic film of all time. Even though _Episode I_ wasn't even that good, I still played my part and saw it several times in theaters. Alas, my efforts were in vain; the film didn't even come close to toppling _Titanic_.
+
+What a difference a good _Star Wars_ movie makes. It only took 15 days for _The Force Awakens_ to cruise past _Titanic_'s domestic total, and just 20 days for it to surpass _Avatar_ as the highest grossing domestic film of all time. (Though it should be noted that these numbers are not inflation-adjusted; if we <a href="http://www.boxofficemojo.com/alltime/adjusted.htm" target="_blank">adjust for inflation</a>, _The Force Awakens_ has passed _Avatar_, but not _Titanic_).
+
+If you consider what are now the top three highest grossing domestic films of all time, you may notice a pattern. Despite the summer being well-known as the time to release potentially record-breaking blockbusters, _The Force Awakens_, _Avatar_ and _Titanic_ were all released during the holiday season. This led me to wonder: when it comes to these big-budget tentpole movies, is winter the new summer?
+
+To explore this question, it helps to have some data. Here, for your perusal, is data on the top five grossing films during the summer and the holidays from 1996 - 2015. You can mouse over a data point to get details on the movie. You can also use the controls below the graph to toggle how much information is displayed, as well as toggle whether or not to display inflation-adjusted data. (The data, along with the definition of what qualifies as a summer release and a holiday release, are courtesy of <a href="http://www.boxofficemojo.com/seasonal/" target="_blank">Box Office Mojo</a>.)
+
 <div class="math-area">
   <div class="math-area-title centered">
-    Movie Data (<span class="graph-year">2015</span>)
+    Movie Data (<span class="graph-year">2015</span>): Revenue vs. Weeks Since Release
   </div>
   <div class="math-area-body-visible">
     <div id="graph"></div>
