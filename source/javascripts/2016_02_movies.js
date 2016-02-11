@@ -30,6 +30,8 @@
       individual: [true, true, true, true, true]
     }
   };
+  var inflationAdjusted = false;
+
   d3.json('/javascripts/2016_movies.json', function(data) {
 
     // modify movie data so that only 20 years are considered
@@ -199,8 +201,9 @@
   }
 
   function drawMovie(movie, idx) {
-    var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
-    var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movie.weeklyGrosses);
+    var movieArr = inflationAdjusted ? movie.weeklyTickets : movie.weeklyGrosses
+    var lines = svg.selectAll('line.' + movie.season + '.movie' + idx).data(movieArr);
+    var circles = svg.selectAll('circle.' + movie.season + '.movie' + idx).data(movieArr);
     var startingOpacity = +!lines.empty();
     if (visibility[movie.season].all && visibility[movie.season].individual[idx % 5]) {
       lines.enter().append('line');
@@ -210,7 +213,7 @@
            .transition()
            .attr('x1', function(d, i) { return xScale(i) })
            .attr('x2', function(d, i) { return xScale(i + 1)})
-           .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
+           .attr('y1', function(d, i) { return movieArr[i - 1] ? yScale(movieArr[i - 1]) : yScale(0)})
            .attr('y2', function(d) { return yScale(d)})
            .transition()
            .ease('linear')
@@ -279,24 +282,22 @@
     if (season) {
       visibility[season[0]].all = !visibility[season[0]].all;
       $('#'+season+"-row").children().slice(1,6).fadeToggle(400, 'linear');
-      drawByYear(curYear);
     } else if (id.match(/inflation/)) {
-      // add code for inflation
-      console.log('inflation!')
+      inflationAdjusted = !inflationAdjusted;
     } else {
       var idx = parseInt(id.split("-")[1])
       var visArr = visibility[$this.attr('class').match(/summer|holiday/)[0]].individual;
       visArr[idx % 5] = !visArr[idx % 5];
-      drawByYear(curYear,idx);
     }
+    drawByYear(curYear,idx);
   })
 
   // TODO:
 
   // - responsive? 
 
-  // - check for inflation vs. not
   // - change axes based on inflation/not
   // - add tooltip for graph 2
+  // - fix extra long gray line bug
 
 });
