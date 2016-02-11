@@ -32,22 +32,16 @@
   };
   d3.json('/javascripts/2016_movies.json', function(data) {
 
-    // modify movie data so that only 20 years are considered,
-    // weekly grosses are cumulative
-    revisedMovies = data.filter(function(movie) { 
+    // modify movie data so that only 20 years are considered
+    data = data.filter(function(movie) { 
       return parseInt(movie.releaseYear) > 1995 
-    }).map(function(movie) {
-      movie.weeklyGrosses = movie.weeklyGrosses.map(function(el, idx, grosses) { 
-        return grosses.slice(0,idx+1).reduce(function(a,b) { return a + b }, 0) 
-      });
-      return movie;
     });
 
-    maxX = d3.max(revisedMovies, function(movie) { return movie.weeklyGrosses.length + 1 });
-    maxY = d3.max(revisedMovies, function(movie) { return movie.total });
-
-    // ensure weekly grosses have the same length
-    revisedMovies = revisedMovies.map(function(movie) {
+    maxX = d3.max(data, function(movie) { return movie.weeklyGrosses.length + 1 });
+    maxY = d3.max(data, function(movie) { return movie.total });
+    
+    // weekly grosses are cumulative
+    revisedMovies = marginalToCumulative(data, "weeklyGrosses").map(function(movie) {
       movie.weeks = movie.weeklyGrosses.length;
       for (var i = movie.weeks; i < maxX - 1; i++) {
         movie.weeklyGrosses.push(movie.total);
@@ -55,7 +49,15 @@
       return movie;
     });
 
-    // setup for GRAPH 1
+    // update ticket estimates too
+    revisedMovies = marginalToCumulative(revisedMovies,"weeklyTickets").map(function(movie) {
+      movie.ticketTotal = movie.weeklyTickets[movie.weeklyTickets.length - 1]
+      for (var i = movie.weeks; i < maxX - 1; i++) {
+        movie.weeklyTickets.push(movie.ticketTotal);
+      }
+      return movie;
+    });
+
     // create scales
     xScale = d3.scale.linear()
                      .domain([0, maxX])
@@ -146,26 +148,11 @@
     }, []));
 
     linesavg.enter().append('line');
-    linesavg.attr('x1', function(d, i) { console.log(d); return xScale2(d[0].date); })
+    linesavg.attr('x1', function(d, i) { return xScale2(d[0].date); })
             .attr('x2', function(d, i) { return xScale2(d[1].date); })
             .attr('y1', function(d, i) { return yScale2(d[0].avgMult) })
             .attr('y2', function(d, i) { return yScale2(d[1].avgMult) })
             .attr('class', function(d, i) { return d[0].season })
-
-
-     // lines.enter().append('line');
-     //  lines.classed(movie.season + ' movie' + idx, true)
-     //       .classed('notInTheaters', function(d, i) { return i + 1 > movie.weeks })
-     //       .style('opacity', startingOpacity)
-     //       .transition()
-     //       .attr('x1', function(d, i) { return xScale(i) })
-     //       .attr('x2', function(d, i) { return xScale(i + 1)})
-     //       .attr('y1', function(d, i) { return movie.weeklyGrosses[i - 1] ? yScale(movie.weeklyGrosses[i - 1]) : yScale(0)})
-     //       .attr('y2', function(d) { return yScale(d)})
-     //       .transition()
-     //       .ease('linear')
-     //       .duration(400)
-     //       .style('opacity', 1);
 
   });
 
@@ -260,6 +247,30 @@
     });
     idx !== undefined ? drawMovie(filteredMovies[idx], idx) : filteredMovies.forEach(drawMovie);
   }
+
+  function marginalToCumulative(arr, keyName) {
+    return arr.map(function(el) {
+      el[keyName] = el[keyName].map(function(el, idx, a) {
+        return a.slice(0,idx + 1).reduce(function(b, c) { return b + c },0);
+      });
+      return el;
+    })
+  }
+
+// revisedMovies = data.filter(function(movie) { 
+//       return parseInt(movie.releaseYear) > 1995 
+//     }).map(function(movie) {
+//       movie.weeklyGrosses = movie.weeklyGrosses.map(function(el, idx, grosses) { 
+//         return grosses.slice(0,idx+1).reduce(function(a,b) { return a + b }, 0) 
+//       });
+//       return movie;
+//     }).map(function(movie) {
+//       movie.weeks = movie.weeklyGrosses.length;
+//       for (var i = movie.weeks; i < maxX - 1; i++) {
+//         movie.weeklyGrosses.push(movie.total);
+//       }
+//       return movie;
+//     });
 
   $toggle.on('click', function() {
     var $this = $(this);
