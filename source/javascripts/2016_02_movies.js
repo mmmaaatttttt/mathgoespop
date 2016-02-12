@@ -182,10 +182,19 @@
 
       tooltip.html((function() { 
         var that = d3.select(this);
+        var total = "</p><p>Total "
+        var toDate = addCommas(d) +"</p></div>";
+        if (inflationAdjusted) {
+          total += "Tickets: " + addCommas(that.attr('data-tickets'));
+          toDate = "</p><p>Tickets as of Week " + (i + 1) +": " + toDate;
+        } else {
+          total += "Gross: $" + addCommas(that.attr('data-total'));
+          toDate = "</p><p>Grossed as of Week " + (i + 1) +": $" + toDate;
+        }
         return "<div class='panel-heading'><p class='panel-title'>" + that.attr('data-title') 
-        + "</p></div><div class='panel-body'><p>Released: " + that.attr('data-release')
-        + "</p><p>Total Gross: $" + addCommas(that.attr('data-total'))
-        + "</p><p>Grossed as of Week " + (i + 1) +": $" + addCommas(d) +"</p></div>"}).bind(this)
+          + "</p></div><div class='panel-body'><p>Released: " + that.attr('data-release')
+          + total + toDate;
+      }).bind(this)
       ).style("left", d3.event.pageX + "px")   
        .style("top", d3.event.pageY + "px");  
     }
@@ -230,6 +239,7 @@
              .attr('data-title', movie.title)
              .attr('data-release', movie.releaseDay + " " + movie.releaseYear)
              .attr('data-total', movie.total)
+             .attr('data-tickets', movie.ticketTotal)
              .transition()
              .ease('linear')
              .duration(400)
@@ -303,8 +313,6 @@
 
   // - responsive? 
 
-  // - change axes based on inflation/not
-  // - change tooltip based on inflation/not
   // - add tooltip for graph 2
   // - fix extra long gray line bug
 
