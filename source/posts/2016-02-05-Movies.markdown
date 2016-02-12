@@ -19,7 +19,7 @@ To explore this question, it helps to have some data. Here, for your perusal, is
 
 <div class="math-area">
   <div class="math-area-title centered">
-    Movie Data (<span class="graph-year">2015</span>): Revenue vs. Weeks Since Release
+    Movie Data (<span class="graph-year">2015</span>): <span id="graph-type">Revenue</span> vs. Weeks Since Release
   </div>
   <div class="math-area-body-visible">
     <div id="graph"></div>

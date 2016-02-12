@@ -12,6 +12,7 @@
   var $toggle = $(".toggle");
   var $summerRow = $("#summer-row");
   var $holidayRow = $("#holiday-row");
+  var $graphType = $("#graph-type");
   var padding = {left: 60, top: 370, right: 10, bottom: 30};
   var xScale, yScale, xScale2, yScale2, revisedMovies, maxX, maxY, maxY2;
 
@@ -81,12 +82,12 @@
                       .tickFormat(d3.format("$.3s"));
 
     svg.append('g')
-        .attr('class', 'axis')
+        .attr('class', 'x axis')
         .attr('transform', 'translate(0,' + padding.top + ')')
         .call(xAxis);
 
     svg.append('g')
-        .attr('class', 'axis')
+        .attr('class', 'y axis')
         .attr('transform', 'translate(' + padding.left + ',0)')
         .call(yAxis);
 
@@ -260,21 +261,6 @@
     })
   }
 
-// revisedMovies = data.filter(function(movie) { 
-//       return parseInt(movie.releaseYear) > 1995 
-//     }).map(function(movie) {
-//       movie.weeklyGrosses = movie.weeklyGrosses.map(function(el, idx, grosses) { 
-//         return grosses.slice(0,idx+1).reduce(function(a,b) { return a + b }, 0) 
-//       });
-//       return movie;
-//     }).map(function(movie) {
-//       movie.weeks = movie.weeklyGrosses.length;
-//       for (var i = movie.weeks; i < maxX - 1; i++) {
-//         movie.weeklyGrosses.push(movie.total);
-//       }
-//       return movie;
-//     });
-
   $toggle.on('click', function() {
     var $this = $(this);
     var id = $this.attr('id');
@@ -284,6 +270,27 @@
       $('#'+season+"-row").children().slice(1,6).fadeToggle(400, 'linear');
     } else if (id.match(/inflation/)) {
       inflationAdjusted = !inflationAdjusted;
+      
+      // update y scale and axes
+
+      maxY = d3.max(revisedMovies, function(movie) {  
+        return movie[inflationAdjusted ? 'ticketTotal' : 'total']; 
+      });
+      
+      yScale = d3.scale.linear()
+        .domain([0, maxY])
+        .range([padding.top, padding.bottom]); 
+
+      var yAxis = d3.svg.axis()
+                      .scale(yScale)
+                      .orient("left")
+                      .ticks(20)
+                      .tickFormat(d3.format((inflationAdjusted ? "" : "$") + ".3s"));
+
+      svg.selectAll("g.y.axis")
+        .call(yAxis);
+
+      $graphType.text(inflationAdjusted ? "Estimated Ticket Sales" : "Revenue");
     } else {
       var idx = parseInt(id.split("-")[1])
       var visArr = visibility[$this.attr('class').match(/summer|holiday/)[0]].individual;
@@ -297,6 +304,7 @@
   // - responsive? 
 
   // - change axes based on inflation/not
+  // - change tooltip based on inflation/not
   // - add tooltip for graph 2
   // - fix extra long gray line bug
 
