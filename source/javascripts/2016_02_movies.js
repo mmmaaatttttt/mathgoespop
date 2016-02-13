@@ -135,12 +135,12 @@
 
     var avgMovies = revisedMovies.reduce(function(prev, cur, idx) {
       if (idx % 5 === 0) {
-          prev.push({avgMult: 0, totalTotal: 0, totalOpening: 0, season: cur.season, date: new Date("July 2 " + (1996 + (idx/5 % 20)))})
+          prev.push({avgMult: 0, totalTotal: 0, totalOpening: 0, season: cur.season, date: new Date("July 2 " + (2015 - (idx/5 % 20)))})
       }
       prev[prev.length - 1].avgMult += cur.multiplier/5;
       prev[prev.length - 1].totalTotal += cur.total;
       prev[prev.length - 1].totalOpening += cur.openingWeekend;
-      return prev
+      return prev;
     }, []);
 
     var linesavg = svg2.selectAll('lines.avg').data(avgMovies.reduce(function(prev, cur, idx) {
@@ -314,6 +314,5 @@
   // - responsive? 
 
   // - add tooltip for graph 2
-  // - fix extra long gray line bug
 
 });
