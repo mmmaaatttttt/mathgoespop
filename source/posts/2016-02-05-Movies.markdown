@@ -133,4 +133,18 @@ Below, then, is a plot of the multiplier for each of the top 5 summer and holida
   </div>
 </div>
 
-Here there's a clearer trend: for both summer and holiday movies, multipliers seem to be trending downward. 
+Here there's a clearer trend: for both summer and holiday movies, multipliers seem to be trending downward. Holiday releases tend to have higher multipliers than summer releases, probably due to a couple of reasons:
+
+1. Less competition at the cinema. In the summer, big movies are released every weekend for months. During the holidays, big movies might be released around Thanksgiving and in the weeks leading up to the end of the year, but that's it. But even though movies released in the holidays might have less competition from _other movies_, movies released today have way more competition from media of all types than they did 20 years ago. This may help explain some of the downwards trend.
+
+2. The "wide release" criteria mentioned above may be biasing the multipliers a bit. Unlike in the summer, movies released in the holidays quite often start in limited release and then expand. Because the floor for a wide release is just 600 theaters, a film released during the holidays can qualify for its "opening weekend" when it is still expanding, which can inflate the multiplier somewhat. For example, _Chicago_ was released on December 27, 2002, but its first weekend in wide release was January 24-26, 2003, when it played in 616 theaters. However, the film continued to expand for 9 weeks after that, and on average the box office held steady or increased as the film played on more screens. As a result, _Chicago_'s multiplier is over 20!
+
+So, is winter the new summer? Probably not. In fact, the latest _Star Wars_ is trending towards a fairly unremarkable multiplier: Because of its massive opening weekend ($247 million), there's no way the film will cross a multiplier of 4. This is in stark contrast to _Titanic_ and _Avatar_, which boasted multipliers of 20.98 and 9.73, respectively.
+
+We may never see multipliers that high again, certainly not for summer blockbusters, and doubtfully for holiday releases too. It seems as though long gone are the days of the long tail. 
+
+Well, at least until James Cameron makes another movie.
+
+(Some final remarks on the data: the farther back you go, the less reliable the data is. Sometimes entire weeks worth of data aren't reported. For example, if you look at weekly data on <a href="http://www.boxofficemojo.com/movies/?page=weekly&id=jurassicpark.htm" target="_blank">Jurassic Park (1993)</a>, weeks 47-53 are missing. In these cases I simply used the data that was available, meaning that for some of the older films, the total you see here may be lower than the total reported by Box Office Mojo. 
+
+Have other questions you want to explore, or just want to sanity check me? You can peruse a JSON file of all the data, including data as far back as 1986, <a href="https://github.com/mmmaaatttttt/mathgoespop/blob/master/source/javascripts/2016_movies.json" target="_blank">here!</a>)
