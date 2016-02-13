@@ -147,7 +147,7 @@
         var that = this;
         return "<div class='panel-heading'><p class='panel-title'>" + that.getAttribute('data-title') 
           + "</p></div><div class='panel-body'><p>Released: " + that.getAttribute('data-release')
-          + "</p></div><div class='panel-body'><p>Multiplier: " + that.getAttribute('data-multiplier')
+          + "</p></div><div class='panel-body'><p>Multiplier: " + parseFloat(that.getAttribute('data-multiplier')).toFixed(2)
       }).bind(this))
        .style("left", d3.event.pageX + "px")   
        .style("top", d3.event.pageY + "px");  
@@ -186,8 +186,7 @@
 
   var yearSlider = new ScrubberView(); 
   yearSlider.min(1996).max(2015).step(1).value(2015);
-  // yearSlider.thumb.style.background = 
-  // yearSlider.thumb.style.borderColor = 
+  yearSlider.thumb.style.background = 'rgb(51,122,183)'
   yearSlider.onValueChanged = function(v) {
     curYear = v;
     $yearText.text(v);
@@ -332,12 +331,6 @@
       visArr[idx % 5] = !visArr[idx % 5];
     }
     drawByYear(curYear,idx);
-  })
-
-  // TODO:
-
-  // - slider color
-  // - inflation option fit on one line 
-  // - update 2015 data
+  });
 
 });

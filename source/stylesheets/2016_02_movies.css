@@ -11,7 +11,11 @@ line.summer, line.holiday {
 .scrubber {
 	width: 95%;
 	margin: 0 auto;
-  height: 30px;
+  height: 60px;
+}
+
+.year-option {
+  height: 60px;
 }
 
 .summer {

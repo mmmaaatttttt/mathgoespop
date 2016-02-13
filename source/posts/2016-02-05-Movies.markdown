@@ -25,7 +25,7 @@ To explore this question, it helps to have some data. Here, for your perusal, is
     <div id="graph"></div>
     <div class="container-fluid" id="options">
       <div class="row">
-        <div class="col-sm-2"><p>Year: <span class="graph-year">2015</span></p></div>
+        <div class="col-sm-2"><p class="year-option">Year: <span class="graph-year">2015</span></p></div>
         <div class="col-sm-6"><div id="yearSlider"></div></div>
         <div class="col-sm-4"><p>Adjust for Inflation?</p>
           <div class="switch">
