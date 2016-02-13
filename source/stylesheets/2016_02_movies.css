@@ -40,15 +40,15 @@ circle.notInTheaters {
     shape-rendering: crispEdges;
 }
 
-#tooltip {
+.tooltip {
 	position: absolute;
 }
 
-#tooltip div {
+.tooltip div {
   padding: 2px 4px;
 }
 
-#tooltip p {
+.tooltip p {
   margin: 0;
 }
 

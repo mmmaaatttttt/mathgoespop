@@ -17,9 +17,12 @@
   var xScale, yScale, xScale2, yScale2, revisedMovies, maxX, maxY, maxY2;
 
   var tooltip = d3.select('body').append('div')
-                  .attr('id', 'tooltip')
-                  .attr('class', 'panel panel-warning')
+                  .attr('class', 'tooltip panel panel-warning')
                   .style('opacity', 0);
+
+  var multiplierTooltip = d3.select('body').append('div')
+                  .attr('class', 'tooltip panel panel-warning')
+                  .style('opacity', 0);                
 
   var visibility = {
     summer: {
@@ -131,7 +134,30 @@
     circles2.attr('r', dotRadius)
             .attr('cx', function(d, i) { return xScale2(new Date(d.releaseDay + " " + d.releaseYear)); })
             .attr('cy', function(d, i) { return yScale2(d.multiplier) })
-            .attr('class', function(d, i) { return d.season });
+            .attr('class', function(d, i) { return d.season })
+            .attr('data-title', function(d) { return d.title })
+            .attr('data-release', function(d) { return d.releaseDay + " " + d.releaseYear })
+            .attr('data-multiplier', function(d) { return d.multiplier });
+
+    circles2.on('mouseenter', function() {
+      multiplierTooltip.transition()    
+          .duration(0)    
+          .style("opacity", 0.9);
+      multiplierTooltip.html((function() {
+        var that = this;
+        return "<div class='panel-heading'><p class='panel-title'>" + that.getAttribute('data-title') 
+          + "</p></div><div class='panel-body'><p>Released: " + that.getAttribute('data-release')
+          + "</p></div><div class='panel-body'><p>Multiplier: " + that.getAttribute('data-multiplier')
+      }).bind(this))
+       .style("left", d3.event.pageX + "px")   
+       .style("top", d3.event.pageY + "px");  
+    }).on('mouseout', function() {
+      multiplierTooltip.transition()    
+        .duration(500)    
+        .style("opacity", 0)
+        .style("left", 0)   
+        .style("top", 0);
+    })
 
     var avgMovies = revisedMovies.reduce(function(prev, cur, idx) {
       if (idx % 5 === 0) {
@@ -310,7 +336,6 @@
 
   // TODO:
 
-  // - add tooltip for graph 2
   // - slider color
   // - inflation option fit on one line 
   // - update 2015 data
