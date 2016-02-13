@@ -1,6 +1,6 @@
 ---
 title: For Blockbuster Movies, Is Winter the New Summer?
-date: '2016-02-05'
+date: '2016-02-12'
 custom_js: 
   - d3
   - scrubber
