@@ -135,11 +135,10 @@
 
     var avgMovies = revisedMovies.reduce(function(prev, cur, idx) {
       if (idx % 5 === 0) {
-          prev.push({avgMult: 0, totalTotal: 0, totalOpening: 0, season: cur.season, date: new Date("July 2 " + (2015 - (idx/5 % 20)))})
+          prev.push({avgMult: 0, season: cur.season, date: 0})
       }
       prev[prev.length - 1].avgMult += cur.multiplier/5;
-      prev[prev.length - 1].totalTotal += cur.total;
-      prev[prev.length - 1].totalOpening += cur.openingWeekend;
+      prev[prev.length - 1].date += new Date(cur.releaseDay + " " + cur.releaseYear).getTime()/5
       return prev;
     }, []);
 
@@ -151,8 +150,8 @@
     }, []));
 
     linesavg.enter().append('line');
-    linesavg.attr('x1', function(d, i) { return xScale2(d[0].date); })
-            .attr('x2', function(d, i) { return xScale2(d[1].date); })
+    linesavg.attr('x1', function(d, i) { return xScale2(new Date(d[0].date)); })
+            .attr('x2', function(d, i) { return xScale2(new Date(d[1].date)); })
             .attr('y1', function(d, i) { return yScale2(d[0].avgMult) })
             .attr('y2', function(d, i) { return yScale2(d[1].avgMult) })
             .attr('class', function(d, i) { return d[0].season })

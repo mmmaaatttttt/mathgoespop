@@ -122,7 +122,7 @@ There's one relatively common metric used to try to capture this slow-plateau ph
 
 Given that most movies these days tend to do their best business in their first week of wide release, the multiplier tells us something about how much longevity a film had. A film with a multiplier of 10 indicates a pretty long shelf-life, in general. Conversely, a multiplier of 2 means that half of a film's total revenue was earned in the first weekend, which probably isn't such a good sign.
 
-Here, then, is a plot of the multiplier for each of the top 5 summer and holiday releases from 1996 - 2015:
+Below, then, is a plot of the multiplier for each of the top 5 summer and holiday releases from 1996 - 2015. The red and blue lines show how the average multiplier among these top five films has changed over time.
 
 <div class="math-area">
   <div class="math-area-title centered">
@@ -132,3 +132,5 @@ Here, then, is a plot of the multiplier for each of the top 5 summer and holiday
     <div id="multiplier-graph"></div>
   </div>
 </div>
+
+Here there's a clearer trend: for both summer and holiday movies, multipliers seem to be trending downward. 
