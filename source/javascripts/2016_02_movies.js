@@ -310,10 +310,9 @@
 
   // TODO:
 
-  // - responsive? 
-
   // - add tooltip for graph 2
   // - slider color
   // - inflation option fit on one line 
+  // - update 2015 data
 
 });
