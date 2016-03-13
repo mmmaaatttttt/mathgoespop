@@ -31,7 +31,9 @@ As if that didn't seem like enough of a non-sequiter, Niven next asks us to cons
 
 Here's where I think a little technology can help. Here's a graph with the area Niven is referring to. You can adjust _n_ and _b_; when you change _b_, the value of _a_ will automatically update to give you the best approximation to _&pi;_.
 
-DESMOS STUFF HERE 
+<div class="graph-wrapper">
+  <div id="graph"></div>
+</div>
 
 So, why do we care about this area? Well, as you may have noticed, as you increase _n_, the area increases up to a point, but then begins to decrease, and will ultimately approach 0 as _n_ tends towards infinity. This is because the factorial in the denominator of _f_ grows more quickly than the numerator. In fact, but comparing the area under the curve to the area of the green rectangle on the graph, you can see that the are under the curve must be less than 
 
