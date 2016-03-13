@@ -21,3 +21,12 @@
 .dcg-show-expressions-tab {
   display: none;
 }
+
+.col-xs-6 {
+  margin-left: 15px;
+}
+
+.scrubber {
+  width: 95%;
+  margin: 0 auto;
+}

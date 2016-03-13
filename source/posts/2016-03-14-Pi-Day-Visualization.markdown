@@ -35,6 +35,20 @@ Here's where I think a little technology can help. Here's a graph with the area 
   <div id="graph"></div>
 </div>
 
+<div class="row">
+  <div class="col-xs-6">
+    <input type="number" class="form-control" id="b-val" min="1" step="1" placeholder="enter a value for b here.">
+  </div>
+  <div class="col-xs-3" id="a-val"></div>
+  <div class="col-xs-3" id="p-val"></div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <div id="n-val"></div>
+  </div>
+  <div class="col-xs-6"></div>
+</div>
+
 So, why do we care about this area? Well, as you may have noticed, as you increase _n_, the area increases up to a point, but then begins to decrease, and will ultimately approach 0 as _n_ tends towards infinity. This is because the factorial in the denominator of _f_ grows more quickly than the numerator. In fact, but comparing the area under the curve to the area of the green rectangle on the graph, you can see that the are under the curve must be less than 
 
 <div class="formula text-center"></div>,

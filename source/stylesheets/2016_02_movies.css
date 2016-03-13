@@ -16,6 +16,7 @@ line.summer, line.holiday {
 
 .year-option {
   height: 60px;
+  line-height: 60px;
 }
 
 .summer {
