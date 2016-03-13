@@ -2,14 +2,15 @@
 
 var formulas = $(".formula");
 var expressions = [
-  "{\\displaystyle \\frac{k\\text{ + }1}{n}}",
-  "{\\displaystyle \\frac{k}{n\\text{ - }1}}",
-  "{\\displaystyle \\frac{k\\text{ + }1}{n} \\geq \\frac{k}{n\\text{ - }1}}",
-  "{\\displaystyle (n-1)(k+1) \\geq nk}"
+  "{\\displaystyle f\\left(x\\right)=\\frac{x^n\\left(a - bx\\right)^n}{n!}}.",
   ];
 
-for (var idx=0;idx<formulas.length;idx++) {
-  katex.render(expressions[idx], formulas[idx]);
-}
+// "{\\displaystyle \\frac{k\\text{ + }1}{n}}",
+
+// f\left(x\right)=\frac{x^n\left(a-bx\right)^n}{n!}\left\{0<x<\pi\right\}  
+
+expressions.forEach(function(exp, idx) {
+  katex.render(exp, formulas[idx]);
+})
 
 }); 
