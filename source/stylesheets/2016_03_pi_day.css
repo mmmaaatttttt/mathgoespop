@@ -18,7 +18,8 @@
   left: 0;
 }
 
-.dcg-show-expressions-tab {
+.dcg-show-expressions-tab,
+.dcg-action-zoomrestore {
   display: none;
 }
 

@@ -4,7 +4,7 @@
 var formulas = $(".formula");
 var expressions = [
   "{\\displaystyle f\\left(x\\right)=\\frac{x^n\\left(a - bx\\right)^n}{n!}}.",
-  "{\\displaystyle \\pi\\frac{a^{2n}}{(4b)^n n!}}"
+  "{\\displaystyle \\pi f\\left(\\frac{a}{2b}\\right) = \\pi\\frac{a^{2n}}{(4b)^n n!}}"
 ];
 
 expressions.forEach(function(exp, idx) {
@@ -47,8 +47,8 @@ $nVal.text("n = 1");
 calculator.setMathBounds({
   left: -0.1,
   right: Math.PI + 0.1,
-  bottom: -2,
-  top: 20
+  bottom: -17.285714285714285*1.1*0.1,
+  top: 17.285714285714285*1.1
 });
 
 calculator.setExpression({id: 'a', latex: 'a=22'});
