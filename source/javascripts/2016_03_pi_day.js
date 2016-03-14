@@ -24,6 +24,7 @@ var calculator = Desmos.Calculator(document.getElementById("graph"), {
   expressionsCollapsed: true,
   settingsMenu: false
 });
+var max;
 
 $bVal.on('keyup blur change', function() {
   var bVal = Number($(this).val());
@@ -57,16 +58,7 @@ calculator.setExpression({id: 'f', latex: 'f\\left(x\\right)=\\frac{x^n\\left(a-
 calculator.setExpression({id: 'fsin', latex: 'g\\left(x\\right) = f\\left(x\\right)sin\\left(x\\right)', hidden: true});
 calculator.setExpression({id: 'area', latex: '0\\le y\\le g\\left(x\\right)', color: '#2E303C'});
 calculator.setExpression({id: 'bound', latex: '0\\le y\\le f\\left(\\frac{a}{2b}\\right)\\left\\{0<x<\\pi\\right\\}', color: Desmos.Colors.GREEN, hidden: true});
-
-function closestToPi(b) {
-  return Math.round(b * Math.PI);
-}
-
-function updateGraph(data) {
-  for (var id in data) {
-    calculator.setExpression({id: id, latex: id + '=' + data[id]});
-  }
-}
+max = calculator.HelperExpression({latex: 'f\\left(\\frac{a}{2b}\\right)'});
 
 var nSlider = new ScrubberView(); 
 nSlider.min(1).max(100).step(1).value(1);
@@ -77,6 +69,23 @@ nSlider.onValueChanged = function(v) {
 };
 $nSlider.append(nSlider.elt); 
 
-// add scale button for graph
+$normalize.on('click', function() {
+  calculator.setMathBounds({
+    left: -0.1,
+    right: Math.PI + 0.1,
+    bottom: -max.numericValue*1.1*0.1,
+    top: max.numericValue*1.1
+  });
+})
+
+function closestToPi(b) {
+  return Math.round(b * Math.PI);
+}
+
+function updateGraph(data) {
+  for (var id in data) {
+    calculator.setExpression({id: id, latex: id + '=' + data[id]});
+  }
+}
 
 }); 
