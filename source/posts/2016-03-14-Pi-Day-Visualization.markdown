@@ -37,16 +37,34 @@ Here's where I think a little technology can help. Here's a graph with the area 
 
 <div class="row">
   <div class="col-xs-6">
-    <input type="number" class="form-control" id="b-val" min="1" step="1" placeholder="enter a value for b here.">
+    <div class="input-group">
+      <span class="input-group-addon"><em>b</em></span>
+      <input type="number" class="form-control" id="b-val" min="1" step="1" placeholder="enter a value for b here.">
+    </div>
   </div>
-  <div class="col-xs-3" id="a-val"></div>
-  <div class="col-xs-3" id="p-val"></div>
+  <div class="col-xs-3 text-center">
+    <em>a</em> = <span id="a-val"></span>
+  </div>
+  <div class="col-xs-3 text-center">
+    <em>&pi;</em> &approx; <span id="p-val"></span>
+  </div>
 </div>
-<div class="row">
+<div class="row flexrow">
   <div class="col-xs-6">
-    <div id="n-val"></div>
+    <div id="n-slider" class="text-center">
+      <span id="n-val"></span>
+    </div>
   </div>
-  <div class="col-xs-6"></div>
+  <div class="col-xs-3">
+    <span class="rect">Rectangle</span>
+    <div class="switch">
+      <input id="upper-bound-toggle" class="toggle upper-bound-toggle" type="checkbox">
+      <label for="upper-bound-toggle"></label>
+    </div>
+  </div>
+  <div class="col-xs-3">
+    <button id="normalize" class="btn btn-default">Normalize View</button>
+  </div>
 </div>
 
 So, why do we care about this area? Well, as you may have noticed, as you increase _n_, the area increases up to a point, but then begins to decrease, and will ultimately approach 0 as _n_ tends towards infinity. This is because the factorial in the denominator of _f_ grows more quickly than the numerator. In fact, but comparing the area under the curve to the area of the green rectangle on the graph, you can see that the are under the curve must be less than 

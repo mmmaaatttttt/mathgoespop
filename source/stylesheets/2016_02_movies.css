@@ -57,53 +57,15 @@ circle.notInTheaters {
   margin: 0;
 }
 
-/* checkboxes, inspired by http://callmenick.com/post/css-toggle-switch-examples */
-
-.toggle {
-  position: absolute;
-  margin-left: -9999px;
-  visibility: hidden;
-}
-.toggle + label {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-  padding: 2px;
-  width: 60px;
-  height: 30px;
-  background-color: #dddddd;
-  border-radius: 30px;
-  transition: background 0.4s;
-  margin: 0 auto;
+#options p {
+	margin: 0;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
 }
 
-.toggle + label:before,
-.toggle + label:after {
-  display: block;
-  position: absolute;
-  content: "";
-}
-
-.toggle + label:before {
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  right: 2px;
-  background-color: #fff;
-  border-radius: 60px;
-  transition: background 0.4s;
-}
-
-.toggle + label:after {
-  top: 4px;
-  left: 34px;
-  bottom: 4px;
-  width: 22px;
-  background-color: #dddddd;
-  border-radius: 22px;
-  transition: margin 0.4s, background 0.4s, left 0.4s;
+#holiday-row > .col-xs-2:not(:first-child) {
+  display: none;
 }
 
 .summer-toggle:checked + label {
@@ -116,12 +78,12 @@ circle.notInTheaters {
 }
 
 .holiday-toggle:checked + label {
-	background-color: rgb(217, 83, 79);
+  background-color: rgb(217, 83, 79);
 }
 
 .holiday-toggle:checked + label:after {
-	left: 4px;
-	background-color: rgb(217, 83, 79);
+  left: 4px;
+  background-color: rgb(217, 83, 79);
 }
 
 .inflation-toggle:checked + label {
@@ -131,15 +93,4 @@ circle.notInTheaters {
 .inflation-toggle:checked + label:after {
   left: 4px;
   background-color: rgb(68, 157, 68);
-}
-
-#options p {
-	margin: 0;
-  line-height: 30px;
-  text-align: center;
-  width: 100%;
-}
-
-#holiday-row > .col-xs-2:not(:first-child) {
-  display: none;
 }

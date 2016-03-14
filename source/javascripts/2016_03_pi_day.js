@@ -5,7 +5,7 @@ var formulas = $(".formula");
 var expressions = [
   "{\\displaystyle f\\left(x\\right)=\\frac{x^n\\left(a - bx\\right)^n}{n!}}.",
   "{\\displaystyle \\pi\\frac{a^{2n}}{(4b)^n n!}}"
-  ];
+];
 
 expressions.forEach(function(exp, idx) {
   katex.render(exp, formulas[idx]);
@@ -14,19 +14,34 @@ expressions.forEach(function(exp, idx) {
 // everything else
 var $aVal = $("#a-val");
 var $bVal = $("#b-val");
-var $nVal = $("#n-val");
+var $nSlider = $("#n-slider");
 var $pVal = $("#p-val");
+var $nVal = $("#n-val");
+var $upperBoundToggle = $("#upper-bound-toggle");
+var $normalize = $("#normalize");
+var upperBoundHidden = true;
 var calculator = Desmos.Calculator(document.getElementById("graph"), {
-  expressionsCollapsed: true
+  expressionsCollapsed: true,
+  settingsMenu: false
 });
 
 $bVal.on('keyup blur change', function() {
   var bVal = Number($(this).val());
   var aVal = closestToPi(bVal);
   $aVal.text(aVal);
-  $pVal.text(bVal);
+  $pVal.text(isNaN(aVal/bVal) ? "" : (aVal/bVal).toFixed(8) + "...");
   updateGraph({a: aVal, b: bVal});
 });
+
+$upperBoundToggle.on('click', function() {
+  upperBoundHidden = !upperBoundHidden;
+  calculator.setExpression({id: 'bound', hidden: upperBoundHidden});
+});
+
+$bVal.val(7);
+$aVal.text(22);
+$pVal.text('3.14285714...');
+$nVal.text("n = 1");
 
 calculator.setMathBounds({
   left: -0.1,
@@ -57,11 +72,11 @@ var nSlider = new ScrubberView();
 nSlider.min(1).max(100).step(1).value(1);
 nSlider.thumb.style.background = 'rgb(51,122,183)'
 nSlider.onValueChanged = function(v) {
+  $nVal.text("n = " + v);
   updateGraph({n: v});
 };
-$nVal.append(nSlider.elt); 
+$nSlider.append(nSlider.elt); 
 
-// add toggle for upper bound
 // add scale button for graph
 
 }); 
