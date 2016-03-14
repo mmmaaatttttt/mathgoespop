@@ -1,5 +1,5 @@
 ---
-title: Pi Day Visualization
+title: Why is &pi; Irrational?
 date: '2016-03-14'
 custom_js: 
   - desmos
