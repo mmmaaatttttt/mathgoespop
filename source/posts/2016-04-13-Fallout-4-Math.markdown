@@ -18,13 +18,34 @@ The hacking mini-game was first introduced in _Fallout 3_, and works similar to 
 
 But you know what's better than a video? Trying the game out for yourself! So here's a simple version of the mini-game that I threw together:
 
-<div class="math-area">
-  <div class="math-area-title centered">
-    Hacking!
-  </div>
-  <div class="math-area-body-visible">
-    <div id="terminal"></div>
-  </div>
+<div id="terminal">
+  <div id="terminal-body">
+    <div id="start-area">
+      <p>This computer is password-protected.</p>
+      <p>If you would like to try to access the data on this computer, please select a difficulty from the options below.</p>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="0">5 Letters</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="1">6 Letters</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="2">7 Letters</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <button class="btn btn-terminal btn-block" id="reset-terminal">Reset Data</button> 
+        </div>
+      </div>
+    </div>
+  </div>  
 </div>
-
-<code>test</code>

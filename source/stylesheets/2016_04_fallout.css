@@ -1,3 +1,57 @@
 #terminal {
+  width: 80%;
+  padding-bottom: 60%;
+  position: relative;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+#terminal-body {
+  line-height: 1em;
+  font-size:13px;
+  width: 100%;
+  padding-bottom: 75%;
+  background:#000;
+  padding:10px;
+  line-height:1.5em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+}
+
+#terminal-body * { 
+ font-family: Andale Mono, monospace;
+ color: #63de00; 
+}
   
+#terminal-body p::-webkit-selection  {
+  background:#0b209e;
+}
+#terminal-body p::selection { background:#0b209e; }
+#terminal-body p::-moz-selection { background:#0b209e; }
+
+#terminal-body p {
+  margin-top:5px;
+  margin-bottom:5px;
+  font-size:13px;
+}
+
+#terminal-body .btn {
+  background: #000;
+  color: #63de00;
+  border: 2px solid #63de00;
+  margin: 5% 0;
+  padding: 5% 0;
+}
+
+#terminal-body .btn:hover {
+  background: #63de00;
+  color: #000;
+}
+
+.win-summary {
+  padding-top: 4%;
 }
