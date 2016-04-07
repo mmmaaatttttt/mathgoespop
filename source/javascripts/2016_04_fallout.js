@@ -4,6 +4,8 @@
   var $reset = $("#reset-terminal");
   var $gameBtns = $(".col-xs-6 > .btn-terminal");
   var $winSummary = $(".win-summary");
+  var $typed = $("#typed");
+  var $terminalText = $("#terminal-text")
   var words = [
     ['agent', 'fence', 'forth', 'start', 'shape', 'grass', 'parts', 'fists', 'sound', 'sewer', 'viral', 'piled'],
     ['energy', 'mutter', 'warned', 'atrium', 'second', 'carved', 'forced', 'hungry', 'depend', 'heated', 'mirror', 'stream'],
@@ -14,6 +16,26 @@
   updateSummaries();
 
   $reset.on('click', resetCounts);
+
+  $gameBtns.on('click', function() {
+    var idx = $(this).data('idx');
+    $startArea.slideUp(1000, function() {
+      // $terminalText
+      // set words based on idx
+      // initialize game
+      $typed.typed({
+        stringsElement: $('#typed-text'),
+        showCursor: false,
+        typeSpeed: -100
+      })
+    });
+  });
+
+  // next step:
+  // figure out styling for main game
+  // on button click, grab the correct array, type out options
+  // on click, don't highlight ones that must be wrong, just show likeness 
+  // and decrement number of guesses
 
   function initializeCounts() {
     if (localStorage && localStorage.getItem('counts')) {

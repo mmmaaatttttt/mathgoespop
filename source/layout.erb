@@ -91,7 +91,8 @@
     <%= javascript_include_tag "all" %>
     <% third_party_scripts = {
       "d3" => "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.13/d3.js",
-      "desmos" => "https://www.desmos.com/api/v0.6/calculator.js?apiKey=39091730e90d4e6a9f1084c67c2270a8"
+      "desmos" => "https://www.desmos.com/api/v0.6/calculator.js?apiKey=39091730e90d4e6a9f1084c67c2270a8",
+      "typed" => "/javascripts/vendor/typed.js"
       } %>
     <% if current_page.data.custom_js %>
       <% if current_page.data.custom_js.respond_to?(:each) %>

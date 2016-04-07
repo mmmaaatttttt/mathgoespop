@@ -39,6 +39,9 @@
   font-size:13px;
 }
 
+#typed-text {
+  display: none;
+}
 #terminal-body .btn {
   background: #000;
   color: #63de00;

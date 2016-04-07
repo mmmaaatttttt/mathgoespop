@@ -2,6 +2,7 @@
 title: Fallout 4 Math
 date: '2016-04-13'
 custom_js: 
+  - typed
   - 2016_04_fallout
 custom_css: 
   - 2016_04_fallout
@@ -46,6 +47,15 @@ But you know what's better than a video? Trying the game out for yourself! So he
           <button class="btn btn-terminal btn-block" id="reset-terminal">Reset Data</button> 
         </div>
       </div>
+    </div>
+    <div id="game-area">
+      <div id="typed-text">
+        <p id="terminal-text">
+          <span>The password is one of the following words. Click on a word to make your guess. You have <span class="guess-count">4</span> guesses remaining</span>
+        </p>
+      </div>
+      <div id="typed"></div>
+
     </div>
   </div>  
 </div>
