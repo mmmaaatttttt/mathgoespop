@@ -52,7 +52,7 @@ But you know what's better than a video? Trying the game out for yourself! So he
       <div id="typed-text">
         <p id="terminal-text">
           <span>The password is one of the following words. Click on a word to make your guess:</span>
-          <span id="guess-count">You have 4 guesses remaining.</span>
+          <span class="guess-count">You have 4 guesses remaining.</span>
         </p>
       </div>
       <div id="typed"></div>

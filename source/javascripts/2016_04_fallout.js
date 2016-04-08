@@ -6,7 +6,7 @@
   var $winSummary = $(".win-summary");
   var $typed = $("#typed");
   var $terminalText = $("#terminal-text");
-  var $guessCount = $("#guess-count")
+  var $guessCount = $(".guess-count")
   var words = [
     ['agent', 'fence', 'forth', 'start', 'shape', 'grass', 'parts', 'fists', 'sound', 'sewer', 'viral', 'piled'],
     ['energy', 'mutter', 'warned', 'atrium', 'second', 'carved', 'forced', 'hungry', 'depend', 'heated', 'mirror', 'stream'],
@@ -21,20 +21,20 @@
   $gameBtns.on('click', function() {
     var idx = $(this).data('idx');
     $startArea.slideUp(1000, function() {
-      initializeGame(shuffle(words[idx]));
+      var wordList = shuffle(words[idx]);
+      wordList.forEach(function(word) {
+        $guessCount.before($('<span>', {text: word, class: 'game-word'}));
+      });
       $typed.typed({
         stringsElement: $('#typed-text'),
         showCursor: false,
-        typeSpeed: -100
+        typeSpeed: -100,
+        callback: function() {
+          initializeGame(wordList);
+        }
       })
     });
   });
-
-  // next step:
-  // figure out styling for main game
-  // on button click, grab the correct array, type out options
-  // on click, don't highlight ones that must be wrong, just show likeness 
-  // and decrement number of guesses
 
   function shuffle(arr) {
     var newArr = arr.slice();
@@ -49,8 +49,23 @@
   }
 
   function initializeGame(words) {
-    words.forEach(function(word) {
-      $guessCount.before($('<span>', {text: word, class: 'game-word'}));
+    var winner = words[Math.floor(Math.random() * words.length)];
+    var guessesRemaining = 4;
+    $('#typed .game-word').on('click', function(e) {
+      var $e = $(e.target);
+      var word = $e.text();
+      var likeness = word.length - hammingDistance(word, winner);
+      if (likeness === word.length) {
+        console.log("You win!");
+        // create winning function
+      } else if (guessesRemaining === 1) {
+        console.log("You lose!");
+        // create losing function
+      } else {
+        guessesRemaining--;
+        $('#typed .guess-count').text('You have ' + guessesRemaining + ' guess' + (guessesRemaining > 1 ? 'es' : '') + ' remaining.');
+        $e.removeClass('game-word').addClass('game-word-clicked').text(word + " -----> LIKENESS: " + likeness);
+      }
     });
   }
 
@@ -78,6 +93,16 @@
       var attemptText = "attempt" + (attempts === 1 ? "" : "s");
       $(div).html("<p>" + wins + " " + winText + ", " + "</p><p>" + attempts + " " + attemptText + ".</p>");
     })
+  }
+
+  function hammingDistance(str1, str2) {
+    if (typeof str1 !== 'string' || typeof str2 !== 'string') return 'Both inputs must be strings!';
+    if (str2.length !== str1.length) return 'Strings must have the same length!';
+    var distance = str1.length
+    for (var i = 0; i < str1.length; i++) {
+      if (str1[i].toLowerCase() === str2[i].toLowerCase()) distance--;
+    }
+    return distance;
   }
 
 }); 
