@@ -20,7 +20,7 @@
   $gameBtns.on('click', function() {
     var idx = $(this).data('idx');
     $startArea.slideUp(1000, function() {
-      // $terminalText
+      // $terminalText --> append words
       // set words based on idx
       // initialize game
       $typed.typed({
