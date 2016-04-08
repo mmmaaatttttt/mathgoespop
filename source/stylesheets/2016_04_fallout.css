@@ -20,23 +20,22 @@
   left: 0;
   right: 0;
   border-radius: 10px;
+  min-height: 360px;
 }
 
 #terminal-body * { 
- font-family: Andale Mono, monospace;
- color: #63de00; 
+  font-family: Andale Mono, monospace;
+  color: #63de00; 
+  font-size:15px; 
 }
   
 #terminal-body p::-webkit-selection  {
   background:#0b209e;
 }
-#terminal-body p::selection { background:#0b209e; }
-#terminal-body p::-moz-selection { background:#0b209e; }
 
 #terminal-body p {
   margin-top:5px;
   margin-bottom:5px;
-  font-size:13px;
 }
 
 #typed-text {
@@ -57,4 +56,17 @@
 
 .win-summary {
   padding-top: 4%;
+}
+
+.game-word {
+  display: block;
+  text-align: center;
+  margin: 1% 0;
+}
+
+#game-area .game-word:hover {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 17px;
+  color: yellow;
 }
