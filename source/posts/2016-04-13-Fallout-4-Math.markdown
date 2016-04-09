@@ -43,6 +43,12 @@ But you know what's better than a video? Trying the game out for yourself! So he
         <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
       </div>
       <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="3">Random</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
           <button class="btn btn-terminal btn-block" id="reset-terminal">Reset Data</button> 
         </div>

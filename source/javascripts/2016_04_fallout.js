@@ -20,7 +20,7 @@
   $gameBtns.on('click', function() {
     idx = $(this).data('idx');
     $startArea.slideUp(1000, function() {
-      shuffleAndSetWords(words[idx]);
+      shuffleAndSetWords(words[idx] || createArrayOfRandomStrings(12, Math.floor(Math.random() * 10) + 3));
     });
   });
 
@@ -80,7 +80,7 @@
       $('#typed').remove();
       $("#typed-text").after($('<div>', {id: 'typed'}));
       if ($(e.target).text() === "Play Again") {
-        shuffleAndSetWords(wordList);
+        shuffleAndSetWords(idx !== 3 ? wordList : createArrayOfRandomStrings(12, Math.floor(Math.random() * 10 + 3)));
       } else {
         $startArea.slideDown(1000);
       }
@@ -92,12 +92,12 @@
     if (localStorage && localStorage.getItem('counts')) {
       counts = JSON.parse(localStorage.getItem('counts'));
     } else {
-      counts = {wins: [0, 0, 0], attempts: [0, 0, 0]};
+      counts = {wins: [0, 0, 0, 0], attempts: [0, 0, 0, 0]};
     }
   }
 
   function resetCounts() {
-    counts = {wins: [0, 0, 0], attempts: [0, 0, 0]};
+    counts = {wins: [0, 0, 0, 0], attempts: [0, 0, 0, 0]};
     if (localStorage) {
       localStorage.setItem('counts', JSON.stringify(counts));
     }
@@ -130,5 +130,22 @@
     }
     return distance;
   }
+
+  function createRandomString(length) {
+    var str = "";
+    for (var i = 0; i < length; i++) {
+      str += String.fromCharCode(Math.floor(Math.random() * 26 + 97))
+    }
+    return str;
+  }
+
+  function createArrayOfRandomStrings(arrLen, strLen) {
+    var arr = []
+    for (var i = 0; i < arrLen; i++) {
+      arr.push(createRandomString(strLen));
+    }
+    return arr;
+  }
+
 
 }); 
