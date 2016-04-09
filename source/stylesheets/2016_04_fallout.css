@@ -68,9 +68,26 @@
   width: 100px;
 }
 
-#game-area .game-word:hover {
+#game-area .game-word:hover,
+#typed .guess-count span:hover {
   font-weight: 700;
   cursor: pointer;
   font-size: 17px;
   color: yellow;
+}
+
+.end-game {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+.end-game span {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+#terminal-body .red-text {
+  color: red;
 }

@@ -4,7 +4,6 @@
   var $reset = $("#reset-terminal");
   var $gameBtns = $(".col-xs-6 > .btn-terminal");
   var $winSummary = $(".win-summary");
-  var $typed = $("#typed");
   var $terminalText = $("#terminal-text");
   var $guessCount = $(".guess-count")
   var words = [
@@ -12,27 +11,16 @@
     ['energy', 'mutter', 'warned', 'atrium', 'second', 'carved', 'forced', 'hungry', 'depend', 'heated', 'mirror', 'stream'],
     ['varying', 'cistern', 'expects', 'attends', 'bottles', 'torches', 'limited', 'corners', 'fortify', 'despite', 'session', 'durable']
   ];
-  var counts;
+  var counts, wordList, idx;
   initializeCounts();
   updateSummaries();
 
   $reset.on('click', resetCounts);
 
   $gameBtns.on('click', function() {
-    var idx = $(this).data('idx');
+    idx = $(this).data('idx');
     $startArea.slideUp(1000, function() {
-      var wordList = shuffle(words[idx]);
-      wordList.forEach(function(word) {
-        $guessCount.before($('<span>', {text: word, class: 'game-word'}));
-      });
-      $typed.typed({
-        stringsElement: $('#typed-text'),
-        showCursor: false,
-        typeSpeed: -100,
-        callback: function() {
-          initializeGame(wordList);
-        }
-      })
+      shuffleAndSetWords(words[idx]);
     });
   });
 
@@ -48,24 +36,55 @@
     return newArr;
   }
 
+  function shuffleAndSetWords(words) {
+    wordList = shuffle(words);
+    $('.game-word').remove();
+    wordList.forEach(function(word) {
+      $guessCount.before($('<span>', {text: word, class: 'game-word'}));
+    });
+    $('#typed').typed({
+      stringsElement: $('#typed-text'),
+      showCursor: false,
+      typeSpeed: -100,
+      callback: function() {
+        initializeGame(wordList);
+      }
+    });
+  }
+
   function initializeGame(words) {
     var winner = words[Math.floor(Math.random() * words.length)];
     var guessesRemaining = 4;
-    $('#typed .game-word').on('click', function(e) {
+    $('#typed').on('click', '.game-word', function(e) {
       var $e = $(e.target);
       var word = $e.text();
       var likeness = word.length - hammingDistance(word, winner);
+      guessesRemaining--;
+      $('#typed .guess-count').text('You have ' + guessesRemaining + ' guess' + (guessesRemaining > 1 ? 'es' : '') + ' remaining.');
       if (likeness === word.length) {
-        console.log("You win!");
-        // create winning function
-      } else if (guessesRemaining === 1) {
-        console.log("You lose!");
-        // create losing function
+        endGame('Win', $e);
+      } else if (guessesRemaining === 0) {
+        endGame('Lose', $e);
       } else {
-        guessesRemaining--;
-        $('#typed .guess-count').text('You have ' + guessesRemaining + ' guess' + (guessesRemaining > 1 ? 'es' : '') + ' remaining.');
         $e.removeClass('game-word').addClass('game-word-clicked').text(word + " -----> LIKENESS: " + likeness);
       }
+    });
+  }
+
+  function endGame(state, $div) {
+    $('#typed .game-word').removeClass('game-word').addClass('game-word-clicked');
+    $div.text($div.text() + " -----> You " + state + "!");
+    if (state === "Lose") $div.addClass('red-text');
+    $('#typed .guess-count').html('<span>Play Again</span>|<span>Main Menu</span>').addClass('end-game');
+    $('#typed').on('click', '.guess-count span', function(e) {
+      $('#typed').remove();
+      $("#typed-text").after($('<div>', {id: 'typed'}));
+      if ($(e.target).text() === "Play Again") {
+        shuffleAndSetWords(wordList);
+      } else {
+        $startArea.slideDown(1000);
+      }
+    incrementCounts((state === 'Win'), idx);
     });
   }
 
@@ -82,6 +101,13 @@
     if (localStorage) {
       localStorage.setItem('counts', JSON.stringify(counts));
     }
+    updateSummaries();
+  }
+
+  function incrementCounts(won, idx) {
+    counts.attempts[idx]++;
+    if (won) counts.wins[idx]++;
+    if (localStorage) localStorage.setItem('counts', JSON.stringify(counts));
     updateSummaries();
   }
 
