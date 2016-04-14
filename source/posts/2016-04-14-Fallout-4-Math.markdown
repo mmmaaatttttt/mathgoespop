@@ -7,7 +7,7 @@ custom_js:
 custom_css: 
   - 2016_04_fallout
 ---
-If ever you've wished to experience a 1950's aesthetic combined with a post-apocalyptic landscape filled with death and decay, then the <a href="https://en.wikipedia.org/wiki/Fallout_(series)" target="_blank">Fallout</a> series may be right up your alley. What began as a well-received role-playing game when _Fallout_ was released in 1997, the series has now evolved into one of the most popular video game franchises around. The latest entry, _Fallout 4_ was released last year to critical and commercial acclaim. Here's just one sample of the praise lavished on this game (NSFW, unless you're allowed to watch monsters get shot in the face at work):
+If ever you've wished to experience a 1950's aesthetic combined with a post-apocalyptic landscape filled with death and decay, then the <a href="https://en.wikipedia.org/wiki/Fallout_(series)" target="_blank">Fallout</a> series may be right up your alley. What began with the well-received release of _Fallout_ in 1997 has since evolved into one of the most popular video game franchises around. The latest entry, _Fallout 4_ was released last year to critical and commercial acclaim. Here's just one sample of the praise lavished on this game (NSFW, unless you're allowed to watch monsters get shot in the face at work):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o-1h373RYDc" frameborder="0" allowfullscreen class="mgp-youtube"></iframe>
 
