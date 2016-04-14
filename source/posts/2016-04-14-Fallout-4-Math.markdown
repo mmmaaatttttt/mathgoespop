@@ -1,6 +1,6 @@
 ---
 title: Fallout 4 Math
-date: '2016-04-13'
+date: '2016-04-14'
 custom_js: 
   - typed
   - 2016_04_fallout
