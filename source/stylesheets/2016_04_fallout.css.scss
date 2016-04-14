@@ -93,4 +93,5 @@ $header-bg: #2E303C;
 
 .table-hover>tbody>tr:hover {
   background-color: lighten($header-bg, 40%);
+  color: white;
 }

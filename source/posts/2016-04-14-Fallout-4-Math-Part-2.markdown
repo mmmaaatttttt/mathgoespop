@@ -4,7 +4,7 @@ date: '2016-04-14'
 custom_js: 
   - 2016_04_fallout
 custom_css: 
-  - 2016_04_fallout
+  - 2016_04_fallout-2
 ---
 _This post is the second part in a series. If you haven't ready the <a href="/2016/04/fallout-4-math.html" target="_blank">first part</a>, I'd highly encourage you to do so._
 
@@ -27,11 +27,66 @@ List 2: 'energy', 'mutter', 'warned', 'atrium', 'second', 'carved', 'forced', 'h
 
 List 3: 'varying', 'cistern', 'expects', 'attends', 'bottles', 'torches', 'limited', 'corners', 'fortify', 'despite', 'session', 'durable'
 
-table for these lists
+Here's some data on how each strategy performs with respect to each of these lists. For the random guessing strategy, we simulated 100,000 playthroughs of the game for each possible password, or 1.2 million playthroughs in all. The other strategies are completely deterministic, so you only need to play the game once for each password to know how many guesses you'd need to make.
+
+<table class="table table-bordered table-striped table-hover centered" id="data-1">
+  <tr>
+    <th class="mgp-table-cell centered">Strategy</th>
+    <th class="mgp-table-cell centered">Random Guess</th>
+    <th class="mgp-table-cell centered">Closest Word</th>
+    <th class="mgp-table-cell centered">Farthest Word</th>
+    <th class="mgp-table-cell centered">Most Expected Eliminations</th>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">List 1</th>
+    <td>Avg. Guesses: 3.06</td>
+    <td>Avg. Guesses: 2.92</td>
+    <td>Avg. Guesses: 3.50</td>
+    <td>Avg. Guesses: 2.75</td>
+  </tr>
+  <tr>
+    <td>Win %: 92.79%</td>
+    <td>Win %: 91.67%</td>
+    <td>Win %: 75.00%</td>
+    <td>Win %: 100%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">List 2</th>
+    <td>Avg. Guesses: 2.83</td>
+    <td>Avg. Guesses: 2.58</td>
+    <td>Avg. Guesses: 3.25</td>
+    <td>Avg. Guesses: 2.58</td>
+  </tr>
+  <tr>
+    <td>Win %: 96.21%</td>
+    <td>Win %: 100%</td>
+    <td>Win %: 83.33%</td>
+    <td>Win %: 100%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">List 3</th>
+    <td>Avg. Guesses: 2.78</td>
+    <td>Avg. Guesses: 2.58</td>
+    <td>Avg. Guesses: 3.08</td>
+    <td>Avg. Guesses: 2.58</td>
+  </tr>
+  <tr>
+    <td>Win %: 97.93%</td>
+    <td>Win %: 100%</td>
+    <td>Win %: 91.67%</td>
+    <td>Win %: 100%</td>
+  </tr>
+</table>
+
+Based on this data, it's clear that selecting the farthest word is your worst option. Guessing randomly does surprisingly well in terms of win percentage, though the average number of guesses you'll need is higher than with the closest word or most expected elimination strategies. And the only strategy to guarantee a win 100% of the time is most expected elimination. So is this the one strategy to rule them all?
+
+Before we declare a winner, it's probably worth looking at some other sets of words. After all, the word lists in _Fallout 4_ are probably deliberately chosen so that there's a relatively high degree of likeness between words in the list. After all, if every word had a likeness of 0 compared to every other word, all you could do to try and guess the password is blindly guess. If all the likeness scores are 0, the likeness score effectively tells you nothing.
+
+So let's look at some lists of randomly generated words. Online, it's not too hard to find <a href="http://www.bestwordlist.com/" target="_blank">lists of words</a> of a certain length. 
 
 table for random list
 
-table for 5 word list
+table for 5/6/7 word lists
 
 varying # of words in list?
 

@@ -1,0 +1,16 @@
+$header-bg: #2E303C;
+
+.table-hover>tbody>tr:hover {
+  background-color: lighten($header-bg, 40%);
+  color: white;
+}
+
+#data-1 td,
+#data-1 th {
+  width: 22%;
+  vertical-align: middle;
+
+  &:first-child {
+    width: 12%;
+  }
+}
