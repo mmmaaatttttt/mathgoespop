@@ -198,6 +198,14 @@ Many of our previous observations still apply. All strategies perform worse when
 
 Of course, if one wanted to, there's still plenty more to dig into here. Can you think of any other strategies? What if you allow for word lists that are longer than 12? What if you look at words of lengths less than 5 or greater than 7? What if you allow for word lists that contain words of varying lengths? How do you calculate distances in this case? (<a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank">Here's</a> a hint.)
 
-And lest you think all of this work has no application outside the realm of Fallout, ...conclusion
+And lest you think all of this work has no application outside the realm of _Fallout_, the idea of measuring distance between two pieces of text extends far beyond this one example. Indeed, with slightly more sophisticated notions of distance than we've discussed here, there are applications in <a href="http://arxiv.org/pdf/1401.7416.pdf" target="_blank">biology</a> and very common examples in <a href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank">computer science</a>, too. Any time you've used a spellchecker, or Google has corrected a typo for you, you can bet that under the hood there are some distance calculations being performed on strings of text.
 
-link to GH code
+<p class="centered">
+  <img src="/images/2016/04/awesome.png" alt="Google Search"/>
+</p>
+
+Mastermind, the original game which shares many similarities to _Fallout_'s terminal hacking, also has an interesting academic history. Details are beyond the scope of this conversation, but if you want to know more, <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)" target="_blank">Wikipedia</a> offers a good starting point.
+
+In conclusion: even if you dislike _Fallout_ (or video games in general), let it never be said that rich and interesting mathematics couldn't be found therein.
+
+(Bonus: if you'd like to play around with some of the statistics on your own, I've thrown together a little <a href="https://github.com/mmmaaatttttt/terminal_hacking_statistics/" target="_blank">command-line tool</a> to help you do just that.)
