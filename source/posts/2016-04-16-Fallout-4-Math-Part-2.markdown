@@ -1,11 +1,10 @@
 ---
-title: Fallout 4 Math Part 2
-date: '2016-04-15'
+title: Fallout 4 Math, Part 2
+date: '2016-04-16'
 custom_js: 
   - 2016_04_fallout
 custom_css: 
   - 2016_04_fallout-2
-published: false
 ---
 _This post is the second part in a series. If you haven't ready the <a href="/2016/04/fallout-4-math.html" target="_blank">first part</a>, I'd highly encourage you to do so._
 

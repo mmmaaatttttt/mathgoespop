@@ -213,8 +213,6 @@ In fact, "hard" and "zero" have the highest number of expected eliminations. Her
 
 So, if you go with the closest word strategy, you should choose "herd" or "hero." If you go with the farthest word strategy, you should choose "jump." And if maximizing the expected number of eliminations is more your cup of tea, you should choose "hard" or "zero." Of course, guessing randomly could give you any one of these answers.
 
-But which strategy is the best for a wide variety of word lists? Let's tackle that question next time!
+But which strategy is the best for a wide variety of word lists? Let's tackle that question <a href="/2016/04/fallout-4-math-part-2.html" target="_blank">next time!</a>
 
-- game padding bottom
-- typed.js credit
-- link to next
+(H/T to Matt Boldt, creator of <a href="http://www.mattboldt.com/demos/typed-js/" target="_blank">Typed.js</a>, which I used to build the little game up above. You can check him out on <a href="https://twitter.com/atmattb" target="_blank">Twitter</a>.)
