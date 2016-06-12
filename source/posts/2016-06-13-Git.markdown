@@ -12,13 +12,18 @@ There's also the issue of cohesion. Having a coherent curriculum - one with a cl
 
 Chris's proposed solution, and I quote: "We need <a href="https://github.com" target="_blank">Github</a> for math curriculum."
 
-Cool. So what’s GitHub? In the software development world, it's the leading system used by teams to manage their code. In some sense, you can think of it like Dropbox on steroids; you can use GitHub to keep track of the state of all files in a project at any point in time. This makes it easier to go back and see previous versions of what you were working on, resolve conflicts if two people are working in the same file at the same time, and so on. From a practical standpoint, though, for many people (developers included!), GutHub basically works like this:
+Cool. So what’s GitHub? In the software development world, it's the leading system used by teams to manage their code. In some sense, you can think of it like Dropbox on steroids; you can use GitHub to keep track of the state of all files in a project at any point in time. This makes it easier to go back and see previous versions of what you were working on, resolve conflicts if two people are working in the same file at the same time, and so on. From a practical standpoint, though, for many people (developers included!), GitHub basically works like this:
 
 ![xckd git](http://imgs.xkcd.com/comics/git.png)
 
-## my background
+The takeaway here is that if you don't know what Git or GitHub are, don't worry. I interpreted Chris' main argument as being not specific to GitHub, and more about a need he's observed for a better way to collaborate and communicate on curriculum, both among teachers and between teachers and authors. (I trust Chris will correct me if I butchered his sentiment too horribly.)
 
-Like I said, Chris’ musings inspired a lot of debate. 
+### My Perspective
+
+Like I said, Chris’ musings inspired a lot of debate on Twitter: 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Why Secondary Teachers Don’t Want a GitHub for Lesson Plans. Responding to <a href="https://twitter.com/Lustomatical">@lustomatical</a>&#39;s proposal. <a href="https://t.co/DnMjUgUCdJ">https://t.co/DnMjUgUCdJ</a></p>&mdash; Dan Meyer (@ddmeyer) <a href="https://twitter.com/ddmeyer/status/740624584056004608">June 8, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 EXAMPLES ON TWITTER
 
@@ -45,3 +50,6 @@ Unclear sides
 who benefits more from contributions to open source? Authors or contributors?
 Developers can negotiate salaries, teachers can't.
 
+SAGE!
+
+Good curriculum isn't equivalent to pd
