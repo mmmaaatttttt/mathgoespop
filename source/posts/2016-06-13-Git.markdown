@@ -1,0 +1,47 @@
+---
+title: Git
+date: '2016-06-13'
+---
+My good friend and former work-associate <a href="https://twitter.com/lustomatical" target="_blank">Chris Lusto</a> recently set off a flurry of Twitter activity when he shared some of his thoughts on curriculum development in a post titled <a href="http://chrislusto.com/lessons-for-other-people/" target="_blank">Lessons for Other People</a> (he's since written a follow-up, <a href="http://chrislusto.com/git-push/" target="_blank">Git Push</a>). These posts have sparked a lot of interesting conversation, and have inspired me to share some thoughts of my own.
+
+In the interest of self-containment, let me begin by trying to summarize Chris' main argument. First, some background: Chris and I both spent a not-insignificant share of our professional careers writing math curriculum at <a href="http://www.mathalicious.com" target="_blank">Mathalicious</a>. Writing curriculum is a lot of fun, but is also hard work, especially when you're trying to write for an audience larger than yourself. Different teachers may be looking for wildly different things: one may want something highly scaffolded while another wants something more open-ended, one may embrace a lesson on <a href="http://www.mathalicious.com/lessons/the-cheese-that-goes-crunch" target="_blank">Cheetos</a> while another may not...the list goes on, and on, and on. And on. Seriously. It goes on.
+
+One approach to solving this problem is to make content editable, so that teachers aren't forced to use a resource that doesn't fit quite right. But this raises other issues. For authors, it can potentially diminish the integrity of the resource. For teachers, making content editable assumes they have time to write content in addition to their full time jobs, you know, _teaching_. 
+
+There's also the issue of cohesion. Having a coherent curriculum - one with a clear vision that can support a natural progression through a set of learning objectives - is undoubtedly important. This is especially true for a discipline like mathematics, which builds on itself over timescales on the order of years, not class just class periods.
+
+Chris's proposed solution, and I quote: "We need <a href="https://github.com" target="_blank">Github</a> for math curriculum."
+
+Cool. So what’s GitHub? In the software development world, it's the leading system used by teams to manage their code. In some sense, you can think of it like Dropbox on steroids; you can use GitHub to keep track of the state of all files in a project at any point in time. This makes it easier to go back and see previous versions of what you were working on, resolve conflicts if two people are working in the same file at the same time, and so on. From a practical standpoint, though, for many people (developers included!), GutHub basically works like this:
+
+![xckd git](http://imgs.xkcd.com/comics/git.png)
+
+## my background
+
+Like I said, Chris’ musings inspired a lot of debate. 
+
+EXAMPLES ON TWITTER
+
+It's an interesting proposition, and one I've thought about from time to time as well. I’d like to throw my two cents into the ring, because for the last year I've been teaching adults how to code. And throughout this new, so-called “bootcamp” industry, we already have an analogy of Chris’ “Github for math curriculum.” It's called Github. Across all of the different companies in this space, GitHub is the primary means by which curriculum gets written and shared with students.
+
+So, how’s that working out? Before I go any further, I think it's important to highlight some important differences between these adult immersive programs and a traditional primary/secondary school:
+
+A “curriculum” for a bootcamp is much narrower in scope than an entire math curriculum. The program I teach lasts six months, but many others are even shorter, which means the cohesion required by a curriculum isn't on a timescale of years. From this standpoint, then, the development of a curriculum is much less likely to turn into a boondoggle.
+Metrics for success in this industry are really straightforward. If your students get jobs, congratulations, you're doing well! If not, you may need to rethink your approach. 
+
+- differences between my class and a k-12 class
+  - metrics for success
+  - size, market details
+     - nascent industry 
+
+- benefits of GH (look at Chris's list)
+
+- downsides
+  - collaboration really only exists between people who know each other already
+  - noise over time with lots of forking
+     - still just text files!
+
+Unclear sides 
+who benefits more from contributions to open source? Authors or contributors?
+Developers can negotiate salaries, teachers can't.
+
