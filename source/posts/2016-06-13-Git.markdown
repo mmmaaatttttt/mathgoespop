@@ -20,36 +20,102 @@ The takeaway here is that if you don't know what Git or GitHub are, don't worry.
 
 ### My Perspective
 
-Like I said, Chris’ musings inspired a lot of debate on Twitter: 
+Like I said, Chris’ musings inspired a lot of dialogue on Twitter: 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Why Secondary Teachers Don’t Want a GitHub for Lesson Plans. Responding to <a href="https://twitter.com/Lustomatical">@lustomatical</a>&#39;s proposal. <a href="https://t.co/DnMjUgUCdJ">https://t.co/DnMjUgUCdJ</a></p>&mdash; Dan Meyer (@ddmeyer) <a href="https://twitter.com/ddmeyer/status/740624584056004608">June 8, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-EXAMPLES ON TWITTER
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Alright I&#39;m jumping into this GitHub discussion. Here goes: <a href="https://t.co/Am85GcBBPe">https://t.co/Am85GcBBPe</a></p>&mdash; Dylan Kane (@math8_teacher) <a href="https://twitter.com/math8_teacher/status/740684582685704192">June 8, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-It's an interesting proposition, and one I've thought about from time to time as well. I’d like to throw my two cents into the ring, because for the last year I've been teaching adults how to code. And throughout this new, so-called “bootcamp” industry, we already have an analogy of Chris’ “Github for math curriculum.” It's called Github. Across all of the different companies in this space, GitHub is the primary means by which curriculum gets written and shared with students.
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I don&#39;t have a blog right now, so I GoogleDoc&#39;d: <a href="https://t.co/u3kYO0ZQqe">https://t.co/u3kYO0ZQqe</a> re <a href="https://twitter.com/Lustomatical">@Lustomatical</a> <a href="https://twitter.com/ddmeyer">@ddmeyer</a> <a href="https://twitter.com/mpershan">@mpershan</a> <a href="https://twitter.com/math8_teacher">@math8_teacher</a> <a href="https://twitter.com/crstn85">@crstn85</a>&#39;s ideas</p>&mdash; Max Ray-Riek (@maxmathforum) <a href="https://twitter.com/maxmathforum/status/741340302326304769">June 10, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-So, how’s that working out? Before I go any further, I think it's important to highlight some important differences between these adult immersive programs and a traditional primary/secondary school:
+(<a href="https://problemproblems.wordpress.com/2016/06/08/what-exactly-do-you-want-michael/" target="_blank">Here's</a> a response that I couldn't find a tweet about, but is also worth checking out.)
 
-A “curriculum” for a bootcamp is much narrower in scope than an entire math curriculum. The program I teach lasts six months, but many others are even shorter, which means the cohesion required by a curriculum isn't on a timescale of years. From this standpoint, then, the development of a curriculum is much less likely to turn into a boondoggle.
-Metrics for success in this industry are really straightforward. If your students get jobs, congratulations, you're doing well! If not, you may need to rethink your approach. 
+I’d like to throw my two cents into the ring, mostly because for the last year I've been teaching adults how to code. Schools like this are popping up in major cities throughout the country. And though they may differ in some of their details, throughout this so-called "bootcamp<sup><a href="#footnote1" id="src1">1</a></sup>" industry one thing seems pretty clear: we already have an analogy of Chris' "GitHub for math curriculum" for our curricula. 
 
-- differences between my class and a k-12 class
-  - metrics for success
-  - size, market details
-     - nascent industry 
+It's called GitHub. 
 
-- benefits of GH (look at Chris's list)
+Across all of the different companies in this space, GitHub is the primary means by which curriculum gets written and shared with students. So, how’s it working out? 
 
-- downsides
-  - collaboration really only exists between people who know each other already
-  - noise over time with lots of forking
-     - still just text files!
+### Some Caveats
 
-Unclear sides 
-who benefits more from contributions to open source? Authors or contributors?
-Developers can negotiate salaries, teachers can't.
+Before I go any further, I think it's important to highlight some important differences between the adult immersive programs in which I teach and a typicalschool in the K-12 space:
+
+1. A "curriculum" for a bootcamp is much narrower in scope than an entire math curriculum. The program I teach lasts six months, but many others are even shorter, which means the cohesion required by a curriculum isn't nearly as complicated. From this standpoint, then, the development of a curriculum is much less likely to turn into a boondoggle.
+2. Metrics for success in my current industry are really straightforward. If your students get jobs, congratulations, you're doing well! If not, you may need to rethink your approach. In this sense, then, the "goal" of a curriculum for us is fairly straightforward, especially when positioned next to the question: "<a href="http://www.ascd.org/publications/newsletters/education-update/jul12/vol54/num07/What-Is-the-Purpose-of-Education%C2%A2.aspx" target="_blank">What is the _purpose_ of education?</a>"
+3. In terms of scale, the bootcamp industry has got nothing on math education. We're still nascent in many ways, with a lot of flexibility to experiment and iterate. The material itself is also continually changing to keep up with the needs of the market. What's more, our timelines feed into this flexibility: if I totally whiff on a set of lessons one day, I don't have to wait a year to try them again.
+
+I'm not passing a value judgment on any of these differences. I just wanted to highlight them to emphasize the fact that, when it comes to GitHub (or CurricHub or MatHub or whatever you'd like to call a math education analogy), your mileage may vary.
+
+### GitHub: The Upsides
+
+Let's accentuate the positive and talk first about some things that I like about using GitHub when working on curriculum. Many of these points tie into the potential advantages Chris wrote about.
+
+1. Finding materials is relatively straightforward. If I'm teaching a lesson on, say, writing functions in Javascript can go to our organization on GitHub and look for materials that cover that topic. If I find something I like, I can use it out of the box. If I find something I almost like, I can easily fork a copy and make any adjustments I want. And if I don't find anything at all, I can write a lesson and add it to the organization so that other classes can use it.
+2. It's really easy to iterate on materials. If I see a typo in a readme, I can update it and have that change available immediately throughout the whole organization. If a lesson didn't go well and I have some specific changes to the materials that I think would improve the experience, it's easy for me to make those changs as well.
+3. If someone wants to make a change but is concerned about a lack of consensus, it's easy to get a discussion thread going. The reasoning for any change can always live in the same general location as the change itself. 
+4. I can see who authored each change on a line-by-line basis. So if I have a question about anything I'm reading, tracking down the source is no problem.
+
+It's not all sunshine and puppy dogs, though. Let's turn to the downsides.
+
+### GitHub: The Downsides
+
+GitHub is a powerful and helpful tool. But when it comes to writing curriculum, there are a number of problems with it (or at least, with my experience implementing it):
+
+1. Through the open source movement, GitHub has allowed software developers from all around the world connect and collaborate more easily than ever before. However, writing curriculum isn't the same as writing software, and I've found that even among teams that are geographically dispersed, **the amount of collaboration between people who don't know each other is pretty minimal** (if it exists at all). I use GitHub with my group of instructors on a daily basis to make improvements to our spin on the curriculum, but I have very rarely collaborated outside of my core group in the same capacity. 
+  
+  Of course, this may not necessarily be due to a fault in the tooling (i.e. GitHub). Part of it may be cultural, and part of it is probably due to the wide variation instructors see across classrooms and across markets. The knowledge students need to get jobs in San Francisco may be different than what they need to get jobs in other places in the country, and each class has its own set of idiosyncracies which instructors will need to address on a cohort-by-cohort basis. Because of this, large-scale collaboaration of the type you see in open-source software development isn't really a thing.
+  
+  But maybe it doesn't need to be. After all, as Chris rightly pointed out, it's easy to fork and clone copies of original material and tweak them as needed for your particular use-case. But this brings me to my second observation...
+  
+2. **GitHub doesn't really reduce the amount of noise so much as it shifts it to a central location**. Without a lot of careful and active shepherding, curriculum to which everyone can contribute can quickly generate a signal-to-noise ratio that's comparable to what's already available via a Google search. Say I'm looking for content on topic X. It's quite likely I'll find a lot of different curricular sources. Without knowing who wrote the materials, though, I don't have a clear idea of whether the material is a good fit for my class (see #1), and this is true _even if our classes have a shared set of objectives._ Moreover, objectives and requirements change over time, but not every piece of curriculum follows; some are simply abandoned. If I see material that hasn't been updated in a year, is that because it's not great, or because one instructor really loves it and uses it while everyone else uses something else? 
+
+  Maintanence of a large body of curriculum is an expensive operation, and between writing curriculum, teaching, and keeping the entire body of curriculum maintained, it also tends to be the lowest priority.
+  
+  Forking alleviates some of this, but not all. I could not worry about the larger community and just keep a copy of my own forked curriculum updated as I see fit, but if everyone does that, we lose out on the benefits obtained from sharing insights into how things are going across different classrooms. 
+  
+  But even in those cases when certain cohorts want to make changes to the master curriculum, this raises another problem...
+  
+3. **It's difficult to push changes to the curriculum when multiple people are using it while also iterating on the curriculum quickly.** If 12 different classes are using a shared curriculum, some of them may be teaching very similar things within a very short timespan. If one group decides to make significant changes to the curriculum, it has the potential to disrupt the planning of another class. 
+
+  Really, this boils down to a fundmanetal tension between the quality of the educational experience and the philosophy of agile software development. The engineer will advocate for shipping the code (i.e. the change in the curriculum) even if it's not fully-baked, since rapid iteration will catch flaws and fix them. But the users who catch the flaws in this case are students, and students working with a busted curriculum is, to put it mildly, not great for their experience. Given the choice between maintaining the quality of the student experience and iterating rapidly on the product, I'll choose student experience 10 times out of 10. But this means you're potentially losing out on one of the big value-adds GitHub has compared to a traditional software development setup.<a href="#footnote2" id="src2">2</a>
+  
+4. **For all of its technological street cred, GitHub hosts a lot of curriculum that's still stuck in the 20th century.**
+
+Github is super awesome at keeping track of changes to text files. As such, people use it to keep track of text files. At its core, that's what software development is: reading and writing text files, all day every day.
+
+In terms of curriculum, then, GitHub tends to be used to store repositories of text files. This is fine; after all, we've been using text files to communicate curriculum for hundreds of years. 
+
+But at the same time, it's 2016. We have tools to make the dissimination of knowledge more effective and more engaging. For example, if I'm writing about Javascript functions, maybe I want to provide the reader with an example of the proper syntax:
+
+```javascript
+function double(num) {
+  return 2 * num;
+}
+```
+
+This function, as the name suggests, takes a number and doubles it. But if you, as the reader, want to experiment with this function (make sure it works, try it with different inputs, try to break it, etc), you have to open up a Javascript runtime environment, copy and paste the code, and then start exploring. The feedback loop between reading and experimenting is unnecessarily large.
+
+The same is true in mathematics. Open up an algebra textbook to a chapter on linear functions, and you're likely to see images like this:
+
+![Linear Functions Image](http://mathonweb.com/help_ebook/html/functions_3/fungraph01.gif)
+
+
+  - G
+  - feedback loop between reading and experimenting
+    - still just text files!
 
 SAGE!
 
-Good curriculum isn't equivalent to pd
+### GitHub: The I-don't-know-sides
+
+who benefits more from contributions to open source? Authors or contributors?
+Developers can negotiate salaries, teachers can't.
+
+### Conclusions
+
+<a href="#src1" id="footnote1">1</a>: I'll use the term bootcamp throughout this discussion, even though I don't really like using that word to describe what I do (but that's a topic for another day).
+
+<a href="#src2" id="footnote2">2</a>: Again, it's quite possible that this complaint has less to do with GitHub in particular than with external factors such as culture, workflow, etc. But at the very least, I think the idea of keeping a forked copy of your own curriculum to maintain while also folding in the best parts of updates to the main curriculum is, in practice, more complex than it seems.
