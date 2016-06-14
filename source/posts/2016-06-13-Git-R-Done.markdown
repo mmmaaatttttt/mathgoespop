@@ -1,6 +1,11 @@
 ---
-title: Git
+title: Git-R-Done
 date: '2016-06-13'
+custom_js: 
+  - desmos
+  - 2016_06_git_r_done
+custom_css:
+  - 2016_06_git_r_done
 ---
 My good friend and former work-associate <a href="https://twitter.com/lustomatical" target="_blank">Chris Lusto</a> recently set off a flurry of Twitter activity when he shared some of his thoughts on curriculum development in a post titled <a href="http://chrislusto.com/lessons-for-other-people/" target="_blank">Lessons for Other People</a> (he's since written a follow-up, <a href="http://chrislusto.com/git-push/" target="_blank">Git Push</a>). These posts have sparked a lot of interesting conversation, and have inspired me to share some thoughts of my own.
 
@@ -64,33 +69,33 @@ It's not all sunshine and puppy dogs, though. Let's turn to the downsides.
 
 GitHub is a powerful and helpful tool. But when it comes to writing curriculum, there are a number of problems with it (or at least, with my experience implementing it):
 
-1. Through the open source movement, GitHub has allowed software developers from all around the world connect and collaborate with ease. However, writing curriculum isn't the same as writing software, and I've found that even among teams that are geographically dispersed, **the amount of collaboration between people who don't know each other is pretty minimal** (if it exists at all). I use GitHub with my group of instructors on a daily basis to make improvements to our spin on the curriculum, but I have very rarely collaborated outside of my core group in the same capacity. 
-  
-  Of course, this may not necessarily be due to a fault in the tooling (i.e. GitHub). Part of it may be cultural, and part of it is probably due to the wide variation instructors see across classrooms and across markets. The knowledge students need to get jobs in San Francisco may be different than what they need to get jobs in other places in the country, and each class has its own set of idiosyncracies which instructors will need to address on a cohort-by-cohort basis. Because of this, large-scale collaboaration of the type you see in open-source software development isn't really a thing.
-  
-  But maybe it doesn't need to be. After all, as Chris rightly pointed out, it's easy to fork and clone copies of original material and tweak them as needed for your particular use case. But this brings me to my second observation...
+1. Through the open source movement, GitHub has allowed software developers from all around the world connect and collaborate with ease. However, writing curriculum isn't the same as writing software, and I've found that even among teams that are geographically dispersed, **the amount of collaboration between people who don't know each other is pretty minimal** (if it exists at all). I use GitHub with my group of instructors on a daily basis to make improvements to our spin on the curriculum, but I have very rarely collaborated outside of my core group in the same capacity.
+ 
+    Of course, this may not necessarily be due to a fault in the tooling (i.e. GitHub). Part of it may be cultural, and part of it is probably due to the wide variation instructors see across classrooms and across markets. The knowledge students need to get jobs in San Francisco may be different than what they need to get jobs in other places in the country, and each class has its own set of idiosyncracies which instructors will need to address on a cohort-by-cohort basis. Because of this, large-scale collaboaration of the type you see in open-source software development isn't really a thing.
+
+    But maybe it doesn't need to be. After all, as Chris rightly pointed out, it's easy to fork and clone copies of original material and tweak them as needed for your particular use case. But this brings me to my second observation...
   
 2. **GitHub doesn't really reduce the amount of noise so much as it shifts it to a central location**. Without a lot of careful and active shepherding, curriculum to which everyone can contribute can quickly generate a signal-to-noise ratio that's comparable to what's already available via a Google search. Say I'm looking within my GitHub organization for content on topic X. It's quite likely I'll find a lot of different curricular resources. Without a more personal relationship to the author, though, I don't have a clear idea of whether the material is a good fit for my class (see #1), and this is true _even if our classes have a shared set of objectives._ Moreover, objectives and requirements change over time, but not every piece of curriculum follows. If I see material that hasn't been updated in a year, is that because it's not great, or because one instructor really loves it and uses it while everyone else uses something else? 
 
-  Maintanence of a large body of curriculum is expensive, and between writing curriculum, teaching, and keeping the entire body of curriculum maintained, it also tends to be the lowest priority.
+    Maintanence of a large body of curriculum is expensive, and between writing curriculum, teaching, and keeping the entire body of curriculum maintained, it also tends to be the lowest priority.
   
-  Forking alleviates some of this, but not all. I could choose to not worry about the larger community and just keep a copy of my own forked curriculum updated as I see fit, but if everyone does that, we lose out on the benefits obtained from sharing insights into how things are going across different classrooms. 
+    Forking alleviates some of this, but not all. I could choose to not worry about the larger community and just keep a copy of my own forked curriculum updated as I see fit, but if everyone does that, we lose out on the benefits obtained from sharing insights into how things are going across different classrooms. 
   
-  But even in those cases when certain cohorts want to make changes to the master curriculum, this raises another problem...
+    But even in those cases when certain cohorts want to make changes to the master curriculum, this raises another problem...
   
 3. **It's difficult to push changes to the curriculum when multiple people are using it while also iterating on the curriculum quickly.** If 12 different classes are using a shared curriculum, some of them may be teaching very similar things within a very short timespan. If one group decides to make significant changes to the curriculum, it has the potential to disrupt the planning of another class. 
 
-  Really, this boils down to a fundmanetal tension between the quality of the educational experience and the philosophy of agile software development. The engineer will advocate for shipping the code (i.e. the change in the curriculum) even if it's not fully-baked, since rapid iteration will catch flaws and fix them. But the users who catch the flaws in this case are students, and students working with a busted curriculum is, to put it mildly, not great for their experience. Given the choice between maintaining the quality of the student experience and iterating rapidly on the product, I'll choose student experience 10 times out of 10. But this means you're potentially losing out on one of the big value-adds GitHub has in a traditional software development setup.<a href="#footnote2" id="src2">2</a>
+    Really, this boils down to a fundmanetal tension between the quality of the educational experience and the philosophy of agile software development. The engineer will advocate for shipping the code (i.e. the change in the curriculum) even if it's not fully-baked, since rapid iteration will catch flaws and fix them. But the users who catch the flaws in this case are students, and students working with a busted curriculum is, to put it mildly, not great for their experience. Given the choice between maintaining the quality of the student experience and iterating rapidly on the product, I'll choose student experience 10 times out of 10. But this means you're potentially losing out on one of the big value-adds GitHub has in a traditional software development setup.<a href="#footnote2" id="src2">2</a>
   
 4. **For all of its technological street cred, GitHub hosts a lot of curriculum that's still stuck in the 20th century.**
 
-Github is super awesome at keeping track of changes to text files. As such, people use it to keep track of text files. At its core, that's what software development is: reading and writing text files, all day every day.
+    Github is super awesome at keeping track of changes to text files. As such, people use it to keep track of text files. At its core, that's what software development is: reading and writing text files, all day every day.
 
-In terms of curriculum, then, GitHub tends to be used to store repositories of text files. This is fine; after all, we've been using text files to communicate curriculum for hundreds of years. 
+    In terms of curriculum, then, GitHub tends to be used to store repositories of text files. This is fine; after all, we've been using text files to communicate curriculum for hundreds of years. 
 
-But at the same time, it's 2016. We have tools to make the dissimination of knowledge more effective and more engaging. For example, if I'm writing about Javascript functions, maybe I want to provide the reader with an example of the proper syntax:
+    But at the same time, it's 2016. We have tools to make the dissimination of knowledge more effective and more engaging. For example, if I'm writing about Javascript functions, maybe I want to provide the reader with an example of the proper syntax:
 
-```javascript
+```
 function double(num) {
   return 2 * num;
 }
@@ -104,7 +109,9 @@ The same is true in mathematics. Open up an algebra textbook to a chapter on lin
 
 But if you're trying to learn about families of linear functions, explore the relationship between graphs, slope, and intercept, and so on, wouldn't you much rather be able to explore linear functions with something like this?
 
-DESMOS EXAMPLE
+<div class="graph-wrapper">
+  <div id="graph"></div>
+</div>
 
 I certainly would. And examples like this are becoming more common. <a href="http://www.desmos.com" target="_blank">Desmos</a> is getting into the content game, and <a href="http://www.mathalicious.com" target="_blank">Mathalicious</a> lessons are much more interactive than they were a few years ago. In higher education, tools like Sage Math are <a href="http://sagemath.blogspot.com/2016/02/open-source-is-now-ready-to-directly.html" target="_blank">positioning themselves</a> as free, open-source competitors to expensive applications like Mathematica, Maple, and MATLAB.
 
@@ -121,6 +128,8 @@ In a traditional open-source software project, contributions from the community 
 Chris addressed this issue from another perspective in his follow-up post under a section titled <a href="http://chrislusto.com/git-push/#sect-isnt-this-just-a-way-for-publishers-to-exploit-labor" target="_blank">Isn't this just a way for publishers to exploit labor?</a> His rebuttal is nice, you should definitely check it out. Ultimately I don't know what the answer is, but this example is enough to make me think that the question of open-source curriculum is, regardless of how we version control it, big enough to consider on its own merits.
 
 I haven't thought a ton about it, but if you have, I'd love to hear from you! I'm sure the larger community would, too.
+
+<hr/>
 
 <a href="#src1" id="footnote1">1</a>: I'll use the term bootcamp throughout this discussion, even though I don't really like using that word to describe what I do (but that's a topic for another day).
 
