@@ -1,6 +1,6 @@
 ---
 title: Git-R-Done
-date: '2016-06-13'
+date: '2016-06-14'
 custom_js: 
   - desmos
   - 2016_06_git_r_done
