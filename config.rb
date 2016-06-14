@@ -110,7 +110,7 @@ configure :build do
 
   # Use relative URLs
   # activate :relative_assets
-  ignore "/stylesheets/code.css.erb"
+  # ignore "/stylesheets/code.css.erb"
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
   activate :disqus do |d|
