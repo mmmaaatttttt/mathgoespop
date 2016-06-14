@@ -6,7 +6,7 @@ custom_js:
 custom_css: 
   - 2016_04_fallout-2
 ---
-_This post is the second part in a series. If you haven't ready the <a href="/2016/04/fallout-4-math.html" target="_blank">first part</a>, I'd highly encourage you to do so._
+<em>This post is the second part in a series. If you haven't ready the <a href="/2016/04/fallout-4-math.html" target="_blank">first part</a>, I'd highly encourage you to do so.</em>
 
 Last time, we discussed four different strategies for cracking the Fallout 4 hacking mini-game. As you may recall, our four strategies are as follows:
 
