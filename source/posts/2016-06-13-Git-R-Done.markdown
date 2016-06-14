@@ -6,6 +6,7 @@ custom_js:
   - 2016_06_git_r_done
 custom_css:
   - 2016_06_git_r_done
+  - code
 ---
 My good friend and former work-associate <a href="https://twitter.com/lustomatical" target="_blank">Chris Lusto</a> recently set off a flurry of Twitter activity when he shared some of his thoughts on curriculum development in a post titled <a href="http://chrislusto.com/lessons-for-other-people/" target="_blank">Lessons for Other People</a> (he's since written a follow-up, <a href="http://chrislusto.com/git-push/" target="_blank">Git Push</a>). These posts have sparked a lot of interesting conversation, and have inspired me to share some thoughts of my own.
 
@@ -95,7 +96,7 @@ GitHub is a powerful and helpful tool. But when it comes to writing curriculum, 
 
     But at the same time, it's 2016. We have tools to make the dissimination of knowledge more effective and more engaging. For example, if I'm writing about Javascript functions, maybe I want to provide the reader with an example of the proper syntax:
 
-```
+```javascript
 function double(num) {
   return 2 * num;
 }

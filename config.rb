@@ -65,6 +65,12 @@ page "/feed.xml", layout: false
 # Helpers
 ###
 
+# Code Syntax Highlighting
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
+
+activate :syntax
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -104,7 +110,7 @@ configure :build do
 
   # Use relative URLs
   # activate :relative_assets
-
+  ignore "/stylesheets/code.css.erb"
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
   activate :disqus do |d|

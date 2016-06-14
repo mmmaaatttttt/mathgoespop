@@ -27,6 +27,6 @@ p > img {
   margin: 0 auto;
 }
 
-#my-perspective ~ .twitter-tweet {
+#main .twitter-tweet {
   margin: 0 auto;
 }
