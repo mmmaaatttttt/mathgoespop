@@ -1,3 +1,5 @@
+xrequire_relative 'renderer'
+
 ###
 # Blog settings
 ###
@@ -66,8 +68,15 @@ page "/feed.xml", layout: false
 ###
 
 # Code Syntax Highlighting
+
+set(
+  :markdown, 
+  renderer: MGPRenderer, 
+  fenced_code_blocks: true, 
+  smartypants: true, 
+  with_toc_data: true
+)
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true
 
 activate :syntax
 

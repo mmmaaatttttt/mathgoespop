@@ -8,6 +8,7 @@ gem "middleman-disqus"
 gem "middleman-syntax"
 gem "nokogiri", "~> 1.6.5"
 gem "redcarpet"
+gem "pry"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

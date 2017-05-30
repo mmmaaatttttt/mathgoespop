@@ -5,6 +5,7 @@ source/javascripts/twitter.js
 source/javascripts/vendor
 source/posts/ideas.markdown
 source/images/*
+.byebug_history
 
 # source/posts
 
