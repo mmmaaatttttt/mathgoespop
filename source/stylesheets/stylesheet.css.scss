@@ -204,6 +204,18 @@ blockquote {
 	opacity: 0.4;
 }
 
+.img-33 {
+	width: 33%;
+	margin: 0 auto;
+	display: block;
+}
+
+@media (max-width: 500px) {
+	.img-33 {
+		width: 100%;
+	}
+}
+
 @media (max-width: 991px) {
 	#left-sidebar {
 		display: none;

@@ -1,4 +1,4 @@
-xrequire_relative 'renderer'
+require_relative 'renderer'
 
 ###
 # Blog settings
