@@ -149,7 +149,7 @@ DEPENDENCIES
   dotenv
   middleman (~> 3.3.7)
   middleman-blog (~> 3.5.3)
-  middleman-deploy
+  middleman-deploy (~> 1.0.0)
   middleman-disqus
   middleman-syntax
   nokogiri (~> 1.6.5)

@@ -130,10 +130,10 @@ end
 
 # configure deploy options
 activate :deploy do |deploy|
-  deploy.deploy_method   = :ftp
-  deploy.host            = ENV['HOST']
-  deploy.path            = ENV['PATH']
-  deploy.user            = ENV['USER']
-  deploy.password        = ENV['PASSWORD']
+  deploy.method          = :ftp
+  deploy.host            = ENV['FTP_HOST']
+  deploy.path            = ENV['FTP_PATH']
+  deploy.user            = ENV['FTP_USER']
+  deploy.password        = ENV['FTP_PASSWORD']
   deploy.build_before    = true
 end
