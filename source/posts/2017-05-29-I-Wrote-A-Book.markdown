@@ -4,7 +4,7 @@ date: '2017-05-29'
 ---
 Hello friends! In case you haven't heard the news, I released my first book this month. You can order it on Amazon [here](https://www.amazon.com/Power-Up-Unlocking-Hidden-Mathematics-Video/dp/0691161518/).
 
-<img class="img-33" alt="Power-Up Cover" src="./images/2017/05/PowerUp.png">
+<img class="img-33" alt="Power-Up Cover" src="/images/2017/05/PowerUp.png">
 
 The book started as basically an extension of this blog, though with a narrower focus. While I've tried to use this space to explore the intersection of math and pop culture in general, the book focuses specifically on the search for interesting mathematics inspired by video games.
 
