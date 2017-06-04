@@ -6,6 +6,7 @@ source/javascripts/vendor
 source/posts/ideas.markdown
 source/images/*
 .byebug_history
+.env
 
 # source/posts
 

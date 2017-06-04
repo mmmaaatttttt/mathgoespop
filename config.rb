@@ -1,3 +1,4 @@
+require 'dotenv/load'
 require_relative 'renderer'
 
 ###
@@ -125,4 +126,14 @@ configure :build do
   activate :disqus do |d|
     d.shortname = "mathgoespop"
   end
+end
+
+# configure deploy options
+activate :deploy do |deploy|
+  deploy.deploy_method   = :ftp
+  deploy.host            = ENV['HOST']
+  deploy.path            = ENV['PATH']
+  deploy.user            = ENV['USER']
+  deploy.password        = ENV['PASSWORD']
+  deploy.build_before    = true
 end
