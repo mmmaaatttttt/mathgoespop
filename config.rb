@@ -128,9 +128,6 @@ configure :build do
   end
 end
 
-activate :relative_assets
-set :relative_links, true
-
 # configure deploy options
 activate :deploy do |deploy|
   deploy.method          = :ftp
