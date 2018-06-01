@@ -85,7 +85,7 @@ activate :syntax
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-activate :livereload
+# activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -127,6 +127,9 @@ configure :build do
     d.shortname = "mathgoespop"
   end
 end
+
+activate :relative_assets
+set :relative_links, true
 
 # configure deploy options
 activate :deploy do |deploy|
