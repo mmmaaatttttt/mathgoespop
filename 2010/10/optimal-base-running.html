@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Optimal Base Running</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Optimal Base Running</h2> <div class="postDate">October 28, 2010</div>
+          <p>Now that the World Series is upon is, I thought I might take a moment to discuss the latest results in the field of optimal base running.  On the face of it, this may seem like a non-issue; after all, as any decent student of geometry will tell you, the shortest distance between any two plates is a straight line.</p>
+
+<p>In a game of baseball, however, it&#39;s more important to minimize time, not distance.  Given this, running a path that consists of four straight lines connecting each base is not optimal, because the runner must slow down to make the sharp turns at each base.  Of course, baseball players already know this, which is why they often swing out in their path before crossing first when they are confident that they can reach second or more.  But still, the question remains: are these trajectories optimal?</p>
+
+<p>According to a trio of mathematicians from <a href="http://www.williams.edu/">Williams College</a>, maybe not.  According to an article originally posted in <a href="http://www.livescience.com/culture/baseball-running-bases-curved-path-100530.html">May</a>, but which only now seems to be gaining some <a href="http://www.sciencenews.org/index/generic/activity/view/id/64589/title/Math_Trek__Winning_the_World_Series_with_math">traction</a>, recent graduate Davide Carozza wondered what would happen if runners began to curve immediately when leaving the batter&#39;s box.  His conclusion may be somewhat surprising: using a circular path around the bases rather than a straight line path resulted in a 25% faster loop around the pitcher&#39;s mound.</p>
+
+<p style="text-align:center;font-size:small"><a href="http://www.mathgoespop.com/images/2010/10/bwilson.jpg"><img class="size-full wp-image-916" title="bwilson" src="http://www.mathgoespop.com/images/2010/10/bwilson.jpg" alt="" width="599" height="290" /></a><br>Brian Wilson likes those odds.</p>
+
+<p>But of course, a circular loop doesn&#39;t seem like the most efficient route either - after all, once you return to home you don&#39;t need to run again, so it always makes sense to run as straight as possible from 3rd to home.  Upon further analysis, Professor Stewart Johnson found that the fastest loop indeed one that begins like a circle, but comes in closer to the bases on the last leg of the journey.</p>
+
+<p style="text-align:center;font-size:small"><a href="http://www.sciencenews.org/view/access/id/64592/name/MathTrek_oct2010_prepped.jpg"><img class="size-medium wp-image-914" title="basepath" src="http://www.mathgoespop.com/images/2010/10/basepath-300x214.jpg" alt="" width="300" height="214" /></a><br>Here is the proposed optimal path.</p>
+
+<p>As with any mathematical model, some caveats are in order.  The most significant one concerns acceleration - the red lines in the image above denote the acceleration, and you can see that all the lengths are the same, meaning that acceleration is assumed to be constant.  But of course, this isn&#39;t really true when a batter is running the bases - as the latter article points out, &quot;a runner may not be able to speed up as quickly while running along a  curved path as he can along a straight one. In that case, some form of a  banana path might make sense, allowing a runner to go straight for the  first few critical seconds.&quot;  Also, when the runner knows he hasn&#39;t hit more than a single, it obviously makes little sense to run in a curved path.  Instead, it should be obvious that the wisest move is for the runner to get to first as quickly as possible.</p>
+
+<p>Even bearing these warnings in mind, though, there still might be a good idea here worth exploiting.  If the ball is hit between two outfielders and the runner is fairly certain of a double (or better), how much of a curved trajectory should he take?  These are questions that could be answered during practices, and in a game where a fraction of a second can be the difference between a safe and an out, the answers might certainly have some applicability.</p>
+
+<p>I would especially like to consider the San Francisco Giants to take these ideas to heart.  They need every run they can muster, and even though this team looks like a strong contender to bring San Francisco its first World Series title, a little mathematical advantage couldn&#39;t hurt. After all, striking beard fear into the heart of your enemies can only take you so far.</p>
+
+<p style="text-align:center;font-size:small"><a href="http://www.mathgoespop.com/images/2010/10/Picture-1.png"><img class="size-full wp-image-917" title="bwilson2" src="http://www.mathgoespop.com/images/2010/10/Picture-1.png" alt="" width="400" height="524" /></a><br>My betrothed, sporting a most fearsome beard.</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/optimal_base_running';
+                        var disqus_url = 'http://www.mathgoespop.com/2010/10/optimal-base-running.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

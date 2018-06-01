@@ -1,0 +1,1 @@
+$(function(){for(var r=$(".formula"),a=["{\\displaystyle \\frac{c}{r} = \\sqrt{\\frac{\\pi}{2n}\\cot\\left (\\frac{\\pi}{n}\\right )}.}","{\\displaystyle \\frac{r^{2}h}{4}\\tan(\\pi/n),}","{\\displaystyle \\frac{n\\tan(\\pi/n)}{4\\pi}.}","{\\sqrt{2}/2)}"],t=0;t<r.length;t++)katex.render(a[t],r[t])});

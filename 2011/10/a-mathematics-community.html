@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - A Mathematics Community</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>A Mathematics Community</h2> <div class="postDate">October 16, 2011</div>
+          <p>Whether knowingly or not, NBC Thursday night comedies have made occasional dalliances with mathematics.  For example, you can see <a href="http://www.mathgoespop.com/2011/05/dunder-math-lin.html">here</a> for a mathematical discussion inspired by <a href="http://en.wikipedia.org/wiki/The_Office_%28U.S._TV_series%29">The Office</a>, and <a href="http://www.mathgoespop.com/2011/05/parks-and-recreational-mathematics.html">here</a> for one inspired by <a href="http://en.wikipedia.org/wiki/Parks_and_Recreation">Parks and Recreation</a>.</p>
+
+<p>Today I would like to add to this esteemed list the show <a href="http://en.wikipedia.org/wiki/Community_%28TV_series%29">Community</a>, now in its third season on NBC&#39;s Thursday block.  As the title indicates, the show centers around a group of friends who are students at the fictional Greendale Community College (how this formula will pan out if the show lasts more than four seasons is uncertain).</p>
+
+<p>In a recent episode (titled Competitive Ecology), the gang divides themselves up into pairs of lab partners for Biology class, but they quickly discover their pairings are less than ideal - especially since, with an odd number in the central crew, one member must pair up with someone who is not in their clique.  Their first assignment is to build a terrarium, and with the deadline quickly approaching, they need to find away to shuffle around the pairings and get their assignment done on time.</p>
+
+<p>Once they&#39;ve decided to change partners, a debate ensues about the fairest way to switch up their initial pairings.  Finally, frequent ringleader Jeff Winger (played by <a href="http://en.wikipedia.org/wiki/Joel_McHale">Joel McHale</a>) proposes the following solution (note that Abed is another member of the central study group, while Todd is the outsider who found a turtle for his terrarium earlier in the episode):
+<blockquote>Ok, let&#39;s make this simple, and do it like student housing.  Everyone  write down their lab partner preferences from one to eight.  Abed,  you&#39;re a computer, you figure out a way to put us in our optimal  pairings.  And before you all go putting Todd down last, don&#39;t forget,  he comes with a turtle - you&#39;re halfway done.  How does that sound?</blockquote>
+Indeed, Jeff - the problem is more closely related to student housing than you imagine.  Before spoiling the math connection, though, allow me to show you the following dialogue, which takes place once Abed has determined the new pairings.
+<blockquote>
+<p>Abed: Umm, all right.  Yep.  According to my system, Annie&#39;s gonna be  with Shirley, Pierce is with me, Troy&#39;s with Britta, and Jeff is with Todd.</p></p>
+
+<p>Annie: Okay, let's get to work!</p>
+
+<p>Jeff: Uhh, wait.  Umm, how did I end up with Todd?  No offense, but he wasn't exactly at the top of my list.</p>
+
+<p>Todd: None taken.</p>
+
+<p>Abed: It's what the algorithm dictated.</p>
+
+<p>Jeff: And we're just supposed to trust your algorithm?</p>
+
+<p>Abed: Are you questioning my algorithm?</p>
+
+<p>Jeff: Not necessarily - is your algorithm above questioning?</p>
+
+<p>Abed: Not necessarily.</p>
+
+<p>Jeff: Will you just tell us how you chose?</p>
+
+<p>Abed: I used the ballots to rank everyone by popularity, and I put  the most popular with the least popular.  I figured it would maximize  each partnership's audience appeal.</p>
+
+<p>Jeff: Oh, I see. So I was number one, and he was obviously number eight, no offense Todd.</p>
+
+<p>Abed: You and Todd were four and five.</p>
+
+<p>Jeff: I was <em>four</em>?</p>
+
+<p>Abed: Todd was four.</p>
+
+<p>Jeff: I was <em>five</em>?</p>
+
+<p></blockquote>
+More significant than the dent to Jeff&#39;s ego, however, should be the dent to Abed&#39;s for his naïve approach to solving this problem.  Ironically, though he claims that Abed is a computer, it is Jeff&#39;s remark that has the most prescience.  For indeed, this problem is well known as the <a href="http://en.wikipedia.org/wiki/Stable_roommates_problem">stable roommates problem</a>, and has already been studied quite a bit.</p>
+
+<p>More important than &quot;audience appeal&quot; from a mathematical standpoint is the stability of the final pairing.  Roughly speaking, a collection of pairings is said to be <em>stable</em> if no two people from two separate pairs would rather be paired up with each other.  For example, in Abed&#39;s final pairing, if Jeff prefers Annie to Todd and Annie prefers Jeff to Shirley, then Abed&#39;s collection isn&#39;t stable, because Annie and Jeff would both be happier if they swapped partners.</p>
+
+<p>An algorithm to solve this problem was discovered in 1985.  The algorithm is explained in the Wikipedia link above, but let&#39;s see an example of it in action using the Community cast as a starting point.  To keep things simple, let me suppose there are only four people instead of eight: say, Annie, Jeff, Troy, and Britta.</p>
+
+<p>First, note that a stable solution to this problem is not always possible.  For example, suppose everyone grows weary of Jeff&#39;s hubris, and so he ranks last in everyone&#39;s list of preferences.  Then we may be given the following scenario:</p>
+
+<table class="table table-bordered table-centered">
+    <tr>
+        <td width="25%">Name</td>
+        <td width="25%">First Choice</td>
+        <td width="25%">Second Choice</td>
+        <td width="25%">Third Choice</td>
+    </tr>
+    <tr>
+        <td>Annie</td>
+        <td>Britta</td>
+        <td>Troy</td>
+        <td>Jeff</td>
+    </tr>
+    <tr>
+        <td>Britta</td>
+        <td>Troy</td>
+        <td>Annie</td>
+        <td>Jeff</td>
+    </tr>
+    <tr>
+        <td>Jeff</td>
+        <td>Troy</td>
+        <td>Annie</td>
+        <td>Britta</td>
+    </tr>
+    <tr>
+        <td>Troy</td>
+        <td>Annie</td>
+        <td>Britta</td>
+        <td>Jeff</td>
+    </tr>
+</table>
+
+<p>In this scenario, everyone aside from Jeff ranks Jeff last, and we also have a cycle (Annie is Troy&#39;s first choice, Troy is Britta&#39;s first choice, and Britta is Annie&#39;s first choice).  In this case, there can be no stable solution.  For example, suppose Troy and Jeff are paired up, and Annie and Britta are paired up.  In this case, Troy would rather be with Britta, and vice versa.  Similarly, if Annie is stuck with Jeff, she would rather be with Troy, and vice versa, and if Britta is paired with Jeff, she would Annie, and vice versa.</p>
+
+<p>Sometimes, however, solutions will exist.  Consider, for example, the following list of preferences:</p>
+
+<table class="table table-bordered table-centered">
+    <tr>
+        <td width="25%">Name</td>
+        <td width="25%">First Choice</td>
+        <td width="25%">Second Choice</td>
+        <td width="25%">Third Choice</td>
+    </tr>
+    <tr>
+        <td>Annie</td>
+        <td>Britta</td>
+        <td>Jeff</td>
+        <td>Troy</td>
+    </tr>
+    <tr>
+        <td>Britta</td>
+        <td>Troy</td>
+        <td>Jeff</td>
+        <td>Annie</td>
+    </tr>
+    <tr>
+        <td>Jeff</td>
+        <td>Annie</td>
+        <td>Troy</td>
+        <td>Britta</td>
+    </tr>
+    <tr>
+        <td>Troy</td>
+        <td>Annie</td>
+        <td>Britta</td>
+        <td>Jeff</td>
+    </tr>
+</table>
+
+<p>In this case, a stable solution is found in the following way: first, we go in order and list everyone&#39;s first choice (this is the proposal round).  In the event that someone receives a second proposal, that person will reject the person who is lower on their preference list, and the rejected person will then ask the next person on their list.</p>
+
+<p>Given the list above, here&#39;s how things will go down: Annie will propose to Britta, Britta will propose to Troy, Jeff will propose to Annie, and Troy will propose to Annie.  Since Jeff is higher on Annie&#39;s list than Troy, Annie will reject Troy, at which point Troy will propose to Britta.  Britta will then reject Annie&#39;s proposal, and Annie will propose to Jeff.  This gives the pairing of Jeff with Annie and Britta with Troy, and this is stable.</p>
+
+<p>For larger groups of people, the algorithm may need to go into a second stage after the proposal round.  Try a ranking with all eight zany characters and see what happens!</p>
+
+<p>Note that this problem is closely related to the<a href="http://en.wikipedia.org/wiki/Stable_marriage_problem"> stable marriage problem</a>, with one key difference - in the stable marriage problem, the group is always cut in half along gender lines (males and females), so each person only provides a ranking of the members of the opposite sex.  Interestingly, this problem always has a stable solution, and its application goes beyond sorting people into couples - it is used, for instance, in the pairing of medical students with hospitals for residency.</p>
+
+<p>So, sorry Abed, but you are not a computer after all.  But perhaps after reading this, you will be one step closer to the cyborg in Kickpuncher who you idolize so dearly.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2011/10/Picture-6.png"><img class="size-full wp-image-1500" title="Kickpuncher" src="http://www.mathgoespop.com/images/2011/10/Picture-6.png" alt="" width="298" height="457" /></a><br>His cyberpunches have the power of kicks!</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/a_mathematics_community';
+                        var disqus_url = 'http://www.mathgoespop.com/2011/10/a-mathematics-community.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

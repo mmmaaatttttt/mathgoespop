@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href=../../stylesheets/2016_04_fallout-2.css></link>
+    <title>Math Goes Pop! - Fallout 4 Math, Part 2</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Fallout 4 Math, Part 2</h2> <div class="postDate">April 16, 2016</div>
+          <p><em>This post is the second part in a series. If you haven&#39;t ready the <a href="/2016/04/fallout-4-math.html" target="_blank">first part</a>, I&#39;d highly encourage you to do so.</em></p>
+
+<p>Last time, we discussed four different strategies for cracking the Fallout 4 hacking mini-game. As you may recall, our four strategies are as follows:</p>
+
+<ol>
+<li>Guess randomly. </li>
+<li>Guess the word which is closest to the others, according to the <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank">Hamming distance</a>.</li>
+<li>Guess the word that is farthest from the others. </li>
+<li>Guess the word which will result in the highest expected number of word eliminations from the list.</li>
+</ol>
+
+<p>We also looked at an example for which these different strategies yielded different guesses. So, if these strategies really are so different, which one should we choose?</p>
+
+<p>Let&#39;s answer this question experimentally. There are a couple of different metrics we could use to determine the &quot;best&quot; strategy. One way would be to calculate what percentage of the time each strategy is able to identify the password in four guesses or fewer (remember, in Fallout 4, you only have four guesses before the terminal locks up). Alternatively, you could ask what the expected number of guesses is for each strategy. We&#39;ve got time: let&#39;s do both!</p>
+
+<p>In order to test these strategies, we also need a list of words to apply the strategy to. Let&#39;s start by using the three lists from the mini-game featured in the previous post (these word lists all come from Fallout 4). Here they are: </p>
+
+<p>List 1: &#39;agent&#39;, &#39;fence&#39;, &#39;forth&#39;, &#39;start&#39;, &#39;shape&#39;, &#39;grass&#39;, &#39;parts&#39;, &#39;fists&#39;, &#39;sound&#39;, &#39;sewer&#39;, &#39;viral&#39;, &#39;piled&#39;</p>
+
+<p>List 2: &#39;energy&#39;, &#39;mutter&#39;, &#39;warned&#39;, &#39;atrium&#39;, &#39;second&#39;, &#39;carved&#39;, &#39;forced&#39;, &#39;hungry&#39;, &#39;depend&#39;, &#39;heated&#39;, &#39;mirror&#39;, &#39;stream&#39;</p>
+
+<p>List 3: &#39;varying&#39;, &#39;cistern&#39;, &#39;expects&#39;, &#39;attends&#39;, &#39;bottles&#39;, &#39;torches&#39;, &#39;limited&#39;, &#39;corners&#39;, &#39;fortify&#39;, &#39;despite&#39;, &#39;session&#39;, &#39;durable&#39;</p>
+
+<p>Here&#39;s some data on how each strategy performs with respect to each of these lists. For the random guessing strategy, we simulated 100,000 playthroughs of the game for each possible password, or 1.2 million playthroughs in all. The other strategies are completely deterministic, so you only need to play the game once for each password to know how many guesses you&#39;d need to make.</p>
+
+<table class="table table-bordered table-striped table-hover centered" id="data-1">
+  <tr>
+    <th class="mgp-table-cell centered">Strategy</th>
+    <th class="mgp-table-cell centered">Random Guess</th>
+    <th class="mgp-table-cell centered">Closest Word</th>
+    <th class="mgp-table-cell centered">Farthest Word</th>
+    <th class="mgp-table-cell centered">Most Expected Eliminations</th>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">List 1</th>
+    <td>Avg. Guesses: 3.06</td>
+    <td>Avg. Guesses: 2.92</td>
+    <td>Avg. Guesses: 3.50</td>
+    <td>Avg. Guesses: 2.75</td>
+  </tr>
+  <tr>
+    <td>Win %: 92.79%</td>
+    <td>Win %: 91.67%</td>
+    <td>Win %: 75.00%</td>
+    <td>Win %: 100%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">List 2</th>
+    <td>Avg. Guesses: 2.83</td>
+    <td>Avg. Guesses: 2.58</td>
+    <td>Avg. Guesses: 3.25</td>
+    <td>Avg. Guesses: 2.58</td>
+  </tr>
+  <tr>
+    <td>Win %: 96.21%</td>
+    <td>Win %: 100%</td>
+    <td>Win %: 83.33%</td>
+    <td>Win %: 100%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">List 3</th>
+    <td>Avg. Guesses: 2.78</td>
+    <td>Avg. Guesses: 2.58</td>
+    <td>Avg. Guesses: 3.08</td>
+    <td>Avg. Guesses: 2.58</td>
+  </tr>
+  <tr>
+    <td>Win %: 97.93%</td>
+    <td>Win %: 100%</td>
+    <td>Win %: 91.67%</td>
+    <td>Win %: 100%</td>
+  </tr>
+</table>
+
+<p>Based on this data, it&#39;s clear that selecting the farthest word is your worst option. Guessing randomly does surprisingly well in terms of win percentage, though the average number of guesses you&#39;ll need is higher than with the closest word or most expected elimination strategies. And the only strategy to guarantee a win 100% of the time is most expected elimination. So is this the one strategy to rule them all?</p>
+
+<p>Before we declare a winner, it&#39;s probably worth looking at some other sets of words. After all, the word lists in <em>Fallout 4</em> are probably deliberately chosen so that there&#39;s a relatively high degree of likeness between words in the list. After all, if every word had a likeness of 0 compared to every other word, all you could do to try and guess the password is blindly guess. If all the likeness scores are 0, the likeness score effectively tells you nothing.</p>
+
+<p>So let&#39;s look at some lists of randomly generated words. Online, it&#39;s not too hard to find <a href="http://www.bestwordlist.com/" target="_blank">lists of words</a> of a certain length. So, I had my computer quickly whip up 10,000 word lists of twelve words each. I did this three times: once for five-letter words, again for six-letter words, and finally for seven-letter words.</p>
+
+<p>Here are the results (note that this time I only ran 1,000 playthroughs for the random stragety, not 100,000, since I had to do 1,000 playthroughs across 30,000 different word lists):</p>
+
+<table class="table table-bordered table-striped table-hover centered" id="data-1">
+  <tr>
+    <th class="mgp-table-cell centered">Strategy</th>
+    <th class="mgp-table-cell centered">Random Guess</th>
+    <th class="mgp-table-cell centered">Closest Word</th>
+    <th class="mgp-table-cell centered">Farthest Word</th>
+    <th class="mgp-table-cell centered">Most Expected Eliminations</th>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">5 Letters</th>
+    <td>Avg. Guesses: 3.19</td>
+    <td>Avg. Guesses: 2.88</td>
+    <td>Avg. Guesses: 3.82</td>
+    <td>Avg. Guesses: 2.83</td>
+  </tr>
+  <tr>
+    <td>Win %: 85.92%</td>
+    <td>Win %: 96.04%</td>
+    <td>Win %: 64.19%</td>
+    <td>Win %: 97.50%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">6 Letters</th>
+    <td>Avg. Guesses: 3.06</td>
+    <td>Avg. Guesses: 2.80</td>
+    <td>Avg. Guesses: 3.60</td>
+    <td>Avg. Guesses: 2.73</td>
+  </tr>
+  <tr>
+    <td>Win %: 90.64%</td>
+    <td>Win %: 97.42%</td>
+    <td>Win %: 71.31%</td>
+    <td>Win %: 98.94%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">7 Letters</th>
+    <td>Avg. Guesses: 2.96</td>
+    <td>Avg. Guesses: 2.73</td>
+    <td>Avg. Guesses: 3.43</td>
+    <td>Avg. Guesses: 2.65</td>
+  </tr>
+  <tr>
+    <td>Win %: 93.67%</td>
+    <td>Win %: 98.18%</td>
+    <td>Win %: 77.77%</td>
+    <td>Win %: 99.57%</td>
+  </tr>
+</table>
+
+<p>Here are a few observations:</p>
+
+<ol>
+<li>The farthest string stragegy is the poorest performer by far, both in terms of the average number of guesses needed to get the right answer, and in terms of the win percentages.</li>
+<li>Guessing the word with the highest number of expected eliminations is still the best strategy, but simply selecting the closest word in the word list is fairly comparable. Both are better than guessing randomly.</li>
+<li>No matter the strategy, metrics improve as the number of letters per word increases. Why do you think this might be?</li>
+</ol>
+
+<p>Finally, let&#39;s take things one step further: what if we played this game by selecting not just 5-letter <em>words</em> at random, but any list of twelve 5-character strings? In this case, zfwef would be a perfectly suitable candidate, as would aaaaa.</p>
+
+<p>To test this scenario, I generated 10,000 lists of twelve five-character strings, then did the same for six- and seven-character strings. Here are the results:</p>
+
+<table class="table table-bordered table-striped table-hover centered" id="data-1">
+  <tr>
+    <th class="mgp-table-cell centered">Strategy</th>
+    <th class="mgp-table-cell centered">Random Guess</th>
+    <th class="mgp-table-cell centered">Closest Word</th>
+    <th class="mgp-table-cell centered">Farthest Word</th>
+    <th class="mgp-table-cell centered">Most Expected Eliminations</th>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">5 Letters</th>
+    <td>Avg. Guesses: 3.79</td>
+    <td>Avg. Guesses: 3.26</td>
+    <td>Avg. Guesses: 4.65</td>
+    <td>Avg. Guesses: 3.25</td>
+  </tr>
+  <tr>
+    <td>Win %: 66.75%</td>
+    <td>Win %: 84.60%</td>
+    <td>Win %: 46.59%</td>
+    <td>Win %: 85.26%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">6 Letters</th>
+    <td>Avg. Guesses: 3.63</td>
+    <td>Avg. Guesses: 3.16</td>
+    <td>Avg. Guesses: 4.40</td>
+    <td>Avg. Guesses: 3.15</td>
+  </tr>
+  <tr>
+    <td>Win %: 71.13%</td>
+    <td>Win %: 87.72%</td>
+    <td>Win %: 50.87%</td>
+    <td>Win %: 88.52%</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered" rowspan="2">7 Letters</th>
+    <td>Avg. Guesses: 3.50</td>
+    <td>Avg. Guesses: 3.08</td>
+    <td>Avg. Guesses: 4.19</td>
+    <td>Avg. Guesses: 3.06</td>
+  </tr>
+  <tr>
+    <td>Win %: 74.97%</td>
+    <td>Win %: 90.36%</td>
+    <td>Win %: 54.94%</td>
+    <td>Win %: 91.32%</td>
+  </tr>
+</table>
+
+<p>Many of our previous observations still apply. All strategies perform worse when any random string of characters will suffice, probably because you&#39;re less likely to get strings with many characters in common. The farthest string strategy is still the worst, but the random guess strategy takes a fairly significant hit as well. The two remaining strategies are both strong contenders, but going by the maximum expected number of eliminations still seems to be the best bet.</p>
+
+<p>Of course, if one wanted to, there&#39;s still plenty more to dig into here. Can you think of any other strategies? What if you allow for word lists that are longer than 12? What if you look at words of lengths less than 5 or greater than 7? What if you allow for word lists that contain words of varying lengths? How do you calculate distances in this case? (<a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank">Here&#39;s</a> a hint.)</p>
+
+<p>And lest you think all of this work has no application outside the realm of <em>Fallout</em>, the idea of measuring distance between two pieces of text extends far beyond this one example. Indeed, with slightly more sophisticated notions of distance than we&#39;ve discussed here, there are applications in <a href="http://arxiv.org/pdf/1401.7416.pdf" target="_blank">biology</a> and very common examples in <a href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank">computer science</a>, too. Any time you&#39;ve used a spellchecker, or Google has corrected a typo for you, you can bet that under the hood there are some distance calculations being performed on strings of text.</p>
+
+<p class="centered">
+  <img src="/images/2016/04/awesome.png" alt="Google Search"/>
+</p>
+
+<p>Mastermind, the original game which shares many similarities to <em>Fallout</em>&#39;s terminal hacking, also has an interesting academic history. Details are beyond the scope of this conversation, but if you want to know more, <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)" target="_blank">Wikipedia</a> offers a good starting point.</p>
+
+<p>In conclusion: even if you dislike <em>Fallout</em> (or video games in general), let it never be said that rich and interesting mathematics couldn&#39;t be found therein.</p>
+
+<p>(Bonus: if you&#39;d like to play around with some of the statistics on your own, I&#39;ve thrown together a little <a href="https://github.com/mmmaaatttttt/terminal_hacking_statistics/" target="_blank">command-line tool</a> to help you do just that.)</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+          <script src=../../javascripts/2016_04_fallout.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Interview Roulette</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Interview Roulette</h2> <div class="postDate">February 21, 2012</div>
+          <p>Recently I started reading <a href="http://www.amazon.com/Would-Move-Mount-Microsofts-Puzzle/dp/0316919160">How Would You Move Mount Fuji?</a>, a 2003 book written by <a href="http://en.wikipedia.org/wiki/William_Poundstone">William Poundstone</a> on the history and popularization of the puzzle-focused job interview.  The presence of logic puzzles or seemingly unanswerable questions was once a staple of many job interviews in Silicon Valley, and while the book is much more than just a laundry list of good puzzles, it&#39;s hard to write about puzzles without giving some juicy examples.</p>
+
+<p>Today I&#39;d like to talk about one of the earliest puzzles discussed in the books, and show how one can pretty quickly poke and prod this brain teaser until it becomes a different beast entirely.  Here it is, with wording taken from the book:
+<blockquote>&quot;Let&#39;s play a game of Russian roulette,&quot; begins one interview stunt that is going the rounds at Wall Street investment banks.  &quot;You are tied to your chair and can&#39;t get up.  Here&#39;s a gun.  Here&#39;s the barrel of the gun, six chambers, all empty.  Now watch me as I put <em>two</em> bullets in the gun.  See how I put them in two adjacent chambers?  I close the barrel and spin it.  I put the gun to your head and pull the trigger.  Click.  You&#39;re still alive.  Lucky you!  Now, before we discuss your résumé, I&#39;m going to pull the trigger one more time.  Which would you prefer, that I spin the barrel first, or that I just pull the trigger?&quot;</blockquote>
+Setting aside the somewhat sadistic nature of the problem (it could be rephrased to make the context less malicious), there&#39;s some fun math going on here.  The situation can be visualized as follows:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/02/bullets.2.1.jpg"><img class="size-full wp-image-1703" title="bullets.2.1" src="http://www.mathgoespop.com/images/2012/02/bullets.2.1.jpg" alt="" width="150" height="150" /></a><br>Figure 1. White chambers are empty, black chambers have a bullet.</p>
+
+<p>Let&#39;s consider first what happens if the barrel is spun after the first shot is fired.  In this case, any one of the chambers is equally likely to end up in the firing position.  Since four of the six chambers are empty, this means the probability of not getting shot is 4/6, or 2/3.  On the other hand, if the barrel is not spun, the only way the gun will fire is if the empty chamber from the first time the trigger is pulled is replaced by a chamber with a bullet.  The modified figure below shows there is only one such empty chamber.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/02/barrel.2.1.full_.jpg"><img class="size-full wp-image-1702" title="barrel.2.1.full" src="http://www.mathgoespop.com/images/2012/02/barrel.2.1.full_.jpg" alt="" width="150" height="150" /></a><br>Figure 2. If the first empty chamber is the red one, you will get shot. Otherwise, the second shot will be empty too.</p>
+
+<p>From this, we see the probability of not getting shot if the chamber is not spun is 3/4.  Since this is larger than 2/3, you are better off not spinning the chamber before the trigger is pulled again.</p>
+
+<p>As far as the original riddle is concerned, there&#39;s nothing more to say.  But from a mathematical standpoint, we&#39;ve only just scratched the surface!  Here&#39;s one way we can try to think of this problem in a larger context.  Let&#39;s suppose the chamber of the gun has two bullets, but the bullets aren&#39;t necessarily adjacent.  In this case, there are three possible configurations:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/02/all2barrels.jpg"><img class="size-full wp-image-1700" title="all2barrels" src="http://www.mathgoespop.com/images/2012/02/all2barrels.jpg" alt="" width="450" height="150" /></a><br>Figure 3. If there are two barrels in the chamber, they are separated by either 0, 1, or 2 empty chambers in between them.</p>
+
+<p>We&#39;ve already considered the case on the left.  Notice that in every case, there are 4 empty chambers out of 6, so if the barrel is spun after the first empty shot is fired, the probability the second shot will be empty is again 2/3.  But if the chamber is not spun, the first case has a distinct advantage over the second and third.  As you can see from the above figure, in each of the latter two cases, the probability that the second shot will be empty if the first shot is empty is only 2/4, or 1/2.  Since this is less than 2/3, we see that in each of these cases spinning the chamber is to your advantage.  This turns the original strategy on its head!</p>
+
+<p>Now let&#39;s throw another wrench into the machinery.  Let&#39;s suppose the gunslinger puts a bullet in the chamber, then spins the chamber, then puts a second bullet in the chamber.  Everything else about the problem is the same - he shoots at you, but the first shot is empty, and then asks if you want the chamber to be spun before he fires again.  In this case, you don&#39;t know what the arrangement of the bullets will be; on the plus side, you do know the configuration must be one of the three shown in Figure 3.</p>
+
+<p>Fortunately, you don&#39;t need to know the configuration in order to compute the probability.  Notice that in every case, there are 4 empty chambers.  So, if you spin the barrel after the first empty shot is fired, the probability that the second shot will be empty too is again 2/3, just as in the first case.  However, if you decide not to spin the barrel after the first shot, the probability the second shot will be empty is only 3/5, since there are 5 chambers remaining and 3 of them are empty.  In particular, this is less than the 3/4 probability we found in the first case, so if you don&#39;t know how the bullets are arranged in the chamber, your best bet is once again to spin between the shots.</p>
+
+<p>But wait, there&#39;s more!  What if you don&#39;t even know how many bullets are in the chamber?  Let&#39;s suppose this dastardly gunslinger puts some number of bullets (between 0 and 5) in the chamber, so that you don&#39;t know how many bullets are in the chamber or their configuration.  Suppose he&#39;s equally likely to put 0 bullets in the chamber as he is to put in 1, 2, 3, 4, or 5.  The rest of the story is the same as before: he fires, nothing happens, and tells you he&#39;ll fire again.  It&#39;s up to you to decide whether or not you want him to spin before he pulls the trigger a second time.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/02/allbarrels.jpg"><img class="size-full wp-image-1701" title="allbarrels" src="http://www.mathgoespop.com/images/2012/02/allbarrels.jpg" alt="" width="600" height="450" /></a><br>Figure 4. Potential configurations of bullets in a six shooter (assuming there&#39;s at least one empty chamber).</p>
+
+<p style="text-align: left;">In this case, there are 12 potential configurations of bullets (see above), but as in the case with two bullets, we don't need to know the full configuration of bullets to calculate the probabilities.  All we need to consider is how many bullets are in the chamber.</p>
+
+<p style="text-align: left;">First, let's suppose you always decide to spin.  If there are no bullets in the chamber, your probability of success is 1.  If there's one bullet in the chamber, your probability of success is 5/6.  If there are two bullets in the chamber, we've already seen that the probability of success (where by "success" I mean "not getting shot") is 4/6, or 2/3.  Do you see the pattern emerging?  Each additional bullet decreases the probability of surviving the second shot by 1/6.  Since the probability of having 0 (or 1, or 2, ... or 5) bullets in the chamber is 1/6, the <a href="http://en.wikipedia.org/wiki/Law_of_total_probability">total probability</a> of not getting shot when the gunslinger pulls the trigger for the second time is equal to</p>
+
+<p style="text-align: center;" class="formula"></p>
+
+<p style="text-align: left;">Now let's suppose you decide to never spin.  Once again, if there are no bullets in the chamber, your probability of success is 1.  If there's one bullet in the chamber, your probability of success is only 4/5 (since you know the first chamber is empty, which means there are four more empty chambers out of the five remaining).  If there are two bullets in the chamber, we've already seen that the probability of success is 3/5.  Comparing this pattern with the last, we see that in this case, each additional bullet decreases the probability of success by 1/5, rather than 1/6.  Intuitively this makes sense - when you don't spin the barrel, that first empty chamber is no longer in play, so to speak.  If you spin the chamber, then any one of the chambers is a potential candidate for the second shot.</p>
+
+<p style="text-align: left;">With this analysis, we see the probability of success if you never spin is equal to</p>
+
+<p style="text-align: center;" class="formula"></p>
+
+<p>So, if you don&#39;t even know how many bullets are in the chamber, your best bet is to spin.</p>
+
+<p>I&#39;ll stop here for now, but the interested reader could continue to push the envelope.  What if you consider a revolver with a larger chamber?  Suppose the gun holds <em>n</em> bullets instead of 6.  What should one do if <em>k</em> bullets are placed into the chamber and the same game is played?  How do things change as the arrangement of <em>k</em> bullets varies?  How to things change as the value <em>k</em> changes?  What if, instead of firing only one shot, the gunslinger fires multiple shots?  What if he doesn&#39;t always fire the shots in a row, but sometimes stops to spin the barrel?  Things can quickly get complicated, but answers to many of these questions are well within reach, provided you have a good understanding of the case we&#39;ve seen here.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://firearmshistory.blogspot.com/2010/06/revolvers-pepper-box-revolver.html"><img class="size-full wp-image-1733" title="24barrel" src="http://www.mathgoespop.com/images/2012/02/24barrel.jpg" alt="" width="440" height="320" /></a><br>Be thankful this isn't the gun you're working with. Click the image to go to the source.</p>
+
+<p>If you ever are presented with a question like this, you will now be able to answer with confidence.  Though if anyone ever says they will shoot you in a job interview, you may be better off walking.</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/interview_roulette';
+                        var disqus_url = 'http://www.mathgoespop.com/2012/02/interview-roulette.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+        <script src=../../javascripts/2012_02_interview_roulette.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

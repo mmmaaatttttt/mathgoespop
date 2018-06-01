@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - A New Birthday Problem</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>A New Birthday Problem</h2> <div class="postDate">July  7, 2010</div>
+          <p>Last week, Slashdot posted an interesting <a href="http://science.slashdot.org/story/10/06/28/2221252/The-Tuesday-Birthday-Problem?from=rss&amp;utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+Slashdot%2Fslashdot+%28Slashdot%29">link</a> to a problem posed at the most recent <a href="http://www.g4g4.com/">Gathering 4 Gardner</a>, a mathematical (or perhaps I should say mathemagical) convention created in honor of the late Martin Gardner.  The question, posed by Gary Foshee, is as follows: you have a friend with two children, one of whom is a boy born on a Tuesday.  What is the probability that the other child is a boy?</p>
+
+<p>Forget about the Tuesday fact for a moment - if you have a friend with two children, one of whom is a boy, what is the probability that the other child is a boy?  You might expect that the answer should be 50%, since the sex of one child shouldn't affect the sex of the other.  But this is not quite right, because you're not told whether the boy is the older or younger child.</p>
+
+<p>There are only four possibilities when one has two children, so the situation is easy to analyze.  With two kids, the four possibilities are boy boy, boy girl, girl boy, and girl girl.  If you know that one of the kids is a boy, this eliminates girl girl from the list of potential combinations, leaving us with the three outcomes boy boy, boy girl, and girl boy.  Of these three outcomes, we see that only the first has two boys, and so we conclude that the probability of the second child being a boy is 1/3, NOT 1/2!</p>
+
+<p style="text-align:center;"><a href="http://www.mathgoespop.com/images/2010/07/Picture-4.png"><img class="aligncenter size-full wp-image-511" title="Picture 4" src="http://www.mathgoespop.com/images/2010/07/Picture-4.png" alt="" width="292" height="292" /></a></p>
+
+<p>There's another way to answer this question, one that generalizes nicely to the more complicated question asked by Foshee.  There are two cases to consider: either the boy you know about is the younger child, or the older child.  If the boy you know about is the younger child, there are two possibilities for the older child (girl or boy).  Similarly, if the boy you know about is the older child, there are two possibilities for the younger child (girl or boy).  This gives four outcomes, but you have counted the boy boy outcome twice.  In other words, we see there are only three distinct outcomes, and only one of them has two boys, so again we see that the probability is 1/3.</p>
+
+<p>Now let's return to the original question.  Again, it seems like the fact that the boy was born on a Tuesday shouldn't matter, but if we do the same analysis as above, we'll see that this is not the case.  The information about the day does make the number of outcomes larger, however, so it's easier to get mixed up.</p>
+
+<p>As before, let's split into two cases, depending on whether the Tuesday boy is younger or older.  If the younger child is the Tuesday boy, then there are 14 possible outcomes for the older child, since there are 2 choices for the sex of the child and 7 choices for the day of the week on which the child was born.  Similarly, if the older child is the Tuesday boy, there are once again 14 possible outcomes for the younger child.  However, notice that we have counted the outcome of two boys both born on Tuesday twice, just as we counted the outcome of two boys twice in the simpler problem.  Correcting for this double counting, we see that there are 14 + 14 - 1 = 27 possible outcomes.  Of these outcomes, 13 of them correspond to having a two boys - if the younger child is the Tuesday boy, there are 7 possible outcomes that will give us two boys, and if the older child is the Tuesday boy, there are again 7 possible outcomes.  As before, though, we've counted both children being Tuesday boys twice, so we subtract 1 to correct for this double-counting, which leaves us with a total of 7 + 7 - 1 = 13 desired outcomes.  This means that the probability of the second child being a boy is 13/27.  While still not equal to 1/2, this is much closer to 1/2 than 1/3.</p>
+
+<p style="text-align:center;"><a href="http://www.mathgoespop.com/images/2010/07/Picture-5.png"><img class="aligncenter size-full wp-image-513" title="Picture 5" src="http://www.mathgoespop.com/images/2010/07/Picture-5.png" alt="" width="378" height="378" /></a></p>
+
+<p>Much like the <a href="http://www.mathgoespop.com/2008/08/math-in-the-news-monty-hall-strikes-again.html">Monty Hall</a> problem, however, one can understand the mathematical reasoning behind this problem and still have trouble with the intuition.  After all, why should the day on which a child was born have any bearing on the sex of the other child?  On the face of it, the solution to this problem doesn't make any sense.  One way to try and marry this solution to our intuition is to assign some numbers and explore the data, seeing where our intuition diverges from this picture.</p>
+
+<p>Suppose we take a survey of 19,600 families with two children (you will understand why I've chosen this seemingly random number in a moment).  Of those families, suppose they are evenly divided among boy boy, boy girl, girl boy, and girl girl households.  In particular, we see that there are 4,900 families with two boys, 4,900 families with two girls, and 9,800 families with a boy and a girl (in half of these families the boy is older, and in half the boy is younger).</p>
+
+<p>Now suppose we further subdivide the data according to the day of the week in which the child was born.  Suppose that a child is equally likely to have been born on any day of the week.  This means that, for example, among the 4,900 families with two boys, 4,900 ÷ 49 = 100 will have boys who were both born on Monday, 100 will have boys for which the oldest was born on Monday and the youngest Tuesday, 100 will have boys for which the oldest was born on Monday and the youngest Wednesday, and so on.  In other words, for every possible combination of sexes and days of birth, there will be 100 families that match that combination.</p>
+
+<p>Suppose, now, that you take a random family in which one of the children is a boy born on Tuesday.  There will be 1,400 families for which the younger child is a born boy on Tuesday, and 1,400 families for which the older child is a boy born on Tuesday, which means there are 2,700 families total families under consideration (note that we have counted the 100 families with two boys born on Tuesday twice).  Of those 2,700 families, 1,300 will have two boys, for the same reason as above (you can also look at the diagram above - imagine each square as representing 100 families in the survey).  So, if we pick a FAMILY at random with a boy born on Tuesday, the probability that the other child is a boy is 1,300 out of 2,700, or 13/27.</p>
+
+<p>Now, instead of picking a family at random, suppose we pick a BOY at random who was born on Tuesday, and ask for the probability that the boy's sibling is also a boy.  In this case, note that there are 2,800 boys in our sample who were born on Tuesday - 1,400 who are the younger sibling and 1,400 who are the older sibling.  In particular, note that we don't subtract out the families with two boys both born on Tuesday for double counting in this case; this is because we are choosing the boy, not the family, and choosing the younger boy born on Tuesday is different from choosing the older boy born on Tuesday.  Because there's nothing to subtract out, we see that of these 2,800 boys, 1,400 have sisters and 1,400 have brothers.  Therefore the probability that the BOY has a brother is 1/2, the answer our intuition gave us from the beginning!</p>
+
+<p>In other words, you can try to understand this seeming paradox as a difference in perspective.  If we look from the perspective of the family unit, the probability that a two-child FAMILY with one son born on Tuesday will have two sons is 13/27, slightly less than one half.  However, from the perspective of the children, the probability that a BOY born on Tuesday in a two-child family will have a brother as opposed to a sister is 1/2.  In this latter case, the day of the week really is irrelevant.</p>
+
+<p>For some, however, this explanation still may not seem like enough.  I'd encourage anyone with a different approach to sound off below!</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/a_new_birthday_problem';
+                        var disqus_url = 'http://www.mathgoespop.com/2010/07/a-new-birthday-problem.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

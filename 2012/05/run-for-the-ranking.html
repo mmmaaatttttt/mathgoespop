@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Run for the Ranking</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Run for the Ranking</h2> <div class="postDate">May  1, 2012</div>
+          <p>This Saturday, folks from all over the country will be tuning in to the 138th <a href="http://en.wikipedia.org/wiki/Kentucky_Derby">Kentucky Derby</a>.  In fact, this year the Kentucky Derby falls on the same day as Cinco de Mayo; undoubtedly the result of this intersection will be a plethora of parties celebrating the melting pot that is America (tacos and mint juleps make for a wonderful combination, I&#39;m sure).</p>
+
+<p>Whenever racing comes up, mathematics can&#39;t be far behind.  Gambling is always a popular topic: how are the odds for the different racers determined, for example?  But this is a question I will save for another time.  Today, inspired by horse racing in particular, I&#39;d like to discuss the following classic logic puzzle.
+<blockquote>Suppose you have 25 horses and a 5 lane race track.  You have no way to record the finishing times of the horses, but you can race up to 5 horses on the track at once and see how quickly the horses finish relative to one another.  What&#39;s the minimum number of races needed to find the three fastest horses?</blockquote>
+If you had a stopwatch, you could find the three fastest horses by splitting the 25 horses into groups of 5, racing each group one at a time, and recording their times.  In fact, this would provide you with a complete ranking of all the horses from the fastest to the slowest, rather than only an identification of the fastest three.  Sadly, without any instruments to measure how quickly a horse completes a race around the track, all we can do is look and see which horses come in first when we race them 5 at a time.</p>
+
+<p>If you haven&#39;t seen this puzzle before, it&#39;s fun to try and think through yourself.  Beware, spoilers abound below!</p>
+
+<p>Certainly, the number of races required is more than 5.  The best thing to do, it seems, is still to split the horses up into five groups of five and race each group.  This is the only way we can get each horse to race once during the first five races; otherwise, after five races there will still be some horses whose ability we know nothing about.  So, let&#39;s split the horses into groups of five and race each group.  Suppose we then organize the results of the races in the following table:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/04/horses.jpg"><img class="size-full wp-image-1959" title="horses" src="http://www.mathgoespop.com/images/2012/04/horses.jpg" alt="" width="500" height="385" /></a><br>25 horses, 5 horse races.</p>
+
+<p>Here I&#39;ve let each row represent a single race, and the horses are ranked by how they placed.  For example, the first race consisted of horses in the top row.  Within that race, the horse with the blue saddle came in first, followed by the horse with the yellow saddle, then the purple saddle, then the black saddle, with the horse in the dark blue saddle coming in last.  We don&#39;t know any of their individual racing times, and so we only know how a horse compares relative to the other horses in the same row.</p>
+
+<p>After five races, what can we conclude?  Well, since we want to identify the fastest three horses, we can easily eliminate the fourth and fifth place finishers in each race; each one of these horses is slower than at least three others.  This allows us to narrow the field of horses from 25 down to 15.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/04/horses1.jpg"><img class="size-full wp-image-1961" title="horses1" src="http://www.mathgoespop.com/images/2012/04/horses1.jpg" alt="" width="500" height="385" /></a><br>Too slow!</p>
+
+<p>Now within each row, we know faster horses are on the left and slower horses are on the right.  But we have no way to compare horses across the columns.  It may be that the first row consists of the 1st, 2nd, and 3rd fastest horses, but it&#39;s just as likely that the first row consists of the 13th, 14th, and 15th fastest horses.  Without being able to compare the columns, we can&#39;t draw any further conclusions.</p>
+
+<p>So, it makes sense to take a horse from each column and create a sixth race.  It also makes sense to race the winners from all the previous races, because the winner among all the winners will be the fastest horse, and we will then only have to find the 2nd and 3rd fastest horses.  After racing the first column of horses, suppose the ranking is as in the picture (i.e. blue horse in first, teal horse in second, orange in third, etc).  If this is not the case, we can always interchange rows so that the first column is ranked according to the outcome of the sixth race.  Our picture now looks like this:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/04/horses3.jpg"><img class="size-full wp-image-1963" title="horses3" src="http://www.mathgoespop.com/images/2012/04/horses3.jpg" alt="" width="302" height="385" /></a><br>The fastest horse is now in green.</p>
+
+<p>We don&#39;t need to race the horse in the upper left corner anymore, since we know it&#39;s the fastest.  In fact, we know even more: just as in the previous case, we can eliminate the fourth and fifth place finishers from the sixth race.  But if we cross out the first horse in the fourth row, we can cross out all the horses to the right, since they are all slower!  The same is true for the fifth row.  This reduces the pool of horses from 15 to 9 (or rather, from 14 to 8, since we no longer need to race the fastest horse):</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/04/horses4.jpg"><img class="size-full wp-image-1964" title="horses4" src="http://www.mathgoespop.com/images/2012/04/horses4.jpg" alt="" width="302" height="385" /></a><br>Only a few remain.</p>
+
+<p>Are there any other horses we can eliminate?  Thankfully, the answer is yes!  We know that the horse on the left in the second row can, at best, be the second fastest horse.  But this means the horses to the right of it can, at best, be the third and fourth fastest, respectively.  Since we're not interested in the fourth fastest horse, we can safely eliminate the third horse in the second row.</p>
+
+<p>Similarly, the horse on the left in the third row can, at best, be the third fastest horse (since it was slower than the horses above it).  This means the other horses in the third row can be no faster than the fourth and fifth fastest horses.  Therefore, both horses can safely be eliminated.  Removing these horses from contention leaves us with the following picture:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/04/horses5.jpg"><img class="size-full wp-image-1965" title="horses5" src="http://www.mathgoespop.com/images/2012/04/horses5.jpg" alt="" width="302" height="232" /></a><br>Almost there!</p>
+
+<p>In other words, we have identified the fastest horse, and eliminated all but five remaining horses.  There&#39;s no way to determine the second and third fastest horses based on the information we have, but since our track has exactly five lanes, we can hold a seventh race among the five remaining horses.  The first and second place finishers of this final race will be the second and third fastest horses overall.</p>
+
+<p>So, the answer to this puzzle appears to be 7.  Technically, I suppose I haven&#39;t shown that it&#39;s <em>impossible</em> to do in six races, but if you play around with these ideas you&#39;ll quickly convince yourself that six races is insufficient.  The nice thing about this problem is that it is easy to ask about generalizations: what happens if you change the number of horses, number of lanes, or number of rankings you wish to determine?  <a href="http://mathoverflow.net/questions/50737/generalization-of-a-horse-racing-puzzle">Here</a>&#39;s a discussion of a generalization to finding the best <em>k</em> horses out of (<em>k</em> - 1)<sup>2</sup>(<em>k</em> + 2)<sup>2</sup>/4 horses total, if you have a race track with (<em>k</em> - 1)(<em>k</em> + 2)/2  lanes.  Though it doesn&#39;t look like it, this is a fairly natural generalization of the case discussed here (in the above case, <em>k</em> = 3).</p>
+
+<p>Of course, this is a fairly idealized situation, since it assumes the horses will finish the race with the same time whenever they run.  In real life, there will be some variance in their finishing times, and in turn this will make the determination of the three &quot;best&quot; horses a bit more nuanced.  This leads naturally into the mathematics of ranking, a topic I will turn my attention to in my next post!</p>
+
+<p>(H/t to <a href="http://daynaschaaf.com/Dayna_Schaaf/Home.html">Dayna</a> for her killer horse drawings).</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/run_for_the_ranking';
+                        var disqus_url = 'http://www.mathgoespop.com/2012/05/run-for-the-ranking.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

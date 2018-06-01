@@ -1,0 +1,1 @@
+$(function(){var e=document.getElementById("form1"),n=document.getElementById("form2"),m=document.getElementById("form3");katex.render("{\\displaystyle \\binom{21}{0} + \\binom{21}{1} + \\binom{21}{2} + \\binom{21}{3} + \\binom{21}{4},}",e),katex.render("{\\binom{n}{k}}",n),katex.render("{\\frac{n!}{k!(n-k)!}}",m)});

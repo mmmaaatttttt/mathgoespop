@@ -1,0 +1,1 @@
+$(function(){var n=document.getElementById("form1"),e=document.getElementById("form2");katex.render("{\\displaystyle M_{n}=2\\cdot n!\\sum_{k=0}^{n}(-1)^{k}\\frac{2n}{2n-k}\\binom{2n-k}{k}(n-k)!.}",n),katex.render("{\\binom{n}{k} = \\frac{n!}{k!(n-k)!}}",e)});

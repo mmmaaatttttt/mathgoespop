@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Two Cups of Mathematics</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Two Cups of Mathematics</h2> <div class="postDate">December 20, 2011</div>
+          <p>With the holidays in full force, many of you are no doubt spending time in the kitchen; those of you who aren&#39;t are nevertheless reaping the benefits provided by those who are.  &#39;Tis the season of baked goods, and if you are lucky enough to have a family member who knows how to bake, then for the month of December you will eat like a king.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://en.wikipedia.org/wiki/File:Cisforcookie.jpg"><img class="size-full wp-image-1588" title="Cisforcookie" src="http://www.mathgoespop.com/images/2011/12/Cisforcookie.jpg" alt="" width="280" height="280" /></a><br>This dude knows a thing or two about baked goods.</p>
+
+<p>For my money, the best part of the baking process (aside from the delicious final act) is the careful and precise initial measurement of the ingredients.  Keeping an accurate account of the relative proportions of each piece of the recipe is a hallmark of baking, and reflects the nature of baking itself: one part art, one part science.  Unlike some other culinary arts, the measurements really do matter.  Screw up these proportions and those fudgy brownies you want to make will be too cakey (or vice versa).</p>
+
+<p>But what in the recipe accounts for the qualitative differences we see and taste in the wide assortment of baked goods available at this time of year?  This question has been mulled over by electrical engineer and baking aficionado Michael Ohene, who in <a href="http://www.cookingforengineers.com/article/280/Analyzing-a-Baking-Recipe">this</a> article essentially considers all baked goods as a function of three parameters: Moistness Value, Butter Content, and Egg Content.</p>
+
+<p>How are these values computed?  First, each wet and dry ingredient is assigned a value per cup - these values are used in the calculations to follow.  For examples of wet ingredients, buttermilk has a value of 1 per cup, applesauce has a value of 0.6 per cup, and so on.  With dry ingredients, things like flour and almond paste have a value of 1 per cup, while peanut butter has a value lightly less (2/3 per cup).  More detailed tables of values can be found at the link given above.  Note that flavorings, leavenings, seasonings, and food pieces (such as whole walnuts) are not included in the calculations.  You can think of these values as a weighing the ingredients according to their relative wetness or dryness.</p>
+
+<p>Once the value of each ingredient is known, that value is multiplied by the volume of the ingredient appearing in the recipe, and these products are totaled up for both wet and dry ingredients - let me call these final values the wetness value and the dryness value, respectively.  Let&#39;s see how this works in practice by analyzing my wife&#39;s spectacular recipe for Pfeffernusse cookies (they are delicious bites of gingerbready goodness).  The ingredients are as follows:</p>
+
+<p>3/4 cup molasses</p>
+
+<p>1/2 cup butter</p>
+
+<p>2 large eggs</p>
+
+<p>4 1/4 cup all purpose flour</p>
+
+<p>1 1/4 teaspoon baking soda</p>
+
+<p>1/2 cup white sugar</p>
+
+<p>1 1/2 teaspoon cinnamon</p>
+
+<p>1/2 teaspoon clove</p>
+
+<p>1/2 teaspoon nutmeg</p>
+
+<p>dash of pepper</p>
+
+<p>confectioners sugar</p>
+
+<p>(In case you&#39;re curious, here&#39;s the recipe, cribbed from my wife&#39;s 8th grade German class:</p>
+
+<p>In a saucepan, combine molasses and butter. Stir until butter melts. Cool to room temperature. Mix in the eggs. In another bowl combine flour, baking soda, sugar, cinnamon, cloves, nutmeg, and a big dash of pepper. Add the flour mixture to the molasses mixture and mix well. Chill for 1-2 hours or overnight. Shape into 1”inch balls. (These can be frozen after this point and baked later if desired) Bake on greased cookie sheet at 350 degrees for 8-9 minutes, they should still be somewhat soft as they will continue to cook after they come out (underdone is better than overdone with these). Cool a bit and role in confectioners sugar. Makes 4 1/2 dozen cookies.)</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2011/12/photo29.jpg"><img class="size-large wp-image-1605" title="photo(29)" src="http://www.mathgoespop.com/images/2011/12/photo29-1024x768.jpg" alt="" width="601" height="451" /></a><br>Like a child who has eaten too much candy, these pfeffernusse cookies are the illest.</p>
+
+<p>According to Mr. Ohene, there are three wet ingredients (butter, large eggs, and molasses) and one dry ingredient (flour).  The rest of the ingredients are not considered in the computations.  Butter has a corresponding value of .5, large eggs have a value of 1/6 per egg, and molasses has a value of 1.  Therefore, the wetness value is .5 times the volume of butter, plus 1/6 times the number of eggs, plus 1 times the volume of molasses, or</p>
+
+<p style="text-align: center;">0.5 &times; 0.5 + 1/6 &times; 2 + 1 &times; 0.75 = 1.33.</p>
+
+<p>Similarly, flour has a corresponding value of 1, so the dryness value is simply 4.25, as the recipe calls for 4 1/4 cups of flour.  So the wetness value is 1.33, and the dryness value is 4.25.</p>
+
+<p>The Moistness Value is the ratio of these two numbers, i.e. the ratio of wet to dry.  Meanwhile, the Butter Content is the ratio of the value coming from the butter to the dryness value, and the Egg Content is the ratio of the number of eggs to the dryness value.  In the example of Pfeffernusse, we see that the Moistness Value is 1.33/4.25, or about 0.3129.  Similarly, the Butter Content is 0.25/4.25, and the Egg Content is 2/4.25, or 0.0588 and 0.4706, respectively.</p>
+
+<p>Varying these three values distinguishes different baked goods from one another.  Want a baked good with relatively high Moistness Value and Butter Content, but relatively low Egg Content?  Perhaps a coffee cake is what you're after.  How about a moderately wet dough with high Egg Content and low Butter Content?  In this case, maybe a brioche is what you're after.  A periodic table of sorts that plots baked goods according to these three values can be found <a href="http://www.whatsthesequency.com/cakey.jpg">here</a>; note that the Pfeffernusse discussed above fall into a square marked "biscotti."  It's quite possible that the Pfeffernusse dough would make for good biscotti, though the process of baking is quite different for these two treats, since biscotti are typically twice baked.</p>
+
+<p>You can do other cool things with this analysis.  For example, you can compute these values for a list of ingredients and make an educated guess about what type of baked good the ingredients will produce.  Also, one can automatically create recipes for baked goods based solely on the qualities one would like that baked good to have.  This service is provided <a href="http://www.whatsthesequency.com/cookie.php">here</a> - you entire the baked good you want, the desired level of richness, and the desired level of sweetness, and it creates a recipe for you on the spot!  So if you can't find just the right recipe for what you want, I'd encourage you to try this recipe creator on for size and see what comes out.</p>
+
+<p>Whatever you or your family decide to bake this holiday, know that adding a little mathematics to the mix never hurt.  And, as evidenced by the work of Mr. Ohene, added analysis can provide some interesting and unexpected insights. Thanks go to him for sending me the links that I've shared with you here!</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/two_cups_of_mathematics';
+                        var disqus_url = 'http://www.mathgoespop.com/2011/12/two-cups-of-mathematics.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

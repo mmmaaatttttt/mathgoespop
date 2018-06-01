@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Would You Like Math With That?</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Would You Like Math With That?</h2> <div class="postDate">September 29, 2010</div>
+          <p>Last week, my friend <a href="http://foodjunta.com/author/jonathan/">Jon</a> forwarded me this <a href="http://eatocracy.cnn.com/2010/09/16/the-math-behind-96-million-burger-choices/">article</a> posted on CNN&#39;s Eatocracy blog.  In it, writer Laurie Segall describes the number of possible burger combinations at a restaurant in New York City called <a href="http://4food.com/">4food</a>.  Using some elementary combinatorics and the brain power of her statistician husband, together they calculated that the number of possible burgers one could order at 4food is 1,598,238,720.  This is assuming that one follows the rules of the restaurant; if you want the option of including all 12 condiments on your burger, rather than sticking to the suggested limit of 0-3, and similarly for the cheese options, the number of combinations jumps to 96,639,764,160 (roughly a 60-fold increase).</p>
+
+<p>This reminded me of a similar calculation I had been meaning to do for the chain of hamburger restaurants called <a href="http://www.thecounterburger.com/">The Counter</a>.  Founded in Los Angeles in 2003, The Counter has since branched out across the country, and has even gone international with locations in Ireland and Australia.  And, like its successor 4food, The Counter is all about customization.</p>
+
+<p>Just how customizable are the burgers at The Counter, you ask?  Well, this <a href="http://www.thecounterburger.com/menu/">menu</a> should give you some indication.  There are 5 1/2 steps to creating your burger, outlined as follows:
+<ul>
+    <li>Step 1: Choose your patty.  There are five different types of patty (beef, chicken, turkey, veggie, and market selection).  One can also select from one of three sizes, and choose whether one wants the burger on a bun or in a bowl.  The bowl option exists because burgers at the counter can be a little hard to eat; in the event that you&#39;d prefer to assault your meal with a fork and knife over a bed of leafy greens, you then have the option of a lettuce blend or organic mixed greens.  Since the size of the burger doesn&#39;t affect the taste, I&#39;ll ignore the number of combinations that arise from differences in the size of the burger (if you&#39;d like to include those combinations, you can just multiply my final answers by 3).</li>
+    <li>Step 2: Choose your cheese.  Here you have 12 options to choose from, but only one cheese comes with your order - extra cheese is $1.</li>
+    <li>Step 3: Choose your toppings.  There are 21 toppings listed, of which you can choose 4.  Extra toppings are $.50 each.</li>
+    <li>Step 3.5: Choose any premium toppings.  No freebies here, but if you want to add any of the 9 premium toppings (including a fried egg), you can do so for $1 per topping.</li>
+    <li>Step 4: Choose a sauce.  As in step 3, you have 21 options here, but this time you are allowed only 1.  Extra sauces are $.50 each.</li>
+    <li>Step 5: If you decided on a bun in step 1, choose your bun.  Here you have 4 options.</li>
+</ul></p>
+
+<p>Already you can see that the number of options available should be much larger than the number at 4food.  But how much larger?  Let&#39;s assume you don&#39;t want to incur any extra charges - in other words, you will stick to no more than 1 cheese, no more than 4 toppings, no premium toppings, and no more than 1 sauce.  As on Eatocracy, we can use the fundamental <a href="http://en.wikipedia.org/wiki/Rule_of_product">counting principle</a> to calculate the number of options in this case.</p>
+
+<p>First, we know that there are 5 options for the type of patty.  When it comes to how you will eat your burger (whether on a bun or in a bowl), there are 6 additional options, since there are 4 options if you choose a bun and 2 options if you choose a bowl.  There are 13 options for cheese (since you can choose any one of the 12 cheeses, or no cheese at all), and similarly there are 22 choices for sauce.  Thus, before invoking the fundamental counting principle, the only thing left to count is the number of combinations of toppings.  Since we can choose 0, 1, 2, 3, or 4 toppings from the list of 21, we see that the total number of <a href="http://en.wikipedia.org/wiki/Combination">combinations</a> is</p>
+
+<p style="text-align: center;" id="form1"></p>
+
+<p>where <span id="form2"></span> (as usual) denotes the <a href="http://en.wikipedia.org/wiki/Binomial_coefficient">binomial coefficient</a> <span id="form3"></span>.  Evaluating each term in the sum, we find that the total is equal to 1 + 21 + 210 + 1330 + 5985 = 7547.</p>
+
+<p>Now we can find the total number of combinations by evaluating the product of all these terms.  In other words, given these restrictions, the total number of burger combinations (excluding differences in size) is 5 &times; 6 &times; 13 &times; 22 &times; 7547 = 64,753,260.  Surprisingly, when sticking to the rules, there are actually fewer choices available at The Counter than at 4food.  Even if you allow yourself at most 1 premium topping, the total number of combinations is still only 647,532,600 - this is still about a billion combinations shy of what 4food offers.</p>
+
+<p>But, if we allow ourselves more leniency, the numbers quickly shoot up.  If we decide to choose any number of cheeses, the total number of cheese options goes from 13 to 2<sup>12</sup>, again by the fundamental counting principle (since for each cheese, we have the option of including it in our burger or not).  Similarly, the number of topping combinations jumps to 2<sup>21</sup>, as does the number of sauce combinations, while the number of premium topping combinations increases to 2<sup>9</sup>.  This means that the total number of combinations increases to 5 &times; 6 &times; 2<sup>12</sup> &times; 2<sup>21</sup> &times; 2<sup>9</sup> &times; 2<sup>21</sup> = 276,701,161,105,643,274,240 (yes, that is 276 quintillion).  This is roughly a 4 trillion-fold increase!</p>
+
+<p>No matter which restaurant you choose, life is too short for you to sample all possible combinations.  If you are the type who likes variety, neither one of these establishments will disappoint you.  Personally, though, I prefer a place like <a href="http://en.wikipedia.org/wiki/In-N-Out_Burger">In-N-Out</a>, which offers fewer choices.  At least, fewer printed choices - I suppose if one wants to consider off menu items, the list of possibilities would grow even more.</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/would_you_like_math_with_that';
+                        var disqus_url = 'http://www.mathgoespop.com/2010/09/would-you-like-math-with-that.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+        <script src=../../javascripts/2010_09_would_you_like_math_with_that.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

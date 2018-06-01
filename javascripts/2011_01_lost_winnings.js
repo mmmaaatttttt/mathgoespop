@@ -1,0 +1,1 @@
+$(function(){var e=document.getElementById("form1"),t=document.getElementById("form2");katex.render("{\\sum_{a=17}^{22}(55-a) = 213.}",e),katex.render("{\\sum_{a=24}^{55}(56-a) = 528.}",t)});

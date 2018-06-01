@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href=../../stylesheets/2015_11_world_series.css></link>
+    <title>Math Goes Pop! - Do Extra Innings Games Predict World Series Longevity?</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Do Extra Innings Games Predict World Series Longevity?</h2> <div class="postDate">November 29, 2015</div>
+          <p>Now that baseball season has ended, I find myself going through withdrawal. And with spring training several months away, I need something to fill the void left in my heart. To that end, let&#39;s take a moment and look back -- with a mathematical eye, of course -- on the 2015 World Series.</p>
+
+<p>In case you missed it, Game 1 was one for the record books. The New York Mets and the Kansas City Royals duked it out for 14 innings. This was long enough to take the crown for the longest Game 1 in World Series history (though it tied Game 2 in 1916 and Game 3 in 2005, which were also 14 innings long). Here are the highlights:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ehiuTpr8g-8" frameborder="0" allowfullscreen class="mgp-youtube"></iframe>
+
+<p>Even before Game 1, many pundits predicted that the series would last a full seven games. For example, all 5 members of the CBS Sports staff polled in <a href="http://www.cbssports.com/mlb/eye-on-baseball/25351815/2015-world-series-predictions-mets-royals-go-the-distance" target="_blank">this</a> article predicted a seven-game series, though they were split on which team would emerge victorious.</p>
+
+<p>It shouldn&#39;t be surprising, then, that after Game 1 analysts maintained their faith that the series would be a long one. And at the time, this belief seemed entirely reasonable: if two teams are so evenly matched that they can grind out 14 innings, then surely the series should be more likely to last seven games. Even bookies agreed with this assessment; here&#39;s how the odds for World Series betting changed between Game 1 and Game 2 (courtesy of <a href="http://bleacherreport.com/articles/2583362-world-series-2015-odds-and-prop-bets-info-for-mets-vs-royals-game-1" target="_blank">Bleacher</a> <a href="http://bleacherreport.com/articles/2583670-world-series-2015-odds-prop-bets-score-prediction-for-mets-vs-royals-game-2">Report</a>):</p>
+
+<table class="table table-bordered table-striped table-hover table-centered">
+  <tr>
+    <th colspan="4" class="text-center mgp-table-cell">World Series Duration</th>
+  </tr>
+  <tr>
+    <td>Games</td>
+    <td>Odds (Before Game 1)</td>
+    <td>Odds (Before Game 2)</td>
+    <td>Percent Change</td>
+  </tr>
+  <tr>
+    <td>Four Games</td>
+    <td>19-4</td>
+    <td>15-2</td>
+    <td><span class="text-success">&approx; +57.9%</span></td>
+  </tr>
+  <tr>
+    <td>Five Games</td>
+    <td>9-4</td>
+    <td>11-4</td>
+    <td><span class="text-success">&approx; +22.2%</span></td>
+  </tr>
+  <tr>
+    <td>Six Games</td>
+    <td>7-4</td>
+    <td>17-10</td>
+    <td><span class="text-danger">&approx; -2.86%</span></td>
+  </tr>
+  <tr>
+    <td>Seven Games</td>
+    <td>7-4</td>
+    <td>13-8</td>
+    <td><span class="text-danger">&approx; -7.14%</span></td>
+  </tr>
+</table>
+
+<p>(Here, the percent change is calculated with respect to a $1 bet. For instance, a $1 bet on a four game series before Game 1 would&#39;ve earned you $19/4 = $4.75, but after Game 1 and before Game 2 it would&#39;ve earned $7.50, a roughly 58% increase.) </p>
+
+<p>Odds on a seven game series had the biggest downward change after Game 1, reflecting the fact that more people thought a seven-game series was likely. </p>
+
+<p>It was somewhat surprising, then, when the Royals defeated the Mets in only five games.</p>
+
+<p>This raises an interesting question: are extra-innings games actually any good at predicting how long a world series lasts? Of course, in theory the answer is yes: if a World Series has 7 extra-innings games, you can be pretty confident that the World Series lasted 7 games. Practically speaking, though, only one World Series (in 1991) has had as many as three extra-innings games; the rest have all had two or fewer.</p>
+
+<p>Let&#39;s take a look, then, at whether the presence of extra-inning games has any impact on the likelihood of a seven-game series. Below is a bunch of data I obtained from  <a href="http://www.baseball-reference.com" target="_blank">baseball-reference.com</a>. (Note: the data excludes the 1903, 1919, 1920, and 1921 World Series, which were all best-of-nine rather than best-of-seven; it also excludes 1907, 1912, and 1922 because those years featured tie games.)</p>
+
+<table class="table table-bordered table-hover table-centered">
+  <tr>
+    <td rowspan="2" class="mgp-table-cell">Series Length (World Series)</td>
+    <td colspan="2" class="mgp-table-cell">Were There Extra Innings Games?</td>
+  </tr>
+  <tr>
+    <td class="mgp-table-cell">No</td>
+    <td class="mgp-table-cell">Yes</td>
+  </tr>
+  <tr>
+    <td class="td-33">4 games</td>
+    <td class="td-33">11</td>
+    <td class="td-33">8</td>
+  </tr>
+  <tr>
+    <td>5 games</td>
+    <td>18</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>6 games</td>
+    <td>13</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>7 games</td>
+    <td>18</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td><strong>Totals</strong></td>
+    <td><strong>60</strong></td>
+    <td><strong>44</strong></td>
+  </tr>
+</table>
+
+<p>Based on this, you might find it tempting to argue that extra innings games are a reasonable predictor of series longevity: 30% (18/60) of series with no extra innings games went to seven games, compared to nearly 41% (18/44) of series with at least one extra innings game. However, the numbers we&#39;re dealing with aren&#39;t large enough for this difference to be statistically significant (more on that below).</p>
+
+<p>What if we want more data? One approach is to simply wait for more World Series to be played. But I&#39;m impatient. So, I decided to expand my search from just World Series to League Championship Series (LCS), which have also been a best-of-seven series since 1985. This gives us an additional 60ish data points to consider, since there are two League Championship Series per year (one for the American League, one for the National League).</p>
+
+<p>Here&#39;s what the data looks like for the LCS:</p>
+
+<table class="table table-bordered table-hover table-centered">
+  <tr>
+    <td rowspan="2" class="mgp-table-cell">Series Length (League Championship Series)</td>
+    <td colspan="2" class="mgp-table-cell">Were There Extra Innings Games?</td>
+  </tr>
+  <tr>
+    <td class="mgp-table-cell">No</td>
+    <td class="mgp-table-cell">Yes</td>
+  </tr>
+  <tr>
+    <td class="td-33">4 games</td>
+    <td class="td-33">4</td>
+    <td class="td-33">4</td>
+  </tr>
+  <tr>
+    <td>5 games</td>
+    <td>11</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>6 games</td>
+    <td>11</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>7 games</td>
+    <td>5</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td><strong>Totals</strong></td>
+    <td><strong>31</strong></td>
+    <td><strong>29</strong></td>
+  </tr>
+</table>
+
+<p>In this case, there&#39;s an even larger difference. Of the League Championship Series with no extra innings games, roughly 16% (5/31) lasted seven games. But if the series had extra innings games, that percentage more than doubles, to more than 34% (10/29). But even though the difference is even more pronounced, it&#39;s not enough to make the result statistically significant.</p>
+
+<p>But here&#39;s where things get a little weird. Combine these two sets together, and we get a cumulative table with data from all relevant World Series and League Championship series: </p>
+
+<table class="table table-bordered table-hover table-centered">
+  <tr>
+    <td rowspan="2" class="mgp-table-cell">Series Length (WS + LCS)</td>
+    <td colspan="2" class="mgp-table-cell">Were There Extra Innings Games?</td>
+  </tr>
+  <tr>
+    <td class="mgp-table-cell">No</td>
+    <td class="mgp-table-cell">Yes</td>
+  </tr>
+  <tr>
+    <td class="td-33">4 games</td>
+    <td class="td-33">15</td>
+    <td class="td-33">12</td>
+  </tr>
+  <tr>
+    <td>5 games</td>
+    <td>29</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>6 games</td>
+    <td>24</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>7 games</td>
+    <td>23</td>
+    <td>28</td>
+  </tr>
+  <tr>
+    <td><strong>Totals</strong></td>
+    <td><strong>91</strong></td>
+    <td><strong>73</strong></td>
+  </tr>
+</table>
+
+<p>In this case, the difference between the proportions (23/91 and 28/73) qualifies as significant! You can play around with the numbers yourself in the area below, if you&#39;re curious.</p>
+
+<p>So, are World Series with extra innings games more likely to last 7 games? Thus far, the data suggests no. But more generally, best-of-seven series with extra inning games appear to be more likely to last 7 games. Cool, right? Statistics is weird.</p>
+
+<p>(Note: based on my introductory anecdote, it may be better to ask whether having the <em>first</em> game in a best-of-seven series go extra innings is a predictor of series longevity, but there&#39;s simply not enough data to reach a conclusion. Come back in another 50 years or so, and maybe we&#39;ll be able to tackle this question.)</p>
+
+<div class="math-area">
+  <div class="math-area-title">
+    Want to dig into statistical significance calculations? Here's the place!
+    <span class="glyphicon glyphicon-plus-sign"></span>
+  </div>
+  <div class="math-area-body">
+    <p>I don't really want to talk much about the details of statistical significance. There are plenty of resources out there that can explain the concept (for example, <a href="https://onlinecourses.science.psu.edu/stat414/node/268" target="_blank">this one</a> or <a href="http://stattrek.com/hypothesis-test/difference-in-proportions.aspx">this one.</a>).</p>
+    <p>What I would like to do, though, is give you the ability to mess around with sample proportions and see whether differences are stastically significant or not. So here's a little widget that lets you do just that.</p>
+    <p>The rules are relatively simple. We have two sets of sample data drawn from two populations. Each one has a number of trials (<em>n</em><sub>1</sub> in the first case, <em>n</em><sub>2</sub> in the second case), and a number of successes (<em>s</em><sub>1</sub> and <em>s</em><sub>2</sub>). We want to know whether or not it's likely for the proportions of success in the two populations are different or not, based on the samples. We do this by comparing the sample proportions <em>s</em><sub>1</sub>/<em>n</em><sub>1</sub> and <em>s</em><sub>2</sub>/<em>n</em><sub>2</sub>, and calculating what's called a <em>P-value</em>. The lower the <em>P-value</em>, the less likely the two proportions are to be equal.</p>
+    <p>For example, in the above example, we could take the population to be the space of all past and future World Series; the samples we're comparing are the proportion of seven-game series that have no extra-inning games to the proportion of seven-game series that have at least one extra inning game.</p>
+    <p>It's worth noting that there are some caveats on the numbers involved: e.g. both <em>s</em><sub>1</sub> and <em>n</em><sub>1</sub> &ndash; <em>s</em><sub>1</sub> should be sufficiently large (say, at least 5).</p>
+    <p>But enough jibber-jabber. Play around with these inputs if you want to build an intuition. (Note: a <em>p-value</em> of 0.05 or less is typically held as being statistically significant, though this benchmark, as discussed beautifully in Jordan Ellenberg's book <em><a href="http://www.amazon.com/How-Not-Be-Wrong-Mathematical/dp/0143127535">How Not to Be Wrong</a></em>, is somewhat arbitrary.</p>
+    <table class="table table-bordered" id="dataTable">
+      <tr>
+        <td colspan="2">Sample 1</td>
+        <td colspan="2">Sample 2</td>
+        <td rowspan="2">P-value</td>
+        <td rowspan="2">Significant (at 0.05)?</td>
+      </tr>
+      <tr>
+        <td><em>s</em><sub>1</sub></td>
+        <td><em>n</em><sub>1</sub></td>
+        <td><em>s</em><sub>2</sub></td>
+        <td><em>n</em><sub>2</sub></td>
+      </tr>
+      <tr id="dataRow">
+        <td><input type="number" id="s1" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td><input type="number" id="n1" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td><input type="number" id="s2" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td><input type="number" id="n2" step="1" min="0" value="0" class="form-control text-center"></td>
+        <td id="pval">--</td>
+        <td id="sig">--</td>
+      </tr>
+    </table>
+    <div class="row">
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="ws">Use WS Data</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="lcs">Use LCS Data</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="wslcs">Use WS + LCS Data</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="ws-reset">Reset Widget</button>
+      </div>
+    </div>
+    <p class="text-danger" id="minVals">Please be sure that <em>s</em><sub>1</sub>, <em>n</em><sub>1</sub> &ndash; <em>s</em><sub>1</sub>, <em>s</em><sub>2</sub>, and <em>n</em><sub>2</sub> &ndash; <em>s</em><sub>2</sub> are all at least 5.</p>
+  </div>
+</div>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+          <script src=../../javascripts/2015_11_world_series.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

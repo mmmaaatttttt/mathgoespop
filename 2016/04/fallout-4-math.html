@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href=../../stylesheets/2016_04_fallout.css></link>
+    <title>Math Goes Pop! - Fallout 4 Math</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Fallout 4 Math</h2> <div class="postDate">April 14, 2016</div>
+          <p>If ever you&#39;ve wished to experience a 1950&#39;s aesthetic combined with a post-apocalyptic landscape filled with death and decay, then the <a href="https://en.wikipedia.org/wiki/Fallout_(series)" target="_blank">Fallout</a> series may be right up your alley. What began with the well-received release of <em>Fallout</em> in 1997 has since evolved into one of the most popular video game franchises around. The latest entry, <em>Fallout 4</em> was released last year to critical and commercial acclaim. Here&#39;s just one sample of the praise lavished on this game (NSFW, unless you&#39;re allowed to watch monsters get shot in the face at work):</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o-1h373RYDc" frameborder="0" allowfullscreen class="mgp-youtube"></iframe>
+
+<p><em>Fallout 4</em>, like many of its predecessors, features many sidequests and mini-games meant to hold the player&#39;s attention long after the main campaign has been completed (or, depending on play style, to postpone completion of the main campaign for as long as possible). The one I&#39;d like to talk about today is the hacking mini-game, in which players attempt to &quot;hack&quot; computers in order to find loot or unlock secrets near their location.</p>
+
+<p>The hacking mini-game was first introduced in <em>Fallout 3</em>. The idea is simple: the player is essentially presented with a list of possible passwords to hack the computer. For example, you might be given a list of twelve five-letter words: one of those words is the password, and the rest are duds. Next, you&#39;re given 4 chances to guess the correct password. Every time you guess incorrectly, though, the computer tells you how many letters in your guess match a letter in the same position in the actual password. So, for example, if the password is &quot;class&quot; and you guess &quot;atlas,&quot; the computer would tell you that you have one letter correct (only the final &#39;s&#39; counts, since that&#39;s the only matching letter that is also in the right position). Here&#39;s a video explaining this process:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uxwfWfFwVFw" frameborder="0" allowfullscreen class="mgp-youtube"></iframe>
+
+<p>But you know what&#39;s better than a video? Trying the game out for yourself! So here&#39;s a simple version of the mini-game that I threw together:</p>
+
+<div id="terminal">
+  <div id="terminal-body">
+    <div id="start-area">
+      <p>This computer is password-protected.</p>
+      <p>If you would like to try to access the data on this computer, please select a difficulty from the options below.</p>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="0">5 Letters</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="1">6 Letters</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="2">7 Letters</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <button class="btn btn-terminal btn-block" data-idx="3">Random</button>
+        </div>
+        <div class="col-xs-6 text-center"><div class="win-summary"></div></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <button class="btn btn-terminal btn-block" id="reset-terminal">Reset Data</button> 
+        </div>
+      </div>
+    </div>
+    <div id="game-area">
+      <div id="typed-text">
+        <p id="terminal-text">
+          <span>The password is one of the following words. Click on a word to make your guess:</span>
+          <span class="guess-count">You have 4 guesses remaining.</span>
+        </p>
+      </div>
+      <div id="typed"></div>
+    </div>
+  </div>  
+</div>
+
+<p>Play this game long enough, and you&#39;ll likely develop some strategies to help you win. For example, if you choose a word whose likeness to the password is 0, you can eliminate any words that have letters in common with your guess. </p>
+
+<p>It&#39;s difficult, however, to implement more complicated strategies by hand. The game itself has no way to mark a word as a dud, so you have to use a fair amount of mental bandwidth keeping track of which words are viable solutions and which aren&#39;t. </p>
+
+<p>So, let&#39;s do what any good mathematician would do and try to come up with a more systematic approach. Before doing so, it may be helpful to point out that this game bears a strong resemblance to the classic board game <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)" target="_blank">Mastermind</a>. In Mastermind, one person creates a secret code using pegs of different colors. The other player then has to guess the correct colors in a four-peg sequence. For example, I might select Red, Green, Blue and Red for my pegs, and my oppenent would then have a certain number of tries to guess this sequence.</p>
+
+<p>Optimal algorithms for playing Mastermind have been studied (see the article linked above for some references). However, Mastermind differs from the Fallout 4 hacking game in one crucial detail. In Mastermind, any sequence of colored pegs can be a valid answer: if there are 6 colors, and each answer consists of 4 pegs, there are 6 * 6 * 6 * 6 = 1,296 possible solutions, each one being equally likely in theory. With Fallout 4, however, it&#39;s not true that the password can be any 5-character string. Indeed, you know when the game starts that the universe of possibilities is only 12 items long. And we can use this restricted set of possibilities to inform what a &#39;best&#39; first guess should be.</p>
+
+<p>To see what I mean, let&#39;s take a look at a simplified example. Suppose you&#39;re given a list of five four-letter words: hard, herd, hero, zero, and jump. What approach should you use to determine which one is the correct password?</p>
+
+<p>Here are a few options I&#39;ll throw out. For each of these strategies, once you make a guess and receive your guess&#39;s likeness score, the idea is that you should remove any words that can&#39;t be the password (by hand on a piece of paper, or using technology) and repeat the strategy.</p>
+
+<ol>
+<li>Guess randomly. This strategy is probably the easiest to understand. With this approach, each of the five words has an equally likely chance of being your guess.</li>
+<li>Guess the word which is &quot;closest&quot; to the others. In some sense, which we&#39;re about to make precise, &quot;herd&quot; is closer to &quot;hard&quot; and &quot;hero&quot; than &quot;hard&quot; is to &quot;jump.&quot; If you have a notion of distance on these words, you could use it to determine the word which is &quot;closest&quot; to all the rest. This word, as it would be likely to be close to the password, might make for a good candidate.</li>
+<li>Guess the word that is &quot;farthest&quot; from the others. In the even that the password is also far, maybe this would be a better approach.</li>
+<li>Guess the word which, on average, will allow us to eliminate the most words from the list.</li>
+</ol>
+
+<p>The first strategy is fairly straightforward, so I won&#39;t say anything else about it. But what about the other three? Let&#39;s consider them within the context of our current list of words.</p>
+
+<p>Before moving any further, let&#39;s define a notion of distance on two words. Assuming the words have the same length, we&#39;ll use the notion of the <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank">Hamming distance</a>, which is just a count of the number of letters that the two words do not have in common (including position). Here are some examples:</p>
+
+<table class="table table-bordered table-striped table-hover centered">
+  <tr>
+    <th class="mgp-table-cell centered">Word 1</th>
+    <th class="mgp-table-cell centered">Word 2</th>
+    <th class="mgp-table-cell centered">Hamming distance</th>
+  </tr>
+  <tr>
+    <td>boss</td>
+    <td>moss</td>
+    <td>1 ('o', 's', and 's' have the same position in both)</td>
+  </tr>
+  <tr>
+    <td>trap</td>
+    <td>harp</td>
+    <td>3 ('p' has the same position in both)</td>
+  <tr>
+    <td>atom</td>
+    <td>moat</td>
+    <td>4 (no letters have the same position in both words!)</td>
+  </tr>
+  </tr>
+  <tr>
+    <td>boar</td>
+    <td>boar</td>
+    <td>0 (all letters are in the same position)</td>
+  </tr>
+</table>
+
+<p>(Aside: the Hamming distance is an actual distance, in the <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)" target="_blank">mathematical sense</a>.)</p>
+
+<p>If you&#39;d rather think in terms of likeness, the Hamming distance between two words is just the difference between their common length and their likeness.</p>
+
+<p>Returning to our four strategies, let&#39;s first make a table of our words and the distances between them:</p>
+
+<table class="table table-bordered table-striped table-hover centered">
+  <tr>
+    <th class="mgp-table-cell centered">Distance</th>
+    <th class="mgp-table-cell centered">hard</th>
+    <th class="mgp-table-cell centered">herd</th>
+    <th class="mgp-table-cell centered">hero</th>
+    <th class="mgp-table-cell centered">zero</th>
+    <th class="mgp-table-cell centered">jump</th>
+    <th class="mgp-table-cell centered">Average</th>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered">hard</th>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>2.0</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered">herd</th>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>4</td>
+    <td>1.6</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered">hero</th>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>4</td>
+    <td>1.6</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered">zero</th>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>4</td>
+    <td>2.0</td>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered">jump</th>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>3.2</td>
+  </tr>
+</table>
+
+<p>Based on this table, we see that the closest words according to this distance metric are &quot;herd&quot; and &quot;hero&quot;, while the farthest word is &quot;jump.&quot; As for the word with the highest number of expected eliminations, here we&#39;ll need to do a bit more calculation.</p>
+
+<p>To begin, let&#39;s suppose that each word has the same probability of being the password. If you guess &quot;jump&quot;, there&#39;s a 20% probability that you&#39;re correct. In this case, you&#39;ll be able to eliminate every word from the list of potential guesses, since you&#39;ll have already guessed the password.</p>
+
+<p>However, there&#39;s an 80% chance that &quot;jump&quot; isn&#39;t the password. In this case, you&#39;ll only be able to eliminate jump from the list of words, since jump will be the only word that has a likeness of 0.</p>
+
+<p>Putting these together, this means that the expected number of eliminations from choosing &quot;jump&quot; is equal to 0.2 &times; 5 + 0.8 &times; 1 = 1.8.</p>
+
+<p>Let&#39;s do one more. Suppose you choose &quot;hard&quot; as your word. In this case, there&#39;s a 20% probability you&#39;ll be able to remove 5 words from the list, and an 80% chance you&#39;ll remove be able to remove four words from the list. That&#39;s because if &quot;hard&quot; isn&#39;t the word, its likeness will immediately determine which word is the password. Put another way, the other four words each have a unique distance to &quot;hard&quot;.</p>
+
+<p>In this case, then, the expected number of eliminations from choosing &quot;hard&quot; is equal to 0.2 &times; 5 + 0.8 &times; 4 = 4.2.</p>
+
+<p>In fact, &quot;hard&quot; and &quot;zero&quot; have the highest number of expected eliminations. Here&#39;s the data on the other words:</p>
+
+<table class="table table-bordered table-striped centered">
+  <tr>
+    <th class="mgp-table-cell centered">Word</th>
+    <th class="mgp-table-cell centered">hard</th>
+    <th class="mgp-table-cell centered">herd</th>
+    <th class="mgp-table-cell centered">hero</th>
+    <th class="mgp-table-cell centered">zero</th>
+    <th class="mgp-table-cell centered">jump</th>
+  </tr>
+  <tr>
+    <th class="mgp-table-cell centered">Expected # of Eliminations</th>
+    <td>4.2</td>
+    <td>3.8</td>
+    <td>3.8</td>
+    <td>4.2</td>
+    <td>1.8</td>
+  </tr>
+</table>
+
+<p>So, if you go with the closest word strategy, you should choose &quot;herd&quot; or &quot;hero.&quot; If you go with the farthest word strategy, you should choose &quot;jump.&quot; And if maximizing the expected number of eliminations is more your cup of tea, you should choose &quot;hard&quot; or &quot;zero.&quot; Of course, guessing randomly could give you any one of these answers.</p>
+
+<p>But which strategy is the best for a wide variety of word lists? Let&#39;s tackle that question <a href="/2016/04/fallout-4-math-part-2.html" target="_blank">next time!</a></p>
+
+<p>(H/T to Matt Boldt, creator of <a href="http://www.mattboldt.com/demos/typed-js/" target="_blank">Typed.js</a>, which I used to build the little game up above. You can check him out on <a href="https://twitter.com/atmattb" target="_blank">Twitter</a>.)</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+          <script src=/javascripts/vendor/typed.js></script>
+          <script src=../../javascripts/2016_04_fallout.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

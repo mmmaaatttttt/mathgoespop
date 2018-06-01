@@ -1,0 +1,1 @@
+$(function(){for(var t=$(".formula"),e=["{\\displaystyle \\frac{k\\text{ + }1}{n}}","{\\displaystyle \\frac{k}{n\\text{ - }1}}","{\\displaystyle \\frac{k\\text{ + }1}{n} \\geq \\frac{k}{n\\text{ - }1}}","{\\displaystyle (n-1)(k+1) \\geq nk}"],a=0;a<t.length;a++)katex.render(e[a],t[a])});

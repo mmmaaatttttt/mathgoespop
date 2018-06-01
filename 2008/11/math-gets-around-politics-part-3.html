@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Math Gets Around: Politics, Part 3</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Math Gets Around: Politics, Part 3</h2> <div class="postDate">November  3, 2008</div>
+          <p>As promised, in this thrilling final installment to the relationship between math and voting (the first two parts can be found <a href="http://mathgoespop.blogspot.com/2008/07/math-gets-around-politics.html">here</a> and <a href="http://mathgoespop.blogspot.com/2008/10/math-gets-around-politics-part-2.html">here</a>), we will look at what many people see as the holy grail of voting systems: Range voting.</p>
+
+<p>The concept of range voting is simple.  Given a set of candidates, in a range voting system you simply put a score next to each name that reflects how strongly you support that candidate.  Of course, this is quite different from our current voting system, where we only get to vote for one candidate, but more importantly, it differs significantly from other voting systems where you are just asked to rank candidates in order of preference, because a ranking gives no information about the degree to which your support varies from candidate to candidate.</p>
+
+<p>For example, if Anna, Bob, and Charlie are all running for President, you and I may both prefer Anna to Bob, and Bob to Charlie.  However, I may LOVE Anna and HATE Charlie, while you may be relatively indifferent, with only a slight preference for one over the other.  In a ranked voting system, both our preferences would be recorded as A &gt; B &gt; C.  However, using range voting, our preferences may look something more like: A = 99, B = 50, C = 0 for me, and A = 51, B = 50, C = 49 for you.</p>
+
+<p>This example shows that range voting allows us to capture more information about voter preferences than the other voting systems discussed.  Therefore, one might heuristically expect that because it captures more information, it leads to better results, i.e. a more accurate representation of the will of the people.  The question, of course, is whether this is actually the case.</p>
+
+<p>The answer may depend on your definition of &quot;better,&quot; but by most measures the range voting system comes out on top of the others.  One important feature of this system is that it is not subject to the constraints of <a href="http://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem">Arrow&#39;s Impossibility Theorem</a> (discussed in <a href="http://mathgoespop.blogspot.com/2008/07/math-gets-around-politics.html">Part 1</a>).  In other words, range voting has basically every property you would like a voting system to have.  Range voting doesn&#39;t contradict Arrow&#39;s theorem because Arrow&#39;s theorem deals only with voting systems that only rank preferences.</p>
+
+<p>There are many other benefits to range voting as well, and these benefits are no doubt well known by any range voting advocate.  The website <a href="http://rangevoting.org/">Rangevoting.org</a> gives a list of reasons why range voting is so great - I won&#39;t list them all here, but I will highlight some of the more interesting ones.</p>
+
+<ul><li>Range voting encourages honest voting, rather than strategic voting.  There is never an incentive for you to score a candidate you support more lower than a candidate you support less.</li><li>Range voting allows for a larger range of political parties to flourish.  Because you are not restricted to one vote, people from third parties can feel free to support their candidate without fear of "wasting their vote."  This is also good for independents who may not feel particularly strongly about any major party candidate.</li><li>(Perhaps the cutest result) Range voting maximizes the number of "pleasantly surprised" voters, i.e. the number of voters for whom the winner of the election is better (scored higher) than they thought it would be.</li></ul>
+
+<p>As with any other idea, though, range voting is not without its share of criticism.  However, these criticisms pale in comparison to the critiques that can be made about our current voting system.  The main critique with range voting has to do with strategic voters, and comes in two forms:</p>
+
+<ul><li>Why doesn't this just degenerate into the system we already have?  For example, if supporters for one candidate feel strongly enough, they will simply give that candidate the highest score and every other candidate a 0.  Doesn't this benefit dishonest voters, and hurt candidates whose supporters are honest and may not give their candidate the full score, or score everyone else with a 0?</li></ul>
+
+<p>This criticism is a little suspect, because while there are certainly people who may vote in this way, it&#39;s certainly hard to believe that everyone will, or that even a disproportionate number of supporters of one candidate will.  It&#39;s more likely that roughly the number of people for each major candidate will feel strongly enough to vote in this way, so that in the end it should all balance out.  There certainly are extremes of political belief, but this is true of both the left and the right, with a wider swath of moderates somewhere in the middle.</p>
+
+<ul><li>Doesn't the system inflate support for third party candidates?  For example, people will be more likely to throw support to a candidate they believe has no chance of winning - this will amplify support for lesser known candidates, and dampen support for well known candidates.</li></ul>
+
+<p>This seems plausible.  One way to combat this is to require that a candidate receive a minimum number of scores in order to be viable.  For example, we could say that in order for a candidate to be declared the winner, at least 10% of the population must have voted for the candidate.  The percentage should be high enough to be significant, but not so high that it&#39;s possible it couldn&#39;t be obtained if enough voters strategically abstain from voting for a particular candidate.</p>
+
+<p>However, it&#39;s still far more likely that a major candidate with a large base of support will win over an independent candidate with a small base of fervent supporters.  Overall, range voting will certainly reflect preferences better than the current system, so it&#39;s hard to argue that this is much of a valid criticism when compared to the current system, where your support is for all intents and purposes meaningless unless it is for a major party candidate.</p>
+
+<p>In summary, from a mathematical point of view, there really is no argument: range voting certainly trounces are current voting system, and it looks like it beats everything else as well.  The question then becomes: why don&#39;t we use it?  I&#39;m not sure there&#39;s a good answer.</p>
+
+<div style="text-align: center;">*<br /></div>
+
+<p>Range voting is not used by any democratic nation, but examples of it can be found all over the internet.  For a concrete example you are probably familiar with, you need look no further than the <a href="http://www.imdb.com">Internet Movie Database</a>.  On this site, you are free to vote on any movie you like, giving it a rating between 1 and 10.  These votes are then compiled into IMDB&#39;s rankings of the top 250 movies of all time, which can be found <a href="http://www.imdb.com/chart/top">here</a>.  What&#39;s even better, the votes are compiled using a true Bayesian estimate, the formula for which can be found at the bottom of the page.  If you have any doubts about the validity of range voting, you need only go view this list and see all the awesome movies on it to conclude that indeed, this system has it going on.</p>
+
+<p>Of course, you may find that this list of movies is terrible, but in this case, don&#39;t worry.  It doesn&#39;t mean that range voting doesn&#39;t work, it just means you have bad taste in movies.</p>
+
+<div style="text-align: center;">*</div>
+
+<p>In conclusion, our voting system is horribly broken.  There are solutions out there, but getting from where we currently are to a new voting system is a problem that goes beyond the scope of a pop culture math blog.  For now, we&#39;ll have to deal with things as is, and of course, that includes voting tomorrow, November 4th.  So make sure you go out and do it.  We can fight the larger fight of voting systems another day.</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/math_gets_around_politics_part_3/';
+                        var disqus_url = 'http://www.mathgoespop.com/2008/11/math-gets-around-politics-part-3.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

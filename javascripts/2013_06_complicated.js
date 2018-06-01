@@ -1,0 +1,1 @@
+$(function(){for(var n=$(".formula"),e=["{\\displaystyle f(n) = \\frac{n+1}{2}, n \\text{ odd},}","{\\displaystyle f(n) = \\frac{n}{2}, n \\text{ even}.}"],t=0;t<n.length;t++)katex.render(e[t],n[t])});

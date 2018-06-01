@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Math Goes Pop! - Hot Dog Mathematics (a.k.a. Hot Dog! Mathematics!) Part 2</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Hot Dog Mathematics (a.k.a. Hot Dog! Mathematics!) Part 2</h2> <div class="postDate">July 27, 2012</div>
+          <p>Last week we <a href="http://www.mathgoespop.com/2012/07/hot-dog-mathematics-a-k-a-hot-dog-mathematics-part-1.html">talked</a> about hot dogs.  Though I spent most of my time discussing how the dog&#39;s surface area changes if it is cut lengthwise (also known as a butterfly cut), my original inspiration came from much more sophisticated wiener slicing.  Around the fourth of July, the following video went viral.  Take a look; it&#39;s hard not to see the merits of this suggested technique for cooking hot dogs.</p>
+
+<p style="text-align: center;"><object width="560" height="315" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/NyieI2bxyIk?version=3&amp;hl=en_US" /><param name="allowfullscreen" value="true" /><embed width="560" height="315" type="application/x-shockwave-flash" src="http://www.youtube.com/v/NyieI2bxyIk?version=3&amp;hl=en_US" allowFullScreen="true" allowscriptaccess="always" allowfullscreen="true" /></object></p>
+
+<p>As the curly fry is to the regular fry, so too is the spiral cut dog to the regular dog.  Indeed, it&#39;s hard to find a reason why one should not choose a spiral cut dog over a regular dog, if given the choice.  But from a mathematical standpoint, as with the butterfly cut discussed last time, arguably the most interesting feature of the spiral cut hot dog is the increased surface area.  Unlike the butterfly cut dog, however, computing how the surface area changes when dealing with a spiral cut dog is not so straightforward. In particular, it is difficult to compute the additional surface area by means of elementary geometry alone.</p>
+
+<p>Though calculation of the surface area would be a good exercise for a calculus student, I will spare you some of the gritty details.  One fun fact I can easily share: the region formed by a spiral as in the spiral cut hot dog is called a <a href="http://mathworld.wolfram.com/Helicoid.html">helicoid</a>!  A helicoid is just a fancy way of describing the shape of a spiral.  It is the shape formed, for example, when a spiral staircase is transformed into a spiral ramp, better known as a super fun happy slide in the following classic <a href="http://en.wikipedia.org/wiki/The_Simpsons">Simpsons</a> episode:</p>
+
+<p style="text-align: center;"><object width="512" height="288" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="src" value="http://www.hulu.com/embed/ctF_XsIfbybDskvVfKlwgw/77/136" /><param name="allowfullscreen" value="true" /><embed width="512" height="288" type="application/x-shockwave-flash" src="http://www.hulu.com/embed/ctF_XsIfbybDskvVfKlwgw/77/136" allowFullScreen="true" allowfullscreen="true" /></object></p>
+
+<p>If you are not a fan of the golden age of The Simpsons, you may prefer the following simple visual instead.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://mathworld.wolfram.com/Helicoid.html"><img class="size-full wp-image-2186" title="Helicoid_800" src="http://www.mathgoespop.com/images/2012/07/Helicoid_800.gif" alt="" width="229" height="177" /></a><br>The mighty helicoid!</p>
+
+<p>This shape, of course, is where the spiral cut hot dog gets its name.  When you cut a spiral into your dog, you wind up with two helicoids, one corresponding to each side of the blade.  This is analogous to the butterfly cut dog, in which one slice gives you two faces with the same shape contributing to the surface area.  If you&#39;re having trouble visualizing what I&#39;m saying, the following image may help.  The two helicoids are colored red and blue; blue for one spiral, red for the other.</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://laughingsquid.com/spiral-cut-hot-dogs/"><img class=" wp-image-2187 " title="spiraldog" src="http://www.mathgoespop.com/images/2012/07/spiraldog.jpg" alt="" width="512" height="510" /></a><br>The spiral cut dog in all its glory! Click the image for the original (non-mathematically doctored) image.</p>
+
+<p>In the above image, I have marked a length with the letter <em>c</em>.  <em>c</em> represents how far up the dog you move when completing one revolution with your knife - the larger its value, the fewer twists your spiral cut dog will have.  In the above image, gravity is distorting things a bit - while it&#39;s easier to see the spirals when the dog is extended, it is perhaps easier to think about the surface area of a compressed dog.</p>
+
+<p>As before, we can compute the surface area of the modified dog by computing the surface area of the usual hot dog and adding the contribution from the cut.  We computed the surface area of a hot dog last time, under the model of a hot dog as a cylinder of height <em>h</em> and radius <em>r</em> along with a hemisphere on either end, also of radius <em>r</em>.  Here&#39;s the picture to jog your memory:</p>
+
+<p style="text-align:center;font-size:small;"><a href="http://www.mathgoespop.com/images/2012/07/dogscolor1.jpg"><img class="aligncenter  wp-image-2191" title="dogscolor" src="http://www.mathgoespop.com/images/2012/07/dogscolor1.jpg" alt="" width="513" height="410" /></a></p>
+
+<p>The computation of the hot dog&#39;s surface area was performed last time (see <a href="http://www.mathgoespop.com/2012/07/hot-dog-mathematics-a-k-a-hot-dog-mathematics-part-1.html">here</a> if you need a review).  Using formulas from the geometry of solid figures, one can show that the surface area of an uncut dog is equal to</p>
+
+<p style="text-align: center;"><em>S</em><sub>1</sub> = 2&pi;<em>rh</em> + 4&pi;<em>r</em><sup>2</sup> = 2&pi;<em>r</em>(<em>h</em> + 2<em>r</em>).</p>
+
+<p>What about the area of the helicoids?  This is where things get trickier.  Because of the complexity of the helicoid shape, the best way to compute its surface area is probably using calculus.  To simply the formulas a bit, I&#39;ll make a few assumptions; first, I&#39;ll assume the spiral only cuts through the cylindrical part of the hot dog, not the hemispheres on either end (this ensures that the helicoid has a constant radius throughout).  I&#39;ll also assume that you go through a complete number of turns with your knife; in other words, I&#39;ll suppose <em>h</em>/<em>c</em> is a whole number (this assumption can be relaxed without too much trouble).</p>
+
+<p style="text-align: center;">*</p>
+
+<p>If you&#39;re not interested in some of these details, feel free to skip over them (just scroll down to the next *).  I&#39;ll simply provide a rough outline of how things go.  Notice that any point (<em>x</em>,<em>y</em>,z) on the helicoid can be described by two variables, <em>u</em> and <em>v</em>, where <em>u</em> is between 0 and <em>r</em>, <em>v</em> is between 0 and 2&pi;<em>h</em>/<em>c</em>$ and</p>
+
+<p style="text-align: center;"><em>x</em> = <em>u</em>cos(<em>v</em>),</p>
+
+<p style="text-align: center;"><em>y</em> = <em>u</em>sin(<em>v</em>),</p>
+
+<p style="text-align: center;"><em>z</em> = <em>cv</em>.</p>
+
+<p>The first two equations tell us the <em>x</em> and <em>y</em> coordinates are on a disc of radius <em>r</em>, while the last equation determines how high up the spiral we are.</p>
+
+<p>These equations are important because they allow us to compute the <a href="http://mathworld.wolfram.com/AreaElement.html">area element</a>, which is needed to compute the surface area (more on integral representations of surface area can be found <a href="http://mathworld.wolfram.com/SurfaceArea.html">here</a>).  After a little bit of calculation (more details in the case of the helicoid are <a href="http://mathworld.wolfram.com/Helicoid.html">here</a>), one finds that the surface area for a helicoid with <em>u</em> and <em>v</em> given above is equal to</p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p>This latter integral can be solved by means of a <a href="http://en.wikipedia.org/wiki/Trigonometric_substitution">trigonometric substitution</a> (or, for those with less patience, <a href="http://www.wolframalpha.com/input/?i=integral+of+sqrt%28x^2+%2B+c^2%29+dx">Wolfram Alpha</a>).  It follows that the surface area of the helicoid which goes through <em>h</em>/<em>c</em> turns and has radius <em>r</em> is equal to</p></p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p>where as usual, ln denotes the <a href="http://en.wikipedia.org/wiki/Natural_logarithm">natural logarithm</a> function.</p>
+
+<p style="text-align: center;">*</p>
+
+<p>Because the spiral cut yields two spirals, by the above outline it follows that the contribution to the surface area from the cut is equal to</p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p>As you can see, this isn&#39;t quite as simple as in the case of the butterfly cut.  But let&#39;s see what we can say about the ratio of the new surface area to the old, in other words <span class="formula"></span>.  With the butterfly cut, we saw this ratio was a function of the single variable <em>y</em> = <em>h/r</em>, but in this case the expression takes the form</p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p>While this function of three variables looks complicated, we can simplify things a bit if we specify the dimensions of the hot dog.  Let&#39;s suppose the radius is one centimeter, and as in the previous post, let&#39;s suppose the ratio of <em>h</em> to <em>r</em> is 12 to 1.  This makes <em>h</em> equal to 12 centimeters, so by substitu<em></em>ting <em>r </em>= 1 and <em>h</em> = 12 into the above expression, it simplifies to</p>
+
+<p style="text-align: center;"><span class="formula"></span></p>
+
+<p>which is a (relatively) simple function of only <em>c</em>, the helicoid parameter pictured above.</p>
+
+<p>The graph of the above function looks like this (the <em>x</em> axis is really the <em>c</em> axis):</p>
+
+<p style="text-align: center;"><a href="http://www.mathgoespop.com/images/2012/07/Picture-29.png"><img class="aligncenter  wp-image-2209" title="Picture 29" src="http://www.mathgoespop.com/images/2012/07/Picture-29.png" alt="" width="601" height="349" /></a></p>
+
+<p>Unlike the case of the butterfly cut dog, with the spiral cut you can make the surface area as large as you like, provided you take <em>c</em> small enough.  Of course, beyond a certain point it will be difficult to make <em>c</em> any smaller without risking the structural integrity of the dog.</p>
+
+<p>Since we assumed <em>h/c</em> is an integer, the largest value we can take for <em>c</em> is <em>c</em> = <em>h</em>, in this case <em>c</em> = 12.  This gives us the smallest ratio among allowed values of <em>c</em>, but even in this case the ratio of surface areas is around 2.716 - in other words, even a single rotation of the knife along the length of a hot dog nearly triples the surface area!  Contrast this to the case of the butterfly cut, where no matter the proportions of the dog, the cut can never even double the surface area.</p>
+
+<p>Clearly, if increasing the surface area is the name of the game, the spiral cut is the way to go.  If you&#39;re feeling even more adventurous, you could study the <a href="http://www.instructables.com/id/Double-Spiral-Hot-Dog/">double spiral cut dog</a>; I will leave investigation of this shape as an exercise.</p>
+
+<p>Bonus exercises!</p>
+
+<p>If you let <em>c</em> go to infinity, what happens to the ratio of the surface areas in the above case (<em>h</em> = 12, <em>r</em> = 1)?  What happens for general <em>r</em> and <em>h</em>?</p>
+
+<p>How to the surface area functions for the butterfly cut dog and the spiral cut dog compare when <em>h </em>= <em></em>c? When <em>r</em> = <em>c</em>?</p>
+
+<p>Any other questions come to mind?  Shoot off below!</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+                        var disqus_identifier = '/hot_dog_mathematics_a_k_a_hot_dog_mathematics_part_2';
+                        var disqus_url = 'http://www.mathgoespop.com/2012/07/hot-dog-mathematics-a-k-a-hot-dog-mathematics-part-2.html';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+        <script src=../../javascripts/2012_07_hot_dog_math.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+(function(){$(function(){var i;i=$(".math-area .glyphicon-plus-sign"),i.click(function(){return $(this).toggleClass("glyphicon-plus-sign").toggleClass("glyphicon-minus-sign"),$(this).parent().siblings().slideToggle({duration:200})})})}).call(this);

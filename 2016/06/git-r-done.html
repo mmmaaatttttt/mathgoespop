@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Bitter:400" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href=../../stylesheets/2016_06_git_r_done.css></link>
+          <link rel="stylesheet" href=../../stylesheets/code.css></link>
+    <title>Math Goes Pop! - Git-R-Done</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <header>
+    <div id="logo_area">
+      <a href="/">
+        <img id="mgp_logo" src="/images/mgp_logo.png">
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="row" id="main-row">
+      <div id="left-sidebar" class="col-md-2">
+        <img src="/images/sidebar.png">
+      </div>
+      <div class="col-md-7">
+        <div id="main" role="main">
+            <h2>Git-R-Done</h2> <div class="postDate">June 14, 2016</div>
+          <p>My good friend and former work-associate <a href="https://twitter.com/lustomatical" target="_blank">Chris Lusto</a> recently set off a flurry of Twitter activity when he shared some of his thoughts on curriculum development in a post titled <a href="http://chrislusto.com/lessons-for-other-people/" target="_blank">Lessons for Other People</a> (he&#39;s since written a follow-up, <a href="http://chrislusto.com/git-push/" target="_blank">Git Push</a>). These posts have sparked a lot of interesting conversation, and have inspired me to share some thoughts of my own.</p>
+
+<p>In the interest of self-containment, let me begin by trying to summarize Chris&#39; main argument. First, some background: Chris and I both spent a not-insignificant share of our professional careers writing math curriculum at <a href="http://www.mathalicious.com" target="_blank">Mathalicious</a>. Writing curriculum is a lot of fun, but is also hard work, especially when you&#39;re trying to write for an audience larger than yourself. Different teachers may be looking for wildly different things: one may want something highly scaffolded while another wants something more open-ended, one may embrace a lesson on <a href="http://www.mathalicious.com/lessons/the-cheese-that-goes-crunch" target="_blank">Cheetos</a> while another may not...the list goes on, and on, and on. And on. Seriously. It goes on.</p>
+
+<p>One approach to solving this problem is to make content editable, so that teachers aren&#39;t forced to use a resource that doesn&#39;t fit quite right. But this raises other issues. For authors, it can potentially diminish the integrity of the resource. For teachers, making content editable assumes they have time to write content in addition to their full time jobs, you know, <em>teaching</em>. </p>
+
+<p>There&#39;s also the issue of cohesion. Having a coherent curriculum - one with a clear vision that can support a natural progression through a set of learning objectives - is undoubtedly important. This is especially true for a discipline like mathematics, which builds on itself over timescales on the order of years, not class just class periods.</p>
+
+<p>Chris&#39;s proposed solution, and I quote: &quot;We need <a href="https://github.com" target="_blank">GitHub</a> for math curriculum.&quot;</p>
+
+<p>Cool. So what’s GitHub? In the software development world, it&#39;s the leading system used by teams to manage their code. In some sense, you can think of it like Dropbox on steroids; you can use GitHub to keep track of the state of all files in a project at any point in time. This makes it easier to go back and see previous versions of what you were working on, resolve conflicts if two people are working in the same file at the same time, and so on. From a practical standpoint, though, for many people (developers included!), GitHub basically works like this:</p>
+
+<p><img alt="xckd git" src="http://imgs.xkcd.com/comics/git.png" /></p>
+
+<p>The takeaway here is that if you don&#39;t know what Git or GitHub are, don&#39;t worry. I interpreted Chris&#39; main argument as being not specific to GitHub, and more about a need for a better way to collaborate and communicate on curriculum, both among teachers and between teachers and authors. (I trust Chris will correct me if I butchered his point too horribly.)</p>
+
+<h3>My Perspective</h3>
+
+<p>Like I said, Chris’ musings inspired a lot of dialogue on Twitter: </p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Why Secondary Teachers Don’t Want a GitHub for Lesson Plans. Responding to <a href="https://twitter.com/Lustomatical">@lustomatical</a>&#39;s proposal. <a href="https://t.co/DnMjUgUCdJ">https://t.co/DnMjUgUCdJ</a></p>&mdash; Dan Meyer (@ddmeyer) <a href="https://twitter.com/ddmeyer/status/740624584056004608">June 8, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Alright I&#39;m jumping into this GitHub discussion. Here goes: <a href="https://t.co/Am85GcBBPe">https://t.co/Am85GcBBPe</a></p>&mdash; Dylan Kane (@math8_teacher) <a href="https://twitter.com/math8_teacher/status/740684582685704192">June 8, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I don&#39;t have a blog right now, so I GoogleDoc&#39;d: <a href="https://t.co/u3kYO0ZQqe">https://t.co/u3kYO0ZQqe</a> re <a href="https://twitter.com/Lustomatical">@Lustomatical</a> <a href="https://twitter.com/ddmeyer">@ddmeyer</a> <a href="https://twitter.com/mpershan">@mpershan</a> <a href="https://twitter.com/math8_teacher">@math8_teacher</a> <a href="https://twitter.com/crstn85">@crstn85</a>&#39;s ideas</p>&mdash; Max Ray-Riek (@maxmathforum) <a href="https://twitter.com/maxmathforum/status/741340302326304769">June 10, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>(<a href="https://problemproblems.wordpress.com/2016/06/08/what-exactly-do-you-want-michael/" target="_blank">Here&#39;s</a> a response that I couldn&#39;t find a tweet about, but is also worth checking out.)</p>
+
+<p>I’d like to throw my two cents into the ring, mostly because for the last year I&#39;ve been teaching adults how to code. Schools like this are popping up in major cities throughout the country. And though they may differ in the details, throughout this so-called &quot;bootcamp<sup><a href="#footnote1" id="src1">1</a></sup>&quot; industry one thing seems pretty clear: we already have an analogy of Chris&#39; &quot;GitHub for math curriculum.&quot;</p>
+
+<p>It&#39;s called GitHub. </p>
+
+<p>Across all of the companies in this space, GitHub is the primary means by which curriculum gets written and shared with students and instructors. So, how’s it working out? </p>
+
+<h3>Some Caveats</h3>
+
+<p>Before I go any further, I think it&#39;s important to highlight some important differences between the adult immersive programs in which I teach and a typical K-12 school:</p>
+
+<ol>
+<li>A &quot;curriculum&quot; for a bootcamp is much narrower in scope than an entire math curriculum. The program I teach lasts six months, but many others are even shorter, which means the cohesion required by a curriculum isn&#39;t nearly as complicated. From this standpoint, the development of a curriculum is much less likely to turn into a boondoggle.</li>
+<li>Metrics for success in my current industry are really straightforward. If your students get jobs, congratulations, you&#39;re doing well! If not, you may need to rethink your approach. In this sense, then, the &quot;goal&quot; of a curriculum for us is fairly straightforward, especially when positioned next to the question: &quot;<a href="http://www.ascd.org/publications/newsletters/education-update/jul12/vol54/num07/What-Is-the-Purpose-of-Education%C2%A2.aspx" target="_blank">What is the <em>purpose</em> of education?</a>&quot;</li>
+<li>In terms of scale, the bootcamp industry has got nothing on math education. We&#39;re still nascent in many ways, with a lot of flexibility to experiment and iterate. The material itself is also continually changing to keep up with the needs of the market. What&#39;s more, our timelines feed into this flexibility: if I totally whiff on a set of lessons one day, I don&#39;t have to wait a year to try them again.</li>
+</ol>
+
+<p>This is not an exhaustive list by any means, it&#39;s just a list of the most pertinent things to be mindful of in what follows. I want to highlight them merely to emphasize the fact that, when it comes to GitHub (or CurricHub or MatHub or whatever you&#39;d like to call a math education analogy), your mileage may vary.</p>
+
+<h3>GitHub: The Upsides</h3>
+
+<p>Let&#39;s accentuate the positive and talk first about some things that I like about using GitHub when working on curriculum. Many of these points tie into the potential advantages Chris wrote about.</p>
+
+<ol>
+<li><strong>Finding materials is relatively straightforward</strong>. If I&#39;m teaching a lesson on, say, writing functions in Javascript, I can go to our organization on GitHub and look for materials that cover that topic, and I can ensure whatever I find meets the learning objectives I&#39;m trying to hit. If I find something I like, I can use it out of the box. If I find something I almost like, I can easily fork a copy and make any adjustments I want. And if I don&#39;t find anything at all, I can write a lesson and add it to the organization so that other classes can use it.</li>
+<li><strong>It&#39;s really easy to iterate on materials</strong>. If I see a typo in a readme, I can update it and have that change available immediately throughout the whole organization. If a lesson didn&#39;t go well and I have some specific changes to the materials that I think would improve the experience, it&#39;s easy for me to make those changs as well.</li>
+<li><strong>If someone wants to make a change but is concerned about a lack of consensus, it&#39;s easy to get a discussion thread going</strong>. The reasoning for any change can always live in the same general location as the change itself. </li>
+<li><strong>I can see who authored each change on a line-by-line basis</strong>. If I have a question about anything I&#39;m reading, tracking down the original author is no problem.</li>
+</ol>
+
+<p>It&#39;s not all sunshine and puppy dogs, though. Let&#39;s turn to the downsides.</p>
+
+<h3>GitHub: The Downsides</h3>
+
+<p>GitHub is a powerful and helpful tool. But when it comes to writing curriculum, there are a number of problems with it (or at least, with my experience implementing it):</p>
+
+<ol>
+<li><p>Through the open source movement, GitHub has allowed software developers from all around the world connect and collaborate with ease. However, writing curriculum isn&#39;t the same as writing software, and I&#39;ve found that even among teams that are geographically dispersed, <strong>the amount of collaboration between people who don&#39;t know each other is pretty minimal</strong> (if it exists at all). I use GitHub with my group of instructors on a daily basis to make improvements to our spin on the curriculum, but I have very rarely collaborated outside of my core group in the same capacity.</p>
+
+<p>Of course, this may not necessarily be due to a fault in the tooling (i.e. GitHub). Part of it may be cultural, and part of it is probably due to the wide variation instructors see across classrooms and across markets. The knowledge students need to get jobs in San Francisco may be different than what they need to get jobs in other places in the country, and each class has its own set of idiosyncracies which instructors will need to address on a cohort-by-cohort basis. Because of this, large-scale collaboaration of the type you see in open-source software development isn&#39;t really a thing.</p>
+
+<p>But maybe it doesn&#39;t need to be. After all, as Chris rightly pointed out, it&#39;s easy to fork and clone copies of original material and tweak them as needed for your particular use case. But this brings me to my second observation...</p></li>
+<li><p><strong>GitHub doesn&#39;t really reduce the amount of noise so much as it shifts it to a central location</strong>. Without a lot of careful and active shepherding, curriculum to which everyone can contribute can quickly generate a signal-to-noise ratio that&#39;s comparable to what&#39;s already available via a Google search. Say I&#39;m looking within my GitHub organization for content on topic X. It&#39;s quite likely I&#39;ll find a lot of different curricular resources. Without a more personal relationship to the author, though, I don&#39;t have a clear idea of whether the material is a good fit for my class (see #1), and this is true <em>even if our classes have a shared set of objectives.</em> Moreover, objectives and requirements change over time, but not every piece of curriculum follows. If I see material that hasn&#39;t been updated in a year, is that because it&#39;s not great, or because one instructor really loves it and uses it while everyone else uses something else? </p>
+
+<p>Maintanence of a large body of curriculum is expensive, and between writing curriculum, teaching, and keeping the entire body of curriculum maintained, it also tends to be the lowest priority.</p>
+
+<p>Forking alleviates some of this, but not all. I could choose to not worry about the larger community and just keep a copy of my own forked curriculum updated as I see fit, but if everyone does that, we lose out on the benefits obtained from sharing insights into how things are going across different classrooms. </p>
+
+<p>But even in those cases when certain cohorts want to make changes to the master curriculum, this raises another problem...</p></li>
+<li><p><strong>It&#39;s difficult to push changes to the curriculum when multiple people are using it while also iterating on the curriculum quickly.</strong> If 12 different classes are using a shared curriculum, some of them may be teaching very similar things within a very short timespan. If one group decides to make significant changes to the curriculum, it has the potential to disrupt the planning of another class. </p>
+
+<p>Really, this boils down to a fundmanetal tension between the quality of the educational experience and the philosophy of agile software development. The engineer will advocate for shipping the code (i.e. the change in the curriculum) even if it&#39;s not fully-baked, since rapid iteration will catch flaws and fix them. But the users who catch the flaws in this case are students, and students working with a busted curriculum is, to put it mildly, not great for their experience. Given the choice between maintaining the quality of the student experience and iterating rapidly on the product, I&#39;ll choose student experience 10 times out of 10. But this means you&#39;re potentially losing out on one of the big value-adds GitHub has in a traditional software development setup.<a href="#footnote2" id="src2">2</a></p></li>
+<li><p><strong>For all of its technological street cred, GitHub hosts a lot of curriculum that&#39;s still stuck in the 20th century.</strong></p>
+
+<p>Github is super awesome at keeping track of changes to text files. As such, people use it to keep track of text files. At its core, that&#39;s what software development is: reading and writing text files, all day every day.</p>
+
+<p>In terms of curriculum, then, GitHub tends to be used to store repositories of text files. This is fine; after all, we&#39;ve been using text files to communicate curriculum for hundreds of years. </p>
+
+<p>But at the same time, it&#39;s 2016. We have tools to make the dissimination of knowledge more effective and more engaging. For example, if I&#39;m writing about Javascript functions, maybe I want to provide the reader with an example of the proper syntax:</p></li>
+</ol>
+<pre class="highlight javascript"><code><span class="kd">function</span> <span class="kr">double</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="nx">num</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p>This function, as the name suggests, takes a number and doubles it. But if you, as the reader, want to experiment with this function (make sure it works, try it with different inputs, try to break it, etc), you have to open up a Javascript runtime environment, copy and paste the code, and then start exploring. The feedback loop between reading and experimenting is unnecessarily large.</p>
+
+<p>The same is true in mathematics. Open up an algebra textbook to a chapter on linear functions, and you&#39;re likely to see images like this:</p>
+
+<p><img alt="Linear Functions Image" src="http://mathonweb.com/help_ebook/html/functions_3/fungraph01.gif" /></p>
+
+<p>But if you&#39;re trying to learn about families of linear functions, explore the relationship between graphs, slope, and intercept, and so on, wouldn&#39;t you much rather be able to explore linear functions with something like this?</p>
+
+<div class="graph-wrapper">
+  <div id="graph"></div>
+</div>
+
+<p>I certainly would. And examples like this are becoming more common. <a href="http://www.desmos.com" target="_blank">Desmos</a> is getting into the content game, and <a href="http://www.mathalicious.com" target="_blank">Mathalicious</a> lessons are much more interactive than they were a few years ago. In higher education, tools like Sage Math are <a href="http://sagemath.blogspot.com/2016/02/open-source-is-now-ready-to-directly.html" target="_blank">positioning themselves</a> as free, open-source competitors to expensive applications like Mathematica, Maple, and MATLAB.</p>
+
+<p>I&#39;m not sure what this means about how curriculum <em>should</em> be tied to GitHub, only that the relationship is typically not harnessed to its fullest potential. Should curriculum live on GitHub, or should it be part of a larger, 21st century application that lives on GitHub? And what does this mean for curriculum authorship in the 21st century? These are questions that could take up posts of their own, so I&#39;ll merely pose them here as another place where I think curriculum and GitHub have room to grow.</p>
+
+<h3>Conclusions</h3>
+
+<p>I&#39;ve addressed the pros and cons of GitHub for my particular use case, with some guesses as to what&#39;s generalizable to others. In the end, though, Chris&#39; article makes me think about a question that may be entirely unrelated to GitHub: what does a model of open-source math curriculum look like? It&#39;s easy to say that it looks like open-source software, but I don&#39;t think that&#39;s true. </p>
+
+<p>There are some similarities. For insatnce, an open-source curriculum, like a large-scale open-source project (e.g. <a href="https://github.com/facebook/react" target="_blank">React</a>, <a href="https://github.com/angular/angular.js" target="_blank">Angular</a>, etc) is likely to require a team of full-time employees to set the vision for the project, maintain the integrity of the curriculum, and release updates.</p>
+
+<p>In a traditional open-source software project, contributions from the community clearly benefit the owners of the project, but they also benefit all users of the project. Crucially, they <em>also</em> materially benefit the user who has their change rolled into the project. (Being able to say you are a contributor to a large open-source project can be a pretty significant bullet point on a resume.) But software developers have a fair amount of leverage in salary negotiations; consequently, I&#39;m not sure how well this model fits with teachers, especially public school teachers whose salaries are on a fixed scale.</p>
+
+<p>Chris addressed this issue from another perspective in his follow-up post under a section titled <a href="http://chrislusto.com/git-push/#sect-isnt-this-just-a-way-for-publishers-to-exploit-labor" target="_blank">Isn&#39;t this just a way for publishers to exploit labor?</a> His rebuttal is nice, you should definitely check it out. Ultimately I don&#39;t know what the answer is, but this example is enough to make me think that the question of open-source curriculum is, regardless of how we version control it, big enough to consider on its own merits.</p>
+
+<p>I haven&#39;t thought a ton about it, but if you have, I&#39;d love to hear from you! I&#39;m sure the larger community would, too.</p>
+
+<hr/>
+
+<p><a href="#src1" id="footnote1">1</a>: I&#39;ll use the term bootcamp throughout this discussion, even though I don&#39;t really like using that word to describe what I do (but that&#39;s a topic for another day).</p>
+
+<p><a href="#src2" id="footnote2">2</a>: Again, it&#39;s quite possible that this complaint has less to do with GitHub in particular than with external factors such as culture, workflow, etc. But at the very least, I think the idea of keeping a forked copy of your own curriculum to maintain while also folding in the best parts of updates to the main curriculum is, in practice, more complex than it seems.</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'mathgoespop';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+           <!--  <script type="text/javascript">
+//<![CDATA[
+    var disqus_shortname = 'mathgoespop';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+//]]>
+</script>
+ -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <aside>
+          <nav class="sidebar-links">
+            <a href="/about.html" class="pull-left">About</a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+          </nav>
+          <form>
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          </form>
+          <div id="recent">
+            <h2>Recent Articles</h2>
+            <ul type="circle">
+                <li><a href="/2017/05/i-wrote-a-book.html">I Wrote A Book!</a> <span>May 29</span></li>
+                <li><a href="/2016/06/git-r-done.html">Git-R-Done</a> <span>Jun 14</span></li>
+                <li><a href="/2016/04/fallout-4-math-part-2.html">Fallout 4 Math, Part 2</a> <span>Apr 16</span></li>
+                <li><a href="/2016/04/fallout-4-math.html">Fallout 4 Math</a> <span>Apr 14</span></li>
+                <li><a href="/2016/03/pi-day-visualization.html">Why is &pi; Irrational?</a> <span>Mar 14</span></li>
+            </ul>
+          </div>
+          <div id="byYear">
+            <h2>By Year</h2>
+            <ul type="circle">
+                <li class="year"><a href="/2017.html">2017 (1)</a></li>
+                <li class="year"><a href="/2016.html">2016 (5)</a></li>
+                <li class="year"><a href="/2015.html">2015 (4)</a></li>
+                <li class="year"><a href="/2014.html">2014 (2)</a></li>
+                <li class="year"><a href="/2013.html">2013 (2)</a></li>
+                <li class="year"><a href="/2012.html">2012 (31)</a></li>
+                <li class="year"><a href="/2011.html">2011 (34)</a></li>
+                <li class="year"><a href="/2010.html">2010 (44)</a></li>
+                <li class="year"><a href="/2009.html">2009 (47)</a></li>
+                <li class="year"><a href="/2008.html">2008 (27)</a></li>
+            </ul>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+   <footer>
+    <div id="social-media">
+      <a href="https://twitter.com/mmmaaatttttt" target="_blank"><i class="fa fa-twitter-square"></i></a>
+      <a href="/feed.xml" target="_blank"><i class="fa fa-rss-square"></i></a>
+    </div>
+    <a rel="license" id="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+   </footer>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/swiftype.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+          <script src=https://www.desmos.com/api/v0.7/calculator.js?apiKey=39091730e90d4e6a9f1084c67c2270a8></script>
+          <script src=../../javascripts/2016_06_git_r_done.js></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4957394-2', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

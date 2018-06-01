@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Math Goes Pop</title>
+  <subtitle>Ruminations on the Intersection Between Math and Pop Culture</subtitle>
+  <id>http://www.mathgoespop.com/</id>
+  <link href="http://www.mathgoespop.com/"/>
+  <link href="http://www.mathgoespop.com/feed.xml" rel="self"/>
+  <updated>2017-05-28T17:00:00-07:00</updated>
+  <author>
+    <name>Matt Lane</name>
+  </author>
+  <entry>
+    <title>I Wrote A Book!</title>
+    <link rel="alternate" href="http://www.mathgoespop.com/2017/05/i-wrote-a-book.html"/>
+    <id>http://www.mathgoespop.com/2017/05/i-wrote-a-book.html</id>
+    <published>2017-05-28T17:00:00-07:00</published>
+    <updated>2018-05-31T22:15:06-07:00</updated>
+    <author>
+      <name>Matt Lane</name>
+    </author>
+    <summary type="html">&lt;p&gt;Hello friends! In case you haven't heard the news, I released my first book this month. You can order it on Amazon &lt;a href="https://www.amazon.com/Power-Up-Unlocking-Hidden-Mathematics-Video/dp/0691161518/" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class="img-33" alt="Power-Up Cover" src="/images/2017/05/PowerUp.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;The book started as basically an extension of this blog, though with a narrower focus. While I've tried to use this space to explore the intersection of math and pop culture in general, the book focuses specifically on the search for interesting mathematics inspired by video games.&lt;/p&gt;
+
+&lt;p&gt;It's been a labor of love, and part of the reason why my musings over here have dwindled over...&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Git-R-Done</title>
+    <link rel="alternate" href="http://www.mathgoespop.com/2016/06/git-r-done.html"/>
+    <id>http://www.mathgoespop.com/2016/06/git-r-done.html</id>
+    <published>2016-06-13T17:00:00-07:00</published>
+    <updated>2018-05-31T22:15:06-07:00</updated>
+    <author>
+      <name>Matt Lane</name>
+    </author>
+    <summary type="html">&lt;p&gt;My good friend and former work-associate &lt;a href="https://twitter.com/lustomatical" target="_blank"&gt;Chris Lusto&lt;/a&gt; recently set off a flurry of Twitter activity when he shared some of his thoughts on curriculum development in a post titled &lt;a href="http://chrislusto.com/lessons-for-other-people/" target="_blank"&gt;Lessons for Other People&lt;/a&gt; (he's since written a follow-up, &lt;a href="http://chrislusto.com/git-push/" target="_blank"&gt;Git Push&lt;/a&gt;). These posts have sparked a lot of interesting conversation, and have inspired me to share some thoughts of my own.&lt;/p&gt;
+
+&lt;p&gt;In the interest of self-containment, let me begin by trying to summarize Chris' main argument. First, some background: Chris and I both...&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Fallout 4 Math, Part 2</title>
+    <link rel="alternate" href="http://www.mathgoespop.com/2016/04/fallout-4-math-part-2.html"/>
+    <id>http://www.mathgoespop.com/2016/04/fallout-4-math-part-2.html</id>
+    <published>2016-04-15T17:00:00-07:00</published>
+    <updated>2018-05-31T22:15:06-07:00</updated>
+    <author>
+      <name>Matt Lane</name>
+    </author>
+    <summary type="html">&lt;p&gt;&lt;em&gt;This post is the second part in a series. If you haven't ready the &lt;a href="/2016/04/fallout-4-math.html" target="_blank"&gt;first part&lt;/a&gt;, I'd highly encourage you to do so.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Last time, we discussed four different strategies for cracking the Fallout 4 hacking mini-game. As you may recall, our four strategies are as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Guess randomly. &lt;/li&gt;
+&lt;li&gt;Guess the word which is closest to the others, according to the &lt;a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank"&gt;Hamming distance&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Guess the word that is farthest from the others. &lt;/li&gt;
+&lt;li&gt;Guess the word which will result in the highest expected number of word eliminations...&lt;/li&gt;
+&lt;/ol&gt;</summary>
+  </entry>
+  <entry>
+    <title>Fallout 4 Math</title>
+    <link rel="alternate" href="http://www.mathgoespop.com/2016/04/fallout-4-math.html"/>
+    <id>http://www.mathgoespop.com/2016/04/fallout-4-math.html</id>
+    <published>2016-04-13T17:00:00-07:00</published>
+    <updated>2018-05-31T22:15:06-07:00</updated>
+    <author>
+      <name>Matt Lane</name>
+    </author>
+    <summary type="html">&lt;p&gt;If ever you've wished to experience a 1950's aesthetic combined with a post-apocalyptic landscape filled with death and decay, then the &lt;a href="https://en.wikipedia.org/wiki/Fallout_(series)" target="_blank"&gt;Fallout&lt;/a&gt; series may be right up your alley. What began with the well-received release of &lt;em&gt;Fallout&lt;/em&gt; in 1997 has since evolved into one of the most popular video game franchises around. The latest entry, &lt;em&gt;Fallout 4&lt;/em&gt; was released last year to critical and commercial acclaim. Here's just one sample of the praise lavished on this game (NSFW, unless you're allowed to watch...&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Why is &amp;pi; Irrational?</title>
+    <link rel="alternate" href="http://www.mathgoespop.com/2016/03/pi-day-visualization.html"/>
+    <id>http://www.mathgoespop.com/2016/03/pi-day-visualization.html</id>
+    <published>2016-03-13T17:00:00-07:00</published>
+    <updated>2018-05-31T22:15:06-07:00</updated>
+    <author>
+      <name>Matt Lane</name>
+    </author>
+    <summary type="html">&lt;p&gt;I've written about my (not super positive) feelings towards &lt;em&gt;π&lt;/em&gt; day in the past. I don't want to rehash those arguments; if you're curious, you can read some of my thoughts &lt;a href="/2009/03/pi-day.html" target="_blank"&gt;here&lt;/a&gt;, &lt;a href="/2011/03/pi-day-post-mortem.html" target="_blank"&gt;here&lt;/a&gt;, and &lt;a href="/2012/03/pi-day-vs-half-tau-day.html" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At the same time, I feel less curmudgeonly these days, and if your idea of a good time is memorizing a sequence of numbers and reciting them or putting them to music, more power to you. &lt;/p&gt;
+
+&lt;p&gt;But if we're going to let &lt;em&gt;π&lt;/em&gt; steal the limelight from other deserving &lt;a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)" target="_blank"&gt;irrational&lt;/a&gt; &lt;a href="https://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant" target="_blank"&gt;numbers&lt;/a&gt;, let's at least explore something...&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>For Blockbuster Movies, Is Winter the New Summer?</title>
+    <link rel="alternate" href="http://www.mathgoespop.com/2016/02/for-blockbuster-movies-is-winter-the-new-summer.html"/>
+    <id>http://www.mathgoespop.com/2016/02/for-blockbuster-movies-is-winter-the-new-summer.html</id>
+    <published>2016-02-11T16:00:00-08:00</published>
+    <updated>2018-05-31T22:15:06-07:00</updated>
+    <author>
+      <name>Matt Lane</name>
+    </author>
+    <summary type="html">&lt;p&gt;When I was in high school, I very much wanted &lt;em&gt;&amp;lt;a href="http://www.imdb.com/title/tt0120915/" target="&lt;/em&gt;blank"&amp;gt;Star Wars Episode I_ to crush &lt;em&gt;&amp;lt;a href="http://www.imdb.com/title/tt0120338/?ref&lt;/em&gt;=nv&lt;em&gt;sr&lt;/em&gt;1" target="&lt;em&gt;blank"&amp;gt;Titanic&lt;/em&gt; and become the highest-grossing domestic film of all time. Even though &lt;em&gt;Episode I&lt;/em&gt; was, by most acccounts, terrible, I still paid to see it several times in theaters. Alas, my efforts were in vain; the film didn't even come close to toppling &lt;em&gt;Titanic&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;What a difference a good &lt;em&gt;Star...&lt;/em&gt;&lt;/p&gt;</summary>
+  </entry>
+</feed>
