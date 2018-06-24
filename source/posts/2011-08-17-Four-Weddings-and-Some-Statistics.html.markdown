@@ -9,6 +9,11 @@ tags:
 - statistics
 - weddings
 ---
+
+(**Update, March 2018**: I've rewritten this post on my new site. The rewrite includes new data, as well as more interactive visualizations. You can check it out [here](https://mattlane.us/stories/four-weddings/)!)
+
+---
+
 When my fiancee was in the midst of the wedding planning, part of her research (or perhaps it was simply a guilty pleasure) involved watching wedding shows on basic cable.  For those of you who have not had the pleasure, between stations like <a href="http://www.wetv.com/">WE tv</a> and <a href="http://tlc.discovery.com/">TLC</a>, there are no fewer than nine different wedding-themed reality shows airing weekly.  Many of them are appealing in a rubbernecking sort of way; much like a car crash, the spectacle is too ridiculous to turn away from (I'm looking at you, <a href="http://tlc.howstuffworks.com/tv/my-big-fat-gypsy-wedding">My Big Fat Gypsy Wedding</a>).
 
 <p style="text-align: center;"><object width="560" height="390"><param name="movie" value="http://www.youtube.com/v/2HAUmII_hcg?version=3&amp;hl=en_US" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="560" height="390" src="http://www.youtube.com/v/2HAUmII_hcg?version=3&amp;hl=en_US" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
