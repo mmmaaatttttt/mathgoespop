@@ -1,6 +1,6 @@
 ---
 title: 'The Blog is Dead. Long Live the Blog!'
-date: '2018-06-01'
+date: '2018-06-24'
 ---
 
 Hello friends,
