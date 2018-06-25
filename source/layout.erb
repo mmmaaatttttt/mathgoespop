@@ -52,8 +52,8 @@
             <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
             <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
           </nav>
-          <form>
-            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!"/>
+          <form action="/search.html">
+            <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!" name="q"/>
           </form>
           <div id="recent">
             <h2>Recent Articles</h2>
@@ -84,7 +84,6 @@
    </footer>
     <script src="/javascripts/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="/javascripts/swiftype.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
     <%= javascript_include_tag "all" %>
     <% third_party_scripts = {

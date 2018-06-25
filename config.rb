@@ -20,7 +20,6 @@ activate :blog do |blog|
   blog.summary_length = 500
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
-  # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
 
   blog.tag_template = "tag.html"
@@ -125,6 +124,20 @@ configure :build do
   # set :http_prefix, "/Content/images/"
   activate :disqus do |d|
     d.shortname = "mathgoespop"
+  end
+end
+
+# search 
+activate :search do |search|
+  search.resources = ['posts']
+  search.fields = {
+    title:   {boost: 100},
+    content: {boost: 50},
+  }
+  search.before_index = Proc.new do |to_index, to_store, resource|
+    to_store[:title] = resource.data.title
+    to_store[:href] = resource.request_path
+    to_store[:date] = resource.data.date
   end
 end
 

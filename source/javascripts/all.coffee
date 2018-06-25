@@ -1,3 +1,5 @@
+#= require lunr.min
+
 $ ->
 
 	mathAreaToggles = $ '.math-area .glyphicon-plus-sign'

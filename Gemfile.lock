@@ -43,6 +43,7 @@ GEM
     i18n (0.7.0)
     json (1.8.6)
     kramdown (1.13.2)
+    libv8 (3.16.14.19)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -83,6 +84,10 @@ GEM
       middleman-core (~> 3.3)
     middleman-gh-pages (0.3.1)
       rake (> 0.9.3)
+    middleman-search (0.10.0)
+      middleman-core (>= 3.2)
+      nokogiri (~> 1.6)
+      therubyracer (~> 0.12.2)
     middleman-sprockets (3.5.0)
       middleman-core (>= 3.3)
       sprockets (~> 2.12.1)
@@ -118,6 +123,7 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redcarpet (3.4.0)
+    ref (2.0.0)
     rouge (2.0.7)
     sass (3.4.24)
     slop (3.6.0)
@@ -132,6 +138,9 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     temple (0.8.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (1.4.1)
@@ -155,6 +164,7 @@ DEPENDENCIES
   middleman-deploy (~> 1.0.0)
   middleman-disqus
   middleman-gh-pages
+  middleman-search
   middleman-syntax
   nokogiri (~> 1.6.5)
   pry
