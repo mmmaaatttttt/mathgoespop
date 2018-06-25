@@ -17,4 +17,4 @@ Why the change? Here are a few reasons:
 
 3.  I'd like to think that I've matured as a writer over the past decade. Some of these posts definitely make me cringe a little. I'd like to think I'm a bit more earnest these days, and a little less snarky. But I'll let you be the judge of that.
 
-Anyway, I hope you'll continue reading what I have to say. Thanks!
+As for the stories that are here, they won't be going anywhere. But from here on how, this site should be considered archived. If you'd like to continue reading what I have to say, you can find me at [my new project](https://mattlane.us). Hope to see you there!
