@@ -35,13 +35,14 @@
       </div>
       <div class="col-md-7">
         <div id="main" role="main">
-          <% unless current_article.nil? %>
+          <% if current_article %>
             <h2><%= current_article.title %></h2> <div class="postDate"><%= current_article.date.strftime('%B %e, %Y') %></div>
           <% end %>
           <%= yield %>
-          <% unless current_article.nil? %>
+          <% if current_article %>
+            <hr>
+            <p><em><b>Psst ... did you know I have a brand new website full of interactive stories? You can check it out <a href="https://mattlane.us" target="_blank" rel="noopener noreferrer">here!</a></em><b></p>
             <%= disqus %>
-           <!--  <%= disqus_count %> -->
           <% end %>
         </div>
       </div>
@@ -49,8 +50,8 @@
         <aside>
           <nav class="sidebar-links">
             <a href="/about.html" class="pull-left">About</a>
-            <a href="https://twitter.com/mmmaaatttttt" target="_blank" class="pull-right"><i class="fa fa-twitter-square"></i></a>
-            <a href="/feed.xml" target="_blank" class="pull-right"><i class="fa fa-rss-square"></i></a>
+            <a href="https://twitter.com/mmmaaatttttt" target="_blank" rel="noopener noreferrer" class="pull-right"><i class="fa fa-twitter-square"></i></a>
+            <a href="/feed.xml" target="_blank" rel="noopener noreferrer" class="pull-right"><i class="fa fa-rss-square"></i></a>
           </nav>
           <form action="/search.html">
             <input type="text" id="st-search-input" class="st-search-input" placeholder="Search Math Goes Pop!" name="q"/>
@@ -71,6 +72,7 @@
               <% end %>
             </ul>
           </div>
+          <p><b>Check out my <a href="https://mattlane.us" target="_blank" rel="noopener noreferrer">new website</a>!</b></p>
           
         </aside>
       </div>
