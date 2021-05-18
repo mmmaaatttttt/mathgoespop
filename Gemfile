@@ -10,7 +10,7 @@ gem "middleman-syntax"
 gem "middleman-gh-pages"
 gem "middleman-search"
 gem "middleman-deploy", "~> 1.0.0"
-gem "nokogiri", "~> 1.6.5"
+gem "nokogiri", "~> 1.11.4"
 gem "redcarpet"
 gem "pry"
 
